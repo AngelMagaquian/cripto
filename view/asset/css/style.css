@@ -17,16 +17,18 @@ a:hover {
 --------------------------------------------------------------*/
 #hero {
   width: 100%;
-  /*background: url("../img/hero-bg.jpg");*/
+  background: url("../img/hero-bg.png");
+  background-repeat: no-repeat;
+  background-size: 100vw;
   position: relative;
   padding: 120px 0 0 0;
+
 }
 
 #hero:before {
   content: "";
-  background: #378969;
   position: absolute;
-  opacity: 0.7;
+  opacity: 1;
   bottom: 0;
   top: 0;
   left: 0;
@@ -34,16 +36,11 @@ a:hover {
 }
 
 #hero h1 {
-  margin: 0 0 20px 0;
+  margin: 0 0 50px 0;
   font-size: 48px;
   font-weight: 700;
   line-height: 56px;
-  color: rgba(255, 255, 255, 0.8);
-}
-
-#hero h1 span {
-  color: #fff;
-  border-bottom: 4px solid #0d58b2;
+  color:  #031D5A;
 }
 
 #hero a {
@@ -142,6 +139,10 @@ a:hover {
   height: 60px;
   z-index: 5;
   position: relative;
+  transform:rotate(180deg);
+  -ms-transform:rotate(180deg);
+  -webkit-transform:rotate(180deg);
+  background: #F1FAFF;
 }
 
 .wave1 use {
@@ -236,6 +237,46 @@ a:hover {
 #hero i:hover {
   background: #1acc8d;
   color: #fff;
+}
+
+
+/*--------------------------------------------------------------
+# Cripto Section
+--------------------------------------------------------------*/
+#cripto{
+  padding: 120px 0;
+  background-color: #F1FAFF;
+}
+
+#cripto .img-cripto img{
+  max-width: 100%;
+
+}
+
+#cripto .cotizacion h4{
+  font-size: 20px !important;
+  text-transform: uppercase;
+  font-style: bold;
+  color: #44596A;
+  margin-top: 10px;
+
+}
+#cripto .cotizacion h5 span{
+  font-style: italic;
+
+}
+
+#cripto .cotizacion h5{
+  font-size: 11px !important;
+  text-transform: uppercase;
+  font-style: bold;
+  margin-bottom: 0;
+
+}
+#cripto .cotizacion .compra span{
+  font-size: 11px;
+  color:#031D5A;
+
 }
 
 

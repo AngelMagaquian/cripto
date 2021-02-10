@@ -1,14 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
-	<link href="./view/css/bootstrap/bootstrap.min.css" rel="stylesheet">
-	<link href="./view/css/style.css" rel="stylesheet">
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <title>Album example · Bootstrap v5.0</title>
+
+
+    
+
+    <!-- Bootstrap core CSS -->
+    <link href="./view/asset/css/bootstrap/bootstrap.min.css" rel="stylesheet">
+
+	<link href="./view/asset/css/style.css" rel="stylesheet">
 </head>
 <body>
-
+<!--Hero -->
 <section id="hero">
-
     <div class="container">
       <div class="row" style="min-height: 445px">
         <div class="col-lg-7 pt-5 pt-lg-0 order-2 order-lg-1 d-flex align-items-center" style="z-index: 999">
@@ -40,22 +50,188 @@
 
 </section><!-- End Hero -->
 
+<!--Cripto-->
+<section id="cripto">
+<div class="container">
+  <div class="row mb-5 justify-content-between">
+    <div class="col-3">
+      <div class="row">
+        <div class="img-cripto col-4">
+          <img src="./view/asset/img/btc.png" alt="Bitcoin">
+        </div>
+        <div class="col-8 cotizacion">
+            <h4><b>bitcoin <span>(btc)</span></b></h4>
+
+            <div class="row">
+
+              <div class="col-6 compra">
+                <h5>Compra</h5>
+                <span>$ 7004262.5</span>
+              </div>
+
+              <div class="col-6 compra">
+                <h5>Venta</h5>
+                <span>$ 7004262.5</span>
+              </div>
+            </div>
+        </div>
+      </div>
+      
+
+    </div>
+
+    <div class="col-3">
+      <div class="row">
+        <div class="img-cripto col-4">
+          <img src="./view/asset/img/eth.png" alt="Ethereum">
+        </div>
+        <div class="col-8 cotizacion">
+          
+            <h4><b>ethereum <span>(eth)</span></b></h4>
+
+            <div class="row">
+
+              <div class="col-6 compra">
+                <h5>Compra</h5>
+                <span>$ 7004262.5</span>
+              </div>
+
+              <div class="col-6 compra">
+                <h5>Venta</h5>
+                <span>$ 7004262.5</span>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-3">
+      <div class="row">
+        <div class="img-cripto col-4">
+          <img src="./view/asset/img/usdt.png" alt="Tether">
+        </div>
+        <div class="col-8 cotizacion">
+            <h4><b>tether <span>(usdt)</span></b></h4>
+
+            <div class="row">
+
+              <div class="col-6 compra">
+                <h5>Compra</h5>
+                <span>$ 7004262.5</span>
+              </div>
+
+              <div class="col-6 compra">
+                <h5>Venta</h5>
+                <span>$ 7004262.5</span>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-between">
+    <div class="col-3">
+      <div class="row">
+        <div class="img-cripto col-4">
+          <img src="./view/asset/img/dai.png" alt="Dai">
+        </div>
+        <div class="col-8 cotizacion">
+            <h4><b>dai <span>(dai)</span></b></h4>
+
+            <div class="row">
+
+              <div class="col-6 compra">
+                <h5>Compra</h5>
+                <span>$ 7004262.5</span>
+              </div>
+
+              <div class="col-6 compra">
+                <h5>Venta</h5>
+                <span>$ 7004262.5</span>
+              </div>
+            </div>
+        </div>
+      </div>
+      
+
+    </div>
+
+    <div class="col-3">
+      <div class="row">
+        <div class="img-cripto col-4">
+          <img src="./view/asset/img/link.png" alt="Chainlink">
+        </div>
+        <div class="col-8 cotizacion">
+            <h4><b>chainlink <span>(link)</span></b></h4>
+
+            <div class="row">
+
+              <div class="col-6 compra">
+                <h5>Compra</h5>
+                <span>$ 7004262.5</span>
+              </div>
+
+              <div class="col-6 compra">
+                <h5>Venta</h5>
+                <span>$ 7004262.5</span>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-3">
+      <div class="row">
+        <div class="img-cripto col-4">
+          <img src="./view/asset/img/xrp.png" alt="Ripple">
+        </div>
+        <div class="col-8 cotizacion">
+            <h4><b>ripple <span>(xrp)</span></b></h4>
+            <div class="row">
+
+              <div class="col-6 compra">
+                <h5>Compra</h5>
+                <span>$ 7004262.5</span>
+              </div>
+
+              <div class="col-6 compra">
+                <h5>Venta</h5>
+                <span>$ 7004262.5</span>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+
+  </div>
+</div>
+</section>
+
 <section id="tips">
   <div class="container">
-    <div class="row justify-content-between">
-      <div class="col-md-3 col-sm-6 col-12 card-tips">
-        <h3><b>Paso uno</b></h3>
-        <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has</p>
+    <div class="row justify-content-sm-between justify-content-center">
+      <div class="col-md-4 col-sm-6 col-12 mb-md-0 mb-sm-4 mb-5">
+        <div class="card-tips">
+          <h3><b>Paso uno</b></h3>
+          <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has</p>
+        </div>
+        
       </div>
 
-      <div class="col-md-3 col-sm-6 col-12 card-tips">
-        <h3><b>Paso dos</b></h3>
-        <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has</p>
+      <div class="col-md-4 col-sm-6 col-12  mb-md-0 mb-sm-4 mb-5">
+        <div class="card-tips">
+          <h3><b>Paso dos</b></h3>
+          <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has</p>
+        </div>
       </div>
 
-      <div class="col-md-3 col-sm-6 col-12 card-tips">
+      <div class="col-md-4 col-sm-6 col-12">
+        <div class="card-tips">
         <h3><b>Paso tres</b></h3>
-        <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has</p>
+          <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has</p>
+        </div>
       </div>
 
     </div>
@@ -63,7 +239,7 @@
   </div>
 </section>
 
-<!--incluir php-->
+<!--incluir php
 <section id="footer">
   <div class="col-2">
     <span>Insttitucional</span>
@@ -86,9 +262,10 @@
       </ul>
     </div>
   </div>
-</section>
+</section>-->
 </body>
 
-  <script src="./view/jquery/jquery.min.js"></script>
-  <script src="./view/js/bootstrap/bootstrap.bundle.min.js"></script>
+  <script src="./view/asset/jquery/jquery.min.js"></script>
+  <script src="./view/asset/js/bootstrap.bundle.min.js"></script>
+
 </html>
