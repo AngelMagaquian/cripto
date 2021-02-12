@@ -1,0 +1,17 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+  }
+/*--------------------------------------------------------------
+# login Section
+--------------------------------------------------------------*/
+
+#login{
+    background: url("../img/bg-login.png");
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: 100vw;
+    bottom: 0;
+  }
