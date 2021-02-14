@@ -16,36 +16,38 @@
 <section id="login">
     <div class="container">
         <div class="row justify-content-center">
-        <div class="col-5 mt-5">
-          <div class="card text-center">
-            <div class="card-body">
-              <h5 class="card-title">¡HOLA!</h5>
-              <p class="card-text">Si te registraste, ingresá tus datos</p>
+        <div class="col-lg-4 col-md-6 col-sm-8 col-11  mt-5">
+          <div class="card ">
+            <div class="card-body mt-4 mb-4">
+              <div class="text-top">
+                <h5 class="card-title text-center mb-3">¡HOLA!</h5>
+                <p class="card-text text-center">Si te registraste, ingresá tus datos</p>
+              </div>
 
-              <form>
-                <div class="input-group mb-3">
-                  <label>Email</label>
-                  <input type="text" class="form-control">
-                </div>
-                <div class="input-group mb-2">
-                  <div class="input-group-append">
-                    <span class="input-group-text"><i class="fas fa-key"></i></span>
+              <div class="row justify-content-center mt-5">
+                <form class="col-10 align-self-center" style="">
+                  <div class="form-group">
+                    <label for="exampleInputEmail1"><b>Usuario</b></label>
+                    <input type="email" class="form-control form-login" id="dni" placeholder="ingresá tu usuario">
                   </div>
-                  <input type="password" name="" class="form-control input_pass" value="" placeholder="password">
-                </div>
-                <div class="form-group">
-                  <div class="custom-control custom-checkbox">
-                    <input type="checkbox" class="custom-control-input" id="customControlInline">
-                    <label class="custom-control-label" for="customControlInline">Remember me</label>
+                  <div class="form-group mt-4">
+                    <label for="exampleInputPassword1"><b>Contraseña</b></label>
+                    <input type="password" class="form-control form-login" id="pass" placeholder="Ingresá tu contraseña">
                   </div>
+                  <div>
+                    <a class="change-pass">¿Olvidaste tu contraseña?</a>
+                  </div>
+                  <div class="text-center mt-4">
+                     <button type="submit" class="btn-login btn-get-started" id="user_input">Iniciar sesión</button>
+                  </div>
+                 
+                </form>
+                <div class="text-center mt-5">
+                  <p class="text-registro">¿Todavía no tenés cuenta?</p>
+                  <button type="submit" class="btn-registrarse btn-get-started">Registrarse</button>
                 </div>
-                <div class="d-flex justify-content-center mt-3 login_container">
-                  <button type="button" name="button" class="btn login_btn">Login</button>
-                </div>
-              </form>
-            </div>
-            <div class="card-footer text-muted">
-              2 days ago
+              </div>
+              
             </div>
           </div>
 

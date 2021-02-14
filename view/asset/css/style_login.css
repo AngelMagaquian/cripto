@@ -3,6 +3,13 @@
     padding: 0;
     font-family: "Montserrat", sans-serif;
   }
+  a {
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: none;
+  }
 /*--------------------------------------------------------------
 # login Section
 --------------------------------------------------------------*/
@@ -14,4 +21,76 @@
     background-repeat: no-repeat;
     background-size: 100vw;
     bottom: 0;
+  }
+
+#login .card{
+  border-radius: 30px !important;
+  -webkit-box-shadow: 0px 0px 8px 0px rgba(186,186,186,1);
+  -moz-box-shadow: 0px 0px 8px 0px rgba(186,186,186,1);
+  box-shadow: 0px 0px 8px 0px rgba(186,186,186,1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+
+#login .text-top{
+  color: #707070;
+}
+
+#login .text-top h5{
+  font-size: 25px;
+
+}
+#login label{
+  color: #031D5A;
+
+}
+#login .form-login{
+    border: none !important;
+    border-bottom: 2px solid #ACACAC !important;
+    border-radius: 0px ;
+    font-size: 13px;
+  }
+
+#login .change-pass{
+  color: #031D5A;
+  font-size: 12px;
+}
+
+  #login .btn-get-started {
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 10px 30px;
+    border-radius: 50px;
+    transition: 0.5s;
+    color: #f5f5f5;
+  }
+
+  #login .btn-login{
+    background-color: #27C0FA;
+    border: none;
+    -webkit-box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
+    -moz-box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
+    box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
+  }
+  #login .btn-login:hover{
+    background-color: #1B97C7;
+  }
+
+  #login .btn-registrarse{
+    background-color: #031D5A;
+    border: none;
+    -webkit-box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
+    -moz-box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
+    box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
+  }
+  #login .btn-registrarse:hover{
+    background-color: #04102C;
+  }  
+
+  #login .text-registro{
+    color: #6FC0FB;
+    font-size: 20px;
   }
