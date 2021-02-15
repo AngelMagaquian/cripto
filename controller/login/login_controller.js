@@ -14,7 +14,7 @@ $(function(){
             $.post('../../model/login/login.ph', postData, function(response){
                 console.log(response);
                 if(response == 0){
-                    
+                    //Meli si te va cambiar el cartelito, cambiaselo ahi en el windows, clava el codigo
                     window.alert('Usuario o contraseña incorrecto');
                     $('#user').val('');
                     $('#pass').val('');
