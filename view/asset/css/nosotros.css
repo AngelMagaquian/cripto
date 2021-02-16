@@ -1,0 +1,417 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+  }
+  a {
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: none;
+  }
+  
+  /*--------------------------------------------------------------
+  # Hero Section
+  --------------------------------------------------------------*/
+  #hero-nosotros {
+    width: 100%;
+    background: #27C0FA;
+    background-repeat: no-repeat;
+    background-size: 100vw;
+    position: relative;
+    padding: 70px 0 0 0;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  
+  }
+  
+  #hero-nosotros:before {
+    content: "";
+    position: absolute;
+    opacity: 1;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+  
+  #hero-nosotros h1 {
+    margin: 0 0 0 0;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 56px;
+    color:  #031D5A;
+  }
+  
+  #hero-nosotros p {
+    margin: 20px 0 0 0;
+    font-size: 20px;
+  }
+ /* #hero-nosotros .text-animate{
+    display: flex;
+    width: 500px;
+    height: 60px;
+    color: #042980;
+    font-size: 40px;
+    position: absolute;
+    overflow: hidden;
+    margin-top: 20px;
+  
+  }
+  
+  #hero-nosotros .text-animate ul{
+    list-style: none;
+    padding-left: 0px;
+    animation: change 9s infinite;
+  }
+  
+  #hero-nosotros .text-animate ul, p{
+    margin: 0;
+  }
+  
+  @keyframes change{
+    0%{margin-top: 0;}
+    20%{margin-top: 0;}
+    
+    25%{margin-top: -70px;}
+    50%{margin-top: -70px;}
+  
+    55%{margin-top: -130px;}
+    80%{margin-top: -130px;}
+  
+    85%{margin-top: -70px;}
+    95%{margin-top: -70px;}
+  
+    100%{margin-top: 0px;}
+  }
+  #hero-nosotros .container-btn{
+    margin-top: 100px;
+  }
+  #hero-nosotros a {
+    text-transform: uppercase;
+  }
+  #hero-nosotros .btn-get-started {
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 10px 30px;
+    border-radius: 50px;
+    transition: 0.5s;
+    color: #f5f5f5;
+  }
+  
+  #hero-nosotros .btn-login{
+    background-color: #27C0FA;
+    -webkit-box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
+    -moz-box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
+    box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
+  }
+  #hero-nosotros .btn-login:hover{
+    background-color: #1B97C7;
+  }
+  
+  #hero-nosotros .btn-registro{
+    background-color: #44596A;
+    -webkit-box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
+    -moz-box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
+    box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
+  }
+  #hero-nosotros .btn-registro:hover{
+    background-color: #2D3A46;
+  }
+  */
+  
+  #hero-nosotros .animated {
+    animation: up-down 2s ease-in-out infinite alternate-reverse both;
+  }
+  
+  @media (min-width: 1024px) {
+    #hero-nosotros {
+      background-attachment: fixed;
+    }
+  }
+  
+  @media (max-width: 991px) {
+    #hero-nosotros {
+      padding-top: 80px;
+    }
+    #hero-nosotros .animated {
+      -webkit-animation: none;
+      animation: none;
+    }
+    #hero-nosotros .hero-img {
+      text-align: center;
+    }
+    #hero-nosotros .hero-img img {
+      max-width: 50%;
+    }
+    #hero-nosotros h1 {
+      font-size: 28px;
+      line-height: 32px;
+      margin-bottom: 10px;
+    }
+    #hero-nosotros h2 {
+      font-size: 18px;
+      line-height: 24px;
+      margin-bottom: 30px;
+    }
+  }
+  
+  @media (max-width: 575px) {
+    #hero-nosotros .hero-img img {
+      width: 80%;
+    }
+  }
+  
+  @-webkit-keyframes up-down {
+    0% {
+      transform: translateY(10px);
+    }
+    100% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  @keyframes up-down {
+    0% {
+      transform: translateY(10px);
+    }
+    100% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  .hero-waves-nosotros {
+    display: block;
+    margin-top: 130px;
+    width: 100%;
+    height: 60px;
+    z-index: 5;
+    position: relative;
+    background: #27C0FA;
+  }
+  
+  .wave1-nosotros use {
+    -webkit-animation: move-forever1 10s linear infinite;
+    animation: move-forever1 10s linear infinite;
+    -webkit-animation-delay: -2s;
+    animation-delay: -2s;
+  }
+  
+  .wave2-nosotros use {
+    -webkit-animation: move-forever2 8s linear infinite;
+    animation: move-forever2 8s linear infinite;
+    -webkit-animation-delay: -2s;
+    animation-delay: -2s;
+  }
+  
+  .wave3-nosotros use {
+    -webkit-animation: move-forever3 6s linear infinite;
+    animation: move-forever3 6s linear infinite;
+    -webkit-animation-delay: -2s;
+    animation-delay: -2s;
+  }
+  
+  @-webkit-keyframes move-forever1 {
+    0% {
+      transform: translate(85px, 0%);
+    }
+    100% {
+      transform: translate(-90px, 0%);
+    }
+  }
+  
+  @keyframes move-forever1 {
+    0% {
+      transform: translate(85px, 0%);
+    }
+    100% {
+      transform: translate(-90px, 0%);
+    }
+  }
+  
+  @-webkit-keyframes move-forever2 {
+    0% {
+      transform: translate(-90px, 0%);
+    }
+    100% {
+      transform: translate(85px, 0%);
+    }
+  }
+  
+  @keyframes move-forever2 {
+    0% {
+      transform: translate(-90px, 0%);
+    }
+    100% {
+      transform: translate(85px, 0%);
+    }
+  }
+  
+  @-webkit-keyframes move-forever3 {
+    0% {
+      transform: translate(-90px, 0%);
+    }
+    100% {
+      transform: translate(85px, 0%);
+    }
+  }
+  
+  @keyframes move-forever3 {
+    0% {
+      transform: translate(-90px, 0%);
+    }
+    100% {
+      transform: translate(85px, 0%);
+    }
+  }
+  
+  
+  #hero-nosotros i {
+      font-size: 20px;
+      color: #0d58b2;
+      float: left;
+      width: 44px;
+      height: 44px;
+      background: #f0f0ff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50px;
+      transition: all 0.3s ease-in-out;
+  }
+  #hero-nosotros i:hover {
+    background: #1acc8d;
+    color: #fff;
+  }
+  
+
+/*--------------------------------------------------------------
+# Tips Section
+--------------------------------------------------------------*/
+#valores{
+    padding: 120px 0;
+    background-color:#F1FAFF;
+  }
+  #valores h3{
+    text-transform: uppercase;
+    font-size: 20px
+  }
+  
+  #valores p{
+    font-size: 15px;
+  }
+  
+  #valores .card-uno{
+    background-color: #031D5A;
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    color:#fff;
+    -webkit-box-shadow: 0px 0px 15px 2px rgba(168,168,168,1);
+  -moz-box-shadow: 0px 0px 15px 2px rgba(168,168,168,1);
+  box-shadow: 0px 0px 15px 2px rgba(168,168,168,1);
+  
+  }
+  #valores .card-dos{
+    background-color: #27C0FA;
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    color:#fff;
+    -webkit-box-shadow: 0px 0px 15px 2px rgba(168,168,168,1);
+  -moz-box-shadow: 0px 0px 15px 2px rgba(168,168,168,1);
+  box-shadow: 0px 0px 15px 2px rgba(168,168,168,1);
+  
+  }
+  #valores .card-tres{
+    background-color: #399EFA;
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    color:#fff;
+    -webkit-box-shadow: 0px 0px 15px 2px rgba(168,168,168,1);
+  -moz-box-shadow: 0px 0px 15px 2px rgba(168,168,168,1);
+  box-shadow: 0px 0px 15px 2px rgba(168,168,168,1);
+  
+  }
+
+  
+  /*--------------------------------------------------------------
+  # ubicacion Section
+  --------------------------------------------------------------*/
+ #ubicacion{
+    padding: 120px 0;
+    background-color:#F1FAFF;
+  }
+
+  #ubicacion .text-ubicacion{
+      margin: auto 0;
+  }
+  #ubicacion h5 {
+    text-align: right;
+    color: #031D5A;
+    position: relative;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+    font-size: 23px;
+  }
+  #ubicacion h5::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 5px;
+    background: #031D5A;
+    bottom: 0;
+    right: 0;
+  }
+
+  #ubicacion p{
+      text-align: right;
+      font-size: 16px;
+  }
+
+  /*--------------------------------------------------------------
+  # random Section
+  --------------------------------------------------------------*/
+  #random{
+    padding: 120px 0;
+    background-color:#F1FAFF;
+  }
+  #random .text-random{
+      margin: auto 0;
+  }
+  #random h5 {
+    color: #031D5A;
+    position: relative;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+    font-size: 23px;
+  }
+  #random h5::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 5px;
+    background: #031D5A;
+    bottom: 0;
+    left: 0;
+  }
+
+  #random p{
+      text-align: left;
+      font-size: 16px;
+  }
+  /*--------------------------------------------------------------
+  # footer Section
+  --------------------------------------------------------------*/
+  .ondas-footer{
+    padding: 0;
+    background-color: #F1FAFF;
+  }

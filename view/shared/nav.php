@@ -7,14 +7,21 @@
     <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link" href="cripto/index.php">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
+          <a class="nav-link" href="./view/compra/index.php">Compra</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+          <a class="nav-link" href="./view/venta/index.php">Venta</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./view/ayuda/index.php">Ayuda</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./view/nosotros/index.php">Nosotros</a>
+        </li>
+
       </ul>
 
     </div>

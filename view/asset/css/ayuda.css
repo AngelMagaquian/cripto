@@ -14,9 +14,9 @@ a:hover {
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
-#hero {
+#hero-help {
   width: 100%;
-  background: url("../img/hero-bg.png");
+  background: #F1FAFF;
   background-repeat: no-repeat;
   background-size: 100vw;
   position: relative;
@@ -28,7 +28,7 @@ a:hover {
 
 }
 
-#hero:before {
+#hero-help:before {
   content: "";
   position: absolute;
   opacity: 1;
@@ -38,7 +38,7 @@ a:hover {
   right: 0;
 }
 
-#hero h1 {
+#hero-help h1 {
   margin: 0 0 0 0;
   font-size: 48px;
   font-weight: 700;
@@ -46,7 +46,7 @@ a:hover {
   color:  #031D5A;
 }
 
-#hero .text-animate{
+#hero-help .text-animate{
   display: flex;
   width: 500px;
   height: 60px;
@@ -58,13 +58,13 @@ a:hover {
 
 }
 
-#hero .text-animate ul{
+#hero-help .text-animate ul{
   list-style: none;
   padding-left: 0px;
   animation: change 9s infinite;
 }
 
-#hero .text-animate ul, p{
+#hero-help .text-animate ul, p{
   margin: 0;
 }
 
@@ -83,13 +83,13 @@ a:hover {
 
   100%{margin-top: 0px;}
 }
-#hero .container-btn{
+#hero-help .container-btn{
   margin-top: 100px;
 }
-#hero a {
+#hero-help a {
   text-transform: uppercase;
 }
-#hero .btn-get-started {
+#hero-help .btn-get-started {
   font-weight: 500;
   font-size: 16px;
   letter-spacing: 1px;
@@ -100,57 +100,57 @@ a:hover {
   color: #f5f5f5;
 }
 
-#hero .btn-login{
+#hero-help .btn-login{
   background-color: #27C0FA;
   -webkit-box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
   -moz-box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
   box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
 }
-#hero .btn-login:hover{
+#hero-help .btn-login:hover{
   background-color: #1B97C7;
 }
 
-#hero .btn-registro{
+#hero-help .btn-registro{
   background-color: #44596A;
   -webkit-box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
   -moz-box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
   box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
 }
-#hero .btn-registro:hover{
+#hero-help .btn-registro:hover{
   background-color: #2D3A46;
 }
 
 
-#hero .animated {
+#hero-help .animated {
   animation: up-down 2s ease-in-out infinite alternate-reverse both;
 }
 
 @media (min-width: 1024px) {
-  #hero {
+  #hero-help {
     background-attachment: fixed;
   }
 }
 
 @media (max-width: 991px) {
-  #hero {
+  #hero-help {
     padding-top: 80px;
   }
-  #hero .animated {
+  #hero-help .animated {
     -webkit-animation: none;
     animation: none;
   }
-  #hero .hero-img {
+  #hero-help .hero-img {
     text-align: center;
   }
-  #hero .hero-img img {
+  #hero-help .hero-img img {
     max-width: 50%;
   }
-  #hero h1 {
+  #hero-help h1 {
     font-size: 28px;
     line-height: 32px;
     margin-bottom: 10px;
   }
-  #hero h2 {
+  #hero-help h2 {
     font-size: 18px;
     line-height: 24px;
     margin-bottom: 30px;
@@ -158,7 +158,7 @@ a:hover {
 }
 
 @media (max-width: 575px) {
-  #hero .hero-img img {
+  #hero-help .hero-img img {
     width: 80%;
   }
 }
@@ -181,34 +181,31 @@ a:hover {
   }
 }
 
-.hero-waves {
+.hero-waves-help {
   display: block;
   margin-top: 130px;
   width: 100%;
   height: 60px;
   z-index: 5;
   position: relative;
-  transform:rotate(180deg);
-  -ms-transform:rotate(180deg);
-  -webkit-transform:rotate(180deg);
   background: #F1FAFF;
 }
 
-.wave1 use {
+.wave1-help use {
   -webkit-animation: move-forever1 10s linear infinite;
   animation: move-forever1 10s linear infinite;
   -webkit-animation-delay: -2s;
   animation-delay: -2s;
 }
 
-.wave2 use {
+.wave2-help use {
   -webkit-animation: move-forever2 8s linear infinite;
   animation: move-forever2 8s linear infinite;
   -webkit-animation-delay: -2s;
   animation-delay: -2s;
 }
 
-.wave3 use {
+.wave3-help use {
   -webkit-animation: move-forever3 6s linear infinite;
   animation: move-forever3 6s linear infinite;
   -webkit-animation-delay: -2s;
@@ -270,7 +267,7 @@ a:hover {
 }
 
 
-#hero i {
+#hero-help i {
     font-size: 20px;
     color: #0d58b2;
     float: left;
@@ -283,81 +280,58 @@ a:hover {
     border-radius: 50px;
     transition: all 0.3s ease-in-out;
 }
-#hero i:hover {
+#hero-help i:hover {
   background: #1acc8d;
   color: #fff;
 }
 
-
 /*--------------------------------------------------------------
-# Cripto Section
+# Ayuda Section
 --------------------------------------------------------------*/
-#cripto{
+#ayuda{
   padding: 120px 0;
-  background-color: #F1FAFF;
+  background-color: #fff;
 }
-
-#cripto .img-cripto img{
-  max-width: 100%;
-  vertical-align: middle;
-}
-
-
-#cripto .cotizacion h4{
-  font-size: 20px !important;
+#ayuda h5{
+  color: #031D5A;
   text-transform: uppercase;
-  font-style: bold;
-  color: #44596A;
-  margin-top: 10px;
-
-}
-#cripto .cotizacion h5 span{
-  font-style: italic;
-
+  font-size: 23px;
 }
 
-#cripto .cotizacion h5{
-  font-size: 11px !important;
-  text-transform: uppercase;
-  font-style: bold;
-  margin-bottom: 0;
-
+#ayuda .card-registro{
+    background-color: #E4F5FF;
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    color:#fff;
+    -webkit-box-shadow: 0px 0px 15px 2px rgba(168,168,168,1);
+    -moz-box-shadow: 0px 0px 15px 2px rgba(168,168,168,1);
+    box-shadow: 0px 0px 15px 2px rgba(168,168,168,1);
+    margin-bottom: 120px;
 }
-#cripto .cotizacion .compra span{
-  font-size: 11px;
-  color:#031D5A;
 
-}
-
-
-/*--------------------------------------------------------------
-# Tips Section
---------------------------------------------------------------*/
-#tips{
-  padding: 120px 0;
-  background-color:#E3F3FF;
-}
-#tips .card-tips{
+#ayuda .card-comprar{
   background-color: #27C0FA;
   border-radius: 15px;
   padding: 30px;
   text-align: center;
   color:#fff;
   -webkit-box-shadow: 0px 0px 15px 2px rgba(168,168,168,1);
--moz-box-shadow: 0px 0px 15px 2px rgba(168,168,168,1);
-box-shadow: 0px 0px 15px 2px rgba(168,168,168,1);
-
+  -moz-box-shadow: 0px 0px 15px 2px rgba(168,168,168,1);
+  box-shadow: 0px 0px 15px 2px rgba(168,168,168,1);
+  margin-bottom: 120px;
 }
 
-#tips .card-tips h3{
-  text-transform: uppercase;
-  font-size: 20px
+#ayuda .card-vender{
+  background-color: #81C1FB;
+  border-radius: 15px;
+  padding: 30px;
+  text-align: center;
+  color:#fff;
+  -webkit-box-shadow: 0px 0px 15px 2px rgba(168,168,168,1);
+  -moz-box-shadow: 0px 0px 15px 2px rgba(168,168,168,1);
+  box-shadow: 0px 0px 15px 2px rgba(168,168,168,1);
 }
-
-#tips .card-tips p{
-  font-size: 15px;
-}
-
 
 
 /*--------------------------------------------------------------
@@ -365,56 +339,5 @@ box-shadow: 0px 0px 15px 2px rgba(168,168,168,1);
 --------------------------------------------------------------*/
 .ondas-footer{
   padding: 0;
-  background-color: #E4F5FF;
+  background-color: #FFF;
 }
-#footer{
-  padding: 10px 0 80px 0;
-  background-color:#399EFA;
-}
-
-#footer .title{
- color: #fff;
- text-transform: uppercase;
-}
-#footer .list-footer, .text-footer{
-  padding-top: 10px;
-  font-size: 15px;
-}
-#footer ul{
-  list-style: none;
-  padding-left: 0;
- }
-
- #footer a{
-  color: #fff;
- }
-
- #footer a:hover{
-  color: #ADD8F8
- }
-
- #footer .text-footer{
-  color: #fff;
- }
-
- #footer .redes .circle-footer{
-   width: 35px;
-   height: 35px;
-   border-radius: 50%;
-   background-color: #fff;
-   cursor: pointer;
-   margin-right: 15px;
- }
- #footer .redes .float-circle{
-  float: left;
- }
-
- #footer .redes .circle-footer:hover{
-  background-color:#ADD8F8
-}
- #footer .redes .circle-footer svg{
-   color: #031D5A;
- }
-
-
- 

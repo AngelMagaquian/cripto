@@ -1,0 +1,247 @@
+
+  /*--------------------------------------------------------------
+  # Hero Section
+  --------------------------------------------------------------*/
+  #hero-nosotros {
+    width: 100%;
+    background: #27C0FA;
+    background-repeat: no-repeat;
+    background-size: 100vw;
+    position: relative;
+    padding: 70px 0 0 0;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  
+  }
+  
+  #hero-nosotros:before {
+    content: "";
+    position: absolute;
+    opacity: 1;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+  
+ 
+  
+  #hero-nosotros p {
+    margin: 20px 0 0 0;
+    font-size: 20px;
+  }
+ 
+  #hero-nosotros .animated {
+    animation: up-down 2s ease-in-out infinite alternate-reverse both;
+  }
+  
+  @media (min-width: 1024px) {
+    #hero-nosotros {
+      background-attachment: fixed;
+    }
+  }
+  
+  @media (max-width: 991px) {
+    #hero-nosotros {
+      padding-top: 80px;
+    }
+    #hero-nosotros .animated {
+      -webkit-animation: none;
+      animation: none;
+    }
+    #hero-nosotros .hero-img {
+      text-align: center;
+    }
+    #hero-nosotros .hero-img img {
+      max-width: 50%;
+    }
+    #hero-nosotros h1 {
+      font-size: 28px;
+      line-height: 32px;
+      margin-bottom: 10px;
+    }
+    #hero-nosotros h2 {
+      font-size: 18px;
+      line-height: 24px;
+      margin-bottom: 30px;
+    }
+  }
+  
+  @media (max-width: 575px) {
+    #hero-nosotros .hero-img img {
+      width: 80%;
+    }
+  }
+  
+  @-webkit-keyframes up-down {
+    0% {
+      transform: translateY(10px);
+    }
+    100% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  @keyframes up-down {
+    0% {
+      transform: translateY(10px);
+    }
+    100% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  .hero-waves-nosotros {
+    display: block;
+    margin-top: 130px;
+    width: 100%;
+    height: 60px;
+    z-index: 5;
+    position: relative;
+    background: #27C0FA;
+  }
+  
+  .wave1-nosotros use {
+    -webkit-animation: move-forever1 10s linear infinite;
+    animation: move-forever1 10s linear infinite;
+    -webkit-animation-delay: -2s;
+    animation-delay: -2s;
+  }
+  
+  .wave2-nosotros use {
+    -webkit-animation: move-forever2 8s linear infinite;
+    animation: move-forever2 8s linear infinite;
+    -webkit-animation-delay: -2s;
+    animation-delay: -2s;
+  }
+  
+  .wave3-nosotros use {
+    -webkit-animation: move-forever3 6s linear infinite;
+    animation: move-forever3 6s linear infinite;
+    -webkit-animation-delay: -2s;
+    animation-delay: -2s;
+  }
+  
+  @-webkit-keyframes move-forever1 {
+    0% {
+      transform: translate(85px, 0%);
+    }
+    100% {
+      transform: translate(-90px, 0%);
+    }
+  }
+  
+  @keyframes move-forever1 {
+    0% {
+      transform: translate(85px, 0%);
+    }
+    100% {
+      transform: translate(-90px, 0%);
+    }
+  }
+  
+  @-webkit-keyframes move-forever2 {
+    0% {
+      transform: translate(-90px, 0%);
+    }
+    100% {
+      transform: translate(85px, 0%);
+    }
+  }
+  
+  @keyframes move-forever2 {
+    0% {
+      transform: translate(-90px, 0%);
+    }
+    100% {
+      transform: translate(85px, 0%);
+    }
+  }
+  
+  @-webkit-keyframes move-forever3 {
+    0% {
+      transform: translate(-90px, 0%);
+    }
+    100% {
+      transform: translate(85px, 0%);
+    }
+  }
+  
+  @keyframes move-forever3 {
+    0% {
+      transform: translate(-90px, 0%);
+    }
+    100% {
+      transform: translate(85px, 0%);
+    }
+  }
+  
+
+/*--------------------------------------------------------------
+# Cripto Section
+--------------------------------------------------------------*/
+#cripto{
+    padding: 30px 0 60px 0;
+    background-color: #27C0FA;
+}
+#cripto h1{
+    color: #fff;
+    text-transform: uppercase;
+}
+
+#cripto .cotizacion h4, h5{
+    color: #fff; 
+}
+
+#cripto .cotizacion .compra span{
+    color:#000;
+  }
+/*--------------------------------------------------------------
+  # random Section
+  --------------------------------------------------------------*/
+  #tips{
+    padding: 150px 0;
+    background-color:#fff;
+  }
+  /*--------------------------------------------------------------
+  # random Section
+  --------------------------------------------------------------*/
+  #random{
+    padding: 120px 0;
+    background-color:#F1FAFF;
+  }
+  #random .text-random{
+      margin: auto 0;
+  }
+  #random h5 {
+    color: #031D5A;
+    position: relative;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+    font-size: 23px;
+  }
+  #random h5::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 5px;
+    background: #031D5A;
+    bottom: 0;
+    left: 0;
+  }
+
+  #random p{
+      text-align: left;
+      font-size: 16px;
+  }
+
+    /*--------------------------------------------------------------
+  # footer Section
+  --------------------------------------------------------------*/
+  .ondas-footer{
+    padding: 0;
+    background-color: #F1FAFF;
+  }
