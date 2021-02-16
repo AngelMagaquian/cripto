@@ -8,9 +8,9 @@
 
     <title>LOGIN</title>
     <!-- Bootstrap core CSS -->
-    <link href="./view/asset/css/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="../asset/css/bootstrap/bootstrap.min.css" rel="stylesheet">
 
-	<link href="./view/asset/css/style_login.css" rel="stylesheet">
+	<link href="../asset/css/style_login.css" rel="stylesheet">
 </head>
 <body>
 <section id="login">
@@ -28,7 +28,7 @@
                 <form class="col-10 align-self-center" style="">
                   <div class="form-group">
                     <label for="exampleInputEmail1"><b>Usuario</b></label>
-                    <input type="email" class="form-control form-login" id="dni" placeholder="ingresá tu usuario">
+                    <input type="text" class="form-control form-login" id="dni" placeholder="ingresá tu usuario">
                   </div>
                   <div class="form-group mt-4">
                     <label for="exampleInputPassword1"><b>Contraseña</b></label>
@@ -60,7 +60,7 @@
 
 </body>
 
-  <script src="./view/asset/jquery/jquery.min.js"></script>
-  <script src="./view/asset/js/bootstrap.bundle.min.js"></script>
+  <script src="../asset/jquery/jquery.min.js"></script>
+  <script src="../asset/js/bootstrap/bootstrap.bundle.min.js"></script>
 
 </html>
