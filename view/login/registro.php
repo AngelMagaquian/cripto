@@ -25,63 +25,69 @@
               </div>
 
               <div class="row justify-content-center mt-5">
-                <form class="col-10 align-self-center" style="">
-                <p class="change-pass">*campos obligatorio</p>
-                <div class="row">
-                    <div class="form-group col-6">
-                        <label for="exampleInputEmail1"><b>Nombre*</b></label>
-                        <input type="text" class="form-control form-login" id="dni" placeholder="ingresá tu nombre">
-                    </div>
-                    <div class="form-group col-6">
-                        <label for="exampleInputEmail1"><b>Segundo nombre</b></label>
-                        <input type="text" class="form-control form-login" id="dni" placeholder="ingresá tu segundo nombre">
-                    </div>
-
-                    <div class="form-group col-6 mt-4">
-                        <label for="exampleInputEmail1"><b>Apellido*</b></label>
-                        <input type="text" class="form-control form-login" id="dni" placeholder="ingresá tu apellido">
-                    </div>
-                    <div class="form-group col-6 mt-4">
-                        <label for="exampleInputEmail1"><b>Segundo apellido</b></label>
-                        <input type="text" class="form-control form-login" id="dni" placeholder="ingresá tu segundo apellido">
-                    </div>
-
-                    <div class="form-group col-6 mt-4">
-                        <label for="exampleInputEmail1"><b>DNI*</b></label>
-                        <input type="text" class="form-control form-login" id="dni" placeholder="ingresá tu DNI">
-                    </div>
-                    <div class="form-group col-6 mt-4">
-                        <label for="exampleInputEmail1"><b>CUIL*</b></label>
-                        <input type="text" class="form-control form-login" id="dni" placeholder="ingresá tu CUIL">
-                    </div>
-                    
-                    <div class="form-group col-6 mt-4">
-                        <label for="exampleInputEmail1"><b>Fecha de nacimiento*</b></label>
-                        <input type="date" class="form-control form-login" id="dni" placeholder="ingresá tu fecha de nacimiento">
-                    </div>
-                    <div class="form-group col-6 mt-4">
-                        <label for="exampleInputEmail1"><b>Email*</b></label>
-                        <input type="email" class="form-control form-login" id="dni" placeholder="ingresá tu email">
-                    </div>
-
-                    <div class="form-group col-6 mt-4 ">
-                        <label for="exampleInputPassword1"><b>Contraseña*</b></label>
-                        <input type="password" class="form-control form-login" id="pass" placeholder="Ingresá una contraseña">
-                    </div>
-                    <div class="form-group col-6 mt-4 ">
-                        <label for="exampleInputPassword1"><b>Repetir contraseña*</b></label>
-                        <input type="password" class="form-control form-login" id="pass" placeholder="Ingresá tu contraseña nuevamente">
-                    </div>
-                </div>
-                </form>
-
-                <div class="col-10 mt-5">
-                    
-                    <div class="text-center">
-                        <button type="submit" class="btn-login btn-get-started">Registrarse</button>
-                    </div>
-                </div>
                 
+                    <form class="col-10 align-self-center" style="" id="input_user">
+                    
+                        <p class="change-pass">*campos obligatorio</p>
+                        <div class="row">
+                        
+                            <div class="form-group col-6">
+                                <label for="exampleInputEmail1" ><b>Nombre*</b></label>
+                                <input type="text" class="form-control form-login" id="name_user" placeholder="ingresá tu nombre" required>
+                            </div>
+                            <div class="form-group col-6">
+                                <label for="exampleInputEmail1"><b>Segundo nombre</b></label>
+                                <input type="text" class="form-control form-login" id="middle_name" placeholder="ingresá tu segundo nombre" >
+                            </div>
+
+                            <div class="form-group col-6 mt-4">
+                                <label for="exampleInputEmail1"><b>Apellido*</b></label>
+                                <input type="text" class="form-control form-login" id="last_name" placeholder="ingresá tu apellido" required>
+                            </div>
+                            <div class="form-group col-6 mt-4">
+                                <label for="exampleInputEmail1"><b>Segundo apellido</b></label>
+                                <input type="text" class="form-control form-login" id="second_last_name" placeholder="ingresá tu segundo apellido">
+                            </div>
+
+                            <div class="form-group col-6 mt-4">
+                                <label for="exampleInputEmail1"><b>DNI*</b></label>
+                                <input type="text" class="form-control form-login" id="dni" placeholder="ingresá tu DNI" required>
+                            </div>
+                            <div class="form-group col-6 mt-4">
+                                <label for="exampleInputEmail1"><b>CUIL*</b></label>
+                                <input type="text" class="form-control form-login" id="cuil" placeholder="ingresá tu CUIL" required>
+                            </div>
+                            
+                            <div class="form-group col-6 mt-4">
+                                <label for="exampleInputEmail1"><b>Fecha de nacimiento*</b></label>
+                                <input type="date" class="form-control form-login" id="birth_day" placeholder="ingresá tu fecha de nacimiento" required>
+                            </div>
+                            <div class="form-group col-6 mt-4">
+                                <label for="exampleInputEmail1"><b>Email*</b></label>
+                                <input type="email" class="form-control form-login" id="email" placeholder="ingresá tu email" required>
+                            </div>
+
+                            <div class="form-group col-6 mt-4 ">
+                                <label for="exampleInputPassword1"><b>Contraseña*</b></label>
+                                <input type="password" class="form-control form-login" id="first_pass" placeholder="Ingresá una contraseña" required>
+                            </div>
+                            <div class="form-group col-6 mt-4 ">
+                                <label for="exampleInputPassword1"><b>Repetir contraseña*</b></label>
+                                <input type="password" class="form-control form-login" id="pass" placeholder="Ingresá tu contraseña nuevamente" required>
+                                <label id="comfirm_pass"></label>
+                            </div>
+                        </div>
+                    
+
+                    <div class="col-10 mt-5">
+                        
+                        <div class="text-center">
+                            
+                            <button type="submit" class="btn-login btn-get-started">Registrarse</button>
+                    
+                        </div>
+                    </div>
+                </from>
               </div>
               
             </div>
@@ -98,5 +104,7 @@
 
   <script src="../asset/jquery/jquery.min.js"></script>
   <script src="../asset/js/bootstrap/bootstrap.bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous" ></script>
+  <script src="..\..\controller\user\insert_user.js" type="module" ></script>
 
 </html>

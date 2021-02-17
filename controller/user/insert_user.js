@@ -1,8 +1,30 @@
 $(function(){
     console.log('AJAX Insert User');
     
+    //variables globales
+    let check_pass = false;
+
+    $('#pass').keyup(function() {
+        const pass= $('#pass').val();
+        const first_pass= $('#first_pass').val();
+
+        if(first_pass === pass){
+            console.log('Las contraseñas coinciden');
+            let template = `<label>Las contraseñas coinciden</label>`;
+            $('#confirm_pass').html(template);
+            check_pass = true;
+            console.log(check_pass);
+        } else{
+            console.log('Las contraseñas NO coinciden');
+            let template = `<label>Las contraseñas NO coinciden</label>`;
+            $('#confirm_pass').html(template);
+            check_pass = false;
+        }
+    })
+
+
     //cambiar al input del dni
-    $('#user_input').submit(function(e){
+    $('#input_user').submit(function(e){
         e.preventDefault();
         console.log('user_submit');
             const postData = {
@@ -12,21 +34,23 @@ $(function(){
                 middle_name : $('#middle_name').val(),
                 last_name : $('#last_name').val(),
                 second_last_name : $('#second_last_name').val(),
-                birth_day : $('#birth_day').val()
+                birth_day : $('#birth_day').val(),
+                cuil : $('#cuil').val(),
+                email : $('#email').val()
             };
             console.log(postData);
             //primer filtro si, es menor no puede registrarse
            if(birth_day_control(postData.birth_day) == true){
-
+                
                 if(postData.middle_name ===''){
-                    middle_name = null;
+                    postData.middle_name = null;
                 }
 
                 if(postData.second_last_name === ''){
-                    second_last_name = null;
+                    postData.second_last_name = null;
                 }
             
-                $.post('../../model/user/insert_new.ph', postData, function(response){
+                /*$.post('../../model/user/insert_new.ph', postData, function(response){
                     console.log(response);
                     if(response == 0){
                        windows.alert('Ocurrio un error al registrarse, intentelo mas tarde');
@@ -34,7 +58,7 @@ $(function(){
                         console.log('Registro exitoso');
                         //redirec(response);
                     }
-                });
+                });*/
            }else{
                 window.alert('Debe ser mayor de 18 años para poder registrarse y operar');
            }
@@ -46,6 +70,7 @@ $(function(){
 
 function birth_day_control(date){
     console.log('Control de edad');
+    return true;
 }
 
 /*
