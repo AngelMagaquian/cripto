@@ -1,11 +1,14 @@
 <?php
     include("../system/conexion.php");
     
-    $dni = $_POST['dni'];
-    $pass= $_POST['pass'];
+    $dni = $_POST['id'];
+    $pass = MD5($_POST['pass']);
 
+    echo $pass;
+    
 
-    $consulta = "SELECT * FROM user WHERE dni = '$dni' and pass = MD5('$pass')";
+    $consulta = "SELECT * FROM user WHERE dni = '$dni' and pass = '$pass'";
+    
     $ejecucion = mysqli_query($conexion, $consulta);
     $resultado=mysqli_fetch_array($ejecucion);
 
@@ -27,5 +30,6 @@
     }else{
         echo 0;
     }
-    mysqli_close($conexion);}
+    
+    mysqli_close($conexion);
 ?>

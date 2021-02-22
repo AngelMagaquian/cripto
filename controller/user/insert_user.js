@@ -10,14 +10,14 @@ $(function(){
 
         if(first_pass === pass){
             console.log('Las contraseñas coinciden');
-            let template = `<label>Las contraseñas coinciden</label>`;
-            $('#confirm_pass').html(template);
+            let template = `<label><b>Las contraseñas coinciden</b></label>`;
+            $('#comfirm_pass').html(template);
             check_pass = true;
             console.log(check_pass);
         } else{
             console.log('Las contraseñas NO coinciden');
-            let template = `<label>Las contraseñas NO coinciden</label>`;
-            $('#confirm_pass').html(template);
+            let template = `<label><b>Las contraseñas NO coinciden</b></label>`;
+            $('#comfirm_pass').html(template);
             check_pass = false;
         }
     })
@@ -50,17 +50,18 @@ $(function(){
                     postData.second_last_name = null;
                 }
             
-                /*$.post('../../model/user/insert_new.ph', postData, function(response){
+                $.post('../../model/user/insert_new.php', postData, function(response){
                     console.log(response);
                     if(response == 0){
-                       windows.alert('Ocurrio un error al registrarse, intentelo mas tarde');
-                    }else{
-                        console.log('Registro exitoso');
-                        //redirec(response);
-                    }
-                });*/
+                        window.alert('Ocurrio un error al registrarse, intentelo mas tarde');
+                     }else{
+                         window.alert('Registro exitoso');
+                         $(location).attr('href','./login.php');
+                     }
+                });
            }else{
-                window.alert('Debe ser mayor de 18 años para poder registrarse y operar');
+           var b1= 1;
+            window.alert('Debe ser mayor de 18 años para poder registrarse y operar');
            }
             
             

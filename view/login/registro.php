@@ -74,7 +74,7 @@
                             <div class="form-group col-6 mt-4 ">
                                 <label for="exampleInputPassword1"><b>Repetir contraseña*</b></label>
                                 <input type="password" class="form-control form-login" id="pass" placeholder="Ingresá tu contraseña nuevamente" required>
-                                <label id="comfirm_pass"></label>
+                                <label for="exampleInputPassword1" id="comfirm_pass"><b></b></label>
                             </div>
                         </div>
 

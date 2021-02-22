@@ -25,7 +25,7 @@
               </div>
 
               <div class="row justify-content-center mt-5">
-                <form class="col-10 align-self-center" style="">
+                <form class="col-10 align-self-center" style="" id="user_input">
                   <div class="form-group">
                     <label for="exampleInputEmail1"><b>Usuario</b></label>
                     <input type="text" class="form-control form-login" id="dni" placeholder="ingresá tu usuario">
@@ -38,14 +38,15 @@
                     <a class="change-pass">¿Olvidaste tu contraseña?</a>
                   </div>
                   <div class="text-center mt-4">
-                     <button type="submit" class="btn-login btn-get-started" id="user_input">Iniciar sesión</button>
+                     <button type="submit" class="btn-login btn-get-started" >Iniciar sesión</button>
                   </div>
                  
+               
+                  <div class="text-center mt-5">
+                    <p class="text-registro">¿Todavía no tenés cuenta?</p>
+                    <a type="submit" class="btn-registrarse btn-get-started" href="registro.php">Registrarse</a>
+                  </div>
                 </form>
-                <div class="text-center mt-5">
-                  <p class="text-registro">¿Todavía no tenés cuenta?</p>
-                  <a type="submit" class="btn-registrarse btn-get-started" href="registro.php">Registrarse</a>
-                </div>
               </div>
               
             </div>

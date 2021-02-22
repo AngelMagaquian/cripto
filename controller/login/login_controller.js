@@ -11,19 +11,20 @@ $(function(){
             };
             console.log(postData);
            
-            $.post('../../model/user/login.ph', postData, function(response){
+            $.post('../../model/user/login.php', postData, function(response){
                 console.log(response);
                 if(response == 0){
                     //Meli si te va cambiar el cartelito, cambiaselo ahi en el windows, clava el codigo
                     window.alert('Usuario o contraseña incorrecto');
-                    $('#user').val('');// con este codigo y el de abajo, vuelve a estar en null todo
-                    $('#pass').val('');
+                   
+                   $('#user').val('');// con este codigo y el de abajo, vuelve a estar en null todo
+                   $('#pass').val('');
                 }else{
-                    console.log('usuario encontrado');
+                    window.alert('usuario encontrado');
                     //redirec(response);
                 }
             });
-
+            e.preventDefault();
     });
 
     /*function redirec(response){
