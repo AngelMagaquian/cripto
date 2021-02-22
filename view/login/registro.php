@@ -77,16 +77,12 @@
                                 <label id="comfirm_pass"></label>
                             </div>
                         </div>
-                    
 
-                    <div class="col-10 mt-5">
-                        
-                        <div class="text-center">
-                            
-                            <button type="submit" class="btn-login btn-get-started">Registrarse</button>
-                    
+                        <div class="row">
+                            <div class="col-12 mt-4 text-center"> 
+                                <button type="submit" class="btn-login btn-get-started">Registrarse</button>
+                            </div>
                         </div>
-                    </div>
                 </from>
               </div>
               

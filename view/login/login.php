@@ -44,7 +44,7 @@
                 </form>
                 <div class="text-center mt-5">
                   <p class="text-registro">¿Todavía no tenés cuenta?</p>
-                  <button type="submit" class="btn-registrarse btn-get-started">Registrarse</button>
+                  <a type="submit" class="btn-registrarse btn-get-started" href="registro.php">Registrarse</a>
                 </div>
               </div>
               

@@ -42,8 +42,8 @@ include 'view/shared/nav.php';
               </ul>     
             </div>
             <div class="container-btn">
-              <a href="view/login/login.html" class="btn-get-started  btn-login mr-2">Iniciar sesión</a>
-              <a  href="contacto.html" class="btn-get-started scrollto btn-registro mr-2">Registrarse</a>
+              <a href="view/login/login.php" class="btn-get-started  btn-login mr-2">Iniciar sesión</a>
+              <a  href="view/login/registro.php" class="btn-get-started scrollto btn-registro mr-2">Registrarse</a>
             </div>
               
           </div>

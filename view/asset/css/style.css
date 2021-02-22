@@ -21,7 +21,7 @@ a:hover {
   background-size: 100vw;
   position: relative;
   padding: 70px 0 0 0;
-  background-attachment: fixed;
+ background-attachment: fixed; 
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -36,6 +36,7 @@ a:hover {
   top: 0;
   left: 0;
   right: 0;
+  z-index: -1;
 }
 
 #hero h1 {
