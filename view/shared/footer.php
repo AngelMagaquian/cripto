@@ -8,7 +8,7 @@
 <div id="footer">
 <div class="container">
         <div class="row justify-content-around">
-            <div class="col-3">
+            <div class="col-md-3 col-sm-6 col-11 mt-md-0 mt-2">
                 <span class="title"><b>Institucional</b></span>
                 <div class="list-footer">
                 <ul>
@@ -19,7 +19,7 @@
                 </div>
             </div>
 
-            <div class="col-3">
+            <div class="col-md-3 col-sm-6 col-11 mt-md-0 mt-4">
                 <span class="title"><b>Útiles</b></span>
                 <div class="list-footer">
                 <ul>
@@ -30,7 +30,7 @@
                 </div>
             </div>
 
-            <div class="col-4">
+            <div class="col-md-4 col-11 mt-md-0 mt-4">
                 <div class="redes mb-2">
                     <div class="circle-footer float-circle">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16" style="margin: 7.2px;">

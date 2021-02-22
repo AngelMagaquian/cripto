@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-    <title>Album example · Bootstrap v5.0</title>
+    <title>CRIPTO | Home </title>
 
 
     
@@ -30,7 +30,6 @@ include 'view/shared/nav.php';
     <div class="container">
       <div class="row" style="min-height: 445px">
         
-
         <div class="col-lg-6 pt-5 pt-lg-0 d-flex align-items-center">
           <div data-aos="zoom-out">
             <h1 class="mb-0">Comprá y vendé la criptomoneda que elijas. </h1>
@@ -43,14 +42,14 @@ include 'view/shared/nav.php';
             </div>
             <div class="container-btn">
               <a href="view/login/login.php" class="btn-get-started  btn-login mr-2">Iniciar sesión</a>
-              <a  href="view/login/registro.php" class="btn-get-started scrollto btn-registro mr-2">Registrarse</a>
+              <a  href="view/login/registro.php" class="btn-get-started scrollto btn-registro mr-2 mt-sm-0 mt-3">Registrarse</a>
             </div>
               
           </div>
           <br>
         </div>
 
-        <div class="col-lg-6">
+        <div class="col-lg-6 d-lg-block d-none">
           <img src="./view/asset/img/img-home.png" alt="" style="width:100%">
         </div>
         
@@ -78,7 +77,7 @@ include 'view/shared/nav.php';
 <section id="cripto">
 <div class="container">
  
-  <div class="row justify-content-md-between justify-content-sm-center">
+  <div class="row justify-content-md-between justify-content-center">
 <!--btc-->
     <div class="col-lg-4 col-md-5 col-sm-8 col-11">
       <div class="row">
@@ -239,7 +238,7 @@ include 'view/shared/nav.php';
 <section id="tips">
   <div class="container">
     <div class="row justify-content-sm-between justify-content-center">
-      <div class="col-md-4 col-sm-6 col-12 mb-md-0 mb-sm-4 mb-5">
+      <div class="col-md-4 col-sm-6 col-11 mb-md-0 mb-sm-4 mb-5">
         <div class="card-tips">
           <h3><b>Registrate</b></h3>
           <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has</p>
@@ -247,14 +246,14 @@ include 'view/shared/nav.php';
         
       </div>
 
-      <div class="col-md-4 col-sm-6 col-12  mb-md-0 mb-sm-4 mb-5">
+      <div class="col-md-4 col-sm-6 col-11  mb-md-0 mb-sm-4 mb-5">
         <div class="card-tips">
           <h3><b>Operá</b></h3>
           <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has</p>
         </div>
       </div>
 
-      <div class="col-md-4 col-sm-6 col-12">
+      <div class="col-md-4 col-sm-6 col-11">
         <div class="card-tips">
         <h3><b>Vé tus ingresos crecer</b></h3>
           <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has</p>

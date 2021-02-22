@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-    <title>Album example · Bootstrap v5.0</title>
+    <title>CRIPTO | Ayuda</title>
 
 
     
@@ -32,7 +32,7 @@ include '../shared/nav.php';
       <div class="row" style="min-height: 445px">
         
 
-        <div class="col-lg-6 pt-5 pt-lg-0 d-flex align-items-center">
+        <div class="col-md-6 pt-lg-0 d-flex align-items-center">
           <div data-aos="zoom-out">
             <h1 class="mb-0">Te ayudamos en lo que necesites.</h1>
             <div class="text-animate">
@@ -48,7 +48,7 @@ include '../shared/nav.php';
           <br>
         </div>
 
-        <div class="col-lg-6">
+        <div class="col-md-6 d-md-block d-none container-img m-auto">
           <img src="../asset/img/img-home.png" alt="" style="width:100%">
         </div>
         

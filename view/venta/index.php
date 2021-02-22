@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-    <title>Album example · Bootstrap v5.0</title>
+    <title>CRIPTO | Venta</title>
 
 
     
@@ -36,7 +36,7 @@ include '../shared/nav.php';
         
       </div>
     </div>
-    <div class="row justify-content-md-between justify-content-sm-center mt-5">
+    <div class="row justify-content-md-between justify-content-center mt-5">
   <!--btc-->
       <div class="col-lg-4 col-md-5 col-sm-8 col-11">
         <div class="row">
@@ -216,7 +216,7 @@ include '../shared/nav.php';
 <section id="tips">
   <div class="container">
     <div class="row justify-content-sm-between justify-content-center">
-      <div class="col-md-4 col-sm-6 col-12 mb-md-0 mb-sm-4 mb-5">
+      <div class="col-md-4 col-sm-6 col-11 mb-md-0 mb-sm-4 mb-5">
         <div class="card-tips">
           <h3><b>Registrate</b></h3>
           <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has</p>
@@ -224,14 +224,14 @@ include '../shared/nav.php';
         
       </div>
 
-      <div class="col-md-4 col-sm-6 col-12  mb-md-0 mb-sm-4 mb-5">
+      <div class="col-md-4 col-sm-6 col-11  mb-md-0 mb-sm-4 mb-5">
         <div class="card-tips">
           <h3><b>Operá</b></h3>
           <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has</p>
         </div>
       </div>
 
-      <div class="col-md-4 col-sm-6 col-12">
+      <div class="col-md-4 col-sm-6 col-11">
         <div class="card-tips">
         <h3><b>Vé tus ingresos crecer</b></h3>
           <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has</p>
@@ -248,12 +248,12 @@ include '../shared/nav.php';
 <div class="container">
     <div class="row justify-content-around">
 
-        <div class="col-5 text-random">
+        <div class="col-md-5 col-11 mt-md-0 mt-5 text-random">
             <h5><b>TE ASESORAMOS EN LO QUE NECESITES</b></h5>
             <p>Ahora operar en criptomonedas es mas facil… Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.</p>
         </div>
 
-        <div class="col-5">
+        <div class="col-md-5 col-11 mt-md-0 mt-5">
             <iframe width="100%" height="250" src="https://www.youtube.com/embed/G5HDviL2DSg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>        
         </div>
 

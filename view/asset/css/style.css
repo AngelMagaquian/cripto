@@ -49,7 +49,7 @@ a:hover {
 
 #hero .text-animate{
   display: flex;
-  width: 500px;
+  width: 450px;
   height: 60px;
   color: #042980;
   font-size: 40px;
@@ -84,12 +84,48 @@ a:hover {
 
   100%{margin-top: 0px;}
 }
+
 #hero .container-btn{
   margin-top: 100px;
 }
 #hero a {
   text-transform: uppercase;
+
 }
+
+@media (max-width: 448px) {
+  #hero .text-animate{
+  width: 300px;
+  height: 42px;  
+  font-size: 28px;
+  margin-top: 10px;
+  }
+
+  @keyframes change{
+  0%{margin-top: 0;}
+  20%{margin-top: 0;}
+  
+  25%{margin-top: -52px;}
+  50%{margin-top: -52px;}
+
+  55%{margin-top: -90px;}
+  80%{margin-top: -90px;}
+
+  85%{margin-top: -52px;}
+  95%{margin-top: -52px;}
+
+  100%{margin-top: 0px;}
+  }
+  #hero .container-btn{
+    margin-top: 75px;
+
+  }
+  #hero a {
+  text-transform: uppercase;
+  font-size: xx-small !important;
+  }
+}
+
 #hero .btn-get-started {
   font-weight: 500;
   font-size: 16px;
@@ -298,6 +334,9 @@ a:hover {
   background-color: #F1FAFF;
 }
 
+#cripto .img-cripto{
+  margin: auto;
+}
 #cripto .img-cripto img{
   max-width: 100%;
   vertical-align: middle;
@@ -309,7 +348,7 @@ a:hover {
   text-transform: uppercase;
   font-style: bold;
   color: #44596A;
-  margin-top: 10px;
+
 
 }
 #cripto .cotizacion h5 span{

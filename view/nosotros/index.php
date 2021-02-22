@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-    <title>Album example · Bootstrap v5.0</title>
+    <title>CRIPTO | Nosotros</title>
 
 
     
@@ -32,7 +32,7 @@ include '../shared/nav.php';
       <div class="row" style="min-height: 445px">
         
 
-        <div class="col-lg-6 pt-5 pt-lg-0 d-flex align-items-center">
+        <div class="col-md-6  pt-lg-0 d-flex align-items-center">
           <div data-aos="zoom-out">
             <h1 class="mb-0">Somos xxxxxxxxxxx</h1>
             <p>Descripción de la empresa. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.</p>
@@ -49,7 +49,7 @@ include '../shared/nav.php';
           <br>
         </div>
 
-        <div class="col-lg-6">
+        <div class="col-md-6 d-md-block d-none  m-auto">
           <img src="../asset/img/img-home.png" alt="" style="width:100%">
         </div>
         
@@ -108,11 +108,15 @@ include '../shared/nav.php';
 <section id="ubicacion">
 <div class="container">
     <div class="row justify-content-around">
-        <div class="col-5 text-ubicacion">
+        <div class="col-md-5 col-11 mt-md-0 mb-5 d-md-none">
+            <h5><b>¿Dónde nos podes encontrar?</b></h5>
+            <p>Ahora operar en criptomonedas es mas facil… Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.</p>
+        </div>
+        <div class="col-md-5 col-11 text-ubicacion">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8097.90356199679!2d-64.18829204977033!3d-31.421039823364293!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432a32dcf5d747f%3A0x40373220b29140ac!2sPatio%20Olmos%20Shopping!5e0!3m2!1ses-419!2sar!4v1613507684482!5m2!1ses-419!2sar" width="100%" height="250" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
         </div>
 
-        <div class="col-5">
+        <div class="col-md-5 col-11 mt-md-0 mt-5 d-none d-md-block">
             <h5><b>¿Dónde nos podes encontrar?</b></h5>
             <p>Ahora operar en criptomonedas es mas facil… Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.</p>
         </div>
@@ -126,12 +130,12 @@ include '../shared/nav.php';
 <div class="container">
     <div class="row justify-content-around">
 
-        <div class="col-5 text-random">
+        <div class="col-md-5 col-11 text-random">
             <h5><b>TE ASESORAMOS EN LO QUE NECESITES</b></h5>
             <p>Ahora operar en criptomonedas es mas facil… Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.</p>
         </div>
 
-        <div class="col-5">
+        <div class="col-md-5 col-11 mt-md-0 mt-5">
             <iframe width="100%" height="250" src="https://www.youtube.com/embed/G5HDviL2DSg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>        
         </div>
 
