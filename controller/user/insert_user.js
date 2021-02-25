@@ -51,11 +51,12 @@ $(function(){
                 }
             
                 $.post('../../model/user/insert_new.php', postData, function(response){
-                    console.log(response);
+                    
                     if(response == 0){
                         window.alert('Ocurrio un error al registrarse, intentelo mas tarde');
                      }else{
                          window.alert('Registro exitoso');
+                         
                          $(location).attr('href','./login.php');
                      }
                 });

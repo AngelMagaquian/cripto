@@ -28,14 +28,14 @@
                 <form class="col-10 align-self-center" style="" id="user_input">
                   <div class="form-group">
                     <label for="exampleInputEmail1"><b>Usuario</b></label>
-                    <input type="text" class="form-control form-login" id="dni" placeholder="ingresá tu usuario">
+                    <input type="text" class="form-control form-login" id="user" placeholder="ingresá tu usuario"> <!--posiblemente cambiemos el placeholder para que sea mas descriptivo de mail para ingresar-->
                   </div>
                   <div class="form-group mt-4">
                     <label for="exampleInputPassword1"><b>Contraseña</b></label>
-                    <input type="password" class="form-control form-login" id="pass" placeholder="Ingresá tu contraseña">
+                    <input type="password" class="form-control form-login" id="pass" placeholder="Ingresá tu contraseña" autocomplete="false" required>
                   </div>
                   <div>
-                    <a class="change-pass">¿Olvidaste tu contraseña?</a>
+                    <a class="change-pass">¿Olvidaste tu contraseña?</a> <!--Falta crear el formulario para restablecer contraseña deberia colocar su mail y dsp ir al mismo para ingresar a otro link y restablecer-->
                   </div>
                   <div class="text-center mt-4">
                      <button type="submit" class="btn-login btn-get-started" >Iniciar sesión</button>
@@ -63,5 +63,6 @@
 
   <script src="../asset/jquery/jquery.min.js"></script>
   <script src="../asset/js/bootstrap/bootstrap.bundle.min.js"></script>
+  <script src="..\..\controller\login\login_controller.js" type="module" ></script>
 
 </html>

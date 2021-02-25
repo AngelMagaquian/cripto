@@ -6,26 +6,31 @@ $(function(){
         e.preventDefault();
         console.log('user_submit');
             const postData = {
-                id : $('#dni').val(),
+                user : $('#user').val(),
                 pass : $('#pass').val()
             };
             console.log(postData);
            
             $.post('../../model/user/login.php', postData, function(response){
-                console.log(response);
+                
                 if(response == 0){
                     //Meli si te va cambiar el cartelito, cambiaselo ahi en el windows, clava el codigo
                     window.alert('Usuario o contraseña incorrecto');
-                   
-                   $('#user').val('');// con este codigo y el de abajo, vuelve a estar en null todo
-                   $('#pass').val('');
+                    
+                    delete_input();
                 }else{
                     window.alert('usuario encontrado');
+                    delete_input();
                     //redirec(response);
                 }
             });
             e.preventDefault();
     });
+
+    function delete_input(){
+        $('#user').val('');// con este codigo y el de abajo, vuelve a estar en null todo
+        $('#pass').val('');
+    }
 
     /*function redirec(response){
         let user_data = JSON.parse(response);
