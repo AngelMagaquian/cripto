@@ -28,7 +28,7 @@
                 <form class="col-10 align-self-center" style="" id="user_input">
                   <div class="form-group">
                     <label for="exampleInputEmail1"><b>Usuario</b></label>
-                    <input type="text" class="form-control form-login" id="user" placeholder="ingresá tu usuario"> <!--posiblemente cambiemos el placeholder para que sea mas descriptivo de mail para ingresar-->
+                    <input type="text" class="form-control form-login" id="user" placeholder="ingresá tu usuario" required> <!--posiblemente cambiemos el placeholder para que sea mas descriptivo de mail para ingresar-->
                   </div>
                   <div class="form-group mt-4">
                     <label for="exampleInputPassword1"><b>Contraseña</b></label>

@@ -1,0 +1,152 @@
+/*NAV*/
+#wrapper {
+    overflow-x: hidden;
+ }
+
+#sidebar-wrapper {
+  min-height: 100vh;
+  margin-left: -15rem;
+  -webkit-transition: margin .25s ease-out;
+  -moz-transition: margin .25s ease-out;
+  -o-transition: margin .25s ease-out;
+  transition: margin .25s ease-out;
+  background-color: #24c4fc;
+  color: #fff;
+}
+
+#sidebar-wrapper .sidebar-heading {
+  padding: 0.875rem 1.25rem;
+  font-size: 1.2rem;
+}
+
+#sidebar-wrapper .list-group {
+  width: 15rem;
+}
+
+#page-content-wrapper {
+  min-width: 100vw;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+  margin-left: 0;
+}
+
+@media (min-width: 768px) {
+  #sidebar-wrapper {
+    margin-left: 0;
+  }
+
+  #page-content-wrapper {
+    min-width: 0;
+    width: 100%;
+  }
+
+  #wrapper.toggled #sidebar-wrapper {
+    margin-left: -15rem;
+  }
+}
+
+.navbar{
+    background-color: #E3F3FF;
+}
+
+.list-group-item{
+    background-color: #24c4fc;
+    color: #fff;
+}
+
+
+#wrapper .btn-get-started {
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 10px 30px;
+  border-radius: 50px;
+  transition: 0.5s;
+  color: #f5f5f5;
+  bottom: 0;
+  position: absolute;
+  margin: auto;
+}
+
+#wrapper .btn-login{
+  background-color: #44596A;
+  border: none;
+  -webkit-box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
+  -moz-box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
+  box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
+}
+#wrapper .btn-login:hover{
+  background-color: #1B97C7;
+}
+
+/*DATOS PERSONALES*/
+
+#perfil .tab-content{
+  background-color: #1b96c725;
+  border-radius: 0 0px 25px 25px;
+  -webkit-box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
+  -moz-box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
+  box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
+  padding: 25px 0;
+}
+
+#perfil .tab-content .form-group label{
+  font-size: 14px;
+}
+
+#perfil .tab-content .form-group input{
+  font-size: 13px;
+  background-color: transparent;
+  border: none !important;
+  border-bottom: 2px solid #ACACAC !important;
+  border-radius: 0px ;
+}
+
+#perfil .tab-content .botonera button{
+  padding: 3px 6px;
+  float: right;
+  margin-left: 5px;
+}
+
+/*DATOS BANCARIOS*/
+#bancos .card{
+  border-radius: 15px;
+  background-color: #1b96c725;
+  -webkit-box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
+  -moz-box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
+  box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
+}
+#bancos .card .card-header{
+  background-color: #24c4fc;
+  border-radius: 15px 15px 0px 0px;
+}
+#bancos span{
+  font-size: 14px;
+}
+#bancos .estado{
+  float: right;
+  color: #fff;
+}
+#bancos .card-body{
+  padding: 25px 10px;
+}
+
+#bancos .card-body label{
+  font-size: 14px;
+}
+#bancos .card-body input{
+  font-size: 14px;
+  background-color: transparent;
+  border: none !important;
+  border: none;
+  border-radius: 0px ;
+  padding: 0px;
+}
+
+#bancos .card-body .botonera button{
+  padding: 3px 6px;
+  float: right;
+  margin-left: 5px;
+}
