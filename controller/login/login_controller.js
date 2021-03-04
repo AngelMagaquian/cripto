@@ -22,6 +22,7 @@ $(function(){
                     window.alert('usuario encontrado');
                     delete_input();
                     //redirec(response);
+                    $(location). attr('href','../../view/perfil/datosPersonales.php');
                 }
             });
             e.preventDefault();
