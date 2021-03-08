@@ -1,3 +1,9 @@
+<?php
+session_start();
+  if(isset($_SESSION['id_user'])){
+    
+  
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -89,7 +95,7 @@
             <div class="row m-0 justify-content-around">
               <div class="form-group col-5">
                 <label for="exampleInputEmail1" ><b>Nombre*</b></label>
-                <input type="text" class="form-control form-login" id="name_user" placeholder="ingresá tu nombre" required>
+                <input type="text" class="form-control form-login" id="name_user" placeholder="ingresá tu nombre" required readonly >
               </div>
               <div class="form-group col-5">
                 <label for="exampleInputEmail1"><b>Segundo nombre</b></label>
@@ -98,7 +104,7 @@
 
               <div class="form-group col-5 mt-4">
                 <label for="exampleInputEmail1"><b>Apellido*</b></label>
-                <input type="text" class="form-control form-login" id="last_name" placeholder="ingresá tu apellido" required>
+                <input type="text" class="form-control form-login" id="last_name" placeholder="ingresá tu apellido" required readonly>
               </div>
               <div class="form-group col-5 mt-4">
                 <label for="exampleInputEmail1"><b>Segundo apellido</b></label>
@@ -107,31 +113,38 @@
 
               <div class="form-group col-5 mt-4">
                 <label for="exampleInputEmail1"><b>DNI*</b></label>
-                <input type="text" class="form-control form-login" id="dni" placeholder="ingresá tu DNI" required>
+                <input type="text" class="form-control form-login" id="dni" placeholder="ingresá tu DNI" required readonly>
               </div>
               <div class="form-group col-5 mt-4">
                 <label for="exampleInputEmail1"><b>CUIL*</b></label>
-                <input type="text" class="form-control form-login" id="cuil" placeholder="ingresá tu CUIL" required>
+                <input type="text" class="form-control form-login" id="cuil" placeholder="ingresá tu CUIL" required readonly>
               </div>
                         
               <div class="form-group col-5 mt-4">
                 <label for="exampleInputEmail1"><b>Fecha de nacimiento*</b></label>
-                <input type="date" class="form-control form-login" id="birth_day" placeholder="ingresá tu fecha de nacimiento" required>
+                <input type="date" class="form-control form-login" id="birth_day" placeholder="ingresá tu fecha de nacimiento" required readonly>
               </div>
               <div class="form-group col-5 mt-4">
                 <label for="exampleInputEmail1"><b>Email*</b></label>
-                <input type="email" class="form-control form-login" id="email" placeholder="ingresá tu email" required>
+                <input type="email" class="form-control form-login" id="email" placeholder="ingresá tu email" required readonly>
               </div>
 
-              <div class="form-group col-5 mt-4 ">
-                <label for="exampleInputPassword1"><b>Contraseña*</b></label>
-                <input type="password" class="form-control form-login" id="first_pass" placeholder="Ingresá una contraseña" required>
-              </div>
-              <div class="form-group col-5 mt-4 ">
-                <label for="exampleInputPassword1"><b>Repetir contraseña*</b></label>
-                <input type="password" class="form-control form-login" id="pass" placeholder="Ingresá tu contraseña nuevamente" required>
-                <label for="exampleInputPassword1" id="comfirm_pass"><b></b></label>
-              </div>
+              <form id="update_pass">
+                <div class="form-group col-5 mt-4 ">
+                  <label for="exampleInputPassword1"><b>Cambiar contraseña</b></label> <br>
+                  <label for="exampleInputPassword1"><b>Nueva contraseña*</b></label>
+                  <input type="password" class="form-control form-login" id="first_pass" placeholder="Ingresá una contraseña" required autocomplete="off">
+                  
+                </div>
+                <div class="form-group col-5 mt-4 ">
+                <br>
+                  <label for="exampleInputPassword1"><b>Repetir contraseña*</b></label>
+                  <input type="password" class="form-control form-login" id="pass" placeholder="Ingresá tu contraseña nuevamente" required autocomplete="off">
+                  <label for="exampleInputPassword1" id="comfirm_pass"><b></b></label>
+                </div>
+                <input type="submit" value="Cambiar contraseña" id="input_update_pass">
+              </form>
+
               <div class="col-11 botonera">
               <button type="button" class="btn btn-success">
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
@@ -172,6 +185,7 @@
   <script src="../asset/jquery/jquery.min.js"></script>
   <script src="../asset/js/bootstrap/bootstrap.js"></script>
   <script src="../asset/js/bootstrap/bootstrap.bundle.min.js"></script>
+  <script src="..\..\controller\user\update_user_info_controller.js" type="module" ></script>
  
 
   <!-- Menu Toggle Script -->
@@ -185,3 +199,9 @@
 </body>
 
 </html>
+
+<?php
+  }else{
+    echo "Debe iniciar sesion";
+  }
+?>
