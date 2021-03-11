@@ -1,5 +1,6 @@
 
     <section id="perfil" style="display:none">
+    
     <div class="container-fluid">
         <div class="row justify-content-center mt-4">
           <div class="col-10">
@@ -16,38 +17,38 @@
             <div class="row m-0 justify-content-around">
               <div class="form-group col-5">
                 <label for="exampleInputEmail1" ><b>Nombre*</b></label>
-                <input type="text" class="form-control form-login" id="name_user" placeholder="ingresá tu nombre" required readonly >
+                <input type="text" class="form-control form-login" id="name_user"  disabled=»disabled» >
               </div>
               <div class="form-group col-5">
                 <label for="exampleInputEmail1"><b>Segundo nombre</b></label>
-                <input type="text" class="form-control form-login" id="middle_name" placeholder="ingresá tu segundo nombre" >
+                <input type="text" class="form-control form-login" id="middle_name"  disabled=»disabled»>
               </div>
 
               <div class="form-group col-5 mt-4">
                 <label for="exampleInputEmail1"><b>Apellido*</b></label>
-                <input type="text" class="form-control form-login" id="last_name" placeholder="ingresá tu apellido" required readonly>
+                <input type="text" class="form-control form-login" id="last_name"  disabled=»disabled»>
               </div>
               <div class="form-group col-5 mt-4">
                 <label for="exampleInputEmail1"><b>Segundo apellido</b></label>
-                <input type="text" class="form-control form-login" id="second_last_name" placeholder="ingresá tu segundo apellido">
+                <input type="text" class="form-control form-login" id="second_last_name"  disabled=»disabled»>
               </div>
 
               <div class="form-group col-5 mt-4">
                 <label for="exampleInputEmail1"><b>DNI*</b></label>
-                <input type="text" class="form-control form-login" id="dni" placeholder="ingresá tu DNI" required readonly>
+                <input type="text" class="form-control form-login" id="dni" placeholder="ingresá tu DNI" disabled=»disabled»>
               </div>
               <div class="form-group col-5 mt-4">
                 <label for="exampleInputEmail1"><b>CUIL*</b></label>
-                <input type="text" class="form-control form-login" id="cuil" placeholder="ingresá tu CUIL" required readonly>
+                <input type="text" class="form-control form-login" id="cuil" placeholder="ingresá tu CUIL" disabled=»disabled»>
               </div>
                         
               <div class="form-group col-5 mt-4">
                 <label for="exampleInputEmail1"><b>Fecha de nacimiento*</b></label>
-                <input type="date" class="form-control form-login" id="birth_day" placeholder="ingresá tu fecha de nacimiento" required readonly>
+                <input type="date" class="form-control form-login" id="birth_day" placeholder="ingresá tu fecha de nacimiento" disabled=»disabled»>
               </div>
               <div class="form-group col-5 mt-4">
                 <label for="exampleInputEmail1"><b>Email*</b></label>
-                <input type="email" class="form-control form-login" id="email" placeholder="ingresá tu email" required readonly>
+                <input type="email" class="form-control form-login" id="email" placeholder="ingresá tu email" disabled=»disabled»>
               </div>
 
               <form id="update_pass">

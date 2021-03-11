@@ -50,16 +50,21 @@ $(function(){
                     postData.second_last_name = null;
                 }
             
-                $.post('../../model/user/insert_new.php', postData, function(response){
+                const pass= $('#pass').val();
+                const first_pass= $('#first_pass').val();
+                if(pass === first_pass){
+                    $.post('../../model/user/insert_new.php', postData, function(response){
                     
-                    if(response == 0){
-                        window.alert('Ocurrio un error al registrarse, intentelo mas tarde');
-                     }else{
-                         window.alert('Registro exitoso');
-                         
-                         $(location).attr('href','./login.php');
-                     }
-                });
+                        if(response == 0){
+                            window.alert('Ocurrio un error al registrarse, intentelo mas tarde');
+                         }else{
+                             window.alert('Registro exitoso');
+                             
+                             $(location).attr('href','./login.php');
+                         }
+                    });
+                }
+                
            }else{
            var b1= 1;
             window.alert('Debe ser mayor de 18 años para poder registrarse y operar');

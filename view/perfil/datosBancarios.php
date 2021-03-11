@@ -6,35 +6,35 @@
                 <div class="col-6">
                 <div class="card">
                     <div class="card-header">
-                        <span>BANCO XXX</span>
-                        <span class="estado">Estado: ---</span>
+                        <span id="bank">BANCO XXX</span>
+                        <label class="estado" id="estado"></label>
                     </div>
                     <div class="card-body row justify-content-around">
                         <div class="col-5">
                             <label><b>Nombre completo</b></label>
-                            <input type="text" class="form-control form-login"  value="valor de prueba"id="">
+                            <input type="text" class="form-control form-login"  value="valor de prueba"id="name" disabled=»disabled»>
                         </div>
                         <div class="col-5 mt-2">
                             <label><b>CUIL</b></label>
-                            <input type="text" class="form-control form-login" id="">
+                            <input type="text" class="form-control form-login" id="CUIL" disabled=»disabled»>
                         </div>
 
                         <div class="col-5 mt-2">
                             <label><b>Tipo de cuenta</b></label>
-                            <input type="text" class="form-control form-login" id="">
+                            <input type="text" class="form-control form-login" id="type_account" disabled=»disabled»>
                         </div>
                         <div class="col-5 mt-2">
                             <label><b>Tipo de moneda</b></label>
-                            <input type="text" class="form-control form-login" id="">
+                            <input type="text" class="form-control form-login" id="type_currency" disabled=»disabled»>
                         </div>
 
                         <div class="col-5 mt-2">
                             <label><b>CBU</b></label>
-                            <input type="text" class="form-control form-login" id="">
+                            <input type="text" class="form-control form-login" id="CBU" disabled=»disabled»>
                         </div>
                         <div class="col-5 mt-2">
                             <label><b>Nro de cuenta</b></label>
-                            <input type="text" class="form-control form-login" id="">
+                            <input type="text" class="form-control form-login" id="account_number" disabled=»disabled»>
                         </div>
 
                         <div class="col-11 botonera">

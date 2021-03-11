@@ -2,24 +2,7 @@ $(function(){
     console.log('AJAX Update User');
     var check_pass = false;
     //primero traer los datos del usuario para mostrar
-    $( document ).ready(function() {
-       
-        $.post('../../model/user/user_information.php', function(response){
-            let data = JSON.parse(response); 
-
-            $('#name_user').val(data.name_user);
-            $('#last_name').val(data.last_name);
-
-            $('#middle_name').val(data.middle_name);
-            $('#second_last_name').val(data.second_last_name);
-
-            $('#dni').val(data.DNI);
-            $('#cuil').val(data.CUIL);
-
-            $('#birth_day').val(data.birth_day);
-            $('#email').val(data.email);
-        });
-    });
+   
 
     $('#update_pass').submit(function(e){
         e.preventDefault();
@@ -27,17 +10,22 @@ $(function(){
         var confirmation = confirm('¿Desea cambiar su contraseña?');
         if(confirmation == true){
             var pass= $('#pass').val();
-
-            $.ajax({
-                url: '../../model/user/update_pass.php',
-                type: 'POST',
-                data: {pass},
-                success: function(response) {
-                if(response == 1){
-                    window.alert('Contraseña cambiada con éxito');
-                }
-                }
-            });
+            var pass2 =$('#first_pass').val();
+            if(pass === pass2){
+                $.ajax({
+                    url: '../../model/user/update_pass.php',
+                    type: 'POST',
+                    data: {pass},
+                    success: function(response) {
+                    if(response == 1){
+                        window.alert('Contraseña cambiada con éxito');
+                    }
+                    }
+                });
+            } else{
+                window.alert('Las contraseñas no coinciden');
+            }
+            
         } else{
             $('#pass').val('');
             $('#first_pass').val('');

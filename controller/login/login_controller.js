@@ -12,7 +12,7 @@ $(function(){
             console.log(postData);
            
             $.post('../../model/user/login.php', postData, function(response){
-                
+                console.log('response' + response);
                 if(response == 0){
                     //Meli si te va cambiar el cartelito, cambiaselo ahi en el windows, clava el codigo
                     window.alert('Usuario o contraseña incorrecto');
@@ -22,7 +22,8 @@ $(function(){
                     window.alert('usuario encontrado');
                     delete_input();
                     //redirec(response);
-                    $(location). attr('href','../../view/perfil/datosPersonales.php');
+                    
+                    $(location). attr('href','../../view/shared/user.php');
                 }
             });
             e.preventDefault();
