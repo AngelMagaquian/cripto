@@ -56,7 +56,7 @@
 }
 
 
-#wrapper .btn-get-started {
+#wrapper .btn-get-started-sesion {
   font-weight: 500;
   font-size: 16px;
   letter-spacing: 1px;
@@ -69,17 +69,45 @@
   position: absolute;
   margin: auto;
 }
+#wrapper .btn-get-started {
+  font-weight: 500;
+  font-size: 13px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 10px 30px;
+  border-radius: 50px;
+  transition: 0.5s;
+  color: #f5f5f5;
 
-#wrapper .btn-login{
+}
+
+#wrapper .btn-sesion{
   background-color: #44596A;
   border: none;
   -webkit-box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
   -moz-box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
   box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
 }
-#wrapper .btn-login:hover{
+#wrapper .btn-sesion:hover{
   background-color: #1B97C7;
 }
+
+.submenu_personal ul li{
+  list-style:none;
+  position: relative;
+  display: block;
+  padding: .5rem 1rem;
+  text-decoration: none;
+  background-color: #fff;
+  background-color: #24c4fc;
+  color: #fff;
+}
+.submenu_personal ul li a{
+  text-decoration: none;
+}
+
+
+
 
 /*DATOS PERSONALES*/
 
@@ -149,4 +177,132 @@
   padding: 3px 6px;
   float: right;
   margin-left: 5px;
+}
+
+
+/*--------------------------------------------------------------
+# Cripto Section
+--------------------------------------------------------------*/
+
+
+#cripto .img-cripto{
+  margin: auto;
+}
+#cripto .img-cripto img{
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+
+#cripto .cotizacion h4{
+  font-size: 20px !important;
+  text-transform: uppercase;
+  font-style: bold;
+  color: #44596A;
+
+
+}
+#cripto .cotizacion h5 span{
+  font-style: italic;
+
+}
+
+#cripto .cotizacion h5{
+  font-size: 11px !important;
+  text-transform: uppercase;
+  font-style: bold;
+  margin-bottom: 0;
+
+}
+#cripto .cotizacion .compra span{
+  font-size: 11px;
+  color:#031D5A;
+
+}
+ #compra .colVenta{
+  height: 100px;
+  background-color: #1B97C7;
+}
+
+#compra .card{
+  border-radius: 15px;
+  padding: 20px;
+  
+  /*background-color: #1b96c725;*/
+  -webkit-box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
+  -moz-box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
+  box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
+}
+
+#compra .price{
+  font-size: 30px;
+  color: #031D5A;
+}
+#compra .estado{
+  float: right;
+  color: #fff;
+}
+#compra .card-body{
+  padding: 25px 10px;
+}
+
+#compra .card-body label{
+  font-size: 14px;
+}
+#compra .card-body input{
+  font-size: 14px;
+  background-color: transparent;
+  border: none !important;
+  border: none;
+  border-radius: 0px ;
+  padding: 0px;
+}
+
+#compra .card-body .botonera button{
+  padding: 3px 6px;
+  float: right;
+  margin-left: 5px;
+}
+
+#compra .focus{
+  border: 2px solid #24c4fc;
+}
+
+#compra .card .calculadora select{
+  border: none;
+  font-size: 30px;
+  color: #031D5A;
+  font-weight: 700;
+}
+
+#compra .card .calculadora select option{
+  font-size: 12px;
+}
+
+#compra .card .calculadora input{
+  font-size: 25px;
+  background-color: transparent;
+  border: none !important;
+  border-bottom: 2px solid #ACACAC !important;
+  border-radius: 0px ;
+  width: 55%;
+}
+
+#compra .card .calculadora .btn-cancelar{
+  color: #27C0FA;
+  background-color: transparent;
+
+}
+#compra .card .calculadora .btn-cancelar:hover{
+  background-color: #a9e2f5;
+}
+
+#compra .card .calculadora  .btn-siguiente{
+  color: #27C0FA;
+  -webkit-box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
+  -moz-box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
+  box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
+}
+#compra .card .calculadora  .btn-siguiente:hover{
+  background-color: #1B97C7;
 }

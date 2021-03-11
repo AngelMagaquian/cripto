@@ -27,18 +27,21 @@
     <div class="border-right" id="sidebar-wrapper">
       <div class="sidebar-heading">LOGO</div>
       <div class="list-group list-group-flush">
-        <a href="#" class="list-group-item list-group-item-action">
+        <a href="#" class="list-group-item list-group-item-action" id="navPerfil" onclick="navPerfil()" value="false">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
                 <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
             </svg>
             Perfil
         </a>
-        <div class="submenu_personal">
-        <ul>
-        <li>
-        <a href="#" id="datosPersonales" onclick="clickDatos()">Datos personales </a>
-        </li>
-        </ul>
+        <div class="submenu-personal">
+          <ul>
+            <li>
+              <a href="#" id="datosPersonales" onclick="clickDatosPersonales()">Datos personales </a>
+            </li>
+            <li>
+              <a href="#" id="datosPersonales" onclick="clickDatosBanco()">Datos bancarios</a>
+            </li>
+          </ul>
         </div>
 
         
@@ -48,6 +51,17 @@
             </svg>
             Operaciones
         </a>
+        <div class="submenu-operaciones">
+          <ul>
+            <li>
+              <a href="#" id="datosPersonales" >Compra</a>
+            </li>
+            <li>
+              <a href="#" id="datosPersonales">Venta</a>
+            </li>
+          </ul>
+        </div>
+
         <a href="#" class="list-group-item list-group-item-action">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag" viewBox="0 0 16 16">
                 <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z"/>
@@ -62,7 +76,7 @@
             Ayuda
         </a>
 
-        <button type="submit" class="btn-login btn-get-started" >Iniciar sesión</button>
+        <button type="submit" class="btn-login btn-get-started-sesion" >Iniciar sesión</button>
       </div>
     </div>
     <!-- /#sidebar-wrapper -->
@@ -81,6 +95,13 @@
       </nav>
 
       <div class="herramienta">
+        <?php
+          include '../operaciones/compra.php';
+          include '../perfil/datosPersonales.php';
+          include '../perfil/datosBancarios.php';
+          
+
+        ?>
       </div>
     </div>
     <!-- /#page-content-wrapper -->
@@ -101,6 +122,20 @@
       $("#wrapper").toggleClass("toggled");
     });
 
+
+
+
+    function clickDatosPersonales(){
+      console.log("hola");
+      $("#perfil").css("display","block")
+      $("#bancos").css("display","none")
+    }
+
+    function clickDatosBanco(){
+      console.log("hola");
+      $("#bancos").css("display","block")
+      $("#perfil").css("display","none")
+    }
 
 
   </script>

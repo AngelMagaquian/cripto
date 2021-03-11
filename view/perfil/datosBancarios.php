@@ -1,4 +1,4 @@
-<section id="bancos">
+<section id="bancos" style="display:none">
     <div class="container-fluid">
         <div class="row justify-content-center mt-4">
           <div class="col-10">
