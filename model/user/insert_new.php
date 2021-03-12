@@ -10,14 +10,16 @@
     $birth_day = $_POST['birth_day'];
     $email = $_POST['email'];
 
-    try{
-        $consulta="INSERT INTO user (DNI, CUIL, pass, name_user, middle_name, last_name, second_last_name, birth_day, check_user, type, email,check_email) 
-        VALUE ($dni, $cuil,'$pass', '$name_user', '$middle_name','$last_name', '$second_last_name', '$birth_day', 0, 0, '$email',0)";
-        $ejecucion=mysqli_query($conexion, $consulta);
-        echo 1;
-    }catch(Exception $e){
-        echo 0;
-    } 
+        
+        $insert_new_user = $conexion -> query("INSERT INTO user (DNI, CUIL, pass, name_user, middle_name, last_name, second_last_name, birth_day, check_user, type, email,check_email) 
+        VALUE ($dni, $cuil,'$pass', '$name_user', '$middle_name','$last_name', '$second_last_name', '$birth_day', 0, 0, '$email',0)") or die('Error: '. mysqli_error($conexion));
+
+        if($insert_new_user){
+            echo 1;
+        }else{
+            echo 'Error: '. mysqli_error($conexion);
+        }
+   
     
    
 

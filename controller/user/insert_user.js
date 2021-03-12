@@ -1,3 +1,6 @@
+import {post_data} from "../app/post_data.js";
+
+
 $(function(){
     console.log('AJAX Insert User');
     
@@ -53,15 +56,20 @@ $(function(){
                 const pass= $('#pass').val();
                 const first_pass= $('#first_pass').val();
                 if(pass === first_pass){
-                    $.post('../../model/user/insert_new.php', postData, function(response){
-                    
-                        if(response == 0){
-                            window.alert('Ocurrio un error al registrarse, intentelo mas tarde');
-                         }else{
-                             window.alert('Registro exitoso');
+                    $.post('../../model/user/insert_new.php', postData).then(response =>{
+                        
                              
-                             $(location).attr('href','./login.php');
-                         }
+                        //$(location).attr('href','./login.php');
+                        if(response == 1){
+                            window.alert('Registro exitoso');
+                        }else{
+                            console.log(response);
+                        }
+                        
+                    })
+                    .catch(error =>{
+                        console.log('Error de insert: '+error);
+                        window.alert('Ocurrio un error al registrarse, intentelo mas tarde');
                     });
                 }
                 
@@ -77,6 +85,12 @@ $(function(){
 
 function birth_day_control(date){
     console.log('Control de edad');
+    
+
+    /*var fecha1 = moment(date);
+    var fecha2 = moment('2021-03-12');
+
+    console.log(fecha2.diff(fecha1, 'years'), ' dias de diferencia');*/
     return true;
 }
 

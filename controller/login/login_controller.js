@@ -12,7 +12,7 @@ $(function(){
             console.log(postData);
            
             $.post('../../model/user/login.php', postData, function(response){
-                console.log('response' + response);
+                console.log('response = ' + response);
                 if(response == 0){
                     //Meli si te va cambiar el cartelito, cambiaselo ahi en el windows, clava el codigo
                     window.alert('Usuario o contraseña incorrecto');
@@ -21,7 +21,7 @@ $(function(){
                 }else{
                     window.alert('usuario encontrado');
                     delete_input();
-                    //redirec(response);
+                   
                     
                     $(location). attr('href','../../view/shared/user.php');
                 }
@@ -34,37 +34,6 @@ $(function(){
         $('#pass').val('');
     }
 
-    /*function redirec(response){
-        let user_data = JSON.parse(response);
-        console.log('funcion redirec');
-        console.log('el permiso es= '+user_data.permiso);
-
-        switch(user_data.permiso){
-            case '1' :
-                console.log('ingreso el gerente o desarrollo');
-                //url de redireccion
-                break;
-            
-            case '2': 
-                console.log('entro un encargado');
-                if(user_data.area == '2'){
-                    //url de eproduccion
-                    console.log('entro produccion')
-                } else{
-                    //url de eoperaciones
-                    console.log('entro finanzas')
-                }
-                break;
-
-            case '3': 
-                console.log('entro un operario');
-                //url de operaciones
-                break;
-            
-        }
-    }*/
-
-   //menu
 
    (function(){
     $('#msbo').on('click', function(){

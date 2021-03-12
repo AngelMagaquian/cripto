@@ -1,3 +1,4 @@
+import {post_data} from "../app/post_data.js";
 $(function(){
     console.log('AJAX Update User');
     var check_pass = false;
@@ -12,15 +13,20 @@ $(function(){
             var pass= $('#pass').val();
             var pass2 =$('#first_pass').val();
             if(pass === pass2){
-                $.ajax({
-                    url: '../../model/user/update_pass.php',
-                    type: 'POST',
-                    data: {pass},
-                    success: function(response) {
-                    if(response == 1){
+                post_data('../../model/user/update_pass.php', pass).then(response => {
+                    // En este punto recibimos la respuesta.
+                    
+                   if(response ==1){
+                       
                         window.alert('Contraseña cambiada con éxito');
-                    }
-                    }
+                   }
+                    
+                    
+                })
+                .catch(error => {
+                  // En este punto recibimos el error. then() no se ha invocado
+                  console.log('Pass Error: '+error);
+                  window.alert('Error al cargar los datos, intente mas tarde');
                 });
             } else{
                 window.alert('Las contraseñas no coinciden');
