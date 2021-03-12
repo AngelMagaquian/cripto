@@ -20,6 +20,7 @@ $(function(){
     
                 $('#birth_day').val(data.birth_day);
                 $('#email').val(data.email);
+                
             
             
         })

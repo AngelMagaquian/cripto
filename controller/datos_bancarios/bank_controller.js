@@ -24,6 +24,8 @@ $(function(){
     
                 $('#type_currency').val(data.currency);
                 $('#CBU').val(data.CBU);
+                $('#account_number').val(data.account_number);
+                
                 
             })
             .catch(error => {
