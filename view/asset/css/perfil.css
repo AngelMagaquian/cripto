@@ -91,23 +91,32 @@
 #wrapper .btn-sesion:hover{
   background-color: #1B97C7;
 }
-
-.submenu_personal ul li{
+.submenu ul{
+  background-color: #E3F3FF;
+  padding: 0;
+}
+.submenu ul li{
   list-style:none;
   position: relative;
   display: block;
   padding: .5rem 1rem;
   text-decoration: none;
-  background-color: #fff;
-  background-color: #24c4fc;
-  color: #fff;
+  background-color: rgb(248, 249, 250);
+  padding-left: 35px;
 }
-.submenu_personal ul li a{
+.submenu ul li a{
   text-decoration: none;
+  color: #031D5A
 }
 
-
-
+.submenu-personal{
+  display: none;
+}
+.submenuBlock{
+  display: block;
+  transition-property: all;
+  transition-duration: 0.5s
+}
 
 /*DATOS PERSONALES*/
 
@@ -136,6 +145,28 @@
   padding: 3px 6px;
   float: right;
   margin-left: 5px;
+}
+#perfil .btn-get-started-pass {
+  font-weight: 500;
+  font-size: 13px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 10px 30px;
+  border-radius: 50px;
+  transition: 0.5s;
+  color: #f5f5f5;
+  border: none;
+}
+
+#perfil .btn-pass{
+  background-color: #27C0FA;
+  -webkit-box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
+  -moz-box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
+  box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
+  float: right;
+}
+#perfil .btn-pass:hover{
+  background-color: #1B97C7;
 }
 
 /*DATOS BANCARIOS*/
@@ -179,7 +210,27 @@
   margin-left: 5px;
 }
 
+#bancos .botonera .btn-get-started-agg {
+  font-weight: 500;
+  font-size: 13px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 10px 30px;
+  border-radius: 50px;
+  transition: 0.5s;
+  color: #f5f5f5;
+}
 
+#bancos .botonera .btn-agg{
+  background-color: #031D5A;
+  -webkit-box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
+  -moz-box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
+  box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
+  float: right;
+}
+#bancos .botonera .btn-agg:hover{
+  background-color: #021646;
+}
 /*--------------------------------------------------------------
 # Cripto Section
 --------------------------------------------------------------*/
@@ -219,6 +270,7 @@
   color:#031D5A;
 
 }
+/*   styles para compra*/
  #compra .colVenta{
   height: 100px;
   background-color: #1B97C7;
@@ -287,22 +339,168 @@
   border-radius: 0px ;
   width: 55%;
 }
+#compra .card .calculadora .container-btn{
+ text-align: center;
+}
 
-#compra .card .calculadora .btn-cancelar{
+#compra .card .calculadora .container-btn .btn-cancelar{
   color: #27C0FA;
   background-color: transparent;
 
 }
-#compra .card .calculadora .btn-cancelar:hover{
-  background-color: #a9e2f5;
+#compra .card .calculadora .container-btn .btn-cancelar:hover{
+  color: #a9e2f5;
 }
 
-#compra .card .calculadora  .btn-siguiente{
-  color: #27C0FA;
+#compra .card .calculadora .container-btn .btn-siguiente{
+  color:#fff;
+  background-color: #27C0FA;
   -webkit-box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
   -moz-box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
   box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
 }
-#compra .card .calculadora  .btn-siguiente:hover{
+#compra .card .calculadora .container-btn .btn-siguiente:hover{
   background-color: #1B97C7;
+}
+
+
+/*   estilos para ventas*/
+#venta .colVenta{
+  height: 100px;
+  background-color: #1B97C7;
+}
+
+#venta .card{
+  border-radius: 15px;
+  padding: 20px;
+  
+  /*background-color: #1b96c725;*/
+  -webkit-box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
+  -moz-box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
+  box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
+}
+
+#venta .price{
+  font-size: 30px;
+  color: #031D5A;
+}
+#venta .estado{
+  float: right;
+  color: #fff;
+}
+#venta .card-body{
+  padding: 25px 10px;
+}
+
+#venta .card-body label{
+  font-size: 14px;
+}
+#venta .card-body input{
+  font-size: 14px;
+  background-color: transparent;
+  border: none !important;
+  border: none;
+  border-radius: 0px ;
+  padding: 0px;
+}
+
+#venta .card-body .botonera button{
+  padding: 3px 6px;
+  float: right;
+  margin-left: 5px;
+}
+
+#venta .focus{
+  border: 2px solid #031D5A;;
+}
+
+#venta .card .calculadora select{
+  border: none;
+  font-size: 30px;
+  color: #031D5A;
+  font-weight: 700;
+}
+
+#venta .card .calculadora select option{
+  font-size: 12px;
+}
+
+#venta .card .calculadora input{
+  font-size: 25px;
+  background-color: transparent;
+  border: none !important;
+  border-bottom: 2px solid #ACACAC !important;
+  border-radius: 0px ;
+  width: 55%;
+}
+#venta .card .calculadora .container-btn{
+ text-align: center;
+}
+
+#venta .card .calculadora .container-btn .btn-cancelar{
+  color: #27C0FA;
+  background-color: transparent;
+
+}
+#venta .card .calculadora .container-btn .btn-cancelar:hover{
+  color: #a9e2f5;
+}
+
+#venta .card .calculadora .container-btn .btn-siguiente{
+  color:#fff;
+  background-color: #27C0FA;
+  -webkit-box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
+  -moz-box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
+  box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
+}
+#venta .card .calculadora .container-btn .btn-siguiente:hover{
+  background-color: #1B97C7;
+}
+
+/*--------------------------------------------------------------
+# mis operaciones
+--------------------------------------------------------------*/
+#misOperaciones .card{
+  border-radius: 15px;
+  background-color: #1b96c725;
+  -webkit-box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
+  -moz-box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
+  box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
+}
+
+#misOperaciones .card-body label{
+  font-size: 14px;
+  color: #031D5A;
+}
+#misOperaciones .card-body input, .card-body select{
+  font-size: 14px;
+  background-color: transparent;
+  border: none !important;
+  border: none;
+  border-radius: 0px ;
+  padding: 0px;
+  color: #000;
+  border-bottom: 1px solid #000 !important;
+}
+
+#misOperaciones .btn-get-started-filtro {
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 10px 30px;
+  border-radius: 50px;
+  transition: 0.5s;
+  color: #f5f5f5;
+  cursor: pointer;
+}
+
+#misOperaciones .btn-filtro{
+  background-color: #031D5A;
+  -webkit-box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
+  -moz-box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
+  box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
+}
+#misOperaciones .btn-filtro:hover{
+  background-color: #021646;
 }

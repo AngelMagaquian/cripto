@@ -17,6 +17,8 @@
   <link href="../asset/css/style_login.css" rel="stylesheet">
   <link href="../asset/css/perfil.css" rel="stylesheet">
 
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.datatables.net/1.10.24/css/dataTables.bootstrap5.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -33,13 +35,13 @@
             </svg>
             Perfil
         </a>
-        <div class="submenu-personal">
+        <div class="submenu submenu-personal" style="">
           <ul>
             <li>
               <a href="#" id="datosPersonales" onclick="clickDatosPersonales()">Datos personales </a>
             </li>
             <li>
-              <a href="#" id="datosPersonales" onclick="clickDatosBanco()">Datos bancarios</a>
+              <a href="#" id="datosBancarios" onclick="clickDatosBanco()">Datos bancarios</a>
             </li>
           </ul>
         </div>
@@ -51,24 +53,24 @@
             </svg>
             Operaciones
         </a>
-        <div class="submenu-operaciones">
+        <div class="submenu submenu-operaciones">
           <ul>
             <li>
-              <a href="#" id="datosPersonales" >Compra</a>
+              <a href="#" id="" onclick="clickCompra()">Compra</a>
             </li>
             <li>
-              <a href="#" id="datosPersonales">Venta</a>
+              <a href="#" id="" onclick="clickVenta()">Venta</a>
             </li>
           </ul>
         </div>
 
-        <a href="#" class="list-group-item list-group-item-action">
+        <a href="#" class="list-group-item list-group-item-action" onclick="clickOperaciones()">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag" viewBox="0 0 16 16">
                 <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z"/>
             </svg>
             Mis operaciones
         </a>
-        <a href="#" class="list-group-item list-group-item-action">
+        <a href="../ayuda/index.php" class="list-group-item list-group-item-action">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-question-circle" viewBox="0 0 16 16">
                 <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
                 <path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z"/>
@@ -76,7 +78,7 @@
             Ayuda
         </a>
 
-        <button type="submit" class="btn-login btn-get-started-sesion" >Iniciar sesión</button>
+        <button type="submit" class="btn-sesion btn-get-started-sesion" >Iniciar sesión</button>
       </div>
     </div>
     <!-- /#sidebar-wrapper -->
@@ -96,9 +98,12 @@
 
       <div class="herramienta">
         <?php
+        include '../misOperaciones/index.php';
           include '../operaciones/compra.php';
+          include '../operaciones/venta.php';
           include '../perfil/datosPersonales.php';
           include '../perfil/datosBancarios.php';
+          
           
 
         ?>
@@ -117,6 +122,9 @@
   <script src="..\..\controller\user\update_user_info_controller.js" type="module" ></script>
   <script src="..\..\controller\datos_bancarios\bank_controller.js" type="module" ></script>
 
+  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/1.10.24/js/dataTables.bootstrap5.min.js"></script>
   <!-- Menu Toggle Script -->
   <script>
     $("#menu-toggle").click(function(e) {
@@ -125,20 +133,89 @@
     });
 
 
+    function navPerfil(){
+      console.log("estoy")
+      $(".submenu-personal").addClass( "submenuBlock" );
+
+    }
+
+    $(document).ready(function() {
+      $('#example').DataTable({ 
+        responsive: true,
+        paging: false,
+        searching: false,
+        language: {
+            lengthMenu: "Agrupar de MENU ",
+            search: " ",
+            searchPlaceholder: " Buscar",
+            info: "",
+            infoEmpty: " ",
+            infoFiltered: " ",
+            infoPostFix: "",
+            loadingRecords: " ",
+            zeroRecords: "No se encontraron datos con tu busqueda",
+            emptyTable: "No hay datos disponibles en la tabla.",
+            paginate: {
+                first: "Primero",
+                previous: "Ant",
+                next: "Sig",
+                last: "Ultimo"
+            },
+            aria: {
+                sortAscending: ": active para ordenar la columna en orden ascendente",
+                sortDescending: ": active para ordenar la columna en orden descendente"
+            },
+            pageLength: 7,
+            bLengthChange: false,
+            ordering: false,
+            select: true,
+            colReorder: true
+        },
+        scrollY: 200,
+        scrollX: true
+      });
+    } );
 
 
     function clickDatosPersonales(){
-      console.log("hola");
       $("#perfil").css("display","block")
       $("#bancos").css("display","none")
+      $("#compra").css("display","none")
+      $("#venta").css("display","none")
+      $("#misOperaciones").css("display","none")
     }
 
     function clickDatosBanco(){
-      console.log("hola");
       $("#bancos").css("display","block")
       $("#perfil").css("display","none")
+      $("#compra").css("display","none")
+      $("#venta").css("display","none")
+      $("#misOperaciones").css("display","none")
     }
 
+    function clickCompra(){
+      $("#compra").css("display","block")
+      $("#bancos").css("display","none")
+      $("#perfil").css("display","none")
+      $("#venta").css("display","none")
+      $("#misOperaciones").css("display","none")
+    }
+
+    function clickVenta(){
+      $("#venta").css("display","block")
+      $("#bancos").css("display","none")
+      $("#perfil").css("display","none")
+      $("#compra").css("display","none")
+      $("#misOperaciones").css("display","none")
+    }
+
+    function clickOperaciones(){
+      $("#misOperaciones").css("display","block")
+      $("#venta").css("display","none")
+      $("#bancos").css("display","none")
+      $("#perfil").css("display","none")
+      $("#compra").css("display","none")
+    }
 
   </script>
 

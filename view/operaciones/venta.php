@@ -1,4 +1,4 @@
-<section id="compra" style="display:none">
+<section id="venta" style="display:none">
 <div id="cripto">
   <div class="container">
     <div class="row  mt-5">
@@ -165,11 +165,11 @@
     <div class="row justify-content-around">
         <div class="col-4">
             <div class="row">
-                <div class="col-12 card text-center" >
+                <div class="col-12 card focus text-center" >
                     <h5>Venta de xxxxx</h5>
                     <span class="price"><b>AR$ 0000</b></span>
                 </div>
-                <div class="col-12 card focus text-center mt-4" >
+                <div class="col-12 card text-center mt-4" >
                     <h5>Compra de xxxxx</h5>
                     <span class="price"><b>AR$ 0000</b></span>
                 </div>

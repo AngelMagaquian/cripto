@@ -26,7 +26,7 @@ $(function(){
                 .catch(error => {
                   // En este punto recibimos el error. then() no se ha invocado
                   console.log('Pass Error: '+error);
-                  window.alert('Error al cargar los datos, intente mas tarde');
+                  //window.alert('Error al cargar los datos, intente mas tarde');
                 });
             } else{
                 window.alert('Las contraseñas no coinciden');
