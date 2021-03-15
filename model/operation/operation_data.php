@@ -13,6 +13,7 @@
         INNER JOIN cripto c ON c.ID_cripto = o.ID_cripto
         INNER JOIN bank b ON o.id_bank = b.id_bank
         WHERE o.ID_user = $user
+        ORDER BY o.date_hour DESC
         ";
         $ejecucion = mysqli_query($conexion, $consulta);
         $json = array();
