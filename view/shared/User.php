@@ -120,7 +120,8 @@
   <script src="../asset/js/bootstrap/bootstrap.bundle.min.js"></script>
   <script src="..\..\controller\user\controller_user.js" type="module" ></script>
   <script src="..\..\controller\user\update_user_info_controller.js" type="module" ></script>
-  <script src="..\..\controller\datos_bancarios\bank_controller.js" type="module" ></script>
+
+  
 
   <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
   <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
