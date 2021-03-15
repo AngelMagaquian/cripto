@@ -26,6 +26,7 @@
 
     <!-- Sidebar -->
     <div class="border-right" id="sidebar-wrapper">
+
       <div class="sidebar-heading">LOGO</div>
       <div class="list-group list-group-flush">
         <a href="#" class="list-group-item list-group-item-action" id="navPerfil" onclick="navPerfil()" value="false">
@@ -91,7 +92,9 @@
             <path fill-rule="evenodd" d="M2.5 11.5A.5.5 0 0 1 3 11h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 3h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
         </svg>
         </button>
-
+        <div style="position: absolute;right: 10px;">
+        <span>DINERO DISPONIBLE: $1500</span>
+        </div>
         
       </nav>
 
