@@ -140,6 +140,8 @@
 
     }
 
+       
+
     $(document).ready(function() {
       $('#example').DataTable({ 
         responsive: true,
@@ -216,6 +218,7 @@
       $("#bancos").css("display","none")
       $("#perfil").css("display","none")
       $("#compra").css("display","none")
+      $.fn.dataTable.tables({ visible: true, api: true }).columns.adjust();
     }
 
   </script>
