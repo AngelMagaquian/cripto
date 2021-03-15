@@ -17,7 +17,6 @@
   <link href="../asset/css/style_login.css" rel="stylesheet">
   <link href="../asset/css/perfil.css" rel="stylesheet">
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.datatables.net/1.10.24/css/dataTables.bootstrap5.min.css" rel="stylesheet">
 </head>
 
@@ -146,7 +145,7 @@
       $('#example').DataTable({ 
         responsive: true,
         paging: false,
-        searching: false,
+        searching: true,
         language: {
             lengthMenu: "Agrupar de MENU ",
             search: " ",
