@@ -19,40 +19,70 @@ $(function(){
     });
 
 
-    $('#filtros').click(function(e){
+    $('#date_form').submit(function(e){
         e.preventDefault();
-        console.log("Filters");
+        console.log("date_filter");
         const postData= {
             date_from : $('#desde').val(),
-            date_to : $('#hasta').val(),
-            operation : $('#operation').val(),
-            cripto : $('#divisa').val()
+            date_to : $('#hasta').val()
         };
 
         console.log(postData);
-        $.post('../../model/operation/filter.php', postData, function(response){
-            //mostrar con la funcion table la tabla temporal
-            console.log(response);
-            data = JSON.parse(response); 
-            
-            table(data); 
-        });
-    
-        
 
+        $.post('../../model/operation/date_filter.php', postData, function(response){
+            if(response == 0){
+                window.alert('Error de fechas: Por favor controler las fechas');
+            }else{
+                //mostrar con la funcion table la tabla temporal
+                console.log(response);
+                data = JSON.parse(response); 
+                
+                table(data); 
+            }
+        });
+    });
+
+    $('#operation_form').submit(function(e){
+        e.preventDefault();
+        console.log("operation_filter");
+        
+        //variables auxiliares
+        var aux_compra = false;
+        var aux_venta = false;
+
+        //verificacion de check, se puede hacer una funcion;
+        if($('#op1').is(':checked')){
+            aux_compra = true;
+        }
+
+        if($('#op2').is(':checked')){
+            aux_venta = true;
+        }
+
+        //lleno el postData con el valor de los check;
+        const postData={
+            compra: aux_compra,
+            venta: aux_venta
+        }
+
+        console.log(postData);
+
+        $.post('../../model/operation/operation_filter.php', postData, function(response){
+            if(response == 0){
+                window.alert('Error de fechas: Por favor controler las fechas');
+            }else{
+                //mostrar con la funcion table la tabla temporal
+                console.log(response);
+                data = JSON.parse(response); 
+                
+                table(data); 
+            }
+        });
     });
 
 
 
-
-
-
-
-
-
-
-
-
+    
     function divisas(){
         get_data('../../model/operation/divisas.php').then(response => {
             // En este punto recibimos la respuesta.

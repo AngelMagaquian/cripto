@@ -5,9 +5,9 @@
             <div class="col-11">   
                 <div class="card">
                     <div class="card-body mt-3 ">
-                    <form id="filtros">
+                    
                         <div class="row justify-content-around ">
-                            
+                            <form id="date_form" >
                                 <div class="col-2">
                                     <label for=""><b>Desde</b></label>
                                     <input id="desde" type="date" class="form-control" value='<?php echo date("Y-m-d");?>'>
@@ -16,25 +16,35 @@
                                     <label for=""><b>Hasta</b></label>
                                     <input id="hasta" type="date" class="form-control" value='<?php echo date("Y-m-d");?>'>
                                 </div>
+                                <input type="submit" value="Filtro de fecha"/>
+                            </form>
+                            <form id="operation_form">
                                 <div class="col-2">
                                     <label for=""><b>Operación</b></label>
-                                    <select name="operation" id="operation" class="form-select">
-                                        <option value="COMPRA">Compra</option>
-                                        <option value="VENTA">Venta</option>
-                                        <option value="3">Ambas</option>
-                                    </select>
+                                        <br>
+                                        <input type="checkbox" id="op1" name="op1" value="compra">
+                                        <label for="op1"> Compra</label><br>
+                                      
+                                        <input type="checkbox" id="op2" name="op2" value="venta">
+                                        <label for="op2"> Venta</label><br>
+                                        
+                                    <input type="submit" value="Filtro de operación"/>
                                 </div>
+                            </form>
+                            <form id="cripto_form">
                                 <div class="col-2">
                                     <label for=""><b>Divisa</b></label>
                                     <select name="" id="divisa" class="form-select">
                                     
                                     </select>
+                                    <input type="submit" value="Filtro de divisa"/>
                                 </div>
                                 <div class="col-2 align-self-center">
                                     <a class="btn-get-started-filtro btn-filtro">Aplicar filtro</a>
                                 </div>
+                            </form>
                         </div>
-                    </form>
+                    
                         
 
                         <div class="row mt-4">
