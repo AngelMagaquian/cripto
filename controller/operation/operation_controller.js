@@ -34,7 +34,7 @@ $(function(){
                 window.alert('Error de fechas: Por favor controler las fechas');
             }else{
                 //mostrar con la funcion table la tabla temporal
-                console.log(response);
+               
                 data = JSON.parse(response); 
                 
                 table(data); 
@@ -81,6 +81,41 @@ $(function(){
         });
         
     });
+
+
+
+    $('#cripto_form').submit(function(e){
+        e.preventDefault();
+        console.log("cripto_filter");
+        
+        //variables auxiliares
+        const postData ={
+            cripto : $('#divisa').val()
+        }
+        var cripto = $('#divisa').val();
+
+        //verificacion de check, se puede hacer una funcion;
+        console.log('se va a buscar= '+cripto);
+
+        $.post('../../model/operation/cripto_filter.php', postData, function(response){
+                
+                data = JSON.parse(response); 
+                
+                table(data);
+            
+        });
+        
+    });
+
+
+
+
+
+
+
+
+
+
 
 
 
