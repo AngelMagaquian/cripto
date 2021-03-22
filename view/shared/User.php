@@ -56,10 +56,10 @@
         <div class="submenu submenu-operaciones">
           <ul>
             <li>
-              <a href="#" id="" onclick="clickCompra()">Compra</a>
+              <a href="#" id="compraOpera" onclick="clickCompra()">Compra</a>
             </li>
             <li>
-              <a href="#" id="" onclick="clickVenta()">Venta</a>
+              <a href="#" id="ventaOpera" onclick="clickVenta()">Venta</a>
             </li>
           </ul>
         </div>
@@ -147,6 +147,11 @@
         $("#navOperaciones").removeClass("activo");
         $(".submenu-operaciones").removeClass( "submenuBlock" );
       }
+
+      $("#datosPersonales").css("font-weight", "normal")
+      $("#datosBancarios").css("font-weight", "normal")
+      $("#compraOpera").css("font-weight", "normal")
+      $("#ventaOpera").css("font-weight", "normal")
     }
 
     function navOperaciones(){
@@ -158,6 +163,11 @@
         $("#navPerfil").removeClass("activo");
         $(".submenu-personal").removeClass( "submenuBlock" );
       }
+
+      $("#datosPersonales").css("font-weight", "normal")
+      $("#datosBancarios").css("font-weight", "normal")
+      $("#compraOpera").css("font-weight", "normal")
+      $("#ventaOpera").css("font-weight", "normal")
     }
        
 
@@ -205,6 +215,11 @@
       $("#compra").css("display","none")
       $("#venta").css("display","none")
       $("#misOperaciones").css("display","none")
+
+      $("#datosPersonales").css("font-weight", "bold")
+      $("#datosBancarios").css("font-weight", "normal")
+      $("#compraOpera").css("font-weight", "normal")
+      $("#ventaOpera").css("font-weight", "normal")
     }
 
     function clickDatosBanco(){
@@ -213,6 +228,12 @@
       $("#compra").css("display","none")
       $("#venta").css("display","none")
       $("#misOperaciones").css("display","none")
+      
+      $("#datosPersonales").css("font-weight", "normal")
+      $("#datosBancarios").css("font-weight", "bold")
+      $("#compraOpera").css("font-weight", "normal")
+      $("#ventaOpera").css("font-weight", "normal")
+      
     }
 
     function clickCompra(){
@@ -221,6 +242,11 @@
       $("#perfil").css("display","none")
       $("#venta").css("display","none")
       $("#misOperaciones").css("display","none")
+
+      $("#datosPersonales").css("font-weight", "normal")
+      $("#datosBancarios").css("font-weight", "normal")
+      $("#compraOpera").css("font-weight", "bold")
+      $("#ventaOpera").css("font-weight", "normal")
     }
 
     function clickVenta(){
@@ -229,6 +255,11 @@
       $("#perfil").css("display","none")
       $("#compra").css("display","none")
       $("#misOperaciones").css("display","none")
+
+      $("#datosPersonales").css("font-weight", "normal")
+      $("#datosBancarios").css("font-weight", "normal")
+      $("#compraOpera").css("font-weight", "normal")
+      $("#ventaOpera").css("font-weight", "bold")
     }
 
     function clickOperaciones(){

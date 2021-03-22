@@ -1,38 +1,38 @@
 <section id="bancos" style="display:none">
     <div class="container-fluid">
         <div class="row justify-content-center mt-4">
-          <div class="col-10">
+          <div class="col-lg-10 col-12">
             <div class="row">
-                <div class="col-6">
+                <div class="col-md-6 col-12">
                     <div class="card">
                         <div class="card-header">
                             <span id="bank">BANCO XXX</span>
                             <label class="estado" id="estado"></label>
                         </div>
                         <div class="card-body row justify-content-around">
-                            <div class="col-5">
+                            <div class="col-md-5 col-12 mt-2">
                                 <label><b>Nombre completo</b></label>
                                 <input type="text" class="form-control form-login"  value="valor de prueba"id="name" disabled=»disabled»>
                             </div>
-                            <div class="col-5 mt-2">
+                            <div class="col-md-5 col-12 mt-2">
                                 <label><b>CUIL</b></label>
                                 <input type="text" class="form-control form-login" id="CUIL" disabled=»disabled»>
                             </div>
 
-                            <div class="col-5 mt-2">
+                            <div class="col-md-5 col-12 mt-2">
                                 <label><b>Tipo de cuenta</b></label>
                                 <input type="text" class="form-control form-login" id="type_account" disabled=»disabled»>
                             </div>
-                            <div class="col-5 mt-2">
+                            <div class="col-md-5 col-12 mt-2">
                                 <label><b>Tipo de moneda</b></label>
                                 <input type="text" class="form-control form-login" id="type_currency" disabled=»disabled»>
                             </div>
 
-                            <div class="col-5 mt-2">
+                            <div class="col-md-5 col-12 mt-2">
                                 <label><b>CBU</b></label>
                                 <input type="text" class="form-control form-login" id="CBU" disabled=»disabled»>
                             </div>
-                            <div class="col-5 mt-2">
+                            <div class="col-md-5 col-12 mt-2">
                                 <label><b>Nro de cuenta</b></label>
                                 <input type="text" class="form-control form-login" id="account_number" disabled=»disabled»>
                             </div>
@@ -56,36 +56,36 @@
                     </div>
 
                 </div>
-                <div class="col-6">
+                <div class="col-md-6 col-12 mt-md-0 mt-4">
                     <div class="card">
                         <div class="card-header">
                             <span id="bank">BANCO XXX</span>
                             <label class="estado" id="estado"></label>
                         </div>
                         <div class="card-body row justify-content-around">
-                            <div class="col-5">
+                            <div class="col-md-5 col-12 mt-">
                                 <label><b>Nombre completo</b></label>
                                 <input type="text" class="form-control form-login"  value="valor de prueba"id="name" disabled=»disabled»>
                             </div>
-                            <div class="col-5 mt-2">
+                            <div class="col-md-5 col-12 mt-2">
                                 <label><b>CUIL</b></label>
                                 <input type="text" class="form-control form-login" id="CUIL" disabled=»disabled»>
                             </div>
 
-                            <div class="col-5 mt-2">
+                            <div class="col-md-5 col-12 mt-2">
                                 <label><b>Tipo de cuenta</b></label>
                                 <input type="text" class="form-control form-login" id="type_account" disabled=»disabled»>
                             </div>
-                            <div class="col-5 mt-2">
+                            <div class="col-md-5 col-12 mt-2">
                                 <label><b>Tipo de moneda</b></label>
                                 <input type="text" class="form-control form-login" id="type_currency" disabled=»disabled»>
                             </div>
 
-                            <div class="col-5 mt-2">
+                            <div class="col-md-5 col-12 mt-2">
                                 <label><b>CBU</b></label>
                                 <input type="text" class="form-control form-login" id="CBU" disabled=»disabled»>
                             </div>
-                            <div class="col-5 mt-2">
+                            <div class="col-md-5 col-12 mt-2">
                                 <label><b>Nro de cuenta</b></label>
                                 <input type="text" class="form-control form-login" id="account_number" disabled=»disabled»>
                             </div>
