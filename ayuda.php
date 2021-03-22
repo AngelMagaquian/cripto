@@ -12,16 +12,16 @@
     
 
     <!-- Bootstrap core CSS -->
-    <link href="../asset/css/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="./view/asset/css/bootstrap/bootstrap.min.css" rel="stylesheet">
 
-	<link href="../asset/css/style.css" rel="stylesheet">
-    <link href="../asset/css/ayuda.css" rel="stylesheet">
+	<link href="./view/asset/css/style.css" rel="stylesheet">
+    <link href="./view/asset/css/ayuda.css" rel="stylesheet">
 </head>
 <body>
   <header>
   <?php
 
-include '../shared/nav.php';
+include 'nav.php';
 
 
 ?>
@@ -49,7 +49,7 @@ include '../shared/nav.php';
         </div>
 
         <div class="col-md-6 d-md-block d-none container-img m-auto">
-          <img src="../asset/img/img-home.png" alt="" style="width:100%">
+          <img src="./view//asset/img/img-home.png" alt="" style="width:100%">
         </div>
         
       </div>
@@ -112,14 +112,14 @@ include '../shared/nav.php';
 <!--incluir php-->
 <?php
 
-include '../shared/footer.php';
+include './view/shared/footer.php';
 
 
 ?>
 
 </body>
 
-  <script src="../asset/jquery/jquery.min.js"></script>
-  <script src="../asset/js/bootstrap/bootstrap.bundle.min.js"></script>
+  <script src="./view/asset/jquery/jquery.min.js"></script>
+  <script src="./view/js/bootstrap/bootstrap.bundle.min.js"></script>
 
 </html>

@@ -12,16 +12,16 @@
     
 
     <!-- Bootstrap core CSS -->
-    <link href="../asset/css/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="./view/asset/css/bootstrap/bootstrap.min.css" rel="stylesheet">
 
-	<link href="../asset/css/style.css" rel="stylesheet">
-    <link href="../asset/css/nosotros.css" rel="stylesheet">
+	<link href="./view/asset/css/style.css" rel="stylesheet">
+    <link href="./view/asset/css/nosotros.css" rel="stylesheet">
 </head>
 <body>
   <header>
   <?php
 
-include '../shared/nav.php';
+include 'nav.php';
 
 
 ?>
@@ -146,14 +146,14 @@ include '../shared/nav.php';
 <!--incluir php-->
 <?php
 
-include '../shared/footer.php';
+include './view/shared/footer.php';
 
 
 ?>
 
 </body>
 
-  <script src="../asset/jquery/jquery.min.js"></script>
-  <script src="../asset/js/bootstrap/bootstrap.bundle.min.js"></script>
+  <script src="./view/asset/jquery/jquery.min.js"></script>
+  <script src="./view/asset/js/bootstrap/bootstrap.bundle.min.js"></script>
 
 </html>

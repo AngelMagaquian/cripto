@@ -20,7 +20,7 @@
   <header>
   <?php
 
-include 'view/shared/nav.php';
+include 'nav.php';
 
 
 ?>
