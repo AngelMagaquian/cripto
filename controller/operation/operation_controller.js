@@ -34,7 +34,7 @@ $(function(){
                 window.alert('Error de fechas: Por favor controler las fechas');
             }else{
                 //mostrar con la funcion table la tabla temporal
-                console.log(response);
+               
                 data = JSON.parse(response); 
                 
                 table(data); 
@@ -59,6 +59,10 @@ $(function(){
             aux_venta = true;
         }
 
+        if($('#op2').is(':checked')){
+            aux_venta = true;
+        }
+
         //lleno el postData con el valor de los check;
         const postData={
             compra: aux_compra,
@@ -68,21 +72,54 @@ $(function(){
         console.log(postData);
 
         $.post('../../model/operation/operation_filter.php', postData, function(response){
-            if(response == 0){
-                window.alert('Error de fechas: Por favor controler las fechas');
-            }else{
+            
                 //mostrar con la funcion table la tabla temporal
-                console.log(response);
                 data = JSON.parse(response); 
                 
-                table(data); 
-            }
+                table(data);
+            
         });
+        
     });
 
 
 
-    
+    $('#cripto_form').submit(function(e){
+        e.preventDefault();
+        console.log("cripto_filter");
+        
+        //variables auxiliares
+        const postData ={
+            cripto : $('#divisa').val()
+        }
+        var cripto = $('#divisa').val();
+
+        //verificacion de check, se puede hacer una funcion;
+        console.log('se va a buscar= '+cripto);
+
+        $.post('../../model/operation/cripto_filter.php', postData, function(response){
+                
+                data = JSON.parse(response); 
+                
+                table(data);
+            
+        });
+        
+    });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     function divisas(){
         get_data('../../model/operation/divisas.php').then(response => {
             // En este punto recibimos la respuesta.
@@ -133,7 +170,7 @@ $(function(){
         })
         
        
-        console.log('template: ');
+        
         $('#operation_tbody').html(template);
     }
 
