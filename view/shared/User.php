@@ -70,6 +70,12 @@
             </svg>
             Mis operaciones
         </a>
+        <a href="#" class="list-group-item list-group-item-action" onclick="clickWallet()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag" viewBox="0 0 16 16">
+                <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z"/>
+            </svg>
+            Wallet
+        </a>
         <a href="../ayuda/index.php" class="list-group-item list-group-item-action">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-question-circle" viewBox="0 0 16 16">
                 <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
@@ -100,11 +106,13 @@
 
       <div class="herramienta">
         <?php
+        include '../wallet/index.php';
         include '../misOperaciones/index.php';
           include '../operaciones/compra.php';
           include '../operaciones/venta.php';
           include '../perfil/datosPersonales.php';
           include '../perfil/datosBancarios.php';
+          
           
           
 
@@ -215,6 +223,7 @@
       $("#compra").css("display","none")
       $("#venta").css("display","none")
       $("#misOperaciones").css("display","none")
+      $("#wallet").css("display","none")
 
       $("#datosPersonales").css("font-weight", "bold")
       $("#datosBancarios").css("font-weight", "normal")
@@ -228,6 +237,7 @@
       $("#compra").css("display","none")
       $("#venta").css("display","none")
       $("#misOperaciones").css("display","none")
+      $("#wallet").css("display","none")
       
       $("#datosPersonales").css("font-weight", "normal")
       $("#datosBancarios").css("font-weight", "bold")
@@ -242,6 +252,7 @@
       $("#perfil").css("display","none")
       $("#venta").css("display","none")
       $("#misOperaciones").css("display","none")
+      $("#wallet").css("display","none")
 
       $("#datosPersonales").css("font-weight", "normal")
       $("#datosBancarios").css("font-weight", "normal")
@@ -255,6 +266,7 @@
       $("#perfil").css("display","none")
       $("#compra").css("display","none")
       $("#misOperaciones").css("display","none")
+      $("#wallet").css("display","none")
 
       $("#datosPersonales").css("font-weight", "normal")
       $("#datosBancarios").css("font-weight", "normal")
@@ -264,6 +276,25 @@
 
     function clickOperaciones(){
       $("#misOperaciones").css("display","block")
+      $("#venta").css("display","none")
+      $("#bancos").css("display","none")
+      $("#perfil").css("display","none")
+      $("#compra").css("display","none")
+      $("#wallet").css("display","none")
+      $.fn.dataTable.tables({ visible: true, api: true }).columns.adjust();
+
+        $("#navPerfil").removeClass("activo");
+        $(".submenu-personal").removeClass( "submenuBlock" );
+      
+    
+        $("#navOperaciones").removeClass("activo");
+        $(".submenu-operaciones").removeClass( "submenuBlock" );
+      
+    }
+
+    function clickWallet(){
+      $("#wallet").css("display","block")
+      $("#misOperaciones").css("display","none")
       $("#venta").css("display","none")
       $("#bancos").css("display","none")
       $("#perfil").css("display","none")
@@ -278,6 +309,7 @@
         $(".submenu-operaciones").removeClass( "submenuBlock" );
       
     }
+
 
   </script>
 
