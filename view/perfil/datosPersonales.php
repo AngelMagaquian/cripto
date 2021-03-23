@@ -12,7 +12,7 @@
               <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Contraseña</button>
             </li>
             <li class="nav-item" role="presentation">
-              <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="foto" aria-selected="false">Foto</button>
+              <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#foto" type="button" role="tab" aria-controls="foto" aria-selected="false">Foto</button>
             </li>
           </ul>
 
@@ -84,6 +84,20 @@
 
           <div class="tab-pane fade" id="foto" role="tabpanel" aria-labelledby="foto-tab">
             <div class="row m-0 justify-content-around">
+                    <div class="col-11 botonera" >
+                      <form id="from_photo" enctype="multipart/form-data">
+                          <label><b>Foto de usuario</b></label>
+                          <br>
+                          <input type="file" name="myfile"/>
+                          <br>
+                          <input type="submit" value="Cargar"  class="btn-get-started-pass btn-pass float-right">
+                          <br>
+                          <figure>
+
+                          </figure>
+                      </form>
+                    </div>
+                
             </div>      
           </div>
 
