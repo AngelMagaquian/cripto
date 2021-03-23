@@ -27,12 +27,30 @@ $(function(){
         .catch(error => {
           // En este punto recibimos el error. then() no se ha invocado
          //window.alert('Error al cargar los datos, intente mas tarde');
-        });
-            
-            
+        });            
     });
 
-    
+    $('#from_photo').submit(function(e){
+        e.preventDefault();
+        console.log("update pass");
+        var confirmation = confirm('¿Desea subir esta fotografia?');
+        if(confirmation == true){
+            
+            
+        } else{
+            
+        }
+        
+        
+    });
+
+    $(document).on("change", "#from_photo", function(){
+        console.log(this.files)
+        var file = this.files;
+        var element;
+
+        var supportedImages = ['image/jpeg', 'image/png', 'image/gif'];
+    });
 
 });
 
