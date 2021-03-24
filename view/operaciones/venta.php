@@ -55,7 +55,7 @@
       </div>
 
   <!--usdt-->
-      <div class="col-lg-3 col-md-5 col-sm-8 col-11 mt-lg-0 ">
+      <div class="col-lg-3 col-md-5 col-sm-8 col-11 mt-lg-0 mt-md-4">
         <div class="row justify-content-center">
           <div class="img-cripto col-lg-3 col-md-4 col-sm-3 col-3">
             <img src="../asset/img/usdt.png" alt="Tether">
@@ -80,7 +80,7 @@
       </div>
 
   <!--dai-->
-      <div class="col-lg-3 col-md-5 col-sm-8 col-11 ">
+      <div class="col-lg-3 col-md-5 col-sm-8 col-11 mt-lg-0 mt-md-4">
         <div class="row">
           <div class="img-cripto col-lg-3 col-md-4 col-sm-3 col-3">
             <img src="../asset/img/dai.png" alt="Dai">
@@ -163,19 +163,19 @@
 </div>
 <div class="container mt-5">
     <div class="row justify-content-around">
-        <div class="col-lg-4 col-md-6 col-11">
-            <div class="row">
-                <div class="col-12 card focus text-center" >
+        <div class="col-lg-4 col-md-12 col-11">
+            <div class="row justify-content-around">
+                <div class="col-lg-12 col-md-5 col-sm-12 card focus text-center" >
                     <h5>Venta de xxxxx</h5>
                     <span class="price"><b>AR$ 0000</b></span>
                 </div>
-                <div class="col-12 card text-center mt-4" >
+                <div class="col-lg-12 col-md-5 col-sm-12 card text-center mt-lg-4 mt-md-0 mt-sm-4" >
                     <h5>Compra de xxxxx</h5>
                     <span class="price"><b>AR$ 0000</b></span>
                 </div>
             </div>
         </div>
-        <div class="col-md-7 col-sm-11 col-11 card focus mt-md-0 mt-sm-4 mt-4">
+        <div class="col-lg-7 col-md-11 col-sm-11 col-11 card focus mt-lg-0 mt-md-4 mt-sm-4 mt-4">
             <div class="row calculadora justify-content-around m-auto">
                 <div class="col-6">
                     <select name="" id="">

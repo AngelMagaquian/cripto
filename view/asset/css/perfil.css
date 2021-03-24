@@ -10,22 +10,32 @@
   -moz-transition: margin .25s ease-out;
   -o-transition: margin .25s ease-out;
   transition: margin .25s ease-out;
-  background-color: #24c4fc;
+  background-color: #385BA2;
   color: #fff;
 }
 
-#sidebar-wrapper .sidebar-heading {
-  padding: 0.875rem 1.25rem;
-  font-size: 1.2rem;
-}
+#sidebar-wrapper .sidebar-heading{
+  padding: 08px 15px;
 
+
+}
+#sidebar-wrapper .sidebar-heading img{
+  /*padding: 0.875rem 1.25rem;
+  font-size: 1.2rem;*/
+  max-width: 200px;
+  margin: auto;
+
+}
 #sidebar-wrapper .list-group {
   width: 15rem;
 }
 
 #page-content-wrapper {
   min-width: 100vw;
+ /* background-image: url("../img/bg.svg");
+  background-repeat: no-repeat;*/
 }
+
 
 #wrapper.toggled #sidebar-wrapper {
   margin-left: 0;
@@ -47,18 +57,18 @@
 }
 
 .navbar{
-    background-color: #E3F3FF;
+    background-color: #D4DFF5;
 }
 
 .list-group-item{
-    background-color: #24c4fc;
+    background-color: #385BA2;
     color: #fff;
 }
 
 
 #wrapper .btn-get-started-sesion {
   font-weight: 500;
-  font-size: 16px;
+  font-size: 13px;
   letter-spacing: 1px;
   display: inline-block;
   padding: 10px 30px;
@@ -80,14 +90,11 @@
 }
 
 #wrapper .btn-sesion{
-  background-color: #44596A;
+  background-color: #5488F0;
   border: none;
-  -webkit-box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
-  -moz-box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
-  box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
 }
 #wrapper .btn-sesion:hover{
-  background-color: #1B97C7;
+  background-color: #274070;
 }
 .submenu ul{
   background-color: #E3F3FF;
@@ -121,12 +128,14 @@
 
 .activo{
   background-color: rgb(248, 249, 250) !important;
-  color: #021646 !important;
+  color: #274070 !important;
 }
+
+
 /*DATOS PERSONALES*/
 
 #perfil .tab-content{
-  background-color: #1b96c725;
+  background-color: #D4DFF5;
   border-radius: 0 0px 25px 25px;
   -webkit-box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
   -moz-box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
@@ -136,6 +145,7 @@
 
 #perfil .tab-content .form-group label{
   font-size: 14px;
+  color: #274070;
 }
 
 #perfil .tab-content .form-group input{
@@ -164,27 +174,28 @@
 }
 
 #perfil .btn-pass{
-  background-color: #27C0FA;
+  background-color: #385BA2;
   -webkit-box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
   -moz-box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
   box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
   float: right;
 }
 #perfil .btn-pass:hover{
-  background-color: #1B97C7;
+  background-color: #385BA2;
 }
 
 /*DATOS BANCARIOS*/
 #bancos .card{
   border-radius: 15px;
-  background-color: #1b96c725;
+  background-color: #D4DFF5;
   -webkit-box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
   -moz-box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
   box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
 }
 #bancos .card .card-header{
-  background-color: #24c4fc;
+  background-color: #385BA2;
   border-radius: 15px 15px 0px 0px;
+  color: #ffffff;
 }
 #bancos span{
   font-size: 14px;
@@ -227,14 +238,14 @@
 }
 
 #bancos .botonera .btn-agg{
-  background-color: #031D5A;
+  background-color: #385BA2;
   -webkit-box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
   -moz-box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
   box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
   float: right;
 }
 #bancos .botonera .btn-agg:hover{
-  background-color: #021646;
+  background-color: #385BA2;
 }
 /*--------------------------------------------------------------
 # Cripto Section
@@ -251,7 +262,7 @@
 
 
 #cripto .cotizacion h4{
-  font-size: 20px !important;
+  font-size: 18px !important;
   text-transform: uppercase;
   font-style: bold;
   color: #44596A;
@@ -322,7 +333,7 @@
 }
 
 #compra .focus{
-  border: 2px solid #24c4fc;
+  border: 2px solid #5488F0;
 }
 
 #compra .card .calculadora select{
@@ -416,7 +427,7 @@
 }
 
 #venta .focus{
-  border: 2px solid #031D5A;;
+  border: 2px solid #274070;;
 }
 
 #venta .card .calculadora select{
@@ -467,7 +478,7 @@
 --------------------------------------------------------------*/
 #misOperaciones .card{
   border-radius: 15px;
-  background-color: #1b96c725;
+  background-color: #D4DFF5;
   -webkit-box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
   -moz-box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
   box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
@@ -475,7 +486,7 @@
 
 #misOperaciones .card-body label{
   font-size: 14px;
-  color: #031D5A;
+  color: #274070;
 }
 #misOperaciones .card-body input[type=date], .card-body select, .card-body input[type=search]{
   font-size: 14px;
@@ -502,29 +513,34 @@
 }
 
 #misOperaciones .btn-filtro{
-  background-color: #031D5A;
+  background-color: #385BA2;
   -webkit-box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
   -moz-box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
   box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
 }
 #misOperaciones .btn-filtro:hover{
-  background-color: #021646;
+  background-color: #284378;
 }
+
+
 
 /*--------------------------------------------------------------
 # wallet
 --------------------------------------------------------------*/
 #wallet .card{
   border-radius: 15px;
-  background-color: #1b96c725;
+  background-color: #D4DFF5;
   -webkit-box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
   -moz-box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
   box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
 }
-
+#wallet .card-body h5{
+  font-weight: bold;
+  color: #274070;
+}
 #wallet .card-body label{
   font-size: 14px;
-  color: #031D5A;
+  color: #274070;
 }
 #wallet .card-body input[type=date], .card-body select, .card-body input[type=search], .card-body input[type=text]{
   font-size: 14px;
@@ -551,11 +567,33 @@
 }
 
 #wallet .btn-filtro{
-  background-color: #031D5A;
+  background-color: #385BA2;
   -webkit-box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
   -moz-box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
   box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
 }
 #wallet .btn-filtro:hover{
-  background-color: #021646;
+  background-color: #284378;
+}
+
+#wallet .btn-get-started-wallet {
+  font-weight: 500;
+  font-size: 11px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 5px 15px;
+  border-radius: 50px;
+  transition: 0.5s;
+  color: #f5f5f5;
+  cursor: pointer;
+  border: none;
+}
+#wallet .btn-wallet{
+  background-color: #385BA2;
+  -webkit-box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
+  -moz-box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
+  box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
+}
+#wallet .btn-wallet:hover{
+  background-color: #284378;
 }
