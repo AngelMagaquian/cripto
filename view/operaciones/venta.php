@@ -1,7 +1,7 @@
 <section id="venta" style="display:none">
 <div id="cripto">
   <div class="container">
-    <div class="row  mt-5">
+    <div class="row  mt-5  px-2">
   <!--btc-->
       <div class="col-lg-3 col-md-5 col-sm-8 col-11">
         <div class="row">
@@ -163,7 +163,7 @@
 </div>
 <div class="container mt-5">
     <div class="row justify-content-around">
-        <div class="col-4">
+        <div class="col-lg-4 col-md-6 col-11">
             <div class="row">
                 <div class="col-12 card focus text-center" >
                     <h5>Venta de xxxxx</h5>
@@ -175,7 +175,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-7 card focus">
+        <div class="col-md-7 col-sm-11 col-11 card focus mt-md-0 mt-sm-4 mt-4">
             <div class="row calculadora justify-content-around m-auto">
                 <div class="col-6">
                     <select name="" id="">

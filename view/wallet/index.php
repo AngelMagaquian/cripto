@@ -4,8 +4,8 @@
         <div class="row justify-content-center mt-4">
             <div class="col-11">   
                 <div class="card">
-                    <div class="card-body mt-3 ">
-                    <div class="row ">
+                    <div class="card-body mt-3">
+                    <div class="row justify-content-center">
                     <h5>Mis wallet</h5>
 
                     <div class="col-6">
@@ -29,7 +29,7 @@
                     </div>
                     </div>                    
                         <div class="row mt-4">
-                        <table id="example" class="table table-striped table-bordered" style="width:100%">
+                        <table id="walletTable" class="table table-striped table-bordered" style="width:100%">
                             <thead>
                                 <tr>
                                     <th>Id wallet</th>

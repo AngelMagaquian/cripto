@@ -1,7 +1,7 @@
 <section id="compra" style="display:none">
 <div id="cripto">
   <div class="container">
-    <div class="row  mt-5">
+    <div class="row  mt-5  px-2">
   <!--btc-->
       <div class="col-lg-3 col-md-5 col-sm-6 col-11 mt-md-0">
         <div class="row">
