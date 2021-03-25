@@ -1,25 +1,27 @@
 import {get_data} from "../app/get_data.js";
 
 $(function(){
-    console.log('ControlerUser');
+    console.log('User Controller');
     $( document ).ready(function() {
        
         get_data('../../model/user/user_data.php').then(response => {
             // En este punto recibimos la respuesta.
-           
+                console.log(response);
                 let data = JSON.parse(response); 
     
                 $('#name_user').val(data.name_user);
-                $('#last_name').val(data.last_name);
+                $('#user_last_name').val(data.last_name);
     
-                $('#middle_name').val(data.middle_name);
-                $('#second_last_name').val(data.second_last_name);
+                $('#user_middle_name').val(data.middle_name);
+                $('#user_second_last_name').val(data.second_last_name);
     
-                $('#dni').val(data.DNI);
-                $('#cuil').val(data.CUIL);
+                $('#user_dni').val(data.DNI);
+                $('#user_cuil').val(data.CUIL);
     
-                $('#birth_day').val(data.birth_day);
-                $('#email').val(data.email);
+                $('#user_birth_day').val(data.birth_day);
+                $('#user_email').val(data.email);
+
+                console.log('datos de usuario: '+data);
                 
             
             
@@ -30,7 +32,7 @@ $(function(){
         });            
     });
 
-    $('#from_photo').submit(function(e){
+    /*$('#from_photo').submit(function(e){
         e.preventDefault();
         console.log("update pass");
         var confirmation = confirm('¿Desea subir esta fotografia?');
@@ -50,7 +52,7 @@ $(function(){
         var element;
 
         var supportedImages = ['image/jpeg', 'image/png', 'image/gif'];
-    });
+    });*/
 
 });
 
