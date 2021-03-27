@@ -27,7 +27,7 @@ $(function(){
             date_to : $('#hasta').val()
         };
 
-        console.log(postData);
+       
 
         $.post('../../model/operation/date_filter.php', postData, function(response){
             if(response == 0){
@@ -95,8 +95,7 @@ $(function(){
         var cripto = $('#divisa').val();
 
         //verificacion de check, se puede hacer una funcion;
-        console.log('se va a buscar= '+cripto);
-
+      
         $.post('../../model/operation/cripto_filter.php', postData, function(response){
                 
                 data = JSON.parse(response); 
@@ -124,7 +123,7 @@ $(function(){
         get_data('../../model/operation/divisas.php').then(response => {
             // En este punto recibimos la respuesta.
             data = JSON.parse(response); 
-            console.log(data);
+            
             let template=``;
             data.forEach(dato =>{
                    template += `

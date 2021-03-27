@@ -5,7 +5,7 @@ $(function(){
     $( document ).ready(function() {
         
         get_data('../../model/user/balance_wallet_user.php').then(response => {
-            console.log(response);
+            
             let data = JSON.parse(response); 
             var template=``;
             

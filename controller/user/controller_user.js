@@ -6,7 +6,7 @@ $(function(){
        
         get_data('../../model/user/user_data.php').then(response => {
             // En este punto recibimos la respuesta.
-                console.log(response);
+             
                 let data = JSON.parse(response); 
     
                 $('#name_user').val(data.name_user);
@@ -21,7 +21,7 @@ $(function(){
                 $('#user_birth_day').val(data.birth_day);
                 $('#user_email').val(data.email);
 
-                console.log('datos de usuario: '+data);
+            
                 
             
             

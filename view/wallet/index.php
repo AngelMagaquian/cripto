@@ -1,4 +1,4 @@
-
+<script src="..\..\controller\wallet_cripto\wallet_cripto_controller.js" type="module" ></script>
 <section id="wallet" style="display:none">
 
 <div class="container-fluid">
@@ -10,7 +10,7 @@
                 <div class="card-body mt-3">
                 <div class="row justify-content-between">
                     <h5>Mis wallet</h5>
-                    <form id="" class="col-lg-4 col-md-6 col-sm-12">
+                    <form id="buscar" class="col-lg-4 col-md-6 col-sm-12"> <!--cambiar nombre dsp-->
                         <div class="row">
                             <div class="col-md-6 col-sm-6 col-8">
                                 <input type="text" placeholder="Ingresar código de wallet" class="form-control">
@@ -21,7 +21,7 @@
                                 
                         </div>
                     </form>
-                    <form id="" class="col-lg-4 col-md-6 col-sm-12 mt-md-0 mt-sm-4 mt-4">
+                    <form id="" class="col-lg-4 col-md-6 col-sm-12 mt-md-0 mt-sm-4 mt-4"> <!-- falta nombre-->
                         <div class="row">
                             <div class="col-12" style="text-align: end;">
                                 <input type="submit" value="Nueva wallet" class="btn-get-started-wallet btn-wallet">
@@ -35,7 +35,8 @@
                         <thead>
                             <tr>
                                 <th>Id wallet</th>
-                                <th>Tipo de divisa</th>                
+                                <th>Criptomoneda</th>      
+                                <th>Alias</th>          
                             </tr>
                         </thead>
                         <tbody id="wallet_tbody">
