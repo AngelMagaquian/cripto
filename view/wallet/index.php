@@ -10,13 +10,20 @@
                 <div class="card-body mt-3">
                 <div class="row justify-content-between">
                     <h5>Mis wallet</h5>
-                    <form id="buscar" class="col-lg-4 col-md-6 col-sm-12"> <!--cambiar nombre dsp-->
+                    <form id="add_wallet" class="col-lg-4 col-md-6 col-sm-12"> <!--cambiar nombre dsp-->
+                        
                         <div class="row">
+                            
+                            <label>Agregar nueva wallet</label>
                             <div class="col-md-6 col-sm-6 col-8">
-                                <input type="text" placeholder="Ingresar código de wallet" class="form-control">
+                                <input id= "id_cripto_wallet" type="text" placeholder="Ingresar código de wallet" class="form-control" autocomplete="off" required>
+                                <br>
+                                <input id="description_cripto_wallet" type="text" placeholder="Ingresar alias de wallet" class="form-control" autocomplete="off" required>
+                                <br>
+                                <select id="divisa_wallet"></select>
                             </div>
                             <div class="col-2">
-                                <input type="submit" value="Buscar" class="btn-get-started-filtro btn-filtro">
+                                <input type="submit" value="Agregar" class="btn-get-started-filtro btn-filtro">
                             </div>
                                 
                         </div>

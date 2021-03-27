@@ -126,6 +126,7 @@ $(function(){
             
             let template=``;
             data.forEach(dato =>{
+                
                    template += `
                    <option value='${dato.ID_cripto}'>${dato.name} (${dato.description})</option>
                    `;
