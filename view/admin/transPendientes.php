@@ -8,7 +8,7 @@
             <div class="card">
                 <div class="card-body mt-3">
                 <div class="row justify-content-between">
-                    <h5>Datos de usurios</h5>
+                    <h5>Transacciones de depositos pendientes</h5>
                 </div>
 
                 <div class="row mt-4">

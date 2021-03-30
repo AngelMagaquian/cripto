@@ -46,10 +46,10 @@
               <a href="#" id="datosUser" onclick="clickDatosUser()">Datos de usuario</a>
             </li>
             <li>
-              <a href="#" id="" onclick="">Identidad de usuario</a>
+              <a href="#" id="identidadUser" onclick="clickIdentidadUser()">Identidad de usuario</a>
             </li>
             <li>
-              <a href="#" id="" onclick="">Wallet de usuario</a>
+              <a href="#" id="walletUser" onclick="clickWalletUser()">Wallet de usuario</a>
             </li>
           </ul>
         </div>
@@ -64,13 +64,13 @@
         <div class="submenu submenu-operaciones">
           <ul>
             <li>
-              <a href="#" id="transPendientes" onclick="clickTransPendientes()">Transferencias pendientes</a>
+              <a href="#" id="transPendientes" onclick="clickTransPendientes()">Transacciones pendientes</a>
             </li>
             <li>
-              <a href="#" id="ventaOpera" onclick="clickVenta()">Agregar criptomoneda</a>
+              <a href="#" id="" onclick="">Agregar criptomoneda</a>
             </li>
             <li>
-              <a href="#" id="ventaOpera" onclick="clickVenta()">Agregar banco</a>
+              <a href="#" id="aggBanco" onclick="clickaggBanco()">Agregar banco</a>
             </li>
           </ul>
         </div>
@@ -96,13 +96,17 @@
 
       <div class="herramienta">
         <?php
-        include '../wallet/index.php';
-        include '../misOperaciones/index.php';
-          include '../operaciones/compra.php';
-          
           include '../admin/transPendientes.php';
-          include '../admin/datosUser.php';
+          include '../admin/datosUser.php'; 
+          include '../admin/identidadUser.php';
           include '../admin/cuentasBancarias.php';
+
+          include '../admin/aggBanco.php';
+          include '../admin/walletUser.php';
+
+          
+   
+
           
           
           
@@ -281,118 +285,112 @@
       });
     } );
 
-
-
+//cliks en menu
+//usuario
     function clickCuentasBancarias(){
-      $("#cuentas").css("display","block")
-      $("#usuarios").css("display","none")
-      $("#transferencia").css("display","none")
+      $("#cuentas").css("display","block");
+      $("#usuarios").css("display","none");
+      $("#identidad").css("display","none");
+      $("#userW").css("display","none");
+      $("#transferencia").css("display","none");
+      $("#banco").css("display","none");
 
       $("#cuentasBancarias").css("font-weight", "bold")
       $("#datosUser").css("font-weight", "normal")
+      $("#identidadUser").css("font-weight", "normal")
+      $("#walletUser").css("font-weight", "normal")
       $.fn.dataTable.tables({ visible: true, api: true }).columns.adjust();
       //
-
-      $("#bancos").css("display","none")
-      $("#compra").css("display","none")
-      $("#venta").css("display","none")
-      $("#misOperaciones").css("display","none")
-
-
-      
-      
-      $("#compraOpera").css("font-weight", "normal")
-      $("#ventaOpera").css("font-weight", "normal")
 
     }
 
     function clickDatosUser(){
-      $("#usuarios").css("display","block")
-      $("#cuentas").css("display","none")
-      $("#transferencia").css("display","none")
+      $("#usuarios").css("display","block");
+      $("#cuentas").css("display","none");
+      $("#identidad").css("display","none");
+      $("#userW").css("display","none");
+      $("#transferencia").css("display","none");
+      $("#banco").css("display","none");
+      
 
       $("#cuentasBancarias").css("font-weight", "normal")
       $("#datosUser").css("font-weight", "bold")
+      $("#identidadUser").css("font-weight", "normal")
+      $("#walletUser").css("font-weight", "normal")
       $.fn.dataTable.tables({ visible: true, api: true }).columns.adjust();
       //
-      $("#compra").css("display","none")
-      $("#venta").css("display","none")
-      $("#misOperaciones").css("display","none")
-      $("#wallet").css("display","none")
-      
-      
-      $("#compraOpera").css("font-weight", "normal")
-      $("#ventaOpera").css("font-weight", "normal")
       
     }
 
-    function clickTransPendientes(){
-      $("#transferencia").css("display","block")
-      $("#usuarios").css("display","none")
+
+    function clickIdentidadUser(){
+      $("#identidad").css("display","block")
+      $("#cuentas").css("display","none");
+      $("#usuarios").css("display","none");
+
+      $("#userW").css("display","none");
+      $("#transferencia").css("display","none");
+      $("#banco").css("display","none");
+
+      $("#cuentasBancarias").css("font-weight", "normal")
+      $("#datosUser").css("font-weight", "normal")
+      $("#identidadUser").css("font-weight", "bold")
+      $.fn.dataTable.tables({ visible: true, api: true }).columns.adjust();
+      //
+    }
+
+    function clickWalletUser(){
       $("#cuentas").css("display","none")
+      $("#usuarios").css("display","none")
+      $("#identidad").css("display","none")
+      $("#userW").css("display","block")
+      $("#transferencia").css("display","none")
+      $("#banco").css("display","none")
+
+      $("#cuentasBancarias").css("font-weight", "normal")
+      $("#datosUser").css("font-weight", "normal")
+      $("#identidadUser").css("font-weight", "normal")
+      $("#walletUser").css("font-weight", "bold")
+      $.fn.dataTable.tables({ visible: true, api: true }).columns.adjust();
+      //
+
+      
+    }
+
+//operaciones
+    function clickTransPendientes(){
+      $("#cuentas").css("display","none")
+      $("#usuarios").css("display","none")
+      $("#identidad").css("display","none")
+      $("#userW").css("display","none")
+      $("#transferencia").css("display","block")
+      $("#banco").css("display","none")
 
       $("#cuentasBancarias").css("font-weight", "normal")
       $("#datosUser").css("font-weight", "normal")
       $("#transPendientes").css("font-weight", "bold")
       $.fn.dataTable.tables({ visible: true, api: true }).columns.adjust();
       //
-      $("#venta").css("display","none")
-      $("#misOperaciones").css("display","none")
-      $("#wallet").css("display","none")
-
-      
-      $("#ventaOpera").css("font-weight", "normal")
     }
 
-    function clickVenta(){
-      $("#venta").css("display","block")
-      $("#bancos").css("display","none")
-      $("#perfil").css("display","none")
-      $("#compra").css("display","none")
-      $("#misOperaciones").css("display","none")
-      $("#wallet").css("display","none")
+
+    function clickaggBanco(){
+      $("#cuentas").css("display","none")
+      $("#usuarios").css("display","none")
+      $("#identidad").css("display","none")
+      $("#userW").css("display","none")
+      $("#transferencia").css("display","none")
+      $("#banco").css("display","block")
 
       $("#cuentasBancarias").css("font-weight", "normal")
-      $("#datosBancarios").css("font-weight", "normal")
-      $("#compraOpera").css("font-weight", "normal")
-      $("#ventaOpera").css("font-weight", "bold")
+      $("#datosUser").css("font-weight", "normal")
+      $("#identidadUser").css("font-weight", "normal")
+      $("#aggBanco").css("font-weight", "bold")
+
+      //
     }
 
-    function clickOperaciones(){
-      $("#misOperaciones").css("display","block")
-      $("#venta").css("display","none")
-      $("#bancos").css("display","none")
-      $("#perfil").css("display","none")
-      $("#compra").css("display","none")
-      $("#wallet").css("display","none")
-      $.fn.dataTable.tables({ visible: true, api: true }).columns.adjust();
 
-        $("#navUsuario").removeClass("activo");
-        $(".submenu-personal").removeClass( "submenuBlock" );
-      
-    
-        $("#navOperaciones").removeClass("activo");
-        $(".submenu-operaciones").removeClass( "submenuBlock" );
-      
-    }
-
-    function clickWallet(){
-      $("#wallet").css("display","block")
-      $("#misOperaciones").css("display","none")
-      $("#venta").css("display","none")
-      $("#bancos").css("display","none")
-      $("#perfil").css("display","none")
-      $("#compra").css("display","none")
-      $.fn.dataTable.tables({ visible: true, api: true }).columns.adjust();
-
-        $("#navUsuario").removeClass("activo");
-        $(".submenu-personal").removeClass( "submenuBlock" );
-      
-    
-        $("#navOperaciones").removeClass("activo");
-        $(".submenu-operaciones").removeClass( "submenuBlock" );
-      
-    }
 
 
   </script>

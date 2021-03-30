@@ -474,9 +474,9 @@
 }
 
 /*--------------------------------------------------------------
-# mis operaciones
+# transferencia
 --------------------------------------------------------------*/
-#misOperaciones .card{
+#transferencia .card{
   border-radius: 15px;
   background-color: #D4DFF5;
   -webkit-box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
@@ -484,43 +484,11 @@
   box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
 }
 
-#misOperaciones .card-body label{
-  font-size: 14px;
+#transferencia .card-body h5{
+  font-weight: bold;
   color: #274070;
 }
-#misOperaciones .card-body input[type=date], .card-body select, .card-body input[type=search]{
-  font-size: 14px;
-  background-color: transparent;
-  border: none !important;
-  border: none;
-  border-radius: 0px ;
-  padding: 0px;
-  color: #000;
-  border-bottom: 1px solid #000 !important;
-}
 
-#misOperaciones .btn-get-started-filtro {
-  font-weight: 500;
-  font-size: 11px;
-  letter-spacing: 1px;
-  display: inline-block;
-  padding: 5px 15px;
-  border-radius: 50px;
-  transition: 0.5s;
-  color: #f5f5f5;
-  cursor: pointer;
-  border:none;
-}
-
-#misOperaciones .btn-filtro{
-  background-color: #385BA2;
-  -webkit-box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
-  -moz-box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
-  box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
-}
-#misOperaciones .btn-filtro:hover{
-  background-color: #284378;
-}
 
 
 
