@@ -1,6 +1,10 @@
 /*NAV*/
+*{
+  font-family: 'Poppins', sans-serif;
+}
 #wrapper {
     overflow-x: hidden;
+    background-color: rgb(242, 243, 247);
  }
 
 #sidebar-wrapper {
@@ -72,7 +76,7 @@
   letter-spacing: 1px;
   display: inline-block;
   padding: 10px 30px;
-  border-radius: 50px;
+  border-radius: 5px;
   transition: 0.5s;
   color: #f5f5f5;
   margin: auto;
@@ -167,7 +171,7 @@
   letter-spacing: 1px;
   display: inline-block;
   padding: 10px 30px;
-  border-radius: 50px;
+  border-radius: 5px;
   transition: 0.5s;
   color: #f5f5f5;
   border: none;
@@ -186,7 +190,7 @@
 
 /*DATOS BANCARIOS*/
 #bancos .card{
-  border-radius: 15px;
+  border-radius: 8px;
   background-color: #D4DFF5;
   -webkit-box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
   -moz-box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
@@ -232,7 +236,7 @@
   letter-spacing: 1px;
   display: inline-block;
   padding: 10px 30px;
-  border-radius: 50px;
+  border-radius: 5px;
   transition: 0.5s;
   color: #f5f5f5;
 }
@@ -293,7 +297,7 @@
 }
 
 #compra .card{
-  border-radius: 15px;
+  border-radius: 8px;
   padding: 20px;
   
   /*background-color: #1b96c725;*/
@@ -387,7 +391,7 @@
 }
 
 #venta .card{
-  border-radius: 15px;
+  border-radius: 8px;
   padding: 20px;
   
   /*background-color: #1b96c725;*/
@@ -473,62 +477,13 @@
   background-color: #1B97C7;
 }
 
-/*--------------------------------------------------------------
-# mis operaciones
---------------------------------------------------------------*/
-#misOperaciones .card{
-  border-radius: 15px;
-  background-color: #D4DFF5;
-  -webkit-box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
-  -moz-box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
-  box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
-}
-
-#misOperaciones .card-body label{
-  font-size: 14px;
-  color: #274070;
-}
-#misOperaciones .card-body input[type=date], .card-body select, .card-body input[type=search]{
-  font-size: 14px;
-  background-color: transparent;
-  border: none !important;
-  border: none;
-  border-radius: 0px ;
-  padding: 0px;
-  color: #000;
-  border-bottom: 1px solid #000 !important;
-}
-
-#misOperaciones .btn-get-started-filtro {
-  font-weight: 500;
-  font-size: 11px;
-  letter-spacing: 1px;
-  display: inline-block;
-  padding: 5px 15px;
-  border-radius: 50px;
-  transition: 0.5s;
-  color: #f5f5f5;
-  cursor: pointer;
-  border:none;
-}
-
-#misOperaciones .btn-filtro{
-  background-color: #385BA2;
-  -webkit-box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
-  -moz-box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
-  box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
-}
-#misOperaciones .btn-filtro:hover{
-  background-color: #284378;
-}
-
 
 
 /*--------------------------------------------------------------
 # wallet
 --------------------------------------------------------------*/
 #wallet .card{
-  border-radius: 15px;
+  border-radius: 8px;
   background-color: #D4DFF5;
   -webkit-box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
   -moz-box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
@@ -559,7 +514,7 @@
   letter-spacing: 1px;
   display: inline-block;
   padding: 5px 15px;
-  border-radius: 50px;
+  border-radius: 5px;
   transition: 0.5s;
   color: #f5f5f5;
   cursor: pointer;
@@ -582,7 +537,7 @@
   letter-spacing: 1px;
   display: inline-block;
   padding: 5px 15px;
-  border-radius: 50px;
+  border-radius: 5px;
   transition: 0.5s;
   color: #f5f5f5;
   cursor: pointer;
@@ -596,4 +551,260 @@
 }
 #wallet .btn-wallet:hover{
   background-color: #284378;
+}
+
+/*NUEVO*/
+
+
+/*--------------------------------------------------------------
+# cuentas
+--------------------------------------------------------------*/
+#cuentas .card{
+  border-radius: .42rem;
+  background-color: #fff;
+  -webkit-box-shadow: 0 0 30px 0 rgb(82 63 105 / 5%);
+  -moz-box-shadow: 0 0 30px 0 rgb(82 63 105 / 5%);
+  box-shadow: 0 0 30px 0 rgb(82 63 105 / 5%);
+}
+
+#cuentas h5{
+  font-weight: bold;
+  color: #274070;
+  text-transform: uppercase;
+}
+
+#cuentas .fotoPerfil img{
+  width: 150px; 
+  height: 150px; 
+  object-fit: cover;
+}
+
+#cuentas .buscador input{
+  float: right;
+  height: 28px;
+
+}
+#cuentas .buscador button{
+  float: right;
+  margin-left: 5px;
+  border: none;
+  background-color: #D4DFF5;
+  padding: 2px 5px;
+  border-radius: 5px;
+}
+
+#cuentas .btn-get-started-confirmar {
+  font-weight: 500;
+  font-size: 13px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 10px 30px;
+  border-radius: 5px;
+  transition: 0.5s;
+  color: #f5f5f5;
+}
+
+
+/*--------------------------------------------------------------
+# identidad
+--------------------------------------------------------------*/
+#identidad .card{
+  border-radius: .42rem;
+  background-color: #fff;
+  -webkit-box-shadow: 0 0 30px 0 rgb(82 63 105 / 5%);
+  -moz-box-shadow: 0 0 30px 0 rgb(82 63 105 / 5%);
+  box-shadow: 0 0 30px 0 rgb(82 63 105 / 5%);
+}
+
+#identidad h5{
+  font-weight: bold;
+  color: #274070;
+  text-transform: uppercase;
+}
+
+#identidad .fotoPerfil img{
+  width: 150px; 
+  height: 150px; 
+  object-fit: cover;
+}
+
+#identidad .buscador input{
+  float: right;
+  height: 28px;
+
+}
+#identidad .buscador button{
+  float: right;
+  margin-left: 5px;
+  border: none;
+  background-color: #D4DFF5;
+  padding: 2px 5px;
+  border-radius: 5px;
+}
+#identidad .btn-get-started-confirmar {
+  font-weight: 500;
+  font-size: 13px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 10px 30px;
+  border-radius: 5px;
+  transition: 0.5s;
+  color: #f5f5f5;
+}
+
+#identidad .btn{
+  background-color: #385BA2;
+  -webkit-box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
+  -moz-box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
+  box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
+  float: right;
+}
+
+#identidad .btn:hover{
+  background-color: #274070;
+}
+
+/*--------------------------------------------------------------
+# usuarios
+--------------------------------------------------------------*/
+#usuarios .card{
+  border-radius: .42rem;
+  background-color: #fff;
+  -webkit-box-shadow: 0 0 30px 0 rgb(82 63 105 / 5%);
+  -moz-box-shadow: 0 0 30px 0 rgb(82 63 105 / 5%);
+  box-shadow: 0 0 30px 0 rgb(82 63 105 / 5%);
+}
+
+#usuarios h5{
+  font-weight: bold;
+  color: #274070;
+  text-transform: uppercase;
+}
+
+/*--------------------------------------------------------------
+# wallet
+--------------------------------------------------------------*/
+#userW .card{
+  border-radius: .42rem;
+  background-color: #fff;
+  -webkit-box-shadow: 0 0 30px 0 rgb(82 63 105 / 5%);
+  -moz-box-shadow: 0 0 30px 0 rgb(82 63 105 / 5%);
+  box-shadow: 0 0 30px 0 rgb(82 63 105 / 5%);
+}
+
+#userW h5{
+  font-weight: bold;
+  color: #274070;
+  text-transform: uppercase;
+}
+#userW span{
+  font-size: 14px;
+}
+#userW .fotoPerfil img{
+  width: 150px; 
+  height: 150px; 
+  object-fit: cover;
+}
+
+#userW .buscador input{
+  float: right;
+  height: 28px;
+
+}
+#userW .buscador button{
+  float: right;
+  margin-left: 5px;
+  border: none;
+  background-color: #D4DFF5;
+  padding: 2px 5px;
+  border-radius: 5px;
+}
+#userW .btn-get-started-confirmar {
+  font-weight: 500;
+  font-size: 13px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 10px 30px;
+  border-radius: 5px;
+  transition: 0.5s;
+  color: #f5f5f5;
+}
+
+#userW .btn{
+  background-color: #385BA2;
+  -webkit-box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
+  -moz-box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
+  box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
+  float: right;
+}
+
+#userW .btn:hover{
+  background-color: #274070;
+}
+/*--------------------------------------------------------------
+# transferencia
+--------------------------------------------------------------*/
+#transferencia .card{
+  border-radius: .42rem;
+  background-color: #fff;
+  -webkit-box-shadow: 0 0 30px 0 rgb(82 63 105 / 5%);
+  -moz-box-shadow: 0 0 30px 0 rgb(82 63 105 / 5%);
+  box-shadow: 0 0 30px 0 rgb(82 63 105 / 5%);
+}
+
+#transferencia h5{
+  font-weight: bold;
+  color: #274070;
+  text-transform: uppercase;
+}
+
+/*--------------------------------------------------------------
+# transferencia
+--------------------------------------------------------------*/
+#banco .card{
+  border-radius: .42rem;
+  background-color: #fff;
+  -webkit-box-shadow: 0 0 30px 0 rgb(82 63 105 / 5%);
+  -moz-box-shadow: 0 0 30px 0 rgb(82 63 105 / 5%);
+  box-shadow: 0 0 30px 0 rgb(82 63 105 / 5%);
+}
+
+#banco h5{
+  font-weight: bold;
+  color: #274070;
+  text-transform: uppercase;
+}
+
+#banco .btn-get-started-confirmar {
+  font-weight: 500;
+  font-size: 13px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 10px 30px;
+  border-radius: 5px;
+  transition: 0.5s;
+  color: #f5f5f5;
+}
+
+#banco .btn{
+  background-color: #385BA2;
+  -webkit-box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
+  -moz-box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
+  box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
+  float: right;
+}
+
+#banco .btn:hover{
+  background-color: #274070;
+}
+#banco textarea{
+  font-size: 14px;
+  background-color: transparent;
+  border: none !important;
+  border: none;
+  border-radius: 0px;
+  padding: 0px;
+  color: #000;
+  border-bottom: 1px solid #000 !important;
+  height: 20px;
 }
