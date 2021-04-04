@@ -19,11 +19,15 @@ $(function(){
                     
                     delete_input();
                 }else{
-                    window.alert('usuario encontrado');
+                    
                     delete_input();
                    
+                    if(response == 1){
+                        $(location). attr('href','../../view/shared/user.php');
+                    }else if(response == 2){
+                        $(location). attr('href','../../view/admin/index.php');
+                    }
                     
-                    $(location). attr('href','../../view/shared/user.php');
                 }
             });
             e.preventDefault();

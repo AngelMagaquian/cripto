@@ -27,7 +27,7 @@
             $_SESSION['last_name'] = $resultado['last_name'];
             $_SESSION['check_user'] = $resultado['check_user'];
             $_SESSION['type'] = $resultado['type'];
-            echo 1;
+            echo $_SESSION['type'];
         }
     
     
