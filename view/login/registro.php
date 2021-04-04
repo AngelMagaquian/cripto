@@ -11,6 +11,10 @@
     <link href="../asset/css/bootstrap/bootstrap.min.css" rel="stylesheet">
 
 	<link href="../asset/css/style_login.css" rel="stylesheet">
+    <!--fonts-->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
 </head>
 <body>
 <section id="login">

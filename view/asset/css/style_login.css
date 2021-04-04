@@ -1,7 +1,7 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: "Montserrat", sans-serif;
+    font-family: 'Poppins', sans-serif;
   }
   a {
     text-decoration: none;
@@ -24,7 +24,7 @@
   }
 
 #login .card{
-  border-radius: 30px !important;
+  border-radius: .42rem;
   -webkit-box-shadow: 0px 0px 8px 0px rgba(186,186,186,1);
   -moz-box-shadow: 0px 0px 8px 0px rgba(186,186,186,1);
   box-shadow: 0px 0px 8px 0px rgba(186,186,186,1);
@@ -60,12 +60,13 @@
     letter-spacing: 1px;
     display: inline-block;
     padding: 10px 30px;
-    border-radius: 50px;
+    border-radius: 5px;
     transition: 0.5s;
     color: #f5f5f5;
   }
 
   #login .btn-login{
+    font-size: 14px;
     background-color: #27C0FA;
     border: none;
     -webkit-box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
@@ -77,6 +78,7 @@
   }
 
   #login .btn-registrarse{
+    font-size: 14px;
     background-color: #031D5A;
     border: none;
     -webkit-box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
@@ -89,5 +91,5 @@
 
   #login .text-registro{
     color: #6FC0FB;
-    font-size: 20px;
+    font-size: 18px;
   }

@@ -80,7 +80,7 @@
       </div>
 
   <!--dai-->
-      <div class="col-lg-3 col-md-5 col-sm-6 col-11 mt-4">
+      <div class="col-lg-3 col-md-5 col-sm-6 col-11 mt-md-0 mt-4">
         <div class="row">
           <div class="img-cripto col-lg-3 col-md-4 col-sm-3 col-3">
             <img src="../asset/img/dai.png" alt="Dai">

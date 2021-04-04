@@ -5,11 +5,13 @@
     <div class="row justify-content-center mt-4">
 
         <div class="col-11">   
-
+            <div class="row">
+                <h5>Mis wallet</h5>
+            </div>
             <div class="card">
                 <div class="card-body mt-3">
                 <div class="row justify-content-between">
-                    <h5>Mis wallet</h5>
+
                     <form id="add_wallet" class="col-lg-4 col-md-6 col-sm-12"> <!--cambiar nombre dsp-->
                         
                         <div class="row">

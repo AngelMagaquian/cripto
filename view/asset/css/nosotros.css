@@ -1,7 +1,7 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: "Montserrat", sans-serif;
+    font-family: 'Poppins', sans-serif;
   }
   a {
     text-decoration: none;
@@ -50,81 +50,7 @@
     margin: 20px 0 0 0;
     font-size: 20px;
   }
- /* #hero-nosotros .text-animate{
-    display: flex;
-    width: 500px;
-    height: 60px;
-    color: #042980;
-    font-size: 40px;
-    position: absolute;
-    overflow: hidden;
-    margin-top: 20px;
-  
-  }
-  
-  #hero-nosotros .text-animate ul{
-    list-style: none;
-    padding-left: 0px;
-    animation: change 9s infinite;
-  }
-  
-  #hero-nosotros .text-animate ul, p{
-    margin: 0;
-  }
-  
-  @keyframes change{
-    0%{margin-top: 0;}
-    20%{margin-top: 0;}
-    
-    25%{margin-top: -70px;}
-    50%{margin-top: -70px;}
-  
-    55%{margin-top: -130px;}
-    80%{margin-top: -130px;}
-  
-    85%{margin-top: -70px;}
-    95%{margin-top: -70px;}
-  
-    100%{margin-top: 0px;}
-  }
-  #hero-nosotros .container-btn{
-    margin-top: 100px;
-  }
-  #hero-nosotros a {
-    text-transform: uppercase;
-  }
-  #hero-nosotros .btn-get-started {
-    font-weight: 500;
-    font-size: 16px;
-    letter-spacing: 1px;
-    display: inline-block;
-    padding: 10px 30px;
-    border-radius: 50px;
-    transition: 0.5s;
-    color: #f5f5f5;
-  }
-  
-  #hero-nosotros .btn-login{
-    background-color: #27C0FA;
-    -webkit-box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
-    -moz-box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
-    box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
-  }
-  #hero-nosotros .btn-login:hover{
-    background-color: #1B97C7;
-  }
-  
-  #hero-nosotros .btn-registro{
-    background-color: #44596A;
-    -webkit-box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
-    -moz-box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
-    box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
-  }
-  #hero-nosotros .btn-registro:hover{
-    background-color: #2D3A46;
-  }
-  */
-  
+ 
   #hero-nosotros .animated {
     animation: up-down 2s ease-in-out infinite alternate-reverse both;
   }
@@ -308,7 +234,7 @@
   
   #valores .card-uno{
     background-color: #031D5A;
-    border-radius: 15px;
+    border-radius: .42rem;
     padding: 30px;
     text-align: center;
     color:#fff;
@@ -319,7 +245,7 @@
   }
   #valores .card-dos{
     background-color: #27C0FA;
-    border-radius: 15px;
+    border-radius: .42rem;
     padding: 30px;
     text-align: center;
     color:#fff;
@@ -330,7 +256,7 @@
   }
   #valores .card-tres{
     background-color: #399EFA;
-    border-radius: 15px;
+    border-radius: .42rem;
     padding: 30px;
     text-align: center;
     color:#fff;

@@ -4,7 +4,7 @@
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
+  <link rel="shortcut icon" href="view/asset/img/64x64.png"/>
 
     <title>CRIPTO | Ayuda</title>
 
@@ -16,6 +16,10 @@
 
 	<link href="./view/asset/css/style.css" rel="stylesheet">
     <link href="./view/asset/css/ayuda.css" rel="stylesheet">
+      <!--fonts-->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
 </head>
 <body>
   <header>
@@ -77,7 +81,7 @@ include 'nav.php';
 <div class="container">
     <div class="row justify-content-center">
 
-        <div class="col-10 card-registro pt-5 pb-5">
+        <div class="col-8 card-registro pt-5 pb-5">
             <h5 class="text-card mb-4"><b>¿Cómo registrarse?</b></h5>
             <div class="row justify-content-center">
                 <div class="col-11">
@@ -86,7 +90,7 @@ include 'nav.php';
             </div>
         </div>
 
-        <div class="col-10 card-comprar pt-5 pb-5">
+        <div class="col-8 card-comprar pt-5 pb-5">
             <h5 class="text-card mb-4"><b>¿Cómo comprar?</b></h5>
             <div class="row justify-content-center">
                 <div class="col-11">
@@ -95,7 +99,7 @@ include 'nav.php';
             </div>
         </div>
 
-        <div class="col-10 card-vender pt-5 pb-5">
+        <div class="col-8 card-vender pt-5 pb-5">
             <h5 class="text-card mb-4"><b>¿Cómo vender?</b></h5>
             <div class="row justify-content-center">
                 <div class="col-11">
