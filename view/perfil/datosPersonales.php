@@ -86,7 +86,7 @@
             <div class="row m-0 justify-content-around">
                     <div class="col-11 botonera" >
                       <form id="from_photo" enctype="multipart/form-data">
-                          <label><b>Foto de usuario</b></label>
+                          <label style="font-size: 14px; color: #274070;"><b>Foto de usuario</b></label>
                           <br>
                           <input type="file" name="myfile"/>
                           <br>

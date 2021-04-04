@@ -1,8 +1,11 @@
 /*NAV*/
+*{
+  font-family: 'Poppins', sans-serif;
+}
 #wrapper {
     overflow-x: hidden;
+    background-color: rgb(242, 243, 247);
  }
-
 #sidebar-wrapper {
   min-height: 100vh;
   margin-left: -15rem;
@@ -72,7 +75,7 @@
   letter-spacing: 1px;
   display: inline-block;
   padding: 10px 30px;
-  border-radius: 50px;
+  border-radius: 5px;
   transition: 0.5s;
   color: #f5f5f5;
   margin: auto;
@@ -83,7 +86,7 @@
   letter-spacing: 1px;
   display: inline-block;
   padding: 10px 30px;
-  border-radius: 50px;
+  border-radius: 5px;
   transition: 0.5s;
   color: #f5f5f5;
 
@@ -135,12 +138,13 @@
 /*DATOS PERSONALES*/
 
 #perfil .tab-content{
-  background-color: #D4DFF5;
-  border-radius: 0 0px 25px 25px;
-  -webkit-box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
-  -moz-box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
-  box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
+  background-color: #fff;
+  border-radius: 0 0px .42rem .42rem;
+  -webkit-box-shadow: 0 0 30px 0 rgb(82 63 105 / 5%);
+  -moz-box-shadow: 0 0 30px 0 rgb(82 63 105 / 5%);
+  box-shadow: 0 0 30px 0 rgb(82 63 105 / 5%);
   padding: 25px 0;
+  border-color: 1px solid #dee2e6
 }
 
 #perfil .tab-content .form-group label{
@@ -167,7 +171,7 @@
   letter-spacing: 1px;
   display: inline-block;
   padding: 10px 30px;
-  border-radius: 50px;
+  border-radius: 5px;
   transition: 0.5s;
   color: #f5f5f5;
   border: none;
@@ -186,16 +190,15 @@
 
 /*DATOS BANCARIOS*/
 #bancos .card{
-  border-radius: 15px;
-  background-color: #D4DFF5;
-  -webkit-box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
-  -moz-box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
-  box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
+  border-radius: .42rem;
+  background-color: #fff;
+  -webkit-box-shadow: 0 0 30px 0 rgb(82 63 105 / 5%);
+  -moz-box-shadow: 0 0 30px 0 rgb(82 63 105 / 5%);
+  box-shadow: 0 0 30px 0 rgb(82 63 105 / 5%);
 }
 #bancos .card .card-header{
-  background-color: #385BA2;
-  border-radius: 15px 15px 0px 0px;
-  color: #ffffff;
+  border-radius: .42rem .42rem 0px 0px;
+  color: #385BA2;
 }
 #bancos span{
   font-size: 14px;
@@ -210,6 +213,7 @@
 
 #bancos .card-body label{
   font-size: 14px;
+  color: #274070;
 }
 #bancos .card-body input{
   font-size: 14px;
@@ -232,7 +236,7 @@
   letter-spacing: 1px;
   display: inline-block;
   padding: 10px 30px;
-  border-radius: 50px;
+  border-radius: 5px;
   transition: 0.5s;
   color: #f5f5f5;
 }
@@ -293,13 +297,12 @@
 }
 
 #compra .card{
-  border-radius: 15px;
   padding: 20px;
-  
-  /*background-color: #1b96c725;*/
-  -webkit-box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
-  -moz-box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
-  box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
+  border-radius: .42rem;
+  background-color: #fff;
+  -webkit-box-shadow: 0 0 30px 0 rgb(82 63 105 / 5%);
+  -moz-box-shadow: 0 0 30px 0 rgb(82 63 105 / 5%);
+  box-shadow: 0 0 30px 0 rgb(82 63 105 / 5%);
 }
 
 #compra .price{
@@ -360,23 +363,23 @@
 }
 
 #compra .card .calculadora .container-btn .btn-cancelar{
-  color: #27C0FA;
+  color: #385BA2;
   background-color: transparent;
 
 }
 #compra .card .calculadora .container-btn .btn-cancelar:hover{
-  color: #a9e2f5;
+  color: #031D5A;
 }
 
 #compra .card .calculadora .container-btn .btn-siguiente{
   color:#fff;
-  background-color: #27C0FA;
+  background-color: #385BA2;
   -webkit-box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
   -moz-box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
   box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
 }
 #compra .card .calculadora .container-btn .btn-siguiente:hover{
-  background-color: #1B97C7;
+  background-color: #031D5A;
 }
 
 
@@ -387,13 +390,12 @@
 }
 
 #venta .card{
-  border-radius: 15px;
   padding: 20px;
-  
-  /*background-color: #1b96c725;*/
-  -webkit-box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
-  -moz-box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
-  box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
+  border-radius: .42rem;
+  background-color: #fff;
+  -webkit-box-shadow: 0 0 30px 0 rgb(82 63 105 / 5%);
+  -moz-box-shadow: 0 0 30px 0 rgb(82 63 105 / 5%);
+  box-shadow: 0 0 30px 0 rgb(82 63 105 / 5%);
 }
 
 #venta .price{
@@ -454,34 +456,39 @@
 }
 
 #venta .card .calculadora .container-btn .btn-cancelar{
-  color: #27C0FA;
+  color: #385BA2;
   background-color: transparent;
 
 }
 #venta .card .calculadora .container-btn .btn-cancelar:hover{
-  color: #a9e2f5;
+  color: #031D5A;
 }
 
 #venta .card .calculadora .container-btn .btn-siguiente{
   color:#fff;
-  background-color: #27C0FA;
+  background-color: #385BA2;
   -webkit-box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
   -moz-box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
   box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
 }
 #venta .card .calculadora .container-btn .btn-siguiente:hover{
-  background-color: #1B97C7;
+  background-color: #031D5A;
 }
 
 /*--------------------------------------------------------------
 # mis operaciones
 --------------------------------------------------------------*/
+#misOperaciones h5{
+  font-weight: bold;
+  color: #274070;
+  text-transform: uppercase;
+}
 #misOperaciones .card{
-  border-radius: 15px;
-  background-color: #D4DFF5;
-  -webkit-box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
-  -moz-box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
-  box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
+  border-radius: .42rem;
+  background-color: #fff;
+  -webkit-box-shadow: 0 0 30px 0 rgb(82 63 105 / 5%);
+  -moz-box-shadow: 0 0 30px 0 rgb(82 63 105 / 5%);
+  box-shadow: 0 0 30px 0 rgb(82 63 105 / 5%);
 }
 
 #misOperaciones .card-body label{
@@ -505,7 +512,7 @@
   letter-spacing: 1px;
   display: inline-block;
   padding: 5px 15px;
-  border-radius: 50px;
+  border-radius: 5px;
   transition: 0.5s;
   color: #f5f5f5;
   cursor: pointer;
@@ -527,17 +534,19 @@
 /*--------------------------------------------------------------
 # wallet
 --------------------------------------------------------------*/
-#wallet .card{
-  border-radius: 15px;
-  background-color: #D4DFF5;
-  -webkit-box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
-  -moz-box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
-  box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
-}
-#wallet .card-body h5{
+#wallet h5{
   font-weight: bold;
   color: #274070;
+  text-transform: uppercase;
 }
+#wallet .card{
+  border-radius: .42rem;
+  background-color: #fff;
+  -webkit-box-shadow: 0 0 30px 0 rgb(82 63 105 / 5%);
+  -moz-box-shadow: 0 0 30px 0 rgb(82 63 105 / 5%);
+  box-shadow: 0 0 30px 0 rgb(82 63 105 / 5%);
+}
+
 #wallet .card-body label{
   font-size: 14px;
   color: #274070;
@@ -559,7 +568,7 @@
   letter-spacing: 1px;
   display: inline-block;
   padding: 5px 15px;
-  border-radius: 50px;
+  border-radius: 5px;
   transition: 0.5s;
   color: #f5f5f5;
   cursor: pointer;
@@ -582,7 +591,7 @@
   letter-spacing: 1px;
   display: inline-block;
   padding: 5px 15px;
-  border-radius: 50px;
+  border-radius: 5px;
   transition: 0.5s;
   color: #f5f5f5;
   cursor: pointer;
