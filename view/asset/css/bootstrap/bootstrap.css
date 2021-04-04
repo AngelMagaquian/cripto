@@ -3913,7 +3913,16 @@ textarea.form-control-lg {
 
 .navbar-collapse {
   align-items: center;
-  width: 100%;
+}
+
+@media (min-width: 990px) {
+  .navbar-collapse {
+    align-items: center;
+    width: 100%;
+  }
+  .navbar-nav{
+    padding-left: 15px;
+  }
 }
 
 .navbar-toggler {

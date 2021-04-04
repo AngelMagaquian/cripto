@@ -4,7 +4,7 @@
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
+  <link rel="shortcut icon" href="view/asset/img/64x64.png" />
 
     <title>CRIPTO | Compra</title>
 
@@ -16,6 +16,10 @@
 
 	<link href="./view/asset/css/style.css" rel="stylesheet">
     <link href="./view/asset/css/compra.css" rel="stylesheet">
+      <!--fonts-->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
 </head>
 <body>
   <header>
