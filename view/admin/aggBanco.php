@@ -8,17 +8,16 @@
                     <form action="">
                         <div class="card">
                             <div class="card-body row justify-content-around">
-                                <span>Datos del usuario</span>
-                                <div class="col-md-5 col-12 mt-">
+                                <div class="col-md-5 col-12 mt-2">
                                     <label><b>Nombre del banco</b></label>
-                                    <input type="text" class="form-control form-login"  value="valor de prueba"id="name" disabled=»disabled»>
+                                    <input type="text" class="form-control form-login" style="margin-top:14px" value="valor de prueba"id="name" disabled=»disabled»>
                                 </div>
                                 <div class="col-md-5 col-12 mt-2">
                                     <label><b>Descripción</b></label>
                                     <textarea name="" id="" class="form-control form-login"></textarea>
                                 </div>
-                                <div class="col-12">
-                                    <button>Agregar</button>
+                                <div class="col-11 mt-2">
+                                    <button class="btn-get-started-confirmar btn">Agregar</button>
                                 </div>
                             </div>
                         </div>

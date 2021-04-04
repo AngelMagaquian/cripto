@@ -3,65 +3,71 @@
         <div class="row justify-content-center mt-4">
           <div class="col-lg-10 col-12">
             <div class="row">
-                <h5>Identidad de usuario</h5>
-
-                <div class="col-6">
-                    <form action="">
-                        <span>Buscar usuario por DNI</span>
-                        <input type="text" value=""> 
-                        <div class="card">
-                            <div class="card-body row justify-content-around">
-                                <span>Datos del usuario</span>
-                                <div class="col-md-5 col-12 mt-">
-                                    <label><b>Nombre</b></label>
-                                    <input type="text" class="form-control form-login"  value="valor de prueba"id="name" disabled=»disabled»>
-                                </div>
-                                <div class="col-md-5 col-12 mt-2">
-                                    <label><b>Segundo nombre</b></label>
-                                    <input type="text" class="form-control form-login" id="CUIL" disabled=»disabled»>
-                                </div>
-                                <div class="col-md-5 col-12 mt-2">
-                                    <label><b>Apellido</b></label>
-                                    <input type="text" class="form-control form-login" id="type_account" disabled=»disabled»>
-                                </div>
-                                <div class="col-md-5 col-12 mt-2">
-                                    <label><b>Segundo apellido</b></label>
-                                    <input type="text" class="form-control form-login" id="type_currency" disabled=»disabled»>
-                                </div>
-                                <div class="col-md-5 col-12 mt-2">
-                                    <label><b>DNI</b></label>
-                                    <input type="text" class="form-control form-login" id="CBU" disabled=»disabled»>
-                                </div>
-                                <div class="col-md-5 col-12 mt-2">
-                                    <label><b>CUIL</b></label>
-                                    <input type="text" class="form-control form-login" id="account_number" disabled=»disabled»>
-                                </div>
-                                <div class=" col-11 mt-2">
-                                    <label><b>Email</b></label>
-                                    <input type="text" class="form-control form-login" id="account_number" disabled=»disabled»>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-
-                <div class="col-6">
-                    <form action="">
-                    <span></span>
-                        <div class="card">
-                            <div class="card-body row">
-                                <div class="col-12">
-                                    <div style="width: 200px;">
-                                        <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="" style="max-width: 100%;">
+                <div class="col-12">
+                    <div class="row justify-content-between">
+                        <h5>identidad de usuario</h5>
+                    </div>
+                    <div class="card mb-2">
+                        <div class="card-body">
+                            <form action="">
+                                <div class="row justify-content-around">
+                                    <div class="buscador col-11 mt-2 mb-2">
+                                        <button>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                                            </svg>
+                                        </button>
+                                        <input type="text" value="" placeholder="Buscar usuario por DNI"> 
                                     </div>
                                 </div>
+
+                                <div class="row justify-content-around">
+                                    <div class="col-md-5 col-12 mt-2">
+                                        <label><b>Nombre</b></label>
+                                        <input type="text" class="form-control form-login"  value="valor de prueba"id="name" disabled=»disabled»>
+                                    </div>
+                                    <div class="col-md-5 col-12 mt-2">
+                                        <label><b>Segundo nombre</b></label>
+                                        <input type="text" class="form-control form-login" id="CUIL" disabled=»disabled»>
+                                    </div>
+                                    <div class="col-md-5 col-12 mt-2">
+                                        <label><b>Apellido</b></label>
+                                        <input type="text" class="form-control form-login" id="type_account" disabled=»disabled»>
+                                    </div>
+                                    <div class="col-md-5 col-12 mt-2">
+                                        <label><b>Segundo apellido</b></label>
+                                        <input type="text" class="form-control form-login" id="type_currency" disabled=»disabled»>
+                                    </div>
+                                    <div class="col-md-5 col-12 mt-2">
+                                        <label><b>DNI</b></label>
+                                        <input type="text" class="form-control form-login" id="CBU" disabled=»disabled»>
+                                    </div>
+                                    <div class="col-md-5 col-12 mt-2">
+                                        <label><b>CUIL</b></label>
+                                        <input type="text" class="form-control form-login" id="account_number" disabled=»disabled»>
+                                    </div>
+                                    <div class=" col-11 mt-2">
+                                        <label><b>Email</b></label>
+                                        <input type="text" class="form-control form-login" id="account_number" disabled=»disabled»>
+                                    </div>
+                                </div>
+
+                            <div class="row justify-content-around">
+                                <div class=" col-11 mt-2 fotoPerfil">
+                                    <label><b>Foto de perfil</b></label>
+                                    <br>
+                                    <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
+                                </div>
+                            </div> 
+
+                            <div class="row justify-content-around">
+                                <div class="col-11 mt-2">
+                                    <button class="btn-get-started-confirmar btn">Confirmar</button>
+                                </div>
                             </div>
                         </div>
-                    </form>
-                </div>
+                    </div>
 
-                <div class="col-12">
-                <button>Confirmar</button>
                 </div>
             </div>
             

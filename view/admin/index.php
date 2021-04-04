@@ -18,6 +18,10 @@
   <link href="../asset/css/admin.css" rel="stylesheet">
 
   <link href="https://cdn.datatables.net/1.10.24/css/dataTables.bootstrap5.min.css" rel="stylesheet">
+  
+  <!--fonts-->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -66,9 +70,9 @@
             <li>
               <a href="#" id="transPendientes" onclick="clickTransPendientes()">Transacciones pendientes</a>
             </li>
-            <li>
+            <!--<li>
               <a href="#" id="" onclick="">Agregar criptomoneda</a>
-            </li>
+            </li>-->
             <li>
               <a href="#" id="aggBanco" onclick="clickaggBanco()">Agregar banco</a>
             </li>
@@ -96,22 +100,14 @@
 
       <div class="herramienta">
         <?php
-          include '../admin/transPendientes.php';
-          include '../admin/datosUser.php'; 
-          include '../admin/identidadUser.php';
           include '../admin/cuentasBancarias.php';
-
-          include '../admin/aggBanco.php';
+          include '../admin/datosUser.php';
+          include '../admin/identidadUser.php';
+        ?>
+        <?php
           include '../admin/walletUser.php';
-
-          
-   
-
-          
-          
-          
-          
-
+          include '../admin/transPendientes.php';
+          include '../admin/aggBanco.php';
         ?>
       </div>
     </div>
@@ -158,7 +154,6 @@
       $("#cuentasBancarias").css("font-weight", "normal")
       $("#datosBancarios").css("font-weight", "normal")
       $("#transPendientes").css("font-weight", "normal")
-      $("#ventaOpera").css("font-weight", "normal")
     }
 
     function navOperaciones(){
@@ -171,10 +166,13 @@
         $(".submenu-personal").removeClass( "submenuBlock" );
       }
 
-      $("#cuentasBancarias").css("font-weight", "normal")
-      $("#datosBancarios").css("font-weight", "normal")
+
+      $("#cuentasBancarias").css("font-weight", "bold")
+      $("#datosUser").css("font-weight", "normal")
+      $("#identidadUser").css("font-weight", "normal")
+      $("#walletUser").css("font-weight", "normal")
       $("#transPendientes").css("font-weight", "normal")
-      $("#ventaOpera").css("font-weight", "normal")
+      $("#aggBanco").css("font-weight", "normal")
     }
        
 
@@ -182,7 +180,7 @@
       $('#cuentasTable').DataTable({ 
         responsive: true,
         paging: false,
-        searching: true,
+        searching: false,
         language: {
             lengthMenu: "Agrupar de MENU ",
             search: " ",
@@ -210,7 +208,7 @@
             select: true,
             colReorder: true
         },
-        scrollY: 200,
+        scrollY: 100,
         scrollX: true
       });
 
@@ -249,7 +247,7 @@
         scrollX: true
       });
 
-      $('#transferenciaTable').DataTable({ 
+      $('#transtasaccionTable').DataTable({ 
         responsive: true,
         paging: false,
         searching: true,
@@ -369,6 +367,7 @@
       $("#cuentasBancarias").css("font-weight", "normal")
       $("#datosUser").css("font-weight", "normal")
       $("#transPendientes").css("font-weight", "bold")
+      $("#aggBanco").css("font-weight", "normal")
       $.fn.dataTable.tables({ visible: true, api: true }).columns.adjust();
       //
     }
@@ -386,6 +385,7 @@
       $("#datosUser").css("font-weight", "normal")
       $("#identidadUser").css("font-weight", "normal")
       $("#aggBanco").css("font-weight", "bold")
+      $("#transPendientes").css("font-weight", "normal")
 
       //
     }
