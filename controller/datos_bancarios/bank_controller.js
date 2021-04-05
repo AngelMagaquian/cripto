@@ -9,22 +9,28 @@ $(function(){
                 // En este punto recibimos la respuesta.
                
                 let data = JSON.parse(response); 
-                if(data.check_account == 1){
-                    $('#estado').html('ESTADO: CONFIRMADA');
-                } else{
-                    $('#estado').html('ESTADO: NO CONFIRMADA');
-                }
+
+
+                data.forEach(dato =>{
+                    if(data.check_account == 1){
+                        $('#estado').html('ESTADO: CONFIRMADA');
+                    } else{
+                        $('#estado').html('ESTADO: NO CONFIRMADA');
+                    }
+                    $('#bank').html('BANCO: '+dato.bank);
+                    $('#type_account').val(dato.type_account_name);
+                    $('#type_currency').val(dato.currency);
+                    $('#CBU').val(dato.CBU);
+                    $('#account_number').val(dato.account_number);
+                })
+
+
+
+            
                 
-               // $('#name').val(''); //agregar
-    
-                //$('#CUIL').val(data.CUIL); //AGREGAR
                 
-                $('#bank').html('BANCO: '+data.bank);
-                $('#type_account').val(data.type_account_name);
-    
-                $('#type_currency').val(data.currency);
-                $('#CBU').val(data.CBU);
-                $('#account_number').val(data.account_number);
+                
+                
                 
                 
             })
