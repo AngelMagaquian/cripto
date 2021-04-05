@@ -1,3 +1,9 @@
+<?php 
+  session_start();
+  if(isset($_SESSION["id_user"])){
+
+  
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -363,3 +369,10 @@
 </body>
 
 </html>
+
+<?php 
+}else{
+  echo "no estas registrado";
+}
+
+?>

@@ -1,3 +1,12 @@
+<?php 
+  session_start();
+  if(isset($_SESSION['id_user'])){
+    if($_SESSION['id_user'] == 1 and $_SESSION['type'] == 2){
+
+    
+
+ 
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -398,3 +407,8 @@
 </body>
 
 </html>
+<?php
+  }
+}
+echo "No posee permisos para este sitio";
+  ?>
