@@ -18,6 +18,9 @@
         INNER JOIN type_account t ON t.ID_type_account = a.ID_type_account 
         WHERE a.ID_user = $user";
         $ejecucion =mysqli_query($conexion, $get_account);
+
+
+        
         
 
         while($result=mysqli_fetch_array($ejecucion)){

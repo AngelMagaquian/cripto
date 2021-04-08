@@ -20,12 +20,19 @@ $(function(){
         $('#dni').val('');
         $('#cuil').val('');
         $('#email').val('');
+        var template = ``;
+        $('#account_tbody').html(template);
     }
 
     $('#account_form').submit(function(e){
         e.preventDefault();
         console.log('Account info');
         var dni = $('#dni_search').val();
+
+            
+
+          
+
 
             post_data('../../model/user/DNI_search.php', dni).then(response => {
                 // En este punto recibimos la respuesta.
@@ -43,6 +50,7 @@ $(function(){
                     $('#email').val(data.email);
                
 
+                console.log(data.ID_user);
        
                 account_table(data.ID_user);
             })
@@ -59,6 +67,7 @@ $(function(){
             // En este punto recibimos la respuesta.
             let data = JSON.parse(response); 
             let template=``;
+            console.log('la repuesta es: '+ response);
 
             data.forEach(dato =>{
                 if(dato.check_account == '0'){
@@ -81,10 +90,24 @@ $(function(){
         .catch(error => {
             // En este punto recibimos el error. then() no se ha invocado
             console.log(error);
+            default_table();
             
         });
     }
 
+    function default_table(){
+        var template =`
+                        <tr>
+                            <td>No disponible</td>
+                            <td>No disponible</td>
+                            <td>
+                            
+                            </td>
+                        <tr>
+                    `;
+                    
+                    $('#account_tbody').html(template);
+    }
     
     $('#conf_yes').click(function(e){
         e.preventDefault();

@@ -18,13 +18,12 @@
                                 <th>CUIL</th>
                                 <th>Nombre</th>   
                                 <th>Apellido</th> 
-                                <th>CBU</th>     
-                                <th>Wallet</th> 
+                                <th>Email</th>     
                                 <th>Balance</th>
                                 <th>Saldo pendiente</th>
                             </tr>
                         </thead>
-                        <tbody id="">
+                        <tbody id="user_data_tbody">
                             
                         </tbody>
                     </table>

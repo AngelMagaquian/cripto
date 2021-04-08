@@ -61,7 +61,7 @@ $(function(){
                              
                         //$(location).attr('href','./login.php');
                         if(response == 1){
-                            window.alert('Registro exitoso');
+                            insert_wallet()
                         }else{
                             console.log(response);
                         }
@@ -82,6 +82,18 @@ $(function(){
 
     });
 });
+
+function insert_wallet(){
+    const postData = {
+        dni : $('#dni').val()
+    }
+    $.post('../../model/user/insert_wallet_user.php', postData).then(response => {
+        if(response == 1){
+            window.alert('Registro exitoso');
+            $(location).attr('href','./login.php');
+        }
+    })
+}
 
 function birth_day_control(date){
     console.log('Control de edad');

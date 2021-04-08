@@ -131,6 +131,7 @@
   <script src="../asset/js/bootstrap/bootstrap.bundle.min.js"></script>
   <!--Controllers-->
   <script src="..\..\controller\admin\account_controller_admin.js" type="module" ></script>
+  <script src="..\..\controller\admin\user_info_controller_admin.js" type="module" ></script>
 
 
   
@@ -289,6 +290,8 @@
         scrollX: true
       });
     } );
+
+    $('#datosUserTable').search( this.value ).draw();
 
 //cliks en menu
 //usuario
