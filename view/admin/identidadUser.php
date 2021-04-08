@@ -10,7 +10,7 @@
                     </div>
                     <div class="card mb-2">
                         <div class="card-body">
-                            <form id="search_user">
+                            <form id="search_user_uc">
                                 <div class="row justify-content-around">
                                     <div class="buscador col-11 mt-2 mb-2">
                                         
@@ -20,40 +20,40 @@
                                             </svg>
                                         </button>-->
                                         <input type="submit" value="Buscar" />
-                                        <input type="text" id="dni_search" placeholder="Buscar usuario por DNI"/> 
+                                        <input type="text" id="dni_search_uc" placeholder="Buscar usuario por DNI"/> 
                                     </div>
                                 </div>
 
                                 <div class="row justify-content-around">
                                     <div class="col-md-5 col-12 mt-2">
                                         <label><b>Nombre</b></label>
-                                        <input type="text" class="form-control form-login" id="name" disabled=»disabled» />
+                                        <input type="text" class="form-control form-login" id="name_uc" disabled=»disabled» />
                                     </div>
                                     <div class="col-md-5 col-12 mt-2">
                                         <label><b>Segundo nombre</b></label>
                                         
-                                        <input type="text" class="form-control form-login" id="middle_name" disabled=»disabled» />
+                                        <input type="text" class="form-control form-login" id="middle_name_uc" disabled=»disabled» />
                                     </div>
                                     <div class="col-md-5 col-12 mt-2">
                                         <label><b>Apellido</b></label>
                                         
-                                        <input type="text" class="form-control form-login" id="last_name" disabled=»disabled» />
+                                        <input type="text" class="form-control form-login" id="last_name_uc" disabled=»disabled» />
                                     </div>
                                     <div class="col-md-5 col-12 mt-2">
                                         <label><b>Segundo apellido</b></label>
-                                        <input type="text" class="form-control form-login" id="second_last_name" disabled=»disabled» />
+                                        <input type="text" class="form-control form-login" id="second_last_name_uc" disabled=»disabled» />
                                     </div>
                                     <div class="col-md-5 col-12 mt-2">
                                         <label><b>DNI</b></label>
-                                        <input type="text" class="form-control form-login" id="DNI" disabled=»disabled» />
+                                        <input type="text" class="form-control form-login" id="DNI_uc" disabled=»disabled» />
                                     </div>
                                     <div class="col-md-5 col-12 mt-2">
                                         <label><b>CUIL</b></label>
-                                        <input type="text" class="form-control form-login" id="CUIL" disabled=»disabled» />
+                                        <input type="text" class="form-control form-login" id="CUIL_uc" disabled=»disabled» />
                                     </div>
                                     <div class=" col-11 mt-2">
                                         <label><b>Email</b></label>
-                                        <input type="text" class="form-control form-login" id="email" disabled=»disabled» />
+                                        <input type="text" class="form-control form-login" id="email_uc" disabled=»disabled» />
                                     </div>
                                 </div>
 
