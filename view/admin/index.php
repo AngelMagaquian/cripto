@@ -132,6 +132,7 @@
   <!--Controllers-->
   <script src="..\..\controller\admin\account_controller_admin.js" type="module" ></script>
   <script src="..\..\controller\admin\user_info_controller_admin.js" type="module" ></script>
+  <script src="..\..\controller\admin\user_check_controller_admin.js" type="module" ></script>
 
 
   

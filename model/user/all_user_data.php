@@ -4,6 +4,7 @@
     if(isset($_SESSION['id_user'])){
         if($_SESSION['type'] == 2){
             include("../system/conexion.php");
+            
         
            
             $information="SELECT u.ID_user as ID_user , u.dni as DNI, u.cuil as CUIL, u.name_user as name_user,
