@@ -1,9 +1,11 @@
 import {get_data} from "../app/get_data.js";
 import {post_data} from "../app/post_data.js";
 $(function(){
-    console.log('User check Controller');
+    console.log('New Wallet Controller');
 
     $( document ).ready(function() {
+        //dejar todo el form en blanco
+        //setInterval(function(){$("#datosUserTable").draw(); }, 1000);
         default_form();
     });
 
@@ -55,6 +57,10 @@ $(function(){
         
         
     });
+ 
+        
+      
+
 
     function default_form(){
         $('#name').val('');
@@ -65,5 +71,6 @@ $(function(){
         $('#CUIL').val('');
         $('#email').val('');
     }
+
 });
 

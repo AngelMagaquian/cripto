@@ -1,3 +1,4 @@
+<script src="..\..\controller\admin\user_check_controller_admin.js" type="module" ></script>
 <section id="identidad" style="display:none">
     <div class="container-fluid">
         <div class="row justify-content-center mt-4">
