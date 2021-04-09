@@ -61,29 +61,29 @@
                         </div>
                         <div class="card mt-4 mb-2">
                             <div class="card-body">
-                                <form action="">
+
+                                <form id="add_wallet" action="">
                                     <div class="row justify-content-around">
                                         <div class="col-5">
                                             <label for="">Id wallet</label>
-                                                <form id="wallet_data">
+                                               
                                                     </br>
-                                                    <input type="text" id="wallet_id" class="form-control form-login" placeholder="Escribir el código de la wallet"/>
+                                                    <input type="text" id="wallet_id" class="form-control form-login" placeholder="Escribir el código de la wallet" autocomplete="off" required/>
                                                     </br>
-                                                    <input type="text" id="wallet_description" class="form-control form-login" placeholder="Escribir la descripción de la wallet" />
-                                                </form>
+                                                    <label>Descripción de wallet</label>
+                                                    <input type="text" id="description_cripto_wallet" class="form-control form-login" placeholder="Escribir la descripción de la wallet" required/>
+                                                
                                         </div>
                                         <div class="col-5">
                                             <label for="">Criptomoneda</label>
-                                            <select name="" id="cripto" class="form-control">
-                                                <option value="">1</option>
-                                                <option value="">1</option>
-                                                <option value="">1</option>
+                                            <select name="" id="divisa" class="form-control">
+                                                
                                             </select>
                                         </div>
                                         <div class="col-11 mt-2">
-                                                <form id="confirm_wallet">
+                                                
                                                     <input type="submit" value="Confirmar" class="btn-get-started-confirmar btn"/>
-                                                </form>
+                                
                                         </div>
                                     </div>
                                     

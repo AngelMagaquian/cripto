@@ -150,8 +150,10 @@ $(function(){
         data.forEach(dato =>{
             if(dato.state == 1){
                 state = 'COMPLETADA';
-           }else{
+           }else if(dato.state == 2){
                 state = 'PENDIENTE';
+           }else{
+               state = 'CANCELADA';
            }
                template += `
                <tr>
@@ -159,8 +161,6 @@ $(function(){
                    <td>${dato.cripto_name} </td>
                    <td>$${dato.pesos_amount} </td>
                    <td>${dato.cripto_amount} </td>
-                   <td>${dato.bank_name} </td>
-                   <td>${dato.CBU} </td>
                    <td>${dato.wallet_name} </td>
                    <td>${dato.date_hour} </td>
                    <td>${state} </td>

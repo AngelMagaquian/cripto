@@ -5,7 +5,7 @@
 
         <div class="col-11">   
             <div class="row justify-content-between">
-                <h5>Transacciones de depositos pendientes</h5>
+                <h5>Transacciones de transacciones pendientes</h5>
             </div>
             <div class="card">
                 <div class="card-body mt-3">
@@ -21,13 +21,11 @@
                                     <th>Operación</th>   
                                     <th>Criptomoneda</th> 
                                     <th>Pesos</th>   
-                                    <th>CBU</th>  
-                                    <th>Banco</th>
                                     <th>Wallet</th> 
                                     <th>Confirmación</th>
                                 </tr>
                             </thead>
-                            <tbody id="">
+                            <tbody id="transactions_tbody">
                                 <tr>
                                     <td></td>
                                     <td></td>
