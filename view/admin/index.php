@@ -133,6 +133,8 @@
   <script src="..\..\controller\admin\account_controller_admin.js" type="module" ></script>
   <script src="..\..\controller\admin\user_info_controller_admin.js" type="module" ></script>
   <script src="..\..\controller\admin\new_wallet_controller_admin.js" type="module" ></script>
+  <script src="..\..\controller\admin\transactions_controller_admin.js" type="module" ></script>
+  <script src="..\..\controller\admin\new_bank_admin_controller.js" type="module" ></script>
  
 
 

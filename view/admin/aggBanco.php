@@ -5,19 +5,18 @@
             <div class="row">
                 <h5>Agregar banco</h5>
                 <div class="col-12">
-                    <form action="">
+                    <form id="add_new_bank">
                         <div class="card">
                             <div class="card-body row justify-content-around">
                                 <div class="col-md-5 col-12 mt-2">
-                                    <label><b>Nombre del banco</b></label>
-                                    <input type="text" class="form-control form-login" style="margin-top:14px" value="valor de prueba"id="name" disabled=»disabled»>
-                                </div>
-                                <div class="col-md-5 col-12 mt-2">
-                                    <label><b>Descripción</b></label>
-                                    <textarea name="" id="" class="form-control form-login"></textarea>
+                                    <label><b>Número de nomina</b></label>
+                                    <input type="text" class="form-control form-login" style="margin-top:14px" placeholder="Agregue el número de nomina" id="id_bank" autocomplete="off" required>
+                                    </br>
+                                    <label><b>Nombre</b></label>
+                                    <input type="text" id="bank_name" class="form-control form-login" style="margin-top:14px" placeholder="Agregue el nombre del banco" autocomplete="off" required/>
                                 </div>
                                 <div class="col-11 mt-2">
-                                    <button class="btn-get-started-confirmar btn">Agregar</button>
+                                    <input type="submit" value="Agregar" class="btn-get-started-confirmar btn"/>
                                 </div>
                             </div>
                         </div>
