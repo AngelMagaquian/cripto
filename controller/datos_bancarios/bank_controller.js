@@ -4,59 +4,60 @@ $(function(){
 
     $( document ).ready(function() {
        
+            let template =``;
             //funciones para traer los datos del usuario
             get_data('../../model/datos_bancarios/get_account.php').then(response => {
                 // En este punto recibimos la respuesta.
-               
+                
                 let data = JSON.parse(response); 
-                let template =``;
-
+                
+                let state = "";
 
                 data.forEach(dato =>{
+                    console.log(data);
                     if(data.check_account == 1){
-                        $('#estado').html('ESTADO: CONFIRMADA');
+                        state = 'ESTADO: CONFIRMADA';
                     } else{
-                        $('#estado').html('ESTADO: NO CONFIRMADA');
+                        state = 'ESTADO: NO CONFIRMADA';
                     }
-                    /*$('#bank').html('BANCO: '+dato.bank);
-                    $('#type_account').val(dato.type_account_name);
-                    $('#type_currency').val(dato.currency);
-                    $('#CBU').val(dato.CBU);
-                    $('#account_number').val(dato.account_number);*/
 
-
+                    template +=`
+                        <div class="card">
+                            <div class="card-header">
+                                <span>${dato.bank}</span>
+                                <label class="estado">${state}</label>
+                            </div>
+                            <div class="card-body row justify-content-around">
+                                <div class="col-md-5 col-12 mt-2">
+                                    <label><b>CBU</b></label>
+                                    <input type="text" class="form-control form-login"  value="${dato.CBU}" disabled=»disabled»>
+                                </div>
+                                <div class="col-md-5 col-12 mt-2">
+                                    <label><b>TIPO DE CUENTA</b></label>
+                                    <input type="text" class="form-control form-login"  value="${dato.type_account_name}" disabled=»disabled»>
+                                </div>
+                                <div class="col-md-5 col-12 mt-2">
+                                    <label><b>TIPO DE MONEDA</b></label>
+                                    <input type="text" class="form-control form-login"  value="${dato.currency}" disabled=»disabled»>
+                                </div>
+                                <div class="col-md-5 col-12 mt-2">
+                                    <label><b>NÚMERO DE CUENTA</b></label>
+                                    <input type="text" class="form-control form-login"  value="${dato.account_number}" disabled=»disabled»>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        </br>
+                    `;
                 })
 
-
-
-            
-                
-                
-                
-                
-                
+                $('#card_conteiner').html(template);
                 
             })
             .catch(error => {
               // En este punto recibimos el error. then() no se ha invocado
               //window.alert('Error al cargar los datos, intente mas tarde');
             });
-
-
-
-            /*get_data('../../model/user/user_data.php').then(response => {
-                // En este punto recibimos la respuesta.
-                    let data = JSON.parse(response); 
-                    var name = data.last_name + ' '+ data.second_last_name + ' '+ data.name_user + ' ' +data.middle_name;
-                    $('#name').val(name);
-                    $('#CUIL').val(data.CUIL);
-                
-            })
-            .catch(error => {
-              // En este punto recibimos el error. then() no se ha invocado
-              //window.alert('Error al cargar los datos, intente mas tarde');
-            });*/
- 
         
     });
 
