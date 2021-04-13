@@ -15,14 +15,12 @@
                     <form id="add_wallet" class="col-lg-4 col-md-6 col-sm-12"> <!--cambiar nombre dsp-->
                         
                         <div class="row">
-                            
-                            <label>Agregar nueva wallet</label>
-                            <div class="col-md-6 col-sm-6 col-8">
+                            <div class="col-lg-8 col-md-8 col-sm-6 col-8">
                                 <input id= "id_cripto_wallet" type="text" placeholder="Ingresar código de wallet" class="form-control" autocomplete="off" required>
-                                <br>
+                                <!--<br>
                                 <input id="description_cripto_wallet" type="text" placeholder="Ingresar alias de wallet" class="form-control" autocomplete="off" required>
                                 <br>
-                                <select id="divisa_wallet"></select>
+                                <select id="divisa_wallet"></select>-->
                             </div>
                             <div class="col-2">
                                 <input type="submit" value="Agregar" class="btn-get-started-filtro btn-filtro">
