@@ -21,6 +21,7 @@ $(function(){
                         state = 'ESTADO: NO CONFIRMADA';
                     }
 
+                    //meli trabaja aca abajo, tenes que cambiar el color del estado y ponerlo uno al lado del otro, porfa no lo rompas, me costo mucho, tkm <3 o sino ntkm </3
                     template +=`
                         <div class="card">
                             <div class="card-header">

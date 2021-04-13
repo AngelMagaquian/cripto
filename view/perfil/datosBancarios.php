@@ -5,6 +5,7 @@
             <div class="row">
                 <div class="col-md-6 col-12" >
                     <div id="card_conteiner">
+                        <!--Aca se generan las cards-->
                     </div>
                 </div>
 
@@ -16,4 +17,6 @@
         </div>
     </div>
 </section>
+
+
 
