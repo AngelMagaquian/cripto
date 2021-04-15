@@ -167,12 +167,12 @@
   height: 28px;
 
 }
-#cuentas .buscador button{
+#cuentas .buscador input[type=submit]{
   float: right;
   margin-left: 5px;
   border: none;
   background-color: #D4DFF5;
-  padding: 2px 5px;
+  padding: 4px 10px;
   border-radius: 5px;
 }
 
