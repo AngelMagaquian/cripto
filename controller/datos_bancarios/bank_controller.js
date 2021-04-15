@@ -22,9 +22,11 @@ $(function(){
                     }
 
                     template +=`
+                    <div class="col-md-6 col-12 mb-3" >
                         <div class="card">
                             <div class="card-header">
                                 <span>${dato.bank}</span>
+                                <br>
                                 <label class="estado">${state}</label>
                             </div>
                             <div class="card-body row justify-content-around">
@@ -47,7 +49,8 @@ $(function(){
                             </div>
                             
                         </div>
-                        </br>
+                    </div>
+
                     `;
                 })
 
