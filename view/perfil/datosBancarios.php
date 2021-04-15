@@ -1,22 +1,17 @@
-<section id="bancos" >
+<div id="bancos" class=" mb-3" style="display:none">
     <div class="container-fluid">
         <div class="row justify-content-center mt-4">
           <div class="col-lg-10 col-12">
-            <div class="row">
-                <div class="col-md-6 col-12" >
-                    <div id="card_conteiner">
-                        <!--Aca se generan las cards-->
-                    </div>
-                </div>
-
+            <div class="row" id="card_conteiner">
+            </div>
             <div class="row mt-5">
                 <div class="col-12 botonera">
-                    <a class="btn-get-started-agg  btn-agg mr-2">Agregar nuevo</a>
+                    <button class="btn-get-started-agg  btn-agg mr-2" type="button" data-toggle="modal" data-target="#exampleModal">Agregar nuevo</button>
+
                 </div> 
             </div>
+               
+          </div>
         </div>
     </div>
-</section>
-
-
-
+</div>

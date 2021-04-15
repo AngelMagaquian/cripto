@@ -127,24 +127,116 @@
         </div>
         
       </nav>
+<!-- /#aca va el contenedor -->
+        <div id="perfil" style="">
+            <div class="container-fluid">
+                <div class="row justify-content-center mt-4">
+                <div class="col-md-10 col-12">
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Datos personales</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Contraseña</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#foto" type="button" role="tab" aria-controls="foto" aria-selected="false">Foto</button>
+                    </li>
+                </ul>
 
-      <div class="herramienta">
-        <?php
-        include '../wallet/index.php';
-        include '../misOperaciones/operaciones.php';
-        include '../misOperaciones/index.php';
-        include '../operaciones/depositos.php';
-          include '../operaciones/compra.php';
-          include '../operaciones/venta.php';
-          include '../perfil/datosPersonales.php';
-          include '../perfil/datosBancarios.php';
-          
-          
-          
+                
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                    <div class="row m-0 justify-content-around mb-4">
+                        <div class="form-group col-md-5 col-12 mt-4">
+                        <label for="exampleInputEmail1" ><b>Nombre*</b></label>
+                        <input type="text" class="form-control form-login" id="name_user"  disabled=»disabled» >
+                        </div>
+                        <div class="form-group col-md-5 col-12 mt-4">
+                        <label for="exampleInputEmail1"><b>Segundo nombre</b></label>
+                        <input type="text" class="form-control form-login" id="user_middle_name"  disabled=»disabled»>
+                        </div>
 
-        ?>
+                        <div class="form-group col-md-5 col-12 mt-4">
+                        <label for="exampleInputEmail1"><b>Apellido*</b></label>
+                        <input type="text" class="form-control form-login" id="user_last_name"  disabled=»disabled»>
+                        </div>
+                        <div class="form-group col-md-5 col-12 mt-4">
+                        <label for="exampleInputEmail1"><b>Segundo apellido</b></label>
+                        <input type="text" class="form-control form-login" id="user_second_last_name"  disabled=»disabled»>
+                        </div>
 
-      </div>
+                        <div class="form-group col-md-5 col-12 mt-4">
+                        <label for="exampleInputEmail1"><b>DNI*</b></label>
+                        <input type="text" class="form-control form-login" id="user_dni" placeholder="ingresá tu DNI" disabled=»disabled»>
+                        </div>
+                        <div class="form-group col-md-5 col-12 mt-4">
+                        <label for="exampleInputEmail1"><b>CUIL*</b></label>
+                        <input type="text" class="form-control form-login" id="user_cuil" placeholder="ingresá tu CUIL" disabled=»disabled»>
+                        </div>
+                                
+                        <div class="form-group col-md-5 col-12 mt-4">
+                        <label for="exampleInputEmail1"><b>Fecha de nacimiento*</b></label>
+                        <input type="date" class="form-control form-login" id="user_birth_day" placeholder="ingresá tu fecha de nacimiento" disabled=»disabled»>
+                        </div>
+                        <div class="form-group col-md-5 col-12 mt-4">
+                        <label for="exampleInputEmail1"><b>Email*</b></label>
+                        <input type="email" class="form-control form-login" id="user_email" placeholder="ingresá tu email" disabled=»disabled»>
+                        </div>
+                    </div>
+                    </div>
+
+                <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                    <div class="row m-0 justify-content-around">
+                    <form id="update_pass">
+                        <div class="m-0 row justify-content-around">
+                            <div class="form-group col-md-5 col-12 mt-4 ">
+                            <label for="exampleInputPassword1"><b>Nueva contraseña*</b></label>
+                            <input type="password" class="form-control form-login" id="first_pass" placeholder="Ingresá una contraseña" required autocomplete="off">
+                            
+                            </div>
+                            <div class="form-group col-md-5 col-12 mt-4 ">
+                            <label for="exampleInputPassword1"><b>Repetir contraseña*</b></label>
+                            <input type="password" class="form-control form-login" id="pass" placeholder="Ingresá tu contraseña nuevamente" required autocomplete="off">
+                            <label for="exampleInputPassword1" id="comfirm_pass"><b></b></label>
+                            </div>
+
+                            <div class="col-11 botonera">
+                            <input type="submit" value="Cambiar" id="input_update_pass" class="btn-get-started-pass btn-pass float-right">
+                            </div>
+                            
+                        </div>
+                    </form>
+                    </div>
+                </div>
+
+                <div class="tab-pane fade" id="foto" role="tabpanel" aria-labelledby="foto-tab">
+                    <div class="row m-0 justify-content-around">
+                            <div class="col-11 botonera" >
+                            <form id="from_photo" enctype="multipart/form-data">
+                                <label style="font-size: 14px; color: #274070;"><b>Foto de usuario</b></label>
+                                <br>
+                                <input type="file" name="myfile"/>
+                                <br>
+                                <input type="submit" value="Cargar"  class="btn-get-started-pass btn-pass float-right">
+                                <br>
+                                <figure>
+
+                                </figure>
+                            </form>
+                            </div>
+                        
+                    </div>      
+                </div>
+
+
+                </div>
+                
+                
+                </div>
+            </div>
+        </div>
+
     </div>
     <!-- /#page-content-wrapper -->
 
@@ -161,16 +253,12 @@
   <script src="..\..\controller\user\update_user_info_controller.js" type="module" ></script>
   <script src="..\..\controller\datos_bancarios\bank_controller.js" type="module" ></script>
   <script src="..\..\controller\user\wallet_user_controller.js" type="module" ></script>
-
-  
   <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
   <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
   <script src="https://cdn.datatables.net/1.10.24/js/dataTables.bootstrap5.min.js"></script>
   <!-- Menu Toggle Script -->
   <script>
-    $('#myModal').on('hidden.bs.modal', function (e) {
-      // do something...
-    })
+
 
     $("#menu-toggle").click(function(e) {
       e.preventDefault();
@@ -194,96 +282,6 @@
       $("#ventaOpera").css("font-weight", "normal")
     }
 
-    function navOperaciones(){
-      console.log("estoy")
-      $(".submenu-operaciones").addClass( "submenuBlock" );
-      $("#navOperaciones").addClass("activo")
-
-      if($("#navPerfil").hasClass("activo")){
-        $("#navPerfil").removeClass("activo");
-        $(".submenu-personal").removeClass( "submenuBlock" );
-      }
-
-      $("#datosPersonales").css("font-weight", "normal")
-      $("#datosBancarios").css("font-weight", "normal")
-      $("#compraOpera").css("font-weight", "normal")
-      $("#ventaOpera").css("font-weight", "normal")
-    }
-       
-
-    $(document).ready(function() {
-      $('#operacionesTable').DataTable({ 
-        responsive: true,
-        paging: false,
-        searching: true,
-        language: {
-            lengthMenu: "Agrupar de MENU ",
-            search: " ",
-            searchPlaceholder: " Buscar",
-            info: "",
-            infoEmpty: " ",
-            infoFiltered: " ",
-            infoPostFix: "",
-            loadingRecords: " ",
-            zeroRecords: "No se encontraron datos con tu busqueda",
-            emptyTable: "No hay datos disponibles en la tabla.",
-            paginate: {
-                first: "Primero",
-                previous: "Ant",
-                next: "Sig",
-                last: "Ultimo"
-            },
-            aria: {
-                sortAscending: ": active para ordenar la columna en orden ascendente",
-                sortDescending: ": active para ordenar la columna en orden descendente"
-            },
-            pageLength: 7,
-            bLengthChange: false,
-            ordering: false,
-            select: true,
-            colReorder: true
-        },
-        scrollY: 200,
-        scrollX: true
-      });
-    } );
-
-    $(document).ready(function() {
-      $('#walletTable').DataTable({ 
-        responsive: true,
-        paging: false,
-        searching: true,
-        language: {
-            lengthMenu: "Agrupar de MENU ",
-            search: " ",
-            searchPlaceholder: " Buscar",
-            info: "",
-            infoEmpty: " ",
-            infoFiltered: " ",
-            infoPostFix: "",
-            loadingRecords: " ",
-            zeroRecords: "No se encontraron datos con tu busqueda",
-            emptyTable: "No hay datos disponibles en la tabla.",
-            paginate: {
-                first: "Primero",
-                previous: "Ant",
-                next: "Sig",
-                last: "Ultimo"
-            },
-            aria: {
-                sortAscending: ": active para ordenar la columna en orden ascendente",
-                sortDescending: ": active para ordenar la columna en orden descendente"
-            },
-            pageLength: 7,
-            bLengthChange: false,
-            ordering: false,
-            select: true,
-            colReorder: true
-        },
-        scrollY: 200,
-        scrollX: true
-      });
-    } );
 
 
     function clickDatosPersonales(){
@@ -300,84 +298,8 @@
       $("#ventaOpera").css("font-weight", "normal")
     }
 
-    function clickDatosBanco(){
-      $("#bancos").css("display","block")
-      $("#perfil").css("display","none")
-      $("#compra").css("display","none")
-      $("#venta").css("display","none")
-      $("#misOperaciones").css("display","none")
-      $("#wallet").css("display","none")
-      
-      $("#datosPersonales").css("font-weight", "normal")
-      $("#datosBancarios").css("font-weight", "bold")
-      $("#compraOpera").css("font-weight", "normal")
-      $("#ventaOpera").css("font-weight", "normal")
-      
-    }
 
-    function clickCompra(){
-      $("#compra").css("display","block")
-      $("#bancos").css("display","none")
-      $("#perfil").css("display","none")
-      $("#venta").css("display","none")
-      $("#misOperaciones").css("display","none")
-      $("#wallet").css("display","none")
 
-      $("#datosPersonales").css("font-weight", "normal")
-      $("#datosBancarios").css("font-weight", "normal")
-      $("#compraOpera").css("font-weight", "bold")
-      $("#ventaOpera").css("font-weight", "normal")
-    }
-
-    function clickVenta(){
-      $("#venta").css("display","block")
-      $("#bancos").css("display","none")
-      $("#perfil").css("display","none")
-      $("#compra").css("display","none")
-      $("#misOperaciones").css("display","none")
-      $("#wallet").css("display","none")
-
-      $("#datosPersonales").css("font-weight", "normal")
-      $("#datosBancarios").css("font-weight", "normal")
-      $("#compraOpera").css("font-weight", "normal")
-      $("#ventaOpera").css("font-weight", "bold")
-    }
-
-    function clickOperaciones(){
-      $("#misOperaciones").css("display","block")
-      $("#venta").css("display","none")
-      $("#bancos").css("display","none")
-      $("#perfil").css("display","none")
-      $("#compra").css("display","none")
-      $("#wallet").css("display","none")
-      $.fn.dataTable.tables({ visible: true, api: true }).columns.adjust();
-
-        $("#navPerfil").removeClass("activo");
-        $(".submenu-personal").removeClass( "submenuBlock" );
-      
-    
-        $("#navOperaciones").removeClass("activo");
-        $(".submenu-operaciones").removeClass( "submenuBlock" );
-      
-    }
-
-    function clickWallet(){
-      $("#wallet").css("display","block")
-      $("#misOperaciones").css("display","none")
-      $("#venta").css("display","none")
-      $("#bancos").css("display","none")
-      $("#perfil").css("display","none")
-      $("#compra").css("display","none")
-      $.fn.dataTable.tables({ visible: true, api: true }).columns.adjust();
-
-        $("#navPerfil").removeClass("activo");
-        $(".submenu-personal").removeClass( "submenuBlock" );
-      
-    
-        $("#navOperaciones").removeClass("activo");
-        $(".submenu-operaciones").removeClass( "submenuBlock" );
-      
-    }
 
 
   </script>

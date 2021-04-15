@@ -205,7 +205,7 @@
 }
 #bancos .estado{
   float: right;
-  color: #fff;
+  color: #666;
 }
 #bancos .card-body{
   padding: 25px 10px;
@@ -239,6 +239,7 @@
   border-radius: 5px;
   transition: 0.5s;
   color: #f5f5f5;
+  border: none;
 }
 
 #bancos .botonera .btn-agg{
@@ -251,6 +252,66 @@
 #bancos .botonera .btn-agg:hover{
   background-color: #385BA2;
 }
+
+
+/*DEPOSITOS*/
+#depositos h5{
+  font-weight: bold;
+  color: #274070;
+  text-transform: uppercase;
+}
+#depositos .card{
+  border-radius: .42rem;
+  background-color: #fff;
+  -webkit-box-shadow: 0 0 30px 0 rgb(82 63 105 / 5%);
+  -moz-box-shadow: 0 0 30px 0 rgb(82 63 105 / 5%);
+  box-shadow: 0 0 30px 0 rgb(82 63 105 / 5%);
+}
+#depositos .card-body{
+  padding: 25px 10px;
+}
+
+#depositos .card-body label{
+  font-size: 14px;
+  color: #274070;
+}
+#depositos .card-body .form-login{
+  font-size: 13px;
+  background-color: transparent;
+  border: none !important;
+  border-bottom: 2px solid #ACACAC !important;
+  border-radius: 0px ;
+}
+
+#depositos .card-body .botonera {
+  padding: 3px 6px;
+  float: right;
+  margin-left: 5px;
+}
+
+#depositos .botonera .btn-get-started-agg {
+  font-weight: 500;
+  font-size: 13px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 10px 30px;
+  border-radius: 5px;
+  transition: 0.5s;
+  color: #f5f5f5;
+  border: none;
+}
+
+#depositos .botonera .btn-agg{
+  background-color: #385BA2;
+  -webkit-box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
+  -moz-box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
+  box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
+  float: right;
+}
+#depositos .botonera .btn-agg:hover{
+  background-color: #385BA2;
+}
+
 /*--------------------------------------------------------------
 # Cripto Section
 --------------------------------------------------------------*/

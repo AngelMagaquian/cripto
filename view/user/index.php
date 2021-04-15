@@ -51,7 +51,7 @@
         <div class="submenu submenu-personal" style="">
           <ul>
             <li>
-              <a href="#" id="datosPersonales" onclick="clickDatosPersonales()">Datos personales </a>
+              <a href="datosPersonales.php" id="datosPersonales" onclick="clickDatosPersonales()">Datos personales </a>
             </li>
             <li>
               <a href="#" id="datosBancarios" onclick="clickDatosBanco()">Datos bancarios</a>
@@ -127,24 +127,7 @@
         </div>
         
       </nav>
-
-      <div class="herramienta">
-        <?php
-        include '../wallet/index.php';
-        include '../misOperaciones/operaciones.php';
-        include '../misOperaciones/index.php';
-        include '../operaciones/depositos.php';
-          include '../operaciones/compra.php';
-          include '../operaciones/venta.php';
-          include '../perfil/datosPersonales.php';
-          include '../perfil/datosBancarios.php';
-          
-          
-          
-
-        ?>
-
-      </div>
+<!-- /#aca va el contenedor -->
     </div>
     <!-- /#page-content-wrapper -->
 
@@ -161,16 +144,12 @@
   <script src="..\..\controller\user\update_user_info_controller.js" type="module" ></script>
   <script src="..\..\controller\datos_bancarios\bank_controller.js" type="module" ></script>
   <script src="..\..\controller\user\wallet_user_controller.js" type="module" ></script>
-
-  
   <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
   <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
   <script src="https://cdn.datatables.net/1.10.24/js/dataTables.bootstrap5.min.js"></script>
   <!-- Menu Toggle Script -->
   <script>
-    $('#myModal').on('hidden.bs.modal', function (e) {
-      // do something...
-    })
+
 
     $("#menu-toggle").click(function(e) {
       e.preventDefault();
@@ -194,96 +173,6 @@
       $("#ventaOpera").css("font-weight", "normal")
     }
 
-    function navOperaciones(){
-      console.log("estoy")
-      $(".submenu-operaciones").addClass( "submenuBlock" );
-      $("#navOperaciones").addClass("activo")
-
-      if($("#navPerfil").hasClass("activo")){
-        $("#navPerfil").removeClass("activo");
-        $(".submenu-personal").removeClass( "submenuBlock" );
-      }
-
-      $("#datosPersonales").css("font-weight", "normal")
-      $("#datosBancarios").css("font-weight", "normal")
-      $("#compraOpera").css("font-weight", "normal")
-      $("#ventaOpera").css("font-weight", "normal")
-    }
-       
-
-    $(document).ready(function() {
-      $('#operacionesTable').DataTable({ 
-        responsive: true,
-        paging: false,
-        searching: true,
-        language: {
-            lengthMenu: "Agrupar de MENU ",
-            search: " ",
-            searchPlaceholder: " Buscar",
-            info: "",
-            infoEmpty: " ",
-            infoFiltered: " ",
-            infoPostFix: "",
-            loadingRecords: " ",
-            zeroRecords: "No se encontraron datos con tu busqueda",
-            emptyTable: "No hay datos disponibles en la tabla.",
-            paginate: {
-                first: "Primero",
-                previous: "Ant",
-                next: "Sig",
-                last: "Ultimo"
-            },
-            aria: {
-                sortAscending: ": active para ordenar la columna en orden ascendente",
-                sortDescending: ": active para ordenar la columna en orden descendente"
-            },
-            pageLength: 7,
-            bLengthChange: false,
-            ordering: false,
-            select: true,
-            colReorder: true
-        },
-        scrollY: 200,
-        scrollX: true
-      });
-    } );
-
-    $(document).ready(function() {
-      $('#walletTable').DataTable({ 
-        responsive: true,
-        paging: false,
-        searching: true,
-        language: {
-            lengthMenu: "Agrupar de MENU ",
-            search: " ",
-            searchPlaceholder: " Buscar",
-            info: "",
-            infoEmpty: " ",
-            infoFiltered: " ",
-            infoPostFix: "",
-            loadingRecords: " ",
-            zeroRecords: "No se encontraron datos con tu busqueda",
-            emptyTable: "No hay datos disponibles en la tabla.",
-            paginate: {
-                first: "Primero",
-                previous: "Ant",
-                next: "Sig",
-                last: "Ultimo"
-            },
-            aria: {
-                sortAscending: ": active para ordenar la columna en orden ascendente",
-                sortDescending: ": active para ordenar la columna en orden descendente"
-            },
-            pageLength: 7,
-            bLengthChange: false,
-            ordering: false,
-            select: true,
-            colReorder: true
-        },
-        scrollY: 200,
-        scrollX: true
-      });
-    } );
 
 
     function clickDatosPersonales(){
@@ -300,84 +189,8 @@
       $("#ventaOpera").css("font-weight", "normal")
     }
 
-    function clickDatosBanco(){
-      $("#bancos").css("display","block")
-      $("#perfil").css("display","none")
-      $("#compra").css("display","none")
-      $("#venta").css("display","none")
-      $("#misOperaciones").css("display","none")
-      $("#wallet").css("display","none")
-      
-      $("#datosPersonales").css("font-weight", "normal")
-      $("#datosBancarios").css("font-weight", "bold")
-      $("#compraOpera").css("font-weight", "normal")
-      $("#ventaOpera").css("font-weight", "normal")
-      
-    }
 
-    function clickCompra(){
-      $("#compra").css("display","block")
-      $("#bancos").css("display","none")
-      $("#perfil").css("display","none")
-      $("#venta").css("display","none")
-      $("#misOperaciones").css("display","none")
-      $("#wallet").css("display","none")
 
-      $("#datosPersonales").css("font-weight", "normal")
-      $("#datosBancarios").css("font-weight", "normal")
-      $("#compraOpera").css("font-weight", "bold")
-      $("#ventaOpera").css("font-weight", "normal")
-    }
-
-    function clickVenta(){
-      $("#venta").css("display","block")
-      $("#bancos").css("display","none")
-      $("#perfil").css("display","none")
-      $("#compra").css("display","none")
-      $("#misOperaciones").css("display","none")
-      $("#wallet").css("display","none")
-
-      $("#datosPersonales").css("font-weight", "normal")
-      $("#datosBancarios").css("font-weight", "normal")
-      $("#compraOpera").css("font-weight", "normal")
-      $("#ventaOpera").css("font-weight", "bold")
-    }
-
-    function clickOperaciones(){
-      $("#misOperaciones").css("display","block")
-      $("#venta").css("display","none")
-      $("#bancos").css("display","none")
-      $("#perfil").css("display","none")
-      $("#compra").css("display","none")
-      $("#wallet").css("display","none")
-      $.fn.dataTable.tables({ visible: true, api: true }).columns.adjust();
-
-        $("#navPerfil").removeClass("activo");
-        $(".submenu-personal").removeClass( "submenuBlock" );
-      
-    
-        $("#navOperaciones").removeClass("activo");
-        $(".submenu-operaciones").removeClass( "submenuBlock" );
-      
-    }
-
-    function clickWallet(){
-      $("#wallet").css("display","block")
-      $("#misOperaciones").css("display","none")
-      $("#venta").css("display","none")
-      $("#bancos").css("display","none")
-      $("#perfil").css("display","none")
-      $("#compra").css("display","none")
-      $.fn.dataTable.tables({ visible: true, api: true }).columns.adjust();
-
-        $("#navPerfil").removeClass("activo");
-        $(".submenu-personal").removeClass( "submenuBlock" );
-      
-    
-        $("#navOperaciones").removeClass("activo");
-        $(".submenu-operaciones").removeClass( "submenuBlock" );
-      
-    }
 
 
   </script>
