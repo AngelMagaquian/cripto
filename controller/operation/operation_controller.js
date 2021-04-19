@@ -59,9 +59,7 @@ $(function(){
             aux_venta = true;
         }
 
-        if($('#op2').is(':checked')){
-            aux_venta = true;
-        }
+       
 
         //lleno el postData con el valor de los check;
         const postData={
@@ -146,6 +144,7 @@ $(function(){
     function table(data){
         let template =``;
         let state= '';
+        let type = '';
 
         data.forEach(dato =>{
             if(dato.state == 1){
@@ -155,6 +154,8 @@ $(function(){
            }else{
                state = 'CANCELADA';
            }
+
+          
                template += `
                <tr>
                    <td>${dato.type}</td>

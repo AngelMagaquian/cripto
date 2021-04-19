@@ -41,7 +41,7 @@
                                 </div>
                             </form>
 
-                            <form id="operation_form " class="col-lg-4 col-md-6 col-sm-6 col-12 mt-lg-0 mt-md-4  mt-sm-4 mt-4">
+                            <form id="operation_form" class="col-lg-4 col-md-6 col-sm-6 col-12 mt-lg-0 mt-md-4  mt-sm-4 mt-4">
                                 <div class="row">
                                     <div class="col-12">
                                         <label for=""><b>Operación</b></label>
@@ -70,15 +70,13 @@
                             <thead>
                                 <tr>
                                     <th>Tipo de operación</th>
-                                    <th>Tipo de divisa</th>
+                                    <th>Tipo de Criptomoneda</th>
                                     <th>Monto AR$</th>
                                     <th>Monto en Criptomoneda</th>
-                                    <th>Banco</th>
-                                    <th>CBU</th>
                                     <th>Wallet</th>
                                     <th>Fecha</th>
                                     <th>Estado</th>
-                                    
+
                                 </tr>
                             </thead>
                             <tbody id="operation_tbody">

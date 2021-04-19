@@ -1,4 +1,4 @@
-<section id="" style="display:none">
+<section id="" style="display:BLOCK">
 <!--CAMBIARLE DISPLAY:BLOCK-->
     <div class="container-fluid">
         <div class="row justify-content-center mt-4">
@@ -18,19 +18,9 @@
                                     <th>Fecha</th>
                                     <th>Pesos</th>
                                     <th>Estado</th>
-                                    
                                 </tr>
                             </thead>
-                            <tbody>
-                                <tr>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                                
+                            <tbody id="deposit_tbody">
                             </tbody>
                         </table>
                         </div>
@@ -41,3 +31,5 @@
         </div>
     </div>
 </section>
+<script src="..\..\controller\operation\deposit_controller.js" type="module" ></script>
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
