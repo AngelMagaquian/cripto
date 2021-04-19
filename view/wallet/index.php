@@ -12,29 +12,27 @@
                 <div class="card-body mt-3">
                 <div class="row justify-content-between">
 
-                    <form id="add_wallet" class="col-lg-4 col-md-6 col-sm-12"> <!--cambiar nombre dsp-->
+                    <form id="add_wallet" class="col-12"> <!--cambiar nombre dsp-->
                         
                         <div class="row">
-                            <div class="col-lg-8 col-md-8 col-sm-6 col-8">
+                            <div class="col-md-3 col-12">
                                 <input id= "id_cripto_wallet" type="text" placeholder="Ingresar código de wallet" class="form-control" autocomplete="off" required>
-                                <!--<br>
-                                <input id="description_cripto_wallet" type="text" placeholder="Ingresar alias de wallet" class="form-control" autocomplete="off" required>
-                                <br>
-                                <select id="divisa_wallet"></select>-->
                             </div>
+                            <div class="col-md-3 col-12">
+                                <input id="description_cripto_wallet" type="text" placeholder="Ingresar alias de wallet" class="form-control" autocomplete="off" required>
+                            </div>
+                            <div class="col-md-3 col-12">
+                                <select id="divisa_wallet" style="width:100%"></select>
+                            </div>
+                                
+                            
                             <div class="col-2">
                                 <input type="submit" value="Agregar" class="btn-get-started-filtro btn-filtro">
                             </div>
                                 
                         </div>
                     </form>
-                    <form id="" class="col-lg-4 col-md-6 col-sm-12 mt-md-0 mt-sm-4 mt-4"> <!-- falta nombre-->
-                        <div class="row">
-                            <div class="col-12" style="text-align: end;">
-                                <input type="submit" value="Nueva wallet" class="btn-get-started-wallet btn-wallet">
-                            </div>
-                        </div>
-                    </form>   
+                     
                 </div>
 
                 <div class="row mt-4">
@@ -50,6 +48,14 @@
                             
                         </tbody>
                     </table>
+
+                    <form id="" class=" col-12 mt-md-0 mt-sm-4 mt-4"> <!-- falta nombre-->
+                        <div class="row">
+                            <div class="col-12" style="text-align: end;">
+                                <input type="submit" value="Nueva wallet" class="btn-get-started-wallet btn-wallet">
+                            </div>
+                        </div>
+                    </form>  
                     </div>
                     
                              

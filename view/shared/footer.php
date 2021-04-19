@@ -1,7 +1,7 @@
 <section>
 <div class="container-fluid ondas-footer">
     <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1920 172" style="enable-background:new 0 0 1920 172;" xml:space="preserve">
-        <style type="text/css">.st0{fill:#399EFA;}</style>
+        <style type="text/css">.st0{fill:#253d6e;}</style>
     <path class="st0" d="M0,54c0,0,69,48,337-2l147-30c0,0,172-49,411,0c0,0,199,52,241,53c0,0,165,17,287-10s362-8,362-8s101,11,135,22 v93H0V54z"/>
     </svg>
 </div>

@@ -147,6 +147,10 @@
   <script src="https://cdn.datatables.net/1.10.24/js/dataTables.bootstrap5.min.js"></script>
   <!-- Menu Toggle Script -->
   <script>
+    $(document).ready(function(){
+    $('[data-toggle="popover"]').popover();   
+});
+
     $("#menu-toggle").click(function(e) {
       e.preventDefault();
       $("#wrapper").toggleClass("toggled");

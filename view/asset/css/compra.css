@@ -6,7 +6,7 @@
   --------------------------------------------------------------*/
   #hero-nosotros {
     width: 100%;
-    background: #27C0FA;
+    background: #519FED;
     background-repeat: no-repeat;
     background-size: 100vw;
     position: relative;
@@ -102,7 +102,7 @@
     height: 60px;
     z-index: 5;
     position: relative;
-    background: #27C0FA;
+    background: #519FED;
   }
   
   .wave1-nosotros use {
@@ -186,7 +186,7 @@
 --------------------------------------------------------------*/
 #cripto{
     padding: 30px 0 60px 0;
-    background-color: #27C0FA;
+    background-color: #519FED;
 }
 #cripto h1{
     color: #fff;
