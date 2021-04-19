@@ -16,7 +16,7 @@
   --------------------------------------------------------------*/
   #hero-nosotros {
     width: 100%;
-    background: #27C0FA;
+    background: #406dc9;
     background-repeat: no-repeat;
     background-size: 100vw;
     position: relative;
@@ -43,12 +43,13 @@
     font-size: 48px;
     font-weight: 700;
     line-height: 56px;
-    color:  #031D5A;
+    color:  #fff;
   }
   
   #hero-nosotros p {
     margin: 20px 0 0 0;
     font-size: 20px;
+    color: beige;
   }
  
   #hero-nosotros .animated {
@@ -118,7 +119,7 @@
     height: 60px;
     z-index: 5;
     position: relative;
-    background: #27C0FA;
+    background: #406dc9;
   }
   
   .wave1-nosotros use {
@@ -233,7 +234,7 @@
   }
   
   #valores .card-uno{
-    background-color: #031D5A;
+    background-color: #253d6e;
     border-radius: .42rem;
     padding: 30px;
     text-align: center;
@@ -244,7 +245,7 @@
   
   }
   #valores .card-dos{
-    background-color: #27C0FA;
+    background-color: #98B4ED;
     border-radius: .42rem;
     padding: 30px;
     text-align: center;
@@ -255,7 +256,7 @@
   
   }
   #valores .card-tres{
-    background-color: #399EFA;
+    background-color: #5185ED;
     border-radius: .42rem;
     padding: 30px;
     text-align: center;
