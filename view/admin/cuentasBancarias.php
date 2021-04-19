@@ -12,9 +12,7 @@
                             <form id="account_form" action="">
                                 <div class="row justify-content-around">
                                     <div class="buscador col-11 mt-2 mb-2">
-
                                         <input type="submit" value="Buscar"/>
-
                                         <input id="dni_search" type="text" value="" placeholder="Buscar usuario por DNI"> 
                                     </div>
                                 </div>
