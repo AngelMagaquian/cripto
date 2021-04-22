@@ -38,8 +38,8 @@ include 'nav.php';
 
         <div class="col-md-6  pt-lg-0 d-flex align-items-center">
           <div data-aos="zoom-out">
-            <h1 class="mb-0">Somos xxxxxxxxxxx</h1>
-            <p>Descripción de la empresa. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.</p>
+            <h1 class="mb-0">Somos CriptoPremier</h1>
+            <p>El lugar donde ahorrar, invertir y negociar con criptomonedas en Rio Tercero, Córdoba. </p>
             <!--<div class="text-animate">
               <ul>
                 <li>Registrate</li>
@@ -112,17 +112,17 @@ include 'nav.php';
 <section id="ubicacion">
 <div class="container">
     <div class="row justify-content-around">
-        <div class="col-md-5 col-11 mt-md-0 mb-5 d-md-none">
-            <h5><b>¿Dónde nos podes encontrar?</b></h5>
-            <p>Ahora operar en criptomonedas es mas facil… Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.</p>
+        <div class="col-md-5 col-11 mt-md-0 mb-5 d-md-none text-ubicacion">
+        <h5><b>¿Dónde nos podes encontrar?</b></h5>
+            <p>Podes encontrarnos en nuestro local en Av. Vélez Sarsfield 23, Ciudad de Rio Tercero, Córdoba, Argentina.</p>
         </div>
-        <div class="col-md-5 col-11 text-ubicacion">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8097.90356199679!2d-64.18829204977033!3d-31.421039823364293!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432a32dcf5d747f%3A0x40373220b29140ac!2sPatio%20Olmos%20Shopping!5e0!3m2!1ses-419!2sar!4v1613507684482!5m2!1ses-419!2sar" width="100%" height="250" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        <div class="col-md-5 col-11 ">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1688.543910067141!2d-64.11150927944561!3d-32.17490648698032!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95cd6f24d881b0bf%3A0x5b3f9cb441e66eb3!2zRMOtYXogVsOpbGV6IFPDoXJzZmllbGQgMjMsIFLDrW8gVGVyY2VybywgQ8OzcmRvYmE!5e0!3m2!1sen!2sar!4v1619043473134!5m2!1sen!2sar" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
 
-        <div class="col-md-5 col-11 mt-md-0 mt-5 d-none d-md-block">
+        <div class="col-md-5 col-11 mt-md-0 mt-5 d-none d-md-block text-ubicacion">
             <h5><b>¿Dónde nos podes encontrar?</b></h5>
-            <p>Ahora operar en criptomonedas es mas facil… Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.</p>
+            <p>Podes encontrarnos en nuestro local en Av. Vélez Sarsfield 23, Ciudad de Rio Tercero, Córdoba, Argentina.</p>
         </div>
 
     </div>
@@ -136,7 +136,7 @@ include 'nav.php';
 
         <div class="col-md-5 col-11 text-random">
             <h5><b>TE ASESORAMOS EN LO QUE NECESITES</b></h5>
-            <p>Ahora operar en criptomonedas es mas facil… Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.</p>
+            <p>Ahora operar en <b>criptomonedas</b> es más facil. Te ofrecemos atención y asesoramiento personalizado, te ayudamos a abrir tu primera caja de ahorros virtual y te asesoramos si necesitas enviar o recibir dinero desde el exterior</p>
         </div>
 
         <div class="col-md-5 col-11 mt-md-0 mt-5">

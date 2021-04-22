@@ -405,12 +405,12 @@ a:hover {
   background-color: #5185ed;
   border-radius: .42rem;
   padding: 30px;
+  padding-top: 0;
   text-align: center;
   color:#fff;
   -webkit-box-shadow: 0px 0px 15px 2px rgba(168,168,168,1);
 -moz-box-shadow: 0px 0px 15px 2px rgba(168,168,168,1);
 box-shadow: 0px 0px 15px 2px rgba(168,168,168,1);
-
 }
 
 #tips .card-tips h3{
@@ -421,6 +421,19 @@ box-shadow: 0px 0px 15px 2px rgba(168,168,168,1);
 #tips .card-tips p{
   font-size: 15px;
 }
+#tips .container-svg{
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  background-color:#375AA1;
+  margin: auto;
+}
+
+#tips .container-svg svg{
+  margin: 18px
+}
+
+
 
 
 
