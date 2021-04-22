@@ -1,0 +1,6 @@
+{
+    "require": {
+        "codenix-sv/coingecko-api": "^1.0",
+        "guzzlehttp/guzzle": "~6.0"
+    }
+}

@@ -1,3 +1,4 @@
+
 <section id="venta" style="display:none">
 <div id="cripto">
   <div class="container">
@@ -178,21 +179,21 @@
         <div class="col-lg-7 col-md-11 col-sm-11 col-11 card focus mt-lg-0 mt-md-4 mt-sm-4 mt-4">
             <div class="row calculadora justify-content-around m-auto">
                 <div class="col-6">
-                    <select name="" id="">
-                        <option value="">ARG</option>
+                    <select name="" id="pesos_select">
+                        <option value="ars">ARG</option>
                     </select>
-                    <input type="number">
+                    <input type="number" id="ars_value">
                 </div>
                 <div class="col-6 mb-3">
-                    <select name="" id="">
-                        <option value="">BTC</option>
-                        <option value="">ETH</option>
-                        <option value="">USDT</option>
-                        <option value="">DAI</option>
-                        <option value="">LINK</option>
-                        <option value="">XRP</option>
+                    <select name="" id="cripto_select">
+                        <option value="bitcoin">BTC</option>
+                        <option value="ethereum">ETH</option>
+                        <option value="tether">USDT</option>
+                        <option value="dai">DAI</option>
+                        <option value="chainlink">LINK</option>
+                        <option value="ripple">XRP</option>
                     </select>
-                    <input type="number">
+                    <input type="number" id="cripto_value" step="0.00001">
                 </div>
                 <div class="col-12 mt-5">
                     <div class="container-btn">
@@ -205,3 +206,4 @@
     </div>
 </div>
 </section>
+<script src="..\..\controller\operation\op_venta_controller.js" type="module" ></script>
