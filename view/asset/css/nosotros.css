@@ -277,7 +277,7 @@
   }
 
   #ubicacion .text-ubicacion{
-      margin: auto 0;
+      margin: auto 0 !important;
   }
   #ubicacion h5 {
     text-align: right;
