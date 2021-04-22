@@ -16,7 +16,7 @@
                 ORDER BY d.date_hour ASC
                 ";
                 $ejecucion=mysqli_query($conexion, $deposit);
-
+                $var = 1;
                 $json = array();
                 while($resultado= mysqli_fetch_array($ejecucion)){
                     $json[] = array('id_deposit' =>$resultado['id_deposit'], 'id_bank' => $resultado['id_bank'], 'bank_name' => $resultado['bank_name'], 'CBU' => $resultado['CBU'],
