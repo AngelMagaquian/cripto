@@ -123,6 +123,9 @@
 .submenu-operaciones{
   display: none;
 }
+.submenu-misOp{
+  display: none;
+}
 .submenuBlock{
   display: block;
   transition-property: all;
