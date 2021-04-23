@@ -25,7 +25,7 @@ $(function(){
                     if(response == 1){
                         $(location). attr('href','../../view/user/perfil/datosPersonales.php');
                     }else if(response == 2){
-                        $(location). attr('href','../../index.php');
+                        $(location). attr('href','../../view/admin/usuario/cuentasBancarias.php');
                     }
                     
                 }
