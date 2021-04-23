@@ -23,9 +23,9 @@ $(function(){
                     delete_input();
                    
                     if(response == 1){
-                        $(location). attr('href','../../view/shared/user.php');
+                        $(location). attr('href','../../view/user/perfil/datosPersonales.php');
                     }else if(response == 2){
-                        $(location). attr('href','../../view/admin/index.php');
+                        $(location). attr('href','../../index.php');
                     }
                     
                 }
