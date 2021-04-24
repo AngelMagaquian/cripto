@@ -226,6 +226,41 @@
 
     $( document ).ready(function() {
       $("#wallet").addClass("activo")
+
+      $('#walletTable').DataTable({ 
+        responsive: true,
+        paging: false,
+        searching: true,
+        language: {
+            lengthMenu: "Agrupar de MENU ",
+            search: " ",
+            searchPlaceholder: " Buscar",
+            info: "",
+            infoEmpty: " ",
+            infoFiltered: " ",
+            infoPostFix: "",
+            loadingRecords: " ",
+            zeroRecords: "No se encontraron datos con tu busqueda",
+            emptyTable: "No hay datos disponibles en la tabla.",
+            paginate: {
+                first: "Primero",
+                previous: "Ant",
+                next: "Sig",
+                last: "Ultimo"
+            },
+            aria: {
+                sortAscending: ": active para ordenar la columna en orden ascendente",
+                sortDescending: ": active para ordenar la columna en orden descendente"
+            },
+            pageLength: 7,
+            bLengthChange: false,
+            ordering: false,
+            select: true,
+            colReorder: true
+        },
+        scrollY: 200,
+        scrollX: true
+      });
     });
 
     function navPerfil(){
@@ -241,6 +276,9 @@
       if($("#navMisOp").hasClass("activo")){
         $("#navMisOp").removeClass("activo");
       }
+      if($("#wallet").hasClass("activo")){
+        $("#wallet").removeClass("activo");
+      }
     }
 
     function navOperaciones(){
@@ -255,6 +293,9 @@
       }
       if($("#navMisOp").hasClass("activo")){
         $("#navMisOp").removeClass("activo");
+      }
+      if($("#wallet").hasClass("activo")){
+        $("#wallet").removeClass("activo");
       }
     }
 
@@ -273,6 +314,9 @@
       }
       if($("#navPerfil").hasClass("activo")){
         $("#navPerfil").removeClass("activo");
+      }
+      if($("#wallet").hasClass("activo")){
+        $("#wallet").removeClass("activo");
       }
     }
 
