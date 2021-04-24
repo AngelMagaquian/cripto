@@ -9,7 +9,7 @@ $(function(){
     });
 
     function wallet_cripto_table(){
-        get_data('../../model/wallet_cripto/wallet_cripto_data.php').then(response => {
+        get_data('../../../model/wallet_cripto/wallet_cripto_data.php').then(response => {
             // En este punto recibimos la respuesta.
                 
             let data = JSON.parse(response); 
@@ -36,7 +36,7 @@ $(function(){
     }
 
     function divisas(){
-        get_data('../../model/operation/divisas.php').then(response => {
+        get_data('../../../model/operation/divisas.php').then(response => {
             // En este punto recibimos la respuesta.
             
             let data = JSON.parse(response); 
@@ -72,7 +72,7 @@ $(function(){
                 console.log(postData);
                 
                 $.ajax({
-                    url: '../../model/wallet_cripto/new_wallet_cripto.php',
+                    url: '../../../model/wallet_cripto/new_wallet_cripto.php',
                     type: 'POST',
                     data: postData,
                     success: function(response) {

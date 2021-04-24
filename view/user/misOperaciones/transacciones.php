@@ -234,18 +234,14 @@
   <script src="../../asset/js/bootstrap/bootstrap.min.js"></script>
   <script src="../../asset/js/bootstrap/bootstrap.bundle.min.js"></script>
   <!--Controllers-->
-  <script src="..\..\..\controller\user\controller_user.js" type="module" ></script>
-  <script src="..\..\..\controller\user\update_user_info_controller.js" type="module" ></script>
-  <script src="..\..\..\controller\datos_bancarios\bank_controller.js" type="module" ></script>
-  <script src="..\..\..\controller\user\wallet_user_controller.js" type="module" ></script>
-  
-  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <script src="..\..\..\controller\operation\operation_controller.js" type="module" ></script> <!--no eliminar-->
+
+  <script src="https://code.jquery.com/jquery-3.5.1.js"></script> <!--no eliminar-->
   <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
   <script src="https://cdn.datatables.net/1.10.24/js/dataTables.bootstrap5.min.js"></script>
   
 
-  <script src="..\..\controller\operation\operation_controller.js" type="module" ></script>
-  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
   <!-- Menu Toggle Script -->
   <script>
     $("#menu-toggle").click(function(e) {

@@ -33,38 +33,11 @@ $(function(){
 
     function get_cripto_pesos_value(cripto){
         
-        post_data('../../model/calculadora/calculadora2.php', cripto).then(response => {
+        post_data('../../../model/calculadora/calculadora2.php', cripto).then(response => {
             // En este punto recibimos la respuesta.
-            console.log('cripto: '+response);
             let data = JSON.parse(response); 
-    
+            cripto_pesos(data.value);
 
-            switch(cripto){
-                case 'bitcoin':
-                    cripto_pesos(data.bitcoin.ars);
-
-                    break;
-                case 'ethereum':
-                    cripto_pesos(data.ethereum.ars);
-                    break;
-
-                case 'tether':
-                    cripto_pesos(data.tether.ars);
-                    break;
-
-                case 'dai':
-                    cripto_pesos(data.dai.ars);
-                    break;
-
-                case 'chainlink':
-                    cripto_pesos(data.chainlink.ars);
-                    break;
-
-                case 'ripple':
-                    cripto_pesos(data.ripple.ars);
-                    break;
-            }
-            
         })
         .catch(error => {
           console.log(error);
@@ -73,38 +46,12 @@ $(function(){
 
 
     function get_pesos_cripto_value(cripto){
-        var cripto_value = $('#cripto_value').val();
-        post_data('../../model/calculadora/calculadora2.php', cripto).then(response => {
+        
+        post_data('../../../model/calculadora/calculadora2.php', cripto).then(response => {
             // En este punto recibimos la respuesta.
             console.log('cripto: '+response);
             let data = JSON.parse(response); 
-    
-
-            switch(cripto){
-                case 'bitcoin':
-                    pesos_cripto(data.bitcoin.ars);
-
-                    break;
-                case 'ethereum':
-                    pesos_cripto(data.ethereum.ars);
-                    break;
-
-                case 'tether':
-                    pesos_cripto(data.tether.ars);
-                    break;
-
-                case 'dai':
-                    pesos_cripto(data.dai.ars);
-                    break;
-
-                case 'chainlink':
-                    pesos_cripto(data.chainlink.ars);
-                    break;
-
-                case 'ripple':
-                    pesos_cripto(data.ripple.ars);
-                    break;
-            }
+            pesos_cripto(data.value);
             
         })
         .catch(error => {

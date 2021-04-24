@@ -5,7 +5,7 @@ $(function(){
     $( document ).ready(function() {
        
         //funciones para traer los datos del usuario
-        get_data('../../model/operation/operation_data.php').then(response => {
+        get_data('../../../model/operation/operation_data.php').then(response => {
             // En este punto recibimos la respuesta.
       
             data = JSON.parse(response); 
@@ -29,7 +29,7 @@ $(function(){
 
        
 
-        $.post('../../model/operation/date_filter.php', postData, function(response){
+        $.post('../../../model/operation/date_filter.php', postData, function(response){
             if(response == 0){
                 window.alert('Error de fechas: Por favor controler las fechas');
             }else{
@@ -69,7 +69,7 @@ $(function(){
 
         console.log(postData);
 
-        $.post('../../model/operation/operation_filter.php', postData, function(response){
+        $.post('../../../model/operation/operation_filter.php', postData, function(response){
             
                 //mostrar con la funcion table la tabla temporal
                 data = JSON.parse(response); 
@@ -90,11 +90,9 @@ $(function(){
         const postData ={
             cripto : $('#divisa').val()
         }
-        var cripto = $('#divisa').val();
-
         //verificacion de check, se puede hacer una funcion;
       
-        $.post('../../model/operation/cripto_filter.php', postData, function(response){
+        $.post('../../../model/operation/cripto_filter.php', postData, function(response){
                 
                 data = JSON.parse(response); 
                 
@@ -118,7 +116,7 @@ $(function(){
 
 
     function divisas(){
-        get_data('../../model/operation/divisas.php').then(response => {
+        get_data('../../../model/operation/divisas.php').then(response => {
             // En este punto recibimos la respuesta.
             data = JSON.parse(response); 
             

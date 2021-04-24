@@ -6,7 +6,7 @@ $(function(){
     $( document ).ready(function() {
        
         //funciones para traer los datos del usuario
-        get_data('../../model/operation/deposit_data.php').then(response => {
+        get_data('../../../model/operation/deposit_data.php').then(response => {
             // En este punto recibimos la respuesta.
             console.log(response);
             data = JSON.parse(response); 

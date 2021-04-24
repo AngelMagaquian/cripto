@@ -1,5 +1,3 @@
-<script src="..\..\controller\datos_bancarios\new_account_controller.js" type="module" ></script>
-<script src="https://code.jquery.com/jquery-3.5.1.js"></script> <!--late delete script-->
 
 <section id="bancos" >
     <div class="container-fluid">
@@ -43,6 +41,9 @@
         </div>
     </div>
 </section>
+
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script><!--no eliminar-->
+<script src="..\..\..\controller\user\new_account_controller.js" type="module" ></script> <!--no eliminar-->
 
 
 

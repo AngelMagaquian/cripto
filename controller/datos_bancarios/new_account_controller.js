@@ -25,7 +25,7 @@ $(function(){
        
 
         $.ajax({
-            url: '../../model/datos_bancarios/insert_new_account.php',
+            url: '../../../model/datos_bancarios/insert_new_account.php',
             type: 'POST',
             data: postData,
             success: function(response) {
@@ -70,7 +70,7 @@ $(function(){
     }
 
     function type_account(){
-        get_data('../../model/bank/get_type_account.php').then(response =>{
+        get_data('../../../model/bank/get_type_account.php').then(response =>{
             let data = JSON.parse(response); 
             let template =``;
             data.forEach(dato => {

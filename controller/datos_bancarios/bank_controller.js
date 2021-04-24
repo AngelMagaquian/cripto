@@ -6,7 +6,7 @@ $(function(){
        
             let template =``;
             //funciones para traer los datos del usuario
-            get_data('../../model/datos_bancarios/get_account.php').then(response => {
+            get_data('../../../model/datos_bancarios/get_account.php').then(response => {
                 // En este punto recibimos la respuesta.
                 
                 let data = JSON.parse(response); 
@@ -14,7 +14,7 @@ $(function(){
                 let state = "";
 
                 data.forEach(dato =>{
-                    console.log(data);
+                
                     if(data.check_account == 1){
                         state = 'ESTADO: CONFIRMADA';
                     } else{
@@ -59,8 +59,7 @@ $(function(){
                 
             })
             .catch(error => {
-              // En este punto recibimos el error. then() no se ha invocado
-              //window.alert('Error al cargar los datos, intente mas tarde');
+                    console.log(error);
             });
         
     });
