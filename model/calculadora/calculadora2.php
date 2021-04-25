@@ -8,12 +8,12 @@ $cripto = $_POST['data'];
 
 $client = new CoinGeckoClient();
 $data = $client->ping();
-$data = $client->simple()->getPrice($cripto,'ars');
+$data = $client->simple()->getPrice($cripto,'usd');
 
 $cripto_name = current(array_keys($data));
-$ars=array();
-$ars=array('value'=>$data[$cripto_name]['ars']);
+$usd=array();
+$usd=array('value'=>$data[$cripto_name]['usd']);
 
-$jsonstring= json_encode($ars);
+$jsonstring= json_encode($usd);
 echo $jsonstring;
 ?>
