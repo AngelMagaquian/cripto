@@ -3,8 +3,8 @@
     
     if(isset($_SESSION['id_user'])){
         include("../system/conexion.php");
-        
-            $balance="SELECT * FROM wallet_user";
+            $user = $_SESSION['id_user'];
+            $balance="SELECT * FROM wallet_user WHERE ID_user = $user";
             $ejecucion=mysqli_query($conexion, $balance);
 
             $json = array();

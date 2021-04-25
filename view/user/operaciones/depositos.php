@@ -140,41 +140,51 @@
                                     <br>
                                     <label class="estado">$</label>
                                 </div>-->
-                                <form action="">
+                                
                                 <div class="card-body row justify-content-around">
-                                    
                                         <div class="col-md-5 col-12 mt-3">
                                             <label><b>SELECCIONAR CUENTA</b></label>
-                                            <select class="form-control form-login" name="" id="">
-                                                <option value="">1</option>
-                                                <option value="">1</option>
+                                            <select class="form-control form-login"  id="bank_account">
+                                              
                                             </select>
                                         </div>
                                         <div class="col-md-5 col-12 mt-3">
                                             <label><b>SALDO ACTUAL</b></label>
-                                            <input type="text" class="form-control form-login"  value="" disabled=»disabled»>
+                                            <input type="text" class="form-control form-login"  id="saldo_actual" placeholder="" disabled=»disabled» readonly > 
                                         </div>
                                         <div class="col-md-5 col-12 mt-3">
                                             <label><b>IMPORTE</b></label>
-                                            <input type="text" class="form-control form-login"  value="" disabled=»disabled»>
+                                            <input type="text" class="form-control form-login"   id="importe" placeholder="" autocomplete="off" required>
                                         </div>
                                         <div class="col-md-5 col-12 mt-3">
                                             <label><b>PROYECTADO</b></label>
-                                            <input type="text" class="form-control form-login"  value="" disabled=»disabled»>
+                                            <input type="text" class="form-control form-login"  id="saldo_proyectado" placeholder="" disabled=»disabled» readonly >
                                         </div>
 
                                         <div class="col-11 botonera mt-4">
-                                            <input type="submit" value="Cambiar" id="input_update_pass" class="btn-get-started-agg  btn-agg mr-2 float-right">
-                                        </div>
-                                    
+                                            <form id="new_deposit">
+                                              <input type="submit" value="Nuevo deposito" class="btn-get-started-agg  btn-agg mr-2 float-right">
+                                            </form>
                                 </div>
-                                </form>
+                               
                                 
-                            </div>
+                          </div>
+                                        <div class="card" style="width: 18rem; ">
+                                          <div class="card-header">
+                                            Depositos
+                                          </div>
+                                          <ul class="list-group list-group-flush">
+                                            <li class="list-group-item"><b>1.</b> Envie la solicitud completando los datos, establezca cual es la cuenta que usará y el importe. (Si usted no añadio una cuenta de banco puede hacerlo en perfil-> datos bancarios-> nueva cuenta)</li>
+                                            <li class="list-group-item"><b>2.</b> Realize la transferencia atraves de su HomeBanking, debe ser igual al importe, sino será rechazada</li>
+                                            <li class="list-group-item"><b>3.</b> El saldo ingresado quedará en pendiente hasta que los administradores confirmen los fondos ingresados</li>
+                                          </ul>
+                                        </div>
                     </div>
             </div>
         </div>
       </div>
+
+
       <!--FIN VISTA-->
     </div>
     <!-- /#page-content-wrapper -->
@@ -189,7 +199,7 @@
   <script src="../../asset/js/bootstrap/bootstrap.bundle.min.js"></script>
   <!--Controllers-->
   <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-  <script src="..\..\..\controller\operation\operation_controller.js" type="module" ></script>
+  <script src="..\..\..\controller\operation\new_deposit_controller.js" type="module" ></script>
 
 
   <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
