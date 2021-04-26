@@ -16,11 +16,13 @@
   <!-- Bootstrap core CSS -->
   <link href="../../asset/css/bootstrap/bootstrap.min.css" rel="stylesheet">
 
+  <!-- datatable -->
+  <link href="../../asset/css/datatable/bootstrap.css" rel="stylesheet">
+  <link href="../../asset/css/datatable/dataTables.bootstrap4.min.css" rel="stylesheet">
+  
   <!-- Custom styles for this template -->
-  <link href="../../asset/css/style_login.css" rel="stylesheet">
   <link href="../../asset/css/perfil.css" rel="stylesheet">
 
-  <link href="https://cdn.datatables.net/1.10.24/css/dataTables.bootstrap5.min.css" rel="stylesheet">
   
   <!--fonts-->
   <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -129,6 +131,7 @@
       
       <section id="deposito">
 <!--CAMBIARLE DISPLAY:BLOCK-->
+    
     <div class="container-fluid">
         <div class="row justify-content-center mt-4">
             <div class="col-11">   
@@ -169,16 +172,18 @@
 
   <!-- Bootstrap core JavaScript -->
   <script src="../../asset/jquery/jquery.min.js"></script>
-  <script src="../../asset/js/bootstrap/bootstrap.js"></script>
+  <script src="../../asset/js/bootstrap/popper.min.js"></script>
   <script src="../../asset/js/bootstrap/bootstrap.min.js"></script>
-  <script src="../../asset/js/bootstrap/bootstrap.bundle.min.js"></script>
+
+  <!-- DataTable -->
+  <script src="../../asset/datatable/jquery.dataTables.min.js"></script>
+   <script src="../../asset/datatable/dataTables.bootstrap4.min.js"></script>
+
   <!--Controllers-->
   <script src="https://code.jquery.com/jquery-3.5.1.js"></script> <!--no eliminar-->
   <script src="..\..\..\controller\operation\deposit_controller.js" type="module" ></script> <!--no eliminar-->
 
   
-  <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
-  <script src="https://cdn.datatables.net/1.10.24/js/dataTables.bootstrap5.min.js"></script>
 
   <!-- Menu Toggle Script -->
   <script>

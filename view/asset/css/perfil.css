@@ -496,7 +496,7 @@
   border: 2px solid #274070;;
 }
 
-#venta .card .calculadora select{
+#venta .card .calculadora .moneda{
   border: none;
   font-size: 30px;
   color: #031D5A;
@@ -507,7 +507,7 @@
   font-size: 12px;
 }
 
-#venta .card .calculadora input{
+#venta .card .calculadora .number-calculadora{
   font-size: 25px;
   background-color: transparent;
   border: none !important;
@@ -515,9 +515,7 @@
   border-radius: 0px ;
   width: 55%;
 }
-#venta .card .calculadora .container-btn{
- text-align: center;
-}
+
 
 #venta .card .calculadora .container-btn .btn-cancelar{
   color: #385BA2;
@@ -539,6 +537,28 @@
   background-color: #031D5A;
 }
 
+#venta .btn-get-started-agg {
+  font-weight: 500;
+  font-size: 13px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 10px 30px;
+  border-radius: 5px;
+  transition: 0.5s;
+  color: #f5f5f5;
+  border: none;
+}
+
+#venta .btn-agg{
+  background-color: #385BA2;
+  -webkit-box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
+  -moz-box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
+  box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
+  float: right;
+}
+#venta.btn-agg:hover{
+  background-color: #385BA2;
+}
 /*--------------------------------------------------------------
 # mis operaciones
 --------------------------------------------------------------*/

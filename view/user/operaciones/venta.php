@@ -130,28 +130,16 @@
         </div>
         <div class="container mt-5">
             <div class="row justify-content-around">
-                <div class="col-lg-4 col-md-12 col-11">
-                    <div class="row justify-content-around">
-                        <div class="col-lg-12 col-md-5 col-sm-12 card focus text-center" >
-                            <h5>Venta de xxxxx</h5>
-                            <span class="price"><b>AR$ 0000</b></span>
-                        </div>
-                        <div class="col-lg-12 col-md-5 col-sm-12 card text-center mt-lg-4 mt-md-0 mt-sm-4" >
-                            <h5>Compra de xxxxx</h5>
-                            <span class="price"><b>AR$ 0000</b></span>
-                        </div>
-                    </div>
-                </div>
                 <div class="col-lg-7 col-md-11 col-sm-11 col-11 card focus mt-lg-0 mt-md-4 mt-sm-4 mt-4">
                     <div class="row calculadora justify-content-around m-auto">
                         <div class="col-6">
-                            <select name="" id="pesos_select">
+                            <select class="moneda" name="" id="pesos_select">
                                 <option value="ars">ARG</option>
                             </select>
-                            <input type="number" id="ars_value">
+                            <input class="number-calculadora" type="number" id="ars_value">
                         </div>
                         <div class="col-6 mb-3">
-                            <select name="" id="cripto_select">
+                            <select class="moneda" name="" id="cripto_select">
                                 <option value="bitcoin">BTC</option>
                                 <option value="ethereum">ETH</option>
                                 <option value="tether">USDT</option>
@@ -159,7 +147,7 @@
                                 <option value="chainlink">LINK</option>
                                 <option value="ripple">XRP</option>
                             </select>
-                            <input type="number" id="cripto_value" step="0.00001">
+                            <input class="number-calculadora" type="number" id="cripto_value" step="0.00001">
                         </div>
                         <div class="card-footer text-muted">
                           <span id="cripto_seleccionada"></span>
@@ -169,10 +157,68 @@
                           <span id="commision"></span>
                         </div>
                         <div class="col-12 mt-5">
-                            <div class="container-btn">
-                            <a href="" class="btn-get-started  btn-cancelar mr-2">Cancelar</a>
-                            <a href="" class="btn-get-started  btn-siguiente mr-2 mt-sm-0 mt-3">Siguiente</a>
+                            <div class="container-btn text-center">
+                              <a href="" class="btn-get-started  btn-cancelar mr-2">Cancelar</a>
+                              <a href="" class="btn-get-started  btn-siguiente mr-2 mt-sm-0 mt-3" type="button" data-toggle="modal" data-target="#exampleModal">Siguiente</a>
                             </div>
+                          <!-- Modal -->
+                          <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                              <div class="modal-content">
+                                <div class="modal-header" style="color: #385BA2; background-color: rgba(0, 0, 0, 0.03);">
+                                  <h5 class="modal-title" id="exampleModalLabel">Completar operación</h5>
+                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="border: none;background: transparent;">
+                                    <span aria-hidden="true">&times;</span>
+                                  </button>
+                                </div>
+                                <div class="modal-body">
+                                  <div class="row">
+                                    <div class="col-6 form-group">
+                                      <label class="text-letf">Seleccione una operación</label>
+                                      <br>
+                                      <input type="radio" id="1"><label style="padding-left: 8px;">Comprar</label>
+                                      <br>
+                                      <input type="radio" id="1"><label style="padding-left: 8px;">Venta</label>
+                                        
+                                    </div>
+
+                                    <div class="col-6 form-group">
+                                      <label for="">Saldo actual</label>
+                                      <input type="text" class="form-control" disabled>
+                                    </div>
+
+                                    <div class="col-12 form-group mt-2">
+                                      <label for="">Seleccionar wallet</label>
+                                      <select name="" id="wallet_cripto" class="form-control">
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                      </select>
+                                    </div>
+                                    <div class="col-12 form-group mt-2">
+                                      <label for="">Resumen</label>
+                                      <div class="card-footer text-muted">
+                                        <span>Aca va un texto</span>
+                                      </div>
+                                    </div>
+                                  
+                                    
+                                    <div class="col-12 form-group text-right mt-2">
+                                      <form action="new_account">
+                                        <input type="submit" value="Agregar" class="btn btn-sm btn-get-started-agg  btn-agg">
+                                      </form>
+                                      
+                                    </div>
+                                  </div>
+                                  
+                                </div>
+                                
+                              </div>
+                            </div>
+                          </div>
+                            
                         </div>
                     </div>
                 </div>
@@ -187,10 +233,12 @@
   <!-- /#wrapper -->
 
   <!-- Bootstrap core JavaScript -->
-  <script src="../../asset/jquery/jquery.min.js"></script>
-  <script src="../../asset/js/bootstrap/bootstrap.js"></script>
-  <script src="../../asset/js/bootstrap/bootstrap.min.js"></script>
-  <script src="../../asset/js/bootstrap/bootstrap.bundle.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- Popper JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
   <!--Controllers-->
   <script src="..\..\..\controller\operation\calculadora_controller.js" type="module" ></script>
 

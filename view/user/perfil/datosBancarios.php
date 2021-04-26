@@ -15,12 +15,16 @@
 
   <!-- Bootstrap core CSS -->
   <link href="../../asset/css/bootstrap/bootstrap.min.css" rel="stylesheet">
+  <!-- datatable -->
+  <link href="../../asset/css/datatable/bootstrap.css" rel="stylesheet">
+  <link href="../../asset/css/datatable/dataTables.bootstrap4.min.css" rel="stylesheet">
+
 
   <!-- Custom styles for this template -->
   <link href="../../asset/css/style_login.css" rel="stylesheet">
   <link href="../../asset/css/perfil.css" rel="stylesheet">
 
-  <link href="https://cdn.datatables.net/1.10.24/css/dataTables.bootstrap5.min.css" rel="stylesheet">
+
   
   <!--fonts-->
   <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -137,7 +141,67 @@
                   <div class="row mt-5">
                       <div class="col-12 botonera">
                           <button class="btn-get-started-agg  btn-agg mr-2" type="button" data-toggle="modal" data-target="#exampleModal">Agregar nuevo</button>
+                          <!-- Modal -->
+                          <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                              <div class="modal-content">
+                                <div class="modal-header" style="color: #385BA2; background-color: rgba(0, 0, 0, 0.03);">
+                                  <h5 class="modal-title" id="exampleModalLabel">Nueva cuenta bancaria</h5>
+                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                  </button>
+                                </div>
+                                <div class="modal-body">
+                                  <div class="row">
+                                    <div class="col-6 form-group">
+                                      <label for="">Seleccione un banco</label>
+                                      <select name="" id="banco" class="form-control">
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                      </select>
+                                        
+                                    </div>
+                                    <div class="col-6 form-group">
+                                      <label for="">Tipo de cuenta</label>
+                                      <select name="" id="type_account" class="form-control">
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                      </select>
+                                    </div>
 
+                                    <div class="col-12 form-group">
+                                      <label for="">Ingrese su CBU</label>
+                                      <input type="text" name="" id="CBU" class="form-control">
+                                    </div>
+                                    <div class="col-12 form-group">
+                                      <label for="">Ingrese número de cuenta</label>
+                                      <input type="text" name="" id="num_account" class="form-control">
+                                    </div>
+                                    <div class="col-12 form-group">
+                                      <label for="">Ingrese su alias</label>
+                                      <input type="text" name="" id="alias" class="form-control">
+                                    </div>
+                                  
+                                    
+                                    <div class="col-12 form-group text-right">
+                                      <form action="new_account">
+                                        <input type="submit" value="Agregar" class="btn btn-sm btn-get-started-agg  btn-agg">
+                                      </form>
+                                      
+                                    </div>
+                                  </div>
+                                  
+                                </div>
+                                
+                              </div>
+                            </div>
+                          </div>
                       </div> 
                   </div>
                     
@@ -153,15 +217,16 @@
   <!-- /#wrapper -->
 
   <!-- Bootstrap core JavaScript -->
-  <script src="../../asset/jquery/jquery.min.js"></script>
-  <script src="../../asset/js/bootstrap/bootstrap.js"></script>
-  <script src="../../asset/js/bootstrap/bootstrap.min.js"></script>
-  <script src="../../asset/js/bootstrap/bootstrap.bundle.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <!-- Popper JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <!--Controllers-->
   <script src="https://code.jquery.com/jquery-3.5.1.js"></script><!--no eliminar-->
   <script src="..\..\..\controller\datos_bancarios\bank_controller.js" type="module" ></script> <!--no eliminar-->
-  
-
   <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
   <script src="https://cdn.datatables.net/1.10.24/js/dataTables.bootstrap5.min.js"></script>
   
