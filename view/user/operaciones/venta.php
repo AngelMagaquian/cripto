@@ -124,11 +124,173 @@
         </div>
         
       </nav>
-<!-- VISTA-->
-<!--Tabla de criptos-->
-    <?php include('cripto_table.php');?>
+
+      <!--VISTA-->
+      
+      <section id="venta">
+        <div id="cripto">
+          <div class="container">
+            <div class="row  mt-5  px-2">
+          <!--btc-->
+              <div class="col-lg-3 col-md-5 col-sm-8 col-11">
+                <div class="row">
+                  <div class="img-cripto col-lg-3 col-md-4 col-sm-3 col-3">
+                    <img src="../../asset/img/btc.png" alt="Bitcoin">
+                  </div>
+                  <div class="col-lg-9 col-md-8 col-sm-9 col-9  cotizacion">
+                      <h4><b>bitcoin <span>(btc)</span></b></h4>
+
+                      <div class="row">
+
+                        <div class="col-lg-5 col-6 compra">
+                          <h5>Compra</h5>
+                          <span>$ 7004262.5</span>
+                        </div>
+
+                        <div class="col-lg-5 col-6 compra">
+                          <h5>Venta</h5>
+                          <span>$ 7004262.5</span>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+              </div>
+
+              
+          <!--eth-->
+              <div class="col-lg-3 col-md-5 col-sm-8 col-11 mt-md-0 ">
+                <div class="row">
+                  <div class="img-cripto col-lg-3 col-md-4 col-sm-3 col-3">
+                    <img src="../../asset/img/eth.png" alt="Ethereum">
+                  </div>
+                  <div class="col-lg-9 col-md-8 col-sm-9 col-9 cotizacion">
+                    
+                      <h4><b>ethereum <span>(eth)</span></b></h4>
+
+                      <div class="row">
+
+                        <div class="col-lg-5 col-6 compra">
+                          <h5>Compra</h5>
+                          <span>$ 7004262.5</span>
+                        </div>
+
+                        <div class="col-lg-5 col-6 compra">
+                          <h5>Venta</h5>
+                          <span>$ 7004262.5</span>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+              </div>
+
+          <!--usdt-->
+              <div class="col-lg-3 col-md-5 col-sm-8 col-11 mt-lg-0 mt-md-4">
+                <div class="row justify-content-center">
+                  <div class="img-cripto col-lg-3 col-md-4 col-sm-3 col-3">
+                    <img src="../../asset/img/usdt.png" alt="Tether">
+                  </div>
+                  <div class="col-lg-9 col-md-8 col-sm-9 col-9 cotizacion">
+                      <h4><b>tether <span>(usdt)</span></b></h4>
+
+                      <div class="row">
+
+                        <div class="col-lg-5 col-6 compra">
+                          <h5>Compra</h5>
+                          <span>$ 7004262.5</span>
+                        </div>
+
+                        <div class="col-lg-5 col-6 compra">
+                          <h5>Venta</h5>
+                          <span>$ 7004262.5</span>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+              </div>
+
+          <!--dai-->
+              <div class="col-lg-3 col-md-5 col-sm-8 col-11 mt-lg-0 mt-md-4">
+                <div class="row">
+                  <div class="img-cripto col-lg-3 col-md-4 col-sm-3 col-3">
+                    <img src="../../asset/img/dai.png" alt="Dai">
+                  </div>
+                  <div class="col-lg-9 col-md-8 col-sm-9 col-9 cotizacion">
+                      <h4><b>dai <span>(dai)</span></b></h4>
+
+                      <div class="row">
+
+                        <div class="col-lg-5 col-6 compra">
+                          <h5>Compra</h5>
+                          <span>$ 7004262.5</span>
+                        </div>
+
+                        <div class="col-lg-5 col-6 compra">
+                          <h5>Venta</h5>
+                          <span>$ 7004262.5</span>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+              </div>
+
+          <!--link-->
+              <div class="col-lg-3 col-md-5 col-sm-8 col-11 mt-4">
+                <div class="row">
+                  <div class="img-cripto col-lg-3 col-md-4 col-sm-3 col-3">
+                    <img src="../../asset/img/link.png" alt="Chainlink">
+                  </div>
+                  <div class="col-lg-9 col-md-8 col-sm-9 col-9 cotizacion">
+                      <h4><b>chainlink <span>(link)</span></b></h4>
+
+                      <div class="row">
+
+                        <div class="col-lg-5 col-6 compra">
+                          <h5>Compra</h5>
+                          <span>$ 7004262.5</span>
+                        </div>
+
+                        <div class="col-lg-5 col-6 compra">
+                          <h5>Venta</h5>
+                          <span>$ 7004262.5</span>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+              </div>
+
+          <!--xrp-->
+              <div class="col-lg-3 col-md-5 col-sm-8 col-11  mt-4">
+                <div class="row justify-content-center">
+                  <div class="img-cripto col-lg-3 col-md-4 col-sm-3 col-3">
+                    <img src="../../asset/img/xrp.png" alt="Tether">
+                  </div>
+                  <div class="col-lg-9 col-md-8 col-sm-9 col-9 cotizacion">
+                      <h4><b>ripple <span>(xrp)</span></b></h4>
+
+                      <div class="row">
+
+                        <div class="col-lg-5 col-6 compra">
+                          <h5>Compra</h5>
+                          <span>$ 7004262.5</span>
+                        </div>
+
+                        <div class="col-lg-5 col-6 compra">
+                          <h5>Venta</h5>
+                          <span>$ 7004262.5</span>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
+
+          </div>
+
+
         </div>
-        <div class="container mt-5">
+        <div class="container mt-3 mb-2">
             <div class="row justify-content-around">
                 <div class="col-lg-7 col-md-11 col-sm-11 col-11 card focus mt-lg-0 mt-md-4 mt-sm-4 mt-4">
                     <div class="row calculadora justify-content-around m-auto">
@@ -232,8 +394,8 @@
   </div>
   <!-- /#wrapper -->
 
-  <!-- Bootstrap core JavaScript -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+ <!-- Bootstrap core JavaScript -->
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <!-- Popper JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <!-- Latest compiled JavaScript -->
@@ -242,12 +404,17 @@
   <!--Controllers-->
   <script src="..\..\..\controller\operation\calculadora_controller.js" type="module" ></script>
 
+
+  <script src="..\..\..\controller\user\controller_user.js" type="module" ></script>
+  <script src="..\..\..\controller\user\update_user_info_controller.js" type="module" ></script>
+  <script src="..\..\..\controller\datos_bancarios\bank_controller.js" type="module" ></script>
+  <script src="..\..\..\controller\user\wallet_user_controller.js" type="module" ></script>
   
   <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
   <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
   <script src="https://cdn.datatables.net/1.10.24/js/dataTables.bootstrap5.min.js"></script>
   
-
+  <script src="..\..\controller\operation\op_venta_controller.js" type="module" ></script>
   <!-- Menu Toggle Script -->
   <script>
     $("#menu-toggle").click(function(e) {
