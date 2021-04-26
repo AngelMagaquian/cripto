@@ -37,7 +37,7 @@ $(function(){
         var dni = $('#DNI_uc').val();
           
         
-        post_data('../../model/user/update_check_user_admin.php', dni).then(response => {
+        post_data('../../../model/user/update_check_user_admin.php', dni).then(response => {
             
                         
             if(response == 1){

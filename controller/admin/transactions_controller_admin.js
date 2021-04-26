@@ -8,7 +8,7 @@ $(function(){
     });
 
     function all_trans(){
-        get_data('../../model/operation/transaction_no_complete.php').then(response => {
+        get_data('../../../model/operation/transaction_no_complete.php').then(response => {
             // En este punto recibimos la respuesta.
             console.log(response);
             let data = JSON.parse(response); 

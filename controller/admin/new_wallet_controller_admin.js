@@ -16,7 +16,7 @@ $(function(){
         var dni = $('#dni_search_wc').val();
         
 
-        post_data('../../model/user/DNI_search.php', dni).then(response => {
+        post_data('../../../model/user/DNI_search.php', dni).then(response => {
             // En este punto recibimos la respuesta.
             data = JSON.parse(response); 
                 console.log(data);
@@ -44,7 +44,7 @@ $(function(){
 
 
     function divisas(){
-        get_data('../../model/operation/divisas.php').then(response => {
+        get_data('../../../model/operation/divisas.php').then(response => {
             // En este punto recibimos la respuesta.
             let divisa = JSON.parse(response); 
             
@@ -109,7 +109,7 @@ $(function(){
                 console.log(postData);
                 
                 $.ajax({
-                    url: '../../model/wallet_cripto/new_wallet_cripto.php',
+                    url: '../../../model/wallet_cripto/new_wallet_cripto.php',
                     type: 'POST',
                     data: postData,
                     success: function(response) {

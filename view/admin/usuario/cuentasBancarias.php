@@ -206,10 +206,7 @@
   <script src="../../asset/js/bootstrap/bootstrap.bundle.min.js"></script>
   <!--Controllers-->
   <script src="..\..\..\controller\admin\account_controller_admin.js" type="module" ></script>
-  <script src="..\..\..\controller\admin\user_info_controller_admin.js" type="module" ></script>
-  <script src="..\..\..\controller\admin\new_wallet_controller_admin.js" type="module" ></script>
-  <script src="..\..\..\controller\admin\transactions_controller_admin.js" type="module" ></script>
-  <script src="..\..\..\controller\admin\new_bank_admin_controller.js" type="module" ></script>
+
 
   <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
   <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>

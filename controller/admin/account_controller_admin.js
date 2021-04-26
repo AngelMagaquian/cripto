@@ -34,7 +34,7 @@ $(function(){
           
 
 
-            post_data('../../model/user/DNI_search.php', dni).then(response => {
+            post_data('../../../model/user/DNI_search.php', dni).then(response => {
                 // En este punto recibimos la respuesta.
                 // y se debe cargar todos los input con la info y la tabla
                 let data = JSON.parse(response); 
@@ -63,7 +63,7 @@ $(function(){
 
 
     function account_table(id_user){
-        post_data('../../model/datos_bancarios/get_account.php', id_user).then(response => {
+        post_data('../../../model/datos_bancarios/get_account.php', id_user).then(response => {
             // En este punto recibimos la respuesta.
             let data = JSON.parse(response); 
             let template=``;
