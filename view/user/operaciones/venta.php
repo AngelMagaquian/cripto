@@ -335,7 +335,7 @@
                                 </div>
                                 <div class="modal-body">
                                   <div class="row">
-                                    <div class="col-6 form-group">
+                                    <div class="col-6 form-group mb-4">
                                       <label class="text-letf">Seleccione una operación</label>
                                       <br>
                                       <input type="radio" id="1"><label style="padding-left: 8px;">Comprar</label>
@@ -344,12 +344,12 @@
                                         
                                     </div>
 
-                                    <div class="col-6 form-group">
+                                    <div class="col-6 form-group mb-4">
                                       <label for="">Saldo actual</label>
                                       <input type="text" class="form-control" disabled>
                                     </div>
 
-                                    <div class="col-12 form-group mt-2">
+                                    <div class="col-12 form-group mb-4">
                                       <label for="">Seleccionar wallet</label>
                                       <select name="" id="wallet_cripto" class="form-control">
                                         <option>1</option>
@@ -359,7 +359,7 @@
                                         <option>5</option>
                                       </select>
                                     </div>
-                                    <div class="col-12 form-group mt-2">
+                                    <div class="col-12 form-group mb-4">
                                       <label for="">Resumen</label>
                                       <div class="card-footer text-muted">
                                         <span>Aca va un texto</span>
@@ -367,7 +367,7 @@
                                     </div>
                                   
                                     
-                                    <div class="col-12 form-group text-right mt-2">
+                                    <div class="col-12 form-group text-right">
                                       <form action="new_account">
                                         <input type="submit" value="Agregar" class="btn btn-sm btn-get-started-agg  btn-agg">
                                       </form>
