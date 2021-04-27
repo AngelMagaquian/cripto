@@ -141,9 +141,11 @@
                         <div class="col-6 form-group mb-4">
                                       <label class="text-letf">Seleccione una operación</label>
                                       <br>
-                                      <input type="radio" id="op_compra" name="operation" value="1" checked="checked"><label for="op_compra" style="padding-left: 8px;">Comprar</label>
-                                      <br>
-                                      <input type="radio" id="op_venta" name="operation" value="2"><label for="op_venta" style="padding-left: 8px;">Venta</label>
+                                      <input type="radio" class="btn-check" name="operation" id="option1" autocomplete="off" checked value="1">
+                                      <label class="btn btn-primary" for="option1">Compra</label>
+
+                                      <input type="radio" class="btn-check" name="operation" id="option2" autocomplete="off"   value="2">
+                                      <label class="btn btn-primary" for="option2">Venta</label>
                                         
                         </div>
                     <div class="row calculadora justify-content-around m-auto">
@@ -226,7 +228,6 @@
                                       <form action="new_account">
                                         <input type="submit" value="Agregar" class="btn btn-sm btn-get-started-agg  btn-agg">
                                       </form>
-                                      
                                     </div>
                                   </div>
                                   

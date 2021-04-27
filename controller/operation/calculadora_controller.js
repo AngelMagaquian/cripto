@@ -16,12 +16,21 @@ $(function(){
         var cripto = $('#cripto_select').val();
         get_cripto_pesos_value(cripto);
 
+        if($('#option1').is(':checked')){
+            alert('op1');
+        }
+
+        if($('#option2').is(':checked')){
+            alert('op2');
+        } 
+
+			
        /*  $("input[name='operation']").click(function () {    
             alert("La edad seleccionada es: " + $('input:radio[name=operation]:checked').val());
             alert("La edad seleccionada es: " + $(this).val());
         });
 
-
+        
 
 
         if( $("#formulario input[name='operation']:radio").is(':checked')) {  
@@ -33,6 +42,14 @@ $(function(){
 
     });
 
+    $('input[name=operation]').change(function() {
+        if (this.value == '1') {
+            console.log('compra');
+        }
+        else if (this.value == '2') {
+            console.log('venta');
+        }
+    });
 
 
     $('#cripto_select').change(function(){

@@ -3,6 +3,14 @@ $(function(){
     console.log('Operation Controller');
     let data;
     $( document ).ready(function() {
+
+        if($('#option1').is(':checked')){
+            aux_compra = true;
+        }
+
+        if($('#option2').is(':checked')){
+            aux_venta = true;
+        }
        
         //funciones para traer los datos del usuario
         get_data('../../../model/operation/operation_data.php').then(response => {
@@ -51,13 +59,7 @@ $(function(){
         var aux_venta = false;
 
         //verificacion de check, se puede hacer una funcion;
-        if($('#op1').is(':checked')){
-            aux_compra = true;
-        }
-
-        if($('#op2').is(':checked')){
-            aux_venta = true;
-        }
+        
 
        
 
