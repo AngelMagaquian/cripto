@@ -44,8 +44,8 @@ $(function(){
                         <td>$${dato.pesos_amount}</td>
                         <td>${dato.id_wallet_cripto}</td>
                         <td>
-                            <button class="btn btn-success">si</button>
-                            <button class="btn btn-danger">no</button>
+                            <button class="btn btn-success" id="conf_yes" data-id=${dato.id_op}>si</button>
+                            <button class="btn btn-danger"  id="conf_no" data-id=${dato.id_op}>no</button>
                         </td>
                     </tr>
                 `;
@@ -58,7 +58,14 @@ $(function(){
             console.log('error: '+error);
         });
     }
-        
+    $(document).on('click', '#conf_yes', (e) => {
+        e.preventDefault();
+        console.log($(e.currentTarget).data('id'));
+    });
+    $(document).on('click', '#conf_no', (e) => {
+        e.preventDefault();
+        console.log($(e.currentTarget).data('id'));
+    });
     
 });
 

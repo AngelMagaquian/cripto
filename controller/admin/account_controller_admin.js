@@ -76,8 +76,8 @@ $(function(){
                             <td>${dato.bank}</td>
                             <td>${dato.CBU}</td>
                             <td>
-                            <button class="btn btn-success" id="conf_yes">si</button>
-                            <button class="btn btn-danger" id="conf_no">no</button>
+                            <button class="btn btn-success" id="conf_yes" data-id=${dato.CBU}>si</button>
+                            <button class="btn btn-danger" id="conf_no" data-id=${dato.CBU}>no</button>
                             </td>
                         <tr>
                     `;
@@ -109,9 +109,13 @@ $(function(){
                     $('#account_tbody').html(template);
     }
     
-    $('#conf_yes').click(function(e){
+    $(document).on('click', '#conf_yes', (e) => {
         e.preventDefault();
-        console.log('HOLA PUTO');
+        console.log($(e.currentTarget).data('id'));
+    });
+    $(document).on('click', '#conf_no', (e) => {
+        e.preventDefault();
+        console.log($(e.currentTarget).data('id'));
     });
     
 
