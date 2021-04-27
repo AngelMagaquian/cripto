@@ -16,6 +16,21 @@ $(function(){
         var cripto = $('#cripto_select').val();
         get_cripto_pesos_value(cripto);
 
+       /*  $("input[name='operation']").click(function () {    
+            alert("La edad seleccionada es: " + $('input:radio[name=operation]:checked').val());
+            alert("La edad seleccionada es: " + $(this).val());
+        });
+
+
+
+
+        if( $("#formulario input[name='operation']:radio").is(':checked')) {  
+            alert("Bien!!!, la edad seleccionada es: " + $('input:radio[name=operation]:checked').val());
+            
+            } else{  
+                alert("Selecciona la edad por favor!!!");  
+                }  */
+
     });
 
 
@@ -68,6 +83,11 @@ $(function(){
     }
 
     //a esto le falta ser multiplicado por la comision y transformarlo al valor del dolar cripto a pesos
+
+    /* $("input[name='operation']:checked").click(function(){
+        console.log('oli');
+    }) */
+
 
     function pesos_cripto(cripto_amount){
         var pesos_amount = $('#ars_value').val();
