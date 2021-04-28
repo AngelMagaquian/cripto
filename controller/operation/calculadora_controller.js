@@ -3,8 +3,10 @@ import {post_data} from "../app/post_data.js";
 $(function(){
     console.log('venta Controller');
 
-    var commission = 0.0;
+    var commission_venta = 0.0;
+    var commission_compra = 0.0;
     var dolar_cripto = 0.0;
+    var controller_compra = true;
 
     $( document ).ready(function() {
        
@@ -17,11 +19,11 @@ $(function(){
         get_cripto_pesos_value(cripto);
 
         if($('#option1').is(':checked')){
-            alert('op1');
+            controller_compra = true;
         }
 
         if($('#option2').is(':checked')){
-            alert('op2');
+            controller_compra = false;
         } 
 
 			
@@ -43,11 +45,18 @@ $(function(){
     });
 
     $('input[name=operation]').change(function() {
+        
         if (this.value == '1') {
             console.log('compra');
+            controller_compra = true;
+            let cripto = $('#cripto_select').val();
+            get_cripto_pesos_value(cripto);
         }
         else if (this.value == '2') {
+            controller_compra = false;
             console.log('venta');
+            let cripto = $('#cripto_select').val();
+            get_cripto_pesos_value(cripto);
         }
     });
 
@@ -73,9 +82,7 @@ $(function(){
             // En este punto recibimos la respuesta.
             let data = JSON.parse(response); 
             cripto_pesos(data.value);
-            let valor = data.value;
-            
-            $('#cripto_seleccionada').html(cripto+' = '+ valor.toFixed(2)+'usd');
+
             
 
         })
@@ -107,21 +114,35 @@ $(function(){
 
 
     function pesos_cripto(cripto_amount){
-        var pesos_amount = $('#ars_value').val();
-        var result = pesos_amount/(cripto_amount * dolar_cripto); //cantidad de pesos que quiere invertir el usuario divido en el valor de la cripto, el resultado es la cantidad que puedo comprar 
-        $('#cripto_value').val(result); 
+        if(controller_compra == true){
+            var pesos_amount = $('#ars_value').val();
+            var result = pesos_amount/(cripto_amount * dolar_cripto); //cantidad de pesos que quiere invertir el usuario divido en el valor de la cripto, el resultado es la cantidad que puedo comprar 
+            result = ((result * commission_compra)/100) + result;
+            $('#cripto_value').val(result); 
+        }else{
+            var pesos_amount = $('#ars_value').val();
+            var result = pesos_amount/(cripto_amount * dolar_cripto); //cantidad de pesos que quiere invertir el usuario divido en el valor de la cripto, el resultado es la cantidad que puedo comprar 
+            result = ((result * commission_venta)/100) + result;
+            $('#cripto_value').val(result); 
+        }
+        
     }
 
     function cripto_pesos(cripto_value){
-        var cant_cripto = $('#cripto_value').val();
-        var result = cant_cripto * cripto_value; //cantidad que pone el usuario de cripto que quiere multiplicado por el valor de la api
-        result = result * dolar_cripto;
-        result = ((result * commission)/100) + result;
-        let commission_value = (result * commission)/100;
-
-        $('#ars_value').val((result).toFixed(2)); 
-        $('#commision').html('Comision = '+ commission+'%'+' ' + '($'+commission_value.toFixed(2)+')');
-        //$('#ars_value').val(result); 
+   
+        if(controller_compra == true){
+            var cant_cripto = $('#cripto_value').val();
+            var result = cant_cripto * cripto_value; //cantidad que pone el usuario de cripto que quiere multiplicado por el valor de la api
+            result = result * dolar_cripto;
+            result = ((result * commission_compra)/100) + result;
+            $('#ars_value').val(result.toFixed(2)); 
+        }else{
+            var cant_cripto = $('#cripto_value').val();
+            var result = cant_cripto * cripto_value; //cantidad que pone el usuario de cripto que quiere multiplicado por el valor de la api
+            result = result * dolar_cripto;
+            result = ((result * commission_venta)/100) + result;
+            $('#ars_value').val(result.toFixed(2)); 
+        }
     }
 
     
@@ -129,17 +150,25 @@ $(function(){
         get_data('../../../model/calculadora/get_values.php').then(response => {
             // En este punto recibimos la respuesta.
             let data = JSON.parse(response); 
-            console.log(data);
+
             data.forEach(dato => {
-                if(dato.ID_value == 1){
-                    dolar_cripto = dato.value;
-                }else{
-                    commission = dato.value
+                switch(dato.ID_value){
+                    case '1':
+                        dolar_cripto = dato.value;
+                        
+                    break;
+
+                    case '2':
+                        commission_compra = dato.value;
+                        
+                    break;
+
+                    case '3':
+                        commission_venta = dato.value;
+                        
+                    break;
                 }
             });
-            $('#commision').html('Comision = '+ commission+'%');
-            $('#dolar_cripto').html('Dolar Cripto = $'+ dolar_cripto);
-
             
         })
         .catch(error => {

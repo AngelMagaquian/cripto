@@ -78,18 +78,17 @@ $(function(){
             
             let data = JSON.parse(response); 
             data.forEach(dato => {
-                console.log(typeof(dato.ID_value));
                 switch (dato.ID_value){
                     case '1':
                         dolar_cripto = dato.value;
                     break;
 
                     case '2':
-                        commission_venta = dato.value;
+                        commission_compra = dato.value;
                     break;
 
                     case '3':
-                        commission_venta = (dato.value);
+                        commission_venta = dato.value;
                     break;
                 }
             });

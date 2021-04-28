@@ -153,7 +153,8 @@
                             <select class="moneda" name="" id="pesos_select">
                                 <option value="ars">ARG</option>
                             </select>
-                            <input class="number-calculadora" type="number" id="ars_value">
+                          
+                            <label for="ars_value">$</label><input class="number-calculadora" type="number" id="ars_value">
                         </div>
                         
                         <div class="col-6 mb-3">
@@ -167,6 +168,15 @@
                                 <option value="ripple">XRP</option>
                             </select>
                             <input class="number-calculadora" type="number" id="cripto_value" step="0.00001">
+                            <!-- <label>Ultima actualización de precios</label>
+                                  <br>
+                                  <label> <?php 
+                                  
+                                 /*  $fechaActual=new DateTime();
+
+                                  echo $fechaActual->format('Y-m-d H:i:sP'); */
+                                  
+                                  ?></label> -->
                         </div>
                         <!--<div class="card-footer text-muted">
                           <span id="cripto_seleccionada"></span>
@@ -177,10 +187,19 @@
                         </div>-->
                         <div class="col-12 mt-5">
                             <div class="container-btn text-center">
-                              <a href="" class="btn-get-started  btn-cancelar mr-2">Cancelar</a>
-                              <a href="" class="btn-get-started  btn-siguiente mr-2 mt-sm-0 mt-3" type="button" data-toggle="modal" data-target="#exampleModal">Siguiente</a>
+                              <a href="" class="btn-get-started  btn-cancelar mr-2">Actualizar</a>
+                              <a href="" class="btn-get-started  btn-siguiente mr-2 mt-sm-0 mt-3" type="button" data-toggle="modal" data-target="#exampleModal" id="modal_show_button">Siguiente</a>
                             </div>
-                          <!-- Modal -->
+                          <!-- Modal
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                           -->
                           <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
                               <div class="modal-content">
@@ -192,41 +211,29 @@
                                 </div>
                                 <div class="modal-body">
                                   <div class="row">
-                                    <div class="col-6 form-group mb-4">
-                                      <label class="text-letf">Seleccione una operación</label>
-                                      <br>
-                                      <input type="radio" id="1"><label style="padding-left: 8px;">Comprar</label>
-                                      <br>
-                                      <input type="radio" id="1"><label style="padding-left: 8px;">Venta</label>
-                                        
-                                    </div>
+                                    
 
                                     <div class="col-6 form-group mb-4">
                                       <label for="">Saldo actual</label>
-                                      <input type="text" class="form-control" disabled>
+                                      <input id="wallet_user_input"  type="text" class="form-control" disabled >
                                     </div>
 
                                     <div class="col-12 form-group mb-4">
                                       <label for="">Seleccionar wallet</label>
-                                      <select name="" id="wallet_cripto" class="form-control">
-                                        <option>1</option>
-                                        <option>2</option>
-                                        <option>3</option>
-                                        <option>4</option>
-                                        <option>5</option>
+                                      <select name="" id="select_wallet_cripto" class="form-control">
                                       </select>
                                     </div>
                                     <div class="col-12 form-group mb-4">
-                                      <label for="">Resumen</label>
+                                      <label for="">Información</label>
                                       <div class="card-footer text-muted">
-                                        <span>Aca va un texto</span>
+                                        <span id="span_info">Seleccione la wallet de donde desea operar</span>
                                       </div>
                                     </div>
                                   
                                     
                                     <div class="col-12 form-group text-right">
                                       <form action="new_account">
-                                        <input type="submit" value="Agregar" class="btn btn-sm btn-get-started-agg  btn-agg">
+                                        <input type="submit" id="finalizar" value="Finalizar" class="btn btn-sm btn-get-started-agg  btn-agg">
                                       </form>
                                     </div>
                                   </div>
@@ -259,6 +266,7 @@
 
   <!--Controllers-->
   <script src="..\..\..\controller\operation\calculadora_controller.js" type="module" ></script>
+  <script src="..\..\..\controller\operation\modal_trans_controller.js" type="module" ></script>
 
 
 
