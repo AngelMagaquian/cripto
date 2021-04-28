@@ -1,18 +1,18 @@
-import {get_data} from "../app/get_data.js";
-import {post_data} from "../app/post_data.js";
-$(function(){
+import { get_data } from "../app/get_data.js";
+import { post_data } from "../app/post_data.js";
+$(function() {
     console.log('DNI Controller');
 
-    $( document ).ready(function() {
+    $(document).ready(function() {
         //dejar todo el form en blanco
         default_form();
 
-        
-        
+
+
     });
 
 
-    function default_form(){
+    function default_form() {
         $('#first_name').val('');
         $('#middle_name').val('');
         $('#last_name').val('');
@@ -24,54 +24,54 @@ $(function(){
         $('#account_tbody').html(template);
     }
 
-    $('#account_form').submit(function(e){
+    $('#account_form').submit(function(e) {
         e.preventDefault();
         console.log('Account info');
         var dni = $('#dni_search').val();
 
-            
-
-          
 
 
-            post_data('../../../model/user/DNI_search.php', dni).then(response => {
+
+
+
+        post_data('../../../model/user/DNI_search.php', dni).then(response => {
                 // En este punto recibimos la respuesta.
                 // y se debe cargar todos los input con la info y la tabla
-                let data = JSON.parse(response); 
-            
+                let data = JSON.parse(response);
+
                 console.log(data);
-                
-                    $('#first_name').val(data.name_user);
-                    $('#middle_name').val(data.middle_name);
-                    $('#last_name').val(data.last_name);
-                    $('#second_last_name').val(data.second_last_name);
-                    $('#dni').val(data.DNI);
-                    $('#cuil').val(data.CUIL);
-                    $('#email').val(data.email);
-               
+
+                $('#first_name').val(data.name_user);
+                $('#middle_name').val(data.middle_name);
+                $('#last_name').val(data.last_name);
+                $('#second_last_name').val(data.second_last_name);
+                $('#dni').val(data.DNI);
+                $('#cuil').val(data.CUIL);
+                $('#email').val(data.email);
+
 
                 console.log(data.ID_user);
-       
+
                 account_table(data.ID_user);
             })
             .catch(error => {
                 // En este punto recibimos el error. then() no se ha invocado
-                console.log('Error: '+error);
-                
+                console.log('Error: ' + error);
+
             });
     });
 
 
-    function account_table(id_user){
+    function account_table(id_user) {
         post_data('../../../model/datos_bancarios/get_account.php', id_user).then(response => {
-            // En este punto recibimos la respuesta.
-            let data = JSON.parse(response); 
-            let template=``;
-            console.log('la repuesta es: '+ response);
+                // En este punto recibimos la respuesta.
+                let data = JSON.parse(response);
+                let template = ``;
+                console.log('la repuesta es: ' + response);
 
-            data.forEach(dato =>{
-                if(dato.check_account == '0'){
-                        template +=`
+                data.forEach(dato => {
+                    if (dato.check_account == '0') {
+                        template += `
                         <tr>
                             <td>${dato.bank}</td>
                             <td>${dato.CBU}</td>
@@ -81,22 +81,22 @@ $(function(){
                             </td>
                         <tr>
                     `;
-                    
-                    $('#account_tbody').html(template);
-                }
+
+                        $('#account_tbody').html(template);
+                    }
+                })
+
             })
-                
-        })
-        .catch(error => {
-            // En este punto recibimos el error. then() no se ha invocado
-            console.log(error);
-            default_table();
-            
-        });
+            .catch(error => {
+                // En este punto recibimos el error. then() no se ha invocado
+                console.log(error);
+                default_table();
+
+            });
     }
 
-    function default_table(){
-        var template =`
+    function default_table() {
+        var template = `
                         <tr>
                             <td>No disponible</td>
                             <td>No disponible</td>
@@ -105,10 +105,10 @@ $(function(){
                             </td>
                         <tr>
                     `;
-                    
-                    $('#account_tbody').html(template);
+
+        $('#account_tbody').html(template);
     }
-    
+
     $(document).on('click', '#conf_yes', (e) => {
         e.preventDefault();
         console.log($(e.currentTarget).data('id'));
@@ -117,8 +117,7 @@ $(function(){
         e.preventDefault();
         console.log($(e.currentTarget).data('id'));
     });
-    
 
-    
+
+
 });
-
