@@ -44,6 +44,7 @@ $(function(){
 
     });
 
+    //verificar esto
     $('input[name=operation]').change(function() {
         
         if (this.value == '1') {
@@ -57,6 +58,19 @@ $(function(){
             console.log('venta');
             let cripto = $('#cripto_select').val();
             get_cripto_pesos_value(cripto);
+        }
+    });
+
+    $('input[name=operation]').select(function() {
+        
+        if (this.value == '1') {
+            console.log('compra');
+          
+        }
+        else if (this.value == '2') {
+            controller_compra = false;
+            console.log('venta');
+         
         }
     });
 
@@ -118,7 +132,7 @@ $(function(){
             var pesos_amount = $('#ars_value').val();
             var result = pesos_amount/(cripto_amount * dolar_cripto); //cantidad de pesos que quiere invertir el usuario divido en el valor de la cripto, el resultado es la cantidad que puedo comprar 
             result = ((result * commission_compra)/100) + result;
-            $('#cripto_value').val(result); 
+            $('#cripto_value').val(result.toFixed(3)); 
         }else{
             var pesos_amount = $('#ars_value').val();
             var result = pesos_amount/(cripto_amount * dolar_cripto); //cantidad de pesos que quiere invertir el usuario divido en el valor de la cripto, el resultado es la cantidad que puedo comprar 
