@@ -140,7 +140,10 @@
                   </div>
                   <div class="row mt-5">
                       <div class="col-12 botonera">
+                        <form id="new_account_user">
                           <button class="btn-get-started-agg  btn-agg mr-2" type="button" data-toggle="modal" data-target="#exampleModal">Agregar nuevo</button>
+                        </form>
+                         
                           <!-- Modal -->
                           <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
@@ -155,43 +158,38 @@
                                   <div class="row">
                                     <div class="col-6 form-group">
                                       <label for="">Seleccione un banco</label>
-                                      <select name="" id="banco" class="form-control">
-                                        <option>1</option>
-                                        <option>2</option>
-                                        <option>3</option>
-                                        <option>4</option>
-                                        <option>5</option>
+                                      <select name="" id="select_bank" class="form-control">
                                       </select>
                                         
                                     </div>
                                     <div class="col-6 form-group">
                                       <label for="">Tipo de cuenta</label>
-                                      <select name="" id="type_account" class="form-control">
-                                        <option>1</option>
-                                        <option>2</option>
-                                        <option>3</option>
-                                        <option>4</option>
-                                        <option>5</option>
+                                      <select name="" id="select_type_account" class="form-control">
                                       </select>
                                     </div>
 
                                     <div class="col-12 form-group">
                                       <label for="">Ingrese su CBU</label>
-                                      <input type="text" name="" id="CBU" class="form-control">
+                                      <input type="text" name="" id="new_cbu" class="form-control">
                                     </div>
                                     <div class="col-12 form-group">
                                       <label for="">Ingrese número de cuenta</label>
-                                      <input type="text" name="" id="num_account" class="form-control">
+                                      <input type="text" name="" id="new_num_acc" class="form-control">
                                     </div>
                                     <div class="col-12 form-group">
                                       <label for="">Ingrese su alias</label>
                                       <input type="text" name="" id="alias" class="form-control">
                                     </div>
                                   
-                                    
+                                    <div class="col-12 form-group mb-4">
+                                      <label for="">Información</label>
+                                      <div class="card-footer text-muted">
+                                        <span id="span_info">Ingrese correctamente los datos. Cuando los administradores confirmen su cuenta, usted podrá operar con esta cuenta bancaria.</span>
+                                      </div>
+                                    </div>
                                     <div class="col-12 form-group text-right">
-                                      <form action="new_account">
-                                        <input type="submit" value="Agregar" class="btn btn-sm btn-get-started-agg  btn-agg">
+                                      <form id="new_account">
+                                        <input type="submit" value="agregar" class="btn btn-sm btn-get-started-agg  btn-agg">
                                       </form>
                                       
                                     </div>
@@ -225,6 +223,7 @@
   <!--Controllers-->
   <script src="https://code.jquery.com/jquery-3.5.1.js"></script><!--no eliminar-->
   <script src="..\..\..\controller\datos_bancarios\bank_controller.js" type="module" ></script> <!--no eliminar-->
+  <script src="..\..\..\controller\datos_bancarios\new_account_controller.js" type="module" ></script> <!--no eliminar-->
   <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
   <script src="https://cdn.datatables.net/1.10.24/js/dataTables.bootstrap5.min.js"></script>
   

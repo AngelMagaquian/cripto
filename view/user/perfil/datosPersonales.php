@@ -252,6 +252,7 @@
   <script src="..\..\..\controller\user\update_user_info_controller.js" type="module" ></script> <!--no eliminar-->
 
 
+
   <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
   <script src="https://cdn.datatables.net/1.10.24/js/dataTables.bootstrap5.min.js"></script>
   

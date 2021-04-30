@@ -85,19 +85,6 @@ $(function(){
             if(response == 1){
                 var opcion = confirm('Cumple los requisitos para operar, ¿Desea confirmar la operación?');
                 if (opcion == true) {
-                    /*Ahora tengo que extraer estos datos:
-                        -cripto
-                        -wallet --Listo
-                        -pesos
-                        -compra o venta
-
-
-                        let saldo = parseInt(current_sald);
-                        let pesos= parseInt($('#ars_value').val());
-                        
-                   
-                    */ 
-
                     const postData={
                         id_wallet: $('#select_wallet_cripto').val(),
                         cant_pesos: parseInt($('#ars_value').val()),
@@ -130,11 +117,7 @@ $(function(){
                         }) 
                     } 
                     
-
                    console.log(postData);
-                    
-                    
-                   
                 } else {
                     CierraPopup();
                 }

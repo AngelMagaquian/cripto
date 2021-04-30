@@ -27,6 +27,7 @@
         
         
         if($new_deposit){
+            $new_deposit = $conexion -> query("UPDATE wallet_user SET OS_balance =(OS_balance + $importe) WHERE ID_user = $id_user") or die("Error ". mysqli_error($conexion));
             echo 1;
         }else{
             echo 'Error: '. mysqli_error($conexion);
