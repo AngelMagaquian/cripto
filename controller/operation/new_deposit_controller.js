@@ -1,12 +1,12 @@
 import {get_data} from "../app/get_data.js";
+import {post_data} from "../app/post_data.js";
 $(function(){
     console.log('New Deposit Controller');
     
 
     $( document ).ready(function() {
         //funciones para traer los datos del usuario
-        select_bank_account();
-        get_saldo();
+        new_deposit_default();
     });
 
     $('#importe').keyup(function(){
@@ -25,17 +25,46 @@ $(function(){
         if( $('#bank_account').val() == 0){
             alert('Por favor seleccione una cuenta de banco, si aún no agrego ninguna puede hacerlo en Perfil->Datos bancarios->Agregar cuenta');
         }else{
-            const postData ={
-                CBU: $('#bank_account').val(),
-                importe: parseFloat($('#importe').val())
-            }
-            $.post('../../../model/operation/new_deposit.php', postData).then(response => {
-                if(response == 1){
-                    alert('Solicitud de deposito enviada, puede consultar los datos en Mis operaciones->Depositos');
+            get_data('../../../model/transaction/trans_controller.php').then(response =>{
+                if(response==1){
+                    post_data('../../../model/transaction/account_controller.php', $('#bank_account').val()).then(response =>{
+        
+                        if(response == 1){
+                            var opcion = confirm('¿Desea confirmar la operación?');
+                            if (opcion == true) {
+                                const postData ={
+                                    CBU: $('#bank_account').val(),
+                                    importe: parseFloat($('#importe').val())
+                                }
+                                $.post('../../../model/transaction/new_deposit.php', postData).then(response => {
+                                    if(response == 1){
+                                        alert('Solicitud de deposito enviada, puede consultar los datos en Mis operaciones->Depositos');
+                                        new_deposit_default();
+                                    }else{
+                                        alert('Error al cargar los datos: '+response);
+                                        new_deposit_default();
+                                    }
+                                })
+                            }else{
+                                new_deposit_default();
+                            }
+                            
+                        }else{
+                            alert('Falta la confirmación de su cuenta bancaria para poder operar, seleccione otra o espere a que sea confirmada.');
+                            new_deposit_default();
+                        }
+    
+                    }).catch(error=>{
+                        console.log(error);
+                    })
                 }else{
-                    alert('Error al cargar los datos: '+response);
+                    new_deposit_default();
                 }
+            }).catch(error =>{
+                console.log(error);
             })
+                
+            
         }
         
     })
@@ -46,7 +75,7 @@ $(function(){
     function get_saldo(){
         get_data('../../../model/user/balance_wallet_user.php').then(response => {
             // En este punto recibimos la respuesta.
-            console.log(response);
+   
             let data = JSON.parse(response); 
             
 
@@ -60,22 +89,31 @@ $(function(){
     function select_bank_account(){
         get_data('../../../model/datos_bancarios/get_account.php').then(response => {
             // En este punto recibimos la respuesta.
-            console.log(response);
-            let data = JSON.parse(response); 
-            console.log(data);
-            let template =`<option value="0">Mis Cuentas</option>`;
 
-            data.forEach(dato => {
-                template+=`
-                    <option value="${dato.CBU}">${dato.bank} - ${dato.CBU}</option>
-                `;
-            }); 
+            let data = JSON.parse(response); 
+        
+            let template =`<option value="0">Mis Cuentas</option>`;
+            if(data.check_account == 1){
+                data.forEach(dato => {
+                    template+=`
+                        <option value="${dato.CBU}">${dato.bank} - ${dato.CBU}</option>
+                    `;
+                }); 
+            }
+            
 
             $('#bank_account').html(template);
         })
         .catch(error => {
             console.log('error: '+error);
         });
+    }
+
+    function new_deposit_default(){
+        get_saldo();
+        select_bank_account();
+        $('#importe').val('');
+        $('#saldo_proyectado').val('');
     }
 
 

@@ -8,7 +8,7 @@ $(function(){
     });
 
     function all_trans(){
-        get_data('../../../model/operation/transaction_no_complete.php').then(response => {
+        get_data('../../../model/transaction/pending_trans.php').then(response => {
             // En este punto recibimos la respuesta.
             console.log(response);
             let data = JSON.parse(response); 
@@ -20,18 +20,6 @@ $(function(){
 
 
             data.forEach(dato => {
-
-                switch(dato.type) {
-                    case '1':
-                      type = "COMPRA";
-                      break;
-                    case '2':
-                      type = "VENTA";
-                      break;
-                  }
-
-                console.log(typeof dato.type);
-                
                 template += `
                     <tr>
                         <td>${dato.id_user}</td>
@@ -39,7 +27,7 @@ $(function(){
                         <td>${dato.DNI}</td>
                         <td>Trans #${dato.id_op}</td>
                         <td>${dato.date_hour}</td>
-                        <td><b>${type}</b></td>
+                        <td><b>${dato.type}</b></td>
                         <td>(${dato.cripto_name})  <b>${dato.cripto_amount} </b></td>
                         <td>$${dato.pesos_amount}</td>
                         <td>${dato.id_wallet_cripto}</td>
@@ -60,12 +48,42 @@ $(function(){
     }
     $(document).on('click', '#conf_yes', (e) => {
         e.preventDefault();
-        console.log($(e.currentTarget).data('id'));
+        let id_trans=$(e.currentTarget).data('id');
+     
+        confirmation(id_trans,1);
     });
     $(document).on('click', '#conf_no', (e) => {
         e.preventDefault();
-        console.log($(e.currentTarget).data('id'));
+        let id_trans=$(e.currentTarget).data('id');
+        confirmation(id_trans,2);
     });
+
+
+    function confirmation(post_id_trnas, post_conf){
+        
+        const postData={
+            id_trans: post_id_trnas,
+            conf: post_conf
+        }
+        $.post('../../../model/transaction/confirm_operation.php', postData).then(response => {
+            // En este punto recibimos la respuesta.
+            console.log(response);
+            if(response == 1){
+                alert('Confirmación exitosa');
+                all_trans();
+            }else{
+                alert('Ocurrio un error, intentelo mas tarde.');
+                all_trans();
+            }
+
+        })
+        .catch(error => {
+            // En este punto recibimos el error. then() no se ha invocado
+            console.log(error);
+            default_table();
+
+        });
+    }
     
 });
 

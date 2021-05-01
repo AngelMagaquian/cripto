@@ -3,14 +3,13 @@ import {post_data} from "../app/post_data.js";
 $(function(){
     console.log('New account Controller');
 
-    $( document ).ready(function() {
+    $('#new_account_user').click(function(e){
         default_form();
-            
-    });
+    })
 
     
 
-    $('#new_account_user').submit(function(e){
+    $('#new_account').submit(function(e){
         e.preventDefault();
         console.log("Insert new bank account");
         const postData= {
@@ -23,28 +22,53 @@ $(function(){
 
         console.log(postData);
        
-
-        $.ajax({
-            url: '../../../model/datos_bancarios/insert_new_account.php',
-            type: 'POST',
-            data: postData,
-            success: function(response) {
-                console.log(response);
-              if(response == 1){
-                alert('Éxito al cargar la cuenta de banco. Por favor espere que sea verificada por el administrador.');
-              }else{
-                  alert('Error al cargar la cuenta, verifique los datos ingresados');
-              }
-            },
-            error: function(error) {
+        get_data('../../../model/transaction/trans_controller.php').then(response =>{
+            if(response == 1){
+                var opcion = confirm('¿Desea confirmar la cuenta bancaria?');
+                if (opcion == true) {
+                    $.ajax({
+                        url: '../../../model/datos_bancarios/insert_new_account.php',
+                        type: 'POST',
+                        data: postData,
+                        success: function(response) {
+                            console.log(response);
+                          if(response == 1){
+                            alert('Éxito al cargar la cuenta de banco. Por favor espere que sea verificada por el administrador.');
+                            CierraPopup();
+                          }else{
+                              alert('Error al cargar la cuenta, verifique los datos ingresados');
+                          }
+                        },
+                        error: function(error) {
+                            
+                          // "Marcamos" la Promise con error.
+                          reject(error);
+                        }
+                    });
+                }else{
+                    CierraPopup();
+                }
                 
-              // "Marcamos" la Promise con error.
-              reject(error);
+            }else{
+                let template =`
+                    <span id="span_info">
+                    Falta la confirmación de su identidad para poder operar.
+                    </span>
+                    `;
+                    $('#span_info').html(template);
             }
-          });
-    })
+
+            
+        })
+        .catch(error => {
+            console.log(error);
+        });
+
+        
+    }) 
 
     function default_form(){
+        console.log('default values');
         $('#new_cbu').val('');
         $('#new_num_acc').val('');
         $('#alias').val('');
@@ -53,7 +77,7 @@ $(function(){
     }
 
     function banks(){
-        get_data('../../model/bank/get_banks.php').then(response =>{
+        get_data('../../../model/bank/get_banks.php').then(response =>{
             let data = JSON.parse(response); 
             let template =``;
             data.forEach(dato => {
@@ -85,6 +109,12 @@ $(function(){
             console.log(error);
         });
     }
+
+    function CierraPopup() {
+        $("#exampleModal").modal('hide');//ocultamos el modal
+        $('body').removeClass('modal-open');//eliminamos la clase del body para poder hacer scroll
+        $('.modal-backdrop').remove();//eliminamos el backdrop del modal
+      }
 
 });
 

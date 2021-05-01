@@ -139,6 +139,7 @@
             <div class="row justify-content-around">
                 <div class="col-lg-7 col-md-11 col-sm-11 col-11 card focus mt-lg-0 mt-md-4 mt-sm-4 mt-4">
                         <div class="col-6 form-group mb-4">
+                                  <from id="radios">
                                       <label class="text-letf">Seleccione una operación</label>
                                       <br>
                                       <input type="radio" class="btn-check" name="operation" id="option1" autocomplete="off" checked value="1">
@@ -146,7 +147,7 @@
 
                                       <input type="radio" class="btn-check" name="operation" id="option2" autocomplete="off"   value="2">
                                       <label class="btn btn-primary" for="option2">Venta</label>
-                                        
+                                  </from>
                         </div>
                     <div class="row calculadora justify-content-around m-auto">
                         <div class="col-6">
@@ -232,8 +233,8 @@
                                   
                                     
                                     <div class="col-12 form-group text-right">
-                                      <form action="new_account">
-                                        <input type="submit" id="finalizar" value="Finalizar" class="btn btn-sm btn-get-started-agg  btn-agg">
+                                      <form id="finalizar">
+                                        <input type="submit" value="Finalizar" class="btn btn-sm btn-get-started-agg  btn-agg">
                                       </form>
                                     </div>
                                   </div>
@@ -275,7 +276,7 @@
   <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
   <script src="https://cdn.datatables.net/1.10.24/js/dataTables.bootstrap5.min.js"></script>
   
-  <script src="..\..\controller\operation\op_venta_controller.js" type="module" ></script>
+ 
   <!-- Menu Toggle Script -->
   <script>
     $("#menu-toggle").click(function(e) {

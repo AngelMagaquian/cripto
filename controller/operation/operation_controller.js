@@ -144,15 +144,21 @@ $(function(){
     function table(data){
         let template =``;
         let state= '';
-        let type = '';
 
         data.forEach(dato =>{
-            if(dato.state == 1){
-                state = 'COMPLETADA';
-           }else if(dato.state == 2){
-                state = 'PENDIENTE';
-           }else{
-               state = 'CANCELADA';
+       
+           switch (dato.state){
+                case '0':
+                    state = 'NO CONFIRMADA';
+                break;
+
+                case '1':
+                    state = 'CONFIRMADA';
+                break;
+
+                case '2':
+                    state = 'RECHAZADA';
+                break;
            }
 
           

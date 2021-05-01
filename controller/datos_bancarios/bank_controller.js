@@ -15,10 +15,21 @@ $(function(){
 
                 data.forEach(dato =>{
                 
-                    if(data.check_account == 1){
-                        state = 'ESTADO: CONFIRMADA';
-                    } else{
-                        state = 'ESTADO: NO CONFIRMADA';
+                 
+
+                    switch (dato.check_account){
+                        case '0':
+                            state = 'ESTADO: NO CONFIRMADA';
+                        break;
+
+                        case '1':
+                            state = 'ESTADO: CONFIRMADA';
+                        break;
+
+                        case '2':
+                            state = 'ESTADO: RECHAZADA';
+                        break;
+                        
                     }
 
                     //meli trabaja aca abajo, tenes que cambiar el color del estado y ponerlo uno al lado del otro, porfa no lo rompas, me costo mucho, tkm <3 o sino ntkm </3
