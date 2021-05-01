@@ -21,7 +21,7 @@
         $date = date('Y-m-d h:s:m');
        
         $new_op = $conexion -> query("INSERT INTO operation (ID_user, ID_cripto, ID_wallet_cripto, TYPE, cripto_amount, pesos_amount, date_hour,state)
-        VALUE ($user, $id_cripto, $id_wallet, 'COMPRA', $cant_cripto, $cant_pesos,'$date' , 1)")
+        VALUE ($user, $id_cripto, $id_wallet, 'COMPRA', $cant_cripto, $cant_pesos,'$date' , 0)")
          or die("Error ". mysqli_error($conexion));
 
          if($new_op){

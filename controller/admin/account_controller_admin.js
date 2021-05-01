@@ -13,78 +13,57 @@ $(function() {
 
 
     function default_form() {
-        $('#first_name').val('');
-        $('#middle_name').val('');
-        $('#last_name').val('');
-        $('#second_last_name').val('');
-        $('#dni').val('');
-        $('#cuil').val('');
-        $('#email').val('');
-        var template = ``;
-        $('#account_tbody').html(template);
+        account_table();
     }
 
-    $('#account_form').submit(function(e) {
-        e.preventDefault();
-        console.log('Account info');
-        var dni = $('#dni_search').val();
+    
 
 
-
-
-
-
-        post_data('../../../model/user/DNI_search.php', dni).then(response => {
+    function account_table() {
+        get_data('../../../model/datos_bancarios/get_all_account.php').then(response => {
                 // En este punto recibimos la respuesta.
-                // y se debe cargar todos los input con la info y la tabla
-                let data = JSON.parse(response);
-
-                console.log(data);
-
-                $('#first_name').val(data.name_user);
-                $('#middle_name').val(data.middle_name);
-                $('#last_name').val(data.last_name);
-                $('#second_last_name').val(data.second_last_name);
-                $('#dni').val(data.DNI);
-                $('#cuil').val(data.CUIL);
-                $('#email').val(data.email);
-
-
-                console.log(data.ID_user);
-
-                account_table(data.ID_user);
-            })
-            .catch(error => {
-                // En este punto recibimos el error. then() no se ha invocado
-                console.log('Error: ' + error);
-
-            });
-    });
-
-
-    function account_table(id_user) {
-        post_data('../../../model/datos_bancarios/get_account.php', id_user).then(response => {
-                // En este punto recibimos la respuesta.
-                let data = JSON.parse(response);
                 let template = ``;
-                console.log('la repuesta es: ' + response);
+                console.log(response);
+                if(response == 0){
+                    template = `
+                    <tr>
+                        <td>No hay cuentas sin confirmar</td>
+                        <td>No hay cuentas sin confirmar</td>
+                        <td>No hay cuentas sin confirmar</td>
+                        <td>No hay cuentas sin confirmar</td>
+                        <td>
+                        
+                        </td>
+                    <tr>
+                `;
 
-                data.forEach(dato => {
-                    if (dato.check_account == '0') {
-                        template += `
-                        <tr>
-                            <td>${dato.bank}</td>
-                            <td>${dato.CBU}</td>
-                            <td>
-                            <button class="btn btn-success" id="conf_yes" data-id=${dato.CBU}>si</button>
-                            <button class="btn btn-danger" id="conf_no" data-id=${dato.CBU}>no</button>
-                            </td>
-                        <tr>
-                    `;
+                    $('#account_tbody').html(template);
+                }else{
+                    let data = JSON.parse(response);
+                    
+                    console.log('la repuesta es: ' + response);
 
-                        $('#account_tbody').html(template);
-                    }
-                })
+                    data.forEach(dato => {
+                        if (dato.check_account == '0') {
+                            template += `
+                            <tr>
+                                <td>${dato.name}</td>
+                                <td>${dato.CUIL}</td>
+                                <td>${dato.bank}</td>
+                                <td>${dato.CBU}</td>
+                                <td>
+                                <button class="btn btn-success" id="conf_yes" data-id=${dato.CBU}>si</button>
+                                <button class="btn btn-danger" id="conf_no" data-id=${dato.CBU}>no</button>
+                                </td>
+                            <tr>
+                        `;
+
+                            $('#account_tbody').html(template);
+                        }
+               
+                
+                    })
+                }
 
             })
             .catch(error => {
@@ -95,28 +74,42 @@ $(function() {
             });
     }
 
-    function default_table() {
-        var template = `
-                        <tr>
-                            <td>No disponible</td>
-                            <td>No disponible</td>
-                            <td>
-                            
-                            </td>
-                        <tr>
-                    `;
-
-        $('#account_tbody').html(template);
-    }
+   
 
     $(document).on('click', '#conf_yes', (e) => {
         e.preventDefault();
-        console.log($(e.currentTarget).data('id'));
+        let CBU =$(e.currentTarget).data('id');
+        confirmation(1, CBU);
     });
     $(document).on('click', '#conf_no', (e) => {
-        e.preventDefault();
-        console.log($(e.currentTarget).data('id'));
+        let CBU =$(e.currentTarget).data('id');
+        confirmation(2, CBU);
     });
+
+    function confirmation(post_conf, post_CBU){
+        const postData ={
+            CBU: post_CBU,
+            conf: post_conf
+        }
+        $.post('../../../model/datos_bancarios/confirm_account.php', postData).then(response => {
+            // En este punto recibimos la respuesta.
+            console.log(response);
+            if(response == 1){
+                alert('Confirmación exitosa');
+                default_form();
+            }else{
+                alert('Ocurrio un error, intentelo mas tarde.');
+                default_form();
+            }
+
+        })
+        .catch(error => {
+            // En este punto recibimos el error. then() no se ha invocado
+            console.log(error);
+            default_table();
+
+        });
+    }
 
 
 

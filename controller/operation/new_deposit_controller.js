@@ -93,12 +93,14 @@ $(function(){
             let data = JSON.parse(response); 
         
             let template =`<option value="0">Mis Cuentas</option>`;
-
-            data.forEach(dato => {
-                template+=`
-                    <option value="${dato.CBU}">${dato.bank} - ${dato.CBU}</option>
-                `;
-            }); 
+            if(data.check_account == 1){
+                data.forEach(dato => {
+                    template+=`
+                        <option value="${dato.CBU}">${dato.bank} - ${dato.CBU}</option>
+                    `;
+                }); 
+            }
+            
 
             $('#bank_account').html(template);
         })

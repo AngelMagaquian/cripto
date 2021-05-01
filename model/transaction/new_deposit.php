@@ -23,7 +23,7 @@
 
 
         $new_deposit = $conexion -> query("INSERT INTO deposit (id_bank, CBU, id_user, id_wallet_user, date_hour, pesos, state) VALUE
-         ('$id_bank', '$CBU', $id_user, $ID_wallet_user,'$date',$importe, 2)") or die("Error ". mysqli_error($conexion));
+         ('$id_bank', '$CBU', $id_user, $ID_wallet_user,'$date',$importe, 0)") or die("Error ". mysqli_error($conexion));
         
         
         if($new_deposit){

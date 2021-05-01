@@ -12,7 +12,7 @@
                 INNER JOIN user u ON u.ID_user = o.ID_user
                 INNER JOIN cripto c ON c.ID_cripto = o.ID_cripto
                 INNER JOIN wallet_cripto w ON w.id_wallet_cripto = o.ID_wallet_cripto        
-                WHERE o.state = 1        
+                WHERE o.state = 0        
                 ORDER BY o.date_hour ASC
                 ";
                 $ejecucion=mysqli_query($conexion, $transaction);
