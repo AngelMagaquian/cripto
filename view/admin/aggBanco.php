@@ -13,74 +13,19 @@
   <link rel="shortcut icon" href="../../asset/img/64x64.png" />
   <title>CriptoPremier</title>
 
-  <!-- Bootstrap core CSS -->
-  <link href="../../asset/css/bootstrap/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Custom styles for this template -->
-  <link href="../../asset/css/style_login.css" rel="stylesheet">
-  <link href="../../asset/css/admin.css" rel="stylesheet">
-
-  <link href="https://cdn.datatables.net/1.10.24/css/dataTables.bootstrap5.min.css" rel="stylesheet">
-  
-  <!--fonts-->
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-</head>
+  <?php
+  include 'head.php';
+  ?>
+ </head>
 
 <body>
 
   <div class="d-flex" id="wrapper">
 
     <!-- Sidebar -->
-    <div class="border-right" id="sidebar-wrapper">
-
-      <div class="sidebar-heading">
-        <img src="../../asset/img/logo.png" alt="" class="logo">
-      </div>
-      <div class="list-group list-group-flush">
-        <a href="#" class="list-group-item list-group-item-action" id="navUsuario" onclick="navUsuario()" value="false">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
-                <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
-            </svg>
-            Usuario
-        </a>
-        <div class="submenu submenu-personal" style="">
-            <ul>
-            <li>
-              <a href="../usuario/cuentasBancarias.php" id="cuentasBancarias">Cuentas bancarias</a>
-            </li>
-            <li>
-              <a href="../usuario/datosUser.php" id="datosUser">Datos de usuario</a>
-            </li>
-            <li>
-            <a href="../usuario/identidadUser.php" id="identidadUser">Identidad de usuario</a>
-            </li>
-            <li>
-            <a href="../usuario/walletUser" id="walletUser">Wallet de usuario</a>
-            </li>
-          </ul>
-        </div>
-
-        
-        <a href="#" class="list-group-item list-group-item-action" id="navOperaciones" onclick="navOperaciones()">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
-                <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
-            </svg>
-            Operaciones
-        </a>
-        <div class="submenu submenu-operaciones">
-          <ul>
-            <li>
-            <a href="../operaciones/transPendientes.php" id="transPendientes">Transacciones pendientes</a>
-            </li>
-            <li>
-            <b><a href="../operaciones/aggBanco.php" id="aggBanco">Agregar banco</a></b>
-            </li>
-          </ul>
-        </div>
-        <button type="submit" class="btn-sesion btn-get-started-sesion btn-sm mt-5" >Cerrar sesión</button>
-      </div>
-    </div>
+    <?php
+    include 'sidebar.php';
+    ?>
     <!-- /#sidebar-wrapper -->
 
     <!-- Page Content -->
@@ -111,8 +56,7 @@
                         <div class="card">
                             <div class="card-body row justify-content-around">
                                 <div class="col-md-5 col-12 mt-2">
-                                    <button type="button" class="btn btn-sm" data-toggle="popover" title="Ayuda" data-content="Link: <a href='xyz.com'>XYZ</a>"
-  data-html="true">
+                                    <button type="button" class="btn btn-sm" data-toggle="popover" title="Ayuda" data-content="Link: <a href='xyz.com'>XYZ</a>" data-html="true">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-question-circle-fill" viewBox="0 0 16 16">
                                             <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.496 6.033h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286a.237.237 0 0 0 .241.247zm2.325 6.443c.61 0 1.029-.394 1.029-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94 0 .533.425.927 1.01.927z"/>
                                         </svg>
@@ -145,10 +89,6 @@
 
         
     </div>
-
-</section>
-
-
       <!--FIN DE VISTA-->
 
     </div>
@@ -157,24 +97,15 @@
   </div>
   <!-- /#wrapper -->
 
-  <!-- Bootstrap core JavaScript -->
-  <script src="../../asset/jquery/jquery.min.js"></script>
-  <script src="../../asset/js/bootstrap/bootstrap.js"></script>
-  <script src="../../asset/js/bootstrap/bootstrap.bundle.min.js"></script>
+  <?php
+  include 'script.php';
+  ?>
+
   <!--Controllers-->
-
   <script src="..\..\..\controller\admin\new_bank_admin_controller.js" type="module" ></script>
-
-  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-  <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
-  <script src="https://cdn.datatables.net/1.10.24/js/dataTables.bootstrap5.min.js"></script>
 
   <!-- Menu Toggle Script -->
   <script>
-    $(document).ready(function(){
-    $('[data-toggle="popover"]').popover();   
-    });
-
     $("#menu-toggle").click(function(e) {
       e.preventDefault();
       $("#wrapper").toggleClass("toggled");
@@ -183,31 +114,37 @@
     $( document ).ready(function() {
       $("#navOperaciones").addClass("activo")
       $(".submenu-operaciones").css("display", "block")
+      $("#aggBanco").css("font-weight", "bold")
+      $("#navUsuario").addClass("no-activo") 
     });
 
 
     function navUsuario(){
+      $("#navUsuario").removeClass("no-activo")
       $("#navUsuario").addClass("activo")
-
       $(".submenu-operaciones").css("display", "none")
       $(".submenu-personal").css("display", "block")
 
       if($("#navOperaciones").hasClass("activo")){
         $("#navOperaciones").removeClass("activo");
+        $("#navOperaciones").addClass("no-activo")
       }
     }
 
     function navOperaciones(){
+      $("#navOperaciones").removeClass("no-activo")
       $("#navOperaciones").addClass("activo")
-
+      
       $(".submenu-operaciones").css("display", "block")
       $(".submenu-personal").css("display", "none")
 
       if($("#navUsuario").hasClass("activo")){
         $("#navUsuario").removeClass("activo");
+        $("#navUsuario").addClass("no-activo")
       }
 
     }
+
     
 
   </script>

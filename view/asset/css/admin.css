@@ -135,6 +135,12 @@
   color: #274070 !important;
 }
 
+.no-activo{
+  background-color: #385BA2 !important;
+    color: #fff !important;
+    border: none !important;
+}
+
 
 /*NUEVO*/
 

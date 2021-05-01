@@ -4,9 +4,8 @@
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-
-    <title>LOGIN</title>
+  <link rel="shortcut icon" href="../asset/img/64x64.png" />
+  <title>CriptoPremier | Registrarse </title> 
     <!-- Bootstrap core CSS -->
     <link href="../asset/css/bootstrap/bootstrap.min.css" rel="stylesheet">
 
@@ -20,7 +19,7 @@
 <section id="login">
     <div class="container">
         <div class="row justify-content-center">
-        <div class="col-lg-8 col-md-6 col-sm-8 col-11  mt-5">
+        <div class="col-lg-8 col-md-6 col-sm-8 col-11  mt-4 mb-4">
           <div class="card ">
             <div class="card-body mt-4 mb-4">
               <div class="text-top">
@@ -84,7 +83,7 @@
 
                         <div class="row">
                             <div class="col-12 mt-4 text-center"> 
-                                <button type="submit" class="btn-login btn-get-started">Registrarse</button>
+                                <button type="submit" class="btn-registrarse btn-get-started">Registrarse</button>
                             </div>
                         </div>
                 </from>

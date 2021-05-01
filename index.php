@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" href="view/asset/img/64x64.png" />
 
-    <title>CRIPTO | Home </title>
+    <title>CriptoPremier | Home </title>
 
 
     
