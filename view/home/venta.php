@@ -4,8 +4,8 @@
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="shortcut icon" href="view/asset/img/64x64.png" />
-  <title>CRIPTO | Venta</title>
+  <link rel="shortcut icon" href="../asset/img/64x64.png" />
+  <title>CriptoPremier | Venta</title>
   <!-- Bootstrap core CSS -->
   <link href="../asset/css/bootstrap/bootstrap.min.css" rel="stylesheet">
 	<link href="../asset/css/style.css" rel="stylesheet">

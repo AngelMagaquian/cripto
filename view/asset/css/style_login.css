@@ -15,9 +15,8 @@
 --------------------------------------------------------------*/
 
 #login{
-    background: url("../img/bg-login.png");
+    background-color: aliceblue;
     width: 100vw;
-    height: 100vh;
     background-repeat: no-repeat;
     background-size: 100vw;
     bottom: 0;
@@ -39,7 +38,7 @@
 
 }
 #login label{
-  color: #031D5A;
+  color: #253d6e;
 
 }
 #login .form-login{
@@ -50,7 +49,7 @@
   }
 
 #login .change-pass{
-  color: #031D5A;
+  color: #253d6e;
   font-size: 12px;
 }
 
@@ -67,7 +66,7 @@
 
   #login .btn-login{
     font-size: 14px;
-    background-color: #27C0FA;
+    background-color: #5185ed;
     border: none;
     -webkit-box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
     -moz-box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
@@ -79,7 +78,7 @@
 
   #login .btn-registrarse{
     font-size: 14px;
-    background-color: #031D5A;
+    background-color: #253d6e;
     border: none;
     -webkit-box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
     -moz-box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
@@ -90,6 +89,6 @@
   }  
 
   #login .text-registro{
-    color: #6FC0FB;
+    color: #5185ed;
     font-size: 18px;
   }
