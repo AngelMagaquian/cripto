@@ -143,7 +143,7 @@
   include 'head.php';
   ?>
   <!--Controllers-->
-  <script src="..\..\..\controller\operation\operation_controller.js" type="module" ></script> <!--no eliminar-->
+  <script src="..\..\controller\operation\operation_controller.js" type="module" ></script> <!--no eliminar-->
 
   <script src="https://code.jquery.com/jquery-3.5.1.js"></script> <!--no eliminar-->
   <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
