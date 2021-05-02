@@ -25,9 +25,9 @@ $(function(){
         if( $('#bank_account').val() == 0){
             alert('Por favor seleccione una cuenta de banco, si aún no agrego ninguna puede hacerlo en Perfil->Datos bancarios->Agregar cuenta');
         }else{
-            get_data('../../../model/transaction/trans_controller.php').then(response =>{
+            get_data('../../model/transaction/trans_controller.php').then(response =>{
                 if(response==1){
-                    post_data('../../../model/transaction/account_controller.php', $('#bank_account').val()).then(response =>{
+                    post_data('../../model/transaction/account_controller.php', $('#bank_account').val()).then(response =>{
         
                         if(response == 1){
                             var opcion = confirm('¿Desea confirmar la operación?');
@@ -36,7 +36,7 @@ $(function(){
                                     CBU: $('#bank_account').val(),
                                     importe: parseFloat($('#importe').val())
                                 }
-                                $.post('../../../model/transaction/new_deposit.php', postData).then(response => {
+                                $.post('../../model/transaction/new_deposit.php', postData).then(response => {
                                     if(response == 1){
                                         alert('Solicitud de deposito enviada, puede consultar los datos en Mis operaciones->Depositos');
                                         new_deposit_default();
@@ -73,7 +73,7 @@ $(function(){
 
 
     function get_saldo(){
-        get_data('../../../model/user/balance_wallet_user.php').then(response => {
+        get_data('../../model/user/balance_wallet_user.php').then(response => {
             // En este punto recibimos la respuesta.
    
             let data = JSON.parse(response); 
@@ -87,7 +87,7 @@ $(function(){
     }
 
     function select_bank_account(){
-        get_data('../../../model/datos_bancarios/get_account.php').then(response => {
+        get_data('../../model/datos_bancarios/get_account.php').then(response => {
             // En este punto recibimos la respuesta.
 
             let data = JSON.parse(response); 

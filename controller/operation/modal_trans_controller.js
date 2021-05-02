@@ -81,7 +81,7 @@ $(function(){
             -Email en 1
         */
        
-        get_data('../../../model/transaction/trans_controller.php').then(response =>{
+        get_data('../../model/transaction/trans_controller.php').then(response =>{
             if(response == 1){
                 var opcion = confirm('Cumple los requisitos para operar, ¿Desea confirmar la operación?');
                 if (opcion == true) {
@@ -92,7 +92,7 @@ $(function(){
                         cripto : $('#cripto_select').val()
                     }
                     if($('#option1').is(':checked')){
-                        $.post('../../../model/transaction/new_compra.php', postData).then(response => {
+                        $.post('../../model/transaction/new_compra.php', postData).then(response => {
                            
                              if(response == 1){
                                  alert('Compra realizada con éxito, aguarde confirmación del administrador');
@@ -105,7 +105,7 @@ $(function(){
                     }
                 
                     if($('#option2').is(':checked')){
-                        $.post('../../../model/transaction/new_venta.php', postData).then(response => {
+                        $.post('../../model/transaction/new_venta.php', postData).then(response => {
                            
                              if(response == 1){
                                  alert('Venta realizada con éxito, aguarde confirmación del administrador');
@@ -152,7 +152,7 @@ $(function(){
     
 
     function wallet_user(){
-        get_data('../../../model/user/balance_wallet_user.php').then(response =>{
+        get_data('../../model/user/balance_wallet_user.php').then(response =>{
             let data = JSON.parse(response);
             console.log(data);
             controll_balnce(data.balance);
@@ -164,7 +164,7 @@ $(function(){
     }
 
     function wallet_cripto(cripto){
-        post_data('../../../model/wallet_cripto/get_wallet_cripto.php',cripto).then(response =>{
+        post_data('../../model/wallet_cripto/get_wallet_cripto.php',cripto).then(response =>{
             console.log(response);
             if(response !=0){
                 let data = JSON.parse(response);
