@@ -113,7 +113,7 @@
 
   <!--Controllers-->
   <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-  <script src="..\..\..\controller\operation\new_deposit_controller.js" type="module" ></script>
+  <script src="..\..\controller\operation\new_deposit_controller.js" type="module" ></script>
 
   
   <!-- Menu Toggle Script -->

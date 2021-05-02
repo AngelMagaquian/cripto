@@ -1,6 +1,7 @@
 <?php 
   session_start();
-  if(isset($_SESSION["id_user"])){
+  if(isset($_SESSION['id_user'])){
+    if($_SESSION['id_user'] == 1 and $_SESSION['type'] == 2){
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -50,19 +51,21 @@
                             <table id="datosUserTable" class="table table-striped table-bordered" style="width:100%">
                                 <thead>
                                     <tr>
-                                        <th>Id deposito</th>
-                                        <th>CBU</th>
-                                        <th>Banco</th>
-                                        <th>Fecha</th>
-                                        <th>Pesos</th>
-                                        <th>Estado</th>
+                                        <th>Id user</th>
+                                        <th>DNI</th>      
+                                        <th>CUIL</th>
+                                        <th>Nombre</th>   
+                                        <th>Apellido</th> 
+                                        <th>Email</th>     
+                                        <th>Balance</th>
+                                        <th>Saldo pendiente</th>
                                     </tr>
                                 </thead>
-                                <tbody id="deposit_tbody">
+                                <tbody id="user_data_tbody">
                                     
                                 </tbody>
                             </table>
-                            </div>
+                        </div>
                             
                                     
                             
@@ -89,7 +92,7 @@
   <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
   <script src="https://cdn.datatables.net/1.10.24/js/dataTables.bootstrap5.min.js"></script>
   <!--Controllers-->
-  <script src="..\..\controller\operation\deposit_controller.js" type="module" ></script> <!--no eliminar-->
+  <script src="..\..\controller\admin\user_info_controller_admin.js" type="module" ></script>
 
   <!-- Menu Toggle Script -->
   <script>
@@ -99,61 +102,38 @@
     });
 
     $(document).ready(function() {
-      $("#navMisOp").addClass("activo")
-      $(".submenu-misOp").css("display", "block")
-      $("#transacciones").css("font-weight", "bold")
+      $("#navUsuario").addClass("activo")
+      $(".submenu-personal").css("display", "block")
+      $("#datosUser").css("font-weight", "bold")
+      $("#navOperaciones").addClass("no-activo")   
     });
-
-    function navPerfil(){
-      $("#navPerfil").removeClass("no-activo")
-      $("#navPerfil").addClass("activo")
-      $(".submenu-misOp").css("display", "none")
+    
+    function navUsuario(){
+      $("#navUsuario").removeClass("no-activo")
+      $("#navUsuario").addClass("activo")
       $(".submenu-operaciones").css("display", "none")
       $(".submenu-personal").css("display", "block")
 
       if($("#navOperaciones").hasClass("activo")){
         $("#navOperaciones").removeClass("activo");
-        $("#navOperaciones").addClass("no-activo");
-      }
-      if($("#navMisOp").hasClass("activo")){
-        $("#navMisOp").removeClass("activo");
-        $("#navMisOp").addClass("no-activo");
+        $("#navOperaciones").addClass("no-activo")
       }
     }
 
     function navOperaciones(){
       $("#navOperaciones").removeClass("no-activo")
       $("#navOperaciones").addClass("activo")
-      $(".submenu-misOp").css("display", "none")
+      
       $(".submenu-operaciones").css("display", "block")
       $(".submenu-personal").css("display", "none")
-      
-      if($("#navPerfil").hasClass("activo")){
-        $("#navPerfil").removeClass("activo");
-        $("#navPerfil").addClass("no-activo");
-      }
-      if($("#navMisOp").hasClass("activo")){
-        $("#navMisOp").removeClass("activo");
-        $("#navMisOp").addClass("no-activo");
-      }
-    }
 
-    function navMisOp(){
-      $("#navMisOp").removeClass("no-activo")
-      $("#navMisOp").addClass("activo")
-      $(".submenu-misOp").css("display", "block")
-      $(".submenu-operaciones").css("display", "none")
-      $(".submenu-personal").css("display", "none")
+      if($("#navUsuario").hasClass("activo")){
+        $("#navUsuario").removeClass("activo");
+        $("#navUsuario").addClass("no-activo")
+      }
 
-      if($("#navOperaciones").hasClass("activo")){
-        $("#navOperaciones").removeClass("activo");
-        $("#navOperaciones").addClass("no-activo");
-      }
-      if($("#navPerfil").hasClass("activo")){
-        $("#navPerfil").removeClass("activo");
-        $("#navPerfil").addClass("no-activo");
-      }
     }
+    
     $('#datosUserTable').DataTable({ 
         responsive: true,
         paging: false,
@@ -185,7 +165,7 @@
             select: true,
             colReorder: true
         },
-        scrollY: 100,
+        scrollY: 300,
         scrollX: true
       });
 
