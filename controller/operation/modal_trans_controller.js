@@ -172,9 +172,12 @@ $(function(){
                 let template =``;
 
                 data.forEach(dato => {
-                    template +=`
+                 
+                        template +=`
                         <option value="${dato.id_wallet_cripto}">${dato.wallet_name} - ${dato.id_wallet_cripto}</option>
-                    `;
+                        `;
+                    
+                   
                 });
                 $('#select_wallet_cripto').html(template);
                 wallet_controller = true;

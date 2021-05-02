@@ -113,7 +113,7 @@
   <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
   <script src="https://cdn.datatables.net/1.10.24/js/dataTables.bootstrap5.min.js"></script>
   <!--Controllers-->
-  <script src="..\..\..\controller\admin\transactions_controller_admin.js" type="module" ></script>
+  <script src="..\..\controller\admin\transactions_controller_admin.js" type="module" ></script>
 
   <!-- Menu Toggle Script -->
   <script>

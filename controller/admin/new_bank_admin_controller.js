@@ -32,7 +32,7 @@ $(function(){
                 console.log(postData);
                 
                 $.ajax({
-                    url: '../../../model/bank/new_bank.php',
+                    url: '../../model/bank/new_bank.php',
                     type: 'POST',
                     data: postData,
                     success: function(response) {

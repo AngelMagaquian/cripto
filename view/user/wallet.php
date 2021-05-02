@@ -85,10 +85,10 @@
                                 </tbody>
                             </table>
 
-                            <form id="" class=" col-12 mt-md-0 mt-sm-4 mt-4"> <!-- falta nombre-->
+                            <form id="solicitud_wallet" class=" col-12 mt-md-0 mt-sm-4 mt-4"> <!-- falta nombre-->
                                 <div class="row">
                                     <div class="col-12" style="text-align: end;">
-                                        <input type="submit" value="Nueva wallet" class="btn-get-started-wallet btn-wallet">
+                                    <a href="" class="btn-get-started  btn-siguiente mr-2 mt-sm-0 mt-3" type="button" data-toggle="modal" data-target="#exampleModal" id="modal_show_button">Solicitar Wallet</a>
                                     </div>
                                 </div>
                             </form>  
@@ -107,6 +107,38 @@
       </section>
 
       <!--FIN VISTA-->
+                          <!-- Modal
+
+                           -->
+                           <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                              <div class="modal-content">
+                                <div class="modal-header" style="color: #385BA2; background-color: rgba(0, 0, 0, 0.03);">
+                                  <h5 class="modal-title" id="exampleModalLabel">Solicitar nueva wallet</h5>
+                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="border: none;background: transparent;">
+                                    <span aria-hidden="true">&times;</span>
+                                  </button>
+                                </div>
+                                <div class="modal-body">
+                                  <div class="row">
+
+                                    <div class="col-6 form-group mb-4">
+                                      <label for="">Seleccione una criptomoneda</label>
+                                      <select id="select_cripto">
+                                      </select>
+                                    </div>
+                                    <div class="col-12 form-group text-right">
+                                      <form id="finalizar">
+                                        <input type="submit" value="Finalizar" class="btn btn-sm btn-get-started-agg  btn-agg">
+                                      </form>
+                                    </div>
+                                  </div>
+                                  
+                                </div>
+                                
+                              </div>
+                            </div>
+                          </div>
     </div>
     <!-- /#page-content-wrapper -->
 

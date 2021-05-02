@@ -17,7 +17,7 @@ $(function(){
 
 
     function user_table(){
-        get_data('../../../model/user/all_user_data.php').then(response => {
+        get_data('../../model/user/all_user_data.php').then(response => {
             // En este punto recibimos la respuesta.
             let data = JSON.parse(response); 
             let template=``;
