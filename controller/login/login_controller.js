@@ -23,7 +23,7 @@ $(function(){
                     delete_input();
                    
                     if(response == 1){
-                        $(location). attr('href','../../view/user/perfil/datosPersonales.php');
+                        $(location). attr('href','../../view/user/datosPersonales.php');
                     }else if(response == 2){
                         $(location). attr('href','../../view/admin/cuentasBancarias.php');
                     }

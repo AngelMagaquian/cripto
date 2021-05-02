@@ -2,13 +2,15 @@
   session_start();
   if(isset($_SESSION["id_user"])){
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <?php
   include 'head.php';
   ?>
-  </head>
+</head>
 
 <body>
 
@@ -16,7 +18,7 @@
 
     <!-- Sidebar -->
     <?php
-    include 'sidebar.php';
+      include 'sidebar.php';
     ?>
     <!-- /#sidebar-wrapper -->
 
@@ -36,46 +38,40 @@
       </nav>
 
       <!--VISTA-->
-      <section id="usuarios">
-        <div class="container-fluid">
-            <div class="row justify-content-center mt-4">
-
-                <div class="col-11">   
-                    <div class="row justify-content-between">
-                    <h5>Datos de usuarios</h5>
-                        </div>
-                    <div class="card">
-                        <div class="card-body mt-3">
-                        <div class="row mt-4">
-                            <table id="datosUserTable" class="table table-striped table-bordered" style="width:100%">
-                                <thead>
-                                    <tr>
-                                        <th>Id deposito</th>
-                                        <th>CBU</th>
-                                        <th>Banco</th>
-                                        <th>Fecha</th>
-                                        <th>Pesos</th>
-                                        <th>Estado</th>
-                                    </tr>
-                                </thead>
-                                <tbody id="deposit_tbody">
-                                    
-                                </tbody>
-                            </table>
-                            </div>
-                            
-                                    
-                            
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-        </div>
-      </section>
-      <!--FIN DE VISTA-->
-
+      
+      <div id="depositos" class=" mb-3">
+          <div class="container-fluid">
+              <div class="row justify-content-center mt-4">
+                  <div class="col-11">   
+                      <div class="row">
+                          <h5>Depositos</h5>
+                      </div>
+                      <div class="card">
+                          <div class="card-body mt-3 ">
+                              <div class="row mt-4 m-0">
+                                <table id="operacionesTable" class="table table-striped table-bordered" style="width:100%">
+                                    <thead>
+                                        <tr>
+                                            <th>Id deposito</th>
+                                            <th>CBU</th>
+                                            <th>Banco</th>
+                                            <th>Fecha</th>
+                                            <th>Pesos</th>
+                                            <th>Estado</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="deposit_tbody">
+                                    </tbody>
+                                </table>
+                              </div>
+                          </div>
+                      </div>
+              
+                  </div>
+              </div>
+          </div>
+      </div>
+      <!--FIN VISTA-->
     </div>
     <!-- /#page-content-wrapper -->
 
@@ -83,13 +79,17 @@
   <!-- /#wrapper -->
 
   <?php
-  include 'script.php';
+  include 'head.php';
   ?>
+
   <!-- DataTable-->
   <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
   <script src="https://cdn.datatables.net/1.10.24/js/dataTables.bootstrap5.min.js"></script>
   <!--Controllers-->
+  <script src="https://code.jquery.com/jquery-3.5.1.js"></script> <!--no eliminar-->
   <script src="..\..\controller\operation\deposit_controller.js" type="module" ></script> <!--no eliminar-->
+
+  
 
   <!-- Menu Toggle Script -->
   <script>
@@ -98,10 +98,13 @@
       $("#wrapper").toggleClass("toggled");
     });
 
-    $(document).ready(function() {
+  
+
+      $( document ).ready(function() {
       $("#navMisOp").addClass("activo")
       $(".submenu-misOp").css("display", "block")
-      $("#transacciones").css("font-weight", "bold")
+      $("#depositosMisOp").css("font-weight", "bold")
+
     });
 
     function navPerfil(){
@@ -154,10 +157,11 @@
         $("#navPerfil").addClass("no-activo");
       }
     }
-    $('#datosUserTable').DataTable({ 
+
+    $('#operacionesTable').DataTable({ 
         responsive: true,
         paging: false,
-        searching: false,
+        searching: true,
         language: {
             lengthMenu: "Agrupar de MENU ",
             search: " ",
@@ -185,23 +189,21 @@
             select: true,
             colReorder: true
         },
-        scrollY: 100,
+        scrollY: 200,
         scrollX: true
       });
+
 
   </script>
 
 </body>
 
 </html>
-<?php
-  }
+
+<?php 
+}else{
+  echo "no estas registrado";
 }
-echo "No posee permisos para este sitio";
-  ?>
-
-
-
-
+?>
 
 

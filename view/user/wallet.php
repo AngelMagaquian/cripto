@@ -6,26 +6,9 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
-  <link rel="shortcut icon" href="../../asset/img/64x64.png" />
-  <title>CriptoPremier</title>
-
-  <!-- Bootstrap core CSS -->
-  <link href="../../asset/css/bootstrap/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Custom styles for this template -->
-  <link href="../../asset/css/style_login.css" rel="stylesheet">
-  <link href="../../asset/css/perfil.css" rel="stylesheet">
-
-  <link href="https://cdn.datatables.net/1.10.24/css/dataTables.bootstrap5.min.css" rel="stylesheet">
-  
-  <!--fonts-->
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-
+  <?php
+  include 'head.php';
+  ?>
 </head>
 
 <body>
@@ -33,7 +16,9 @@
   <div class="d-flex" id="wrapper">
 
 
-
+    <?php
+    include 'sidebar.php';
+    ?>
     <!-- Page Content -->
     <div id="page-content-wrapper">
 
@@ -73,7 +58,7 @@
                                         <input id="description_cripto_wallet" type="text" placeholder="Ingresar alias de wallet" class="form-control" autocomplete="off" required>
                                     </div>
                                     <div class="col-md-3 col-12">
-                                        <select id="divisa_wallet" style="width:100%"></select>
+                                        <select class="form-control form-select" id="divisa_wallet" style="width:100%"></select>
                                     </div>
                                         
                                     
@@ -128,14 +113,12 @@
   </div>
   <!-- /#wrapper -->
 
-  <!-- Bootstrap core JavaScript -->
-  <script src="../../asset/jquery/jquery.min.js"></script>
-  <script src="../../asset/js/bootstrap/bootstrap.js"></script>
-  <script src="../../asset/js/bootstrap/bootstrap.min.js"></script>
-  <script src="../../asset/js/bootstrap/bootstrap.bundle.min.js"></script>
+  <?php
+  include 'script.php';
+  ?>
   <!--Controllers-->
   <script src="https://code.jquery.com/jquery-3.5.1.js"></script><!--no eliminar-->
-<script src="..\..\..\controller\wallet_cripto\wallet_cripto_controller.js" type="module" ></script> <!--no eliminar-->
+  <script src="..\..\controller\wallet_cripto\wallet_cripto_controller.js" type="module" ></script> <!--no eliminar-->
   
   <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
   <script src="https://cdn.datatables.net/1.10.24/js/dataTables.bootstrap5.min.js"></script>
@@ -147,11 +130,7 @@
       e.preventDefault();
       $("#wrapper").toggleClass("toggled");
     });
-
-    $( document ).ready(function() {
-      $("#wallet").addClass("activo")
-
-      $('#walletTable').DataTable({ 
+    $('#walletTable').DataTable({ 
         responsive: true,
         paging: false,
         searching: true,
@@ -185,62 +164,59 @@
         scrollY: 200,
         scrollX: true
       });
+
+    $( document ).ready(function() {
+      $("#wallet").addClass("activo")
     });
 
     function navPerfil(){
+      $("#navPerfil").removeClass("no-activo")
       $("#navPerfil").addClass("activo")
-
       $(".submenu-misOp").css("display", "none")
       $(".submenu-operaciones").css("display", "none")
       $(".submenu-personal").css("display", "block")
 
       if($("#navOperaciones").hasClass("activo")){
         $("#navOperaciones").removeClass("activo");
+        $("#navOperaciones").addClass("no-activo");
       }
       if($("#navMisOp").hasClass("activo")){
         $("#navMisOp").removeClass("activo");
-      }
-      if($("#wallet").hasClass("activo")){
-        $("#wallet").removeClass("activo");
+        $("#navMisOp").addClass("no-activo");
       }
     }
 
     function navOperaciones(){
+      $("#navOperaciones").removeClass("no-activo")
       $("#navOperaciones").addClass("activo")
-
       $(".submenu-misOp").css("display", "none")
       $(".submenu-operaciones").css("display", "block")
       $(".submenu-personal").css("display", "none")
       
       if($("#navPerfil").hasClass("activo")){
         $("#navPerfil").removeClass("activo");
+        $("#navPerfil").addClass("no-activo");
       }
       if($("#navMisOp").hasClass("activo")){
         $("#navMisOp").removeClass("activo");
-      }
-      if($("#wallet").hasClass("activo")){
-        $("#wallet").removeClass("activo");
+        $("#navMisOp").addClass("no-activo");
       }
     }
 
-    function clickMisOp(){
-      $("#navOp").addClass("activo")
-
+    function navMisOp(){
+      $("#navMisOp").removeClass("no-activo")
+      $("#navMisOp").addClass("activo")
       $(".submenu-misOp").css("display", "block")
       $(".submenu-operaciones").css("display", "none")
       $(".submenu-personal").css("display", "none")
 
       if($("#navOperaciones").hasClass("activo")){
         $("#navOperaciones").removeClass("activo");
-      }
-      if($("#navMisOp").hasClass("activo")){
-        $("#navMisOp").removeClass("activo");
+        $("#navOperaciones").addClass("no-activo");
       }
       if($("#navPerfil").hasClass("activo")){
         $("#navPerfil").removeClass("activo");
-      }
-      if($("#wallet").hasClass("activo")){
-        $("#wallet").removeClass("activo");
+        $("#navPerfil").addClass("no-activo");
       }
     }
 

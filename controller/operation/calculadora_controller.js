@@ -92,7 +92,7 @@ $(function(){
 
     function get_cripto_pesos_value(cripto){
         
-        post_data('../../../model/calculadora/calculadora2.php', cripto).then(response => {
+        post_data('../../model/calculadora/calculadora2.php', cripto).then(response => {
             // En este punto recibimos la respuesta.
             let data = JSON.parse(response); 
             cripto_pesos(data.value);
@@ -108,7 +108,7 @@ $(function(){
 
     function get_pesos_cripto_value(cripto){
         
-        post_data('../../../model/calculadora/calculadora2.php', cripto).then(response => {
+        post_data('../../model/calculadora/calculadora2.php', cripto).then(response => {
             // En este punto recibimos la respuesta.
             console.log('cripto: '+response);
             let data = JSON.parse(response); 
@@ -161,7 +161,7 @@ $(function(){
 
     
     function get_admin_values(){
-        get_data('../../../model/calculadora/get_values.php').then(response => {
+        get_data('../../model/calculadora/get_values.php').then(response => {
             // En este punto recibimos la respuesta.
             let data = JSON.parse(response); 
 

@@ -6,7 +6,7 @@ $(function(){
        
             let template =``;
             //funciones para traer los datos del usuario
-            get_data('../../../model/datos_bancarios/get_account.php').then(response => {
+            get_data('../../model/datos_bancarios/get_account.php').then(response => {
                 // En este punto recibimos la respuesta.
                 
                 let data = JSON.parse(response); 

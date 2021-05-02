@@ -22,12 +22,12 @@ $(function(){
 
         console.log(postData);
        
-        get_data('../../../model/transaction/trans_controller.php').then(response =>{
+        get_data('../../model/transaction/trans_controller.php').then(response =>{
             if(response == 1){
                 var opcion = confirm('¿Desea confirmar la cuenta bancaria?');
                 if (opcion == true) {
                     $.ajax({
-                        url: '../../../model/datos_bancarios/insert_new_account.php',
+                        url: '../../model/datos_bancarios/insert_new_account.php',
                         type: 'POST',
                         data: postData,
                         success: function(response) {
@@ -77,7 +77,7 @@ $(function(){
     }
 
     function banks(){
-        get_data('../../../model/bank/get_banks.php').then(response =>{
+        get_data('../../model/bank/get_banks.php').then(response =>{
             let data = JSON.parse(response); 
             let template =``;
             data.forEach(dato => {
@@ -94,7 +94,7 @@ $(function(){
     }
 
     function type_account(){
-        get_data('../../../model/bank/get_type_account.php').then(response =>{
+        get_data('../../model/bank/get_type_account.php').then(response =>{
             let data = JSON.parse(response); 
             let template =``;
             data.forEach(dato => {

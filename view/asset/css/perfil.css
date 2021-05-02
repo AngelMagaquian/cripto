@@ -136,6 +136,11 @@
   background-color: rgb(248, 249, 250) !important;
   color: #274070 !important;
 }
+.no-activo{
+  background-color: #385BA2 !important;
+    color: #fff !important;
+    border: none !important;
+}
 
 
 /*DATOS PERSONALES*/
