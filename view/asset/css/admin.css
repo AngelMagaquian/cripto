@@ -375,7 +375,19 @@
   color: #f5f5f5;
 }
 
-#banco .btn{
+#banco .btn-get-started-agg {
+  font-weight: 500;
+  font-size: 13px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 5px;
+  transition: 0.5s;
+  color: #f5f5f5;
+  border: none;
+}
+
+#banco .btn-agg{
   background-color: #385BA2;
   -webkit-box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
   -moz-box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
@@ -383,9 +395,6 @@
   float: right;
 }
 
-#banco .btn:hover{
-  background-color: #274070;
-}
 #banco textarea{
   font-size: 14px;
   background-color: transparent;
