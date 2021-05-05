@@ -123,10 +123,10 @@
                   <div class="tab-pane fade" id="foto" role="tabpanel" aria-labelledby="foto-tab">
                     <div class="row m-0 justify-content-around">
                             <div class="col-11 botonera" >
-                              <form id="from_photo" enctype="multipart/form-data">
+                              <form action="foto/registrar.php" method="post" id="from_photo" enctype="multipart/form-data">
                                   <label style="font-size: 14px; color: #274070;"><b>Foto de usuario</b></label>
                                   <br>
-                                  <input type="file" name="myfile"/>
+                                  <input type="file" name="photo_face"/>
                                   <br>
                                   <input type="submit" value="Cargar"  class="btn-get-started-pass btn-pass float-right">
                                   <br>
