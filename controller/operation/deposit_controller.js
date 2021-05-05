@@ -8,7 +8,7 @@ $(function(){
         //funciones para traer los datos del usuario
         get_data('../../model/operation/deposit_data.php').then(response => {
             // En este punto recibimos la respuesta.
-            console.log(response);
+    
             data = JSON.parse(response); 
             
             table(data);
@@ -25,12 +25,20 @@ $(function(){
 
 
         data.forEach(dato =>{
-            if(dato.state == 1){
-                state = 'COMPLETADA';
-           }else if(dato.state == 2){
+            
+
+           switch(dato.state){
+               case '0':
                 state = 'PENDIENTE';
-           }else{
-               state = 'CANCELADA';
+               break;
+
+               case '1':
+                state = 'COMPLETADA';
+               break;
+
+               case '2':
+                state = 'CANCELADA';
+               break;
            }
 
           

@@ -118,7 +118,7 @@ $(function(){
 
 
     function divisas(){
-        get_data('../../../model/operation/divisas.php').then(response => {
+        get_data('../../model/operation/divisas.php').then(response => {
             // En este punto recibimos la respuesta.
             data = JSON.parse(response); 
             
@@ -149,7 +149,7 @@ $(function(){
        
            switch (dato.state){
                 case '0':
-                    state = 'NO CONFIRMADA';
+                    state = 'PENDIENTE';
                 break;
 
                 case '1':

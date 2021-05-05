@@ -4,7 +4,7 @@ $(function(){
     console.log('User Controller');
     $( document ).ready(function() {
        
-        get_data('../../../model/user/user_data.php').then(response => {
+        get_data('../../model/user/user_data.php').then(response => {
             // En este punto recibimos la respuesta.
              
                 let data = JSON.parse(response); 

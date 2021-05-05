@@ -89,6 +89,7 @@ function insert_wallet(){
     }
     $.post('../../model/user/insert_wallet_user.php', postData).then(response => {
         if(response == 1){
+            //Aca seria el punto
             window.alert('Registro exitoso');
             $(location).attr('href','./login.php');
         }

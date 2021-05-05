@@ -28,7 +28,7 @@ $(function(){
                         <td>Trans #${dato.id_op}</td>
                         <td>${dato.date_hour}</td>
                         <td><b>${dato.type}</b></td>
-                        <td>(${dato.cripto_name})  <b>${dato.cripto_amount} </b></td>
+                        <td><b>${dato.cripto_amount} </b> - (${dato.cripto_name})  </td>
                         <td>$${dato.pesos_amount}</td>
                         <td>${dato.id_wallet_cripto}</td>
                         <td>
