@@ -20,7 +20,7 @@
 <header>
   <nav class="navbar navbar-expand-lg ">
     <div class="container-fluid">
-      <a class="navbar-brand p-0" href="../../index.php"><img src="../asset/img/logo.png" alt="" class="logo"></a>
+      <a class="navbar-brand p-0" href="../../index.php"><img src="../asset/img/logo_home.png" alt="" class="logo"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon">
           <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#031D5A" class="bi bi-list" viewBox="0 0 16 16">
@@ -65,7 +65,7 @@
     </div>
     <div class="row justify-content-md-between justify-content-center mt-5">
   <!--btc-->
-      <div class="col-lg-4 col-md-5 col-sm-8 col-11">
+      <!-- <div class="col-lg-4 col-md-5 col-sm-8 col-11">
         <div class="row">
           <div class="img-cripto col-lg-3 col-md-4 col-sm-3 col-3">
             <img src="../asset/img/btc.png" alt="Bitcoin">
@@ -87,10 +87,10 @@
               </div>
           </div>
         </div>
-      </div>
+      </div> -->
 
   <!--eth-->
-      <div class="col-lg-4 col-md-5 col-sm-8 col-11 mt-md-0 mt-5">
+      <!-- <div class="col-lg-4 col-md-5 col-sm-8 col-11 mt-md-0 mt-5">
         <div class="row">
           <div class="img-cripto col-lg-3 col-md-4 col-sm-3 col-3">
             <img src="../asset/img/eth.png" alt="Ethereum">
@@ -113,10 +113,10 @@
               </div>
           </div>
         </div>
-      </div>
+      </div> -->
 
   <!--usdt-->
-      <div class="col-lg-4 col-md-5 col-sm-8 col-11 mt-lg-0 mt-5">
+      <!-- <div class="col-lg-4 col-md-5 col-sm-8 col-11 mt-lg-0 mt-5">
         <div class="row justify-content-center">
           <div class="img-cripto col-lg-3 col-md-4 col-sm-3 col-3">
             <img src="../asset/img/usdt.png" alt="Tether">
@@ -138,10 +138,10 @@
               </div>
           </div>
         </div>
-      </div>
+      </div> -->
 
   <!--dai-->
-      <div class="col-lg-4 col-md-5 col-sm-8 col-11 mt-5">
+      <!-- <div class="col-lg-4 col-md-5 col-sm-8 col-11 mt-5">
         <div class="row">
           <div class="img-cripto col-lg-3 col-md-4 col-sm-3 col-3">
             <img src="../asset/img/dai.png" alt="Dai">
@@ -163,10 +163,10 @@
               </div>
           </div>
         </div>
-      </div>
+      </div> -->
 
   <!--link-->
-      <div class="col-lg-4 col-md-5 col-sm-8 col-11 mt-5">
+      <!-- <div class="col-lg-4 col-md-5 col-sm-8 col-11 mt-5">
         <div class="row">
           <div class="img-cripto col-lg-3 col-md-4 col-sm-3 col-3">
             <img src="../asset/img/link.png" alt="Chainlink">
@@ -188,10 +188,10 @@
               </div>
           </div>
         </div>
-      </div>
+      </div> -->
 
   <!--xrp-->
-      <div class="col-lg-4 col-md-5 col-sm-8 col-11  mt-5">
+      <!-- <div class="col-lg-4 col-md-5 col-sm-8 col-11  mt-5">
         <div class="row justify-content-center">
           <div class="img-cripto col-lg-3 col-md-4 col-sm-3 col-3">
             <img src="../asset/img/xrp.png" alt="Tether">
@@ -213,8 +213,10 @@
               </div>
           </div>
         </div>
-      </div>
+      </div> -->
 
+      <?php include('../user/cripto_table.php');?>
+    
 
     </div>
 
