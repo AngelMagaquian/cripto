@@ -49,6 +49,9 @@
             <li>
               <a href="solicExtracion.php" id="solicExtracion">Solicitudes de extraciónes</a>
             </li>
+            <li>
+              <a href="changeValores.php" id="changeValores">Cambiar valores</a>
+            </li>
           </ul>
         </div>
         <form class="m-auto" action='destroySession.php'>
