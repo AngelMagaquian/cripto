@@ -54,6 +54,15 @@
             <li>
               <a href="transacciones.php" id="transacciones">Transacciones</a>
             </li>
+            <li>
+              <a href="extraciones.php" id="extraciones">Extraciones</a>
+            </li>
+            <li>
+              <a href="misExtraciones.php" id="misExtraciones">Mis extraciones</a>
+            </li>
+            <li>
+              <a href="depositosCancel.php" id="DepCancel">Deposito cancelado</a>
+            </li>
           </ul>
         </div>
 
