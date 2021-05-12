@@ -46,6 +46,9 @@
             <li>
               <a href="aggBanco.php" id="aggBanco">Agregar banco</a>
             </li>
+            <li>
+              <a href="solicExtracion.php" id="solicExtracion">Solicitudes de extraciónes</a>
+            </li>
           </ul>
         </div>
         <form class="m-auto" action='destroySession.php'>

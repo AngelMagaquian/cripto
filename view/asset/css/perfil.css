@@ -584,7 +584,7 @@
   font-size: 14px;
   color: #274070;
 }
-#misOperaciones .card-body input[type=date], .card-body select, .card-body input[type=search]{
+#misOperaciones .card-body input[type=date], .card-body select, .card-body input[type=search], .card-body input[type=number]{
   font-size: 14px;
   background-color: transparent;
   border: none !important;
@@ -605,7 +605,7 @@
   transition: 0.5s;
   color: #f5f5f5;
   cursor: pointer;
-  border:none;
+  border: none;
 }
 
 #misOperaciones .btn-filtro{
@@ -617,6 +617,29 @@
 #misOperaciones .btn-filtro:hover{
   background-color: #284378;
 }
+
+#misOperaciones .btn-get-started-extracciones {
+  font-weight: 500;
+  font-size: 11px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 5px 15px;
+  border-radius: 5px;
+  transition: 0.5s;
+  color: #f5f5f5;
+  cursor: pointer;
+  border: none;
+}
+#misOperaciones .btn-extraciones{
+  background-color: #385BA2;
+  -webkit-box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
+  -moz-box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
+  box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
+}
+#misOperaciones .btn-extraciones:hover{
+  background-color: #284378;
+}
+
 
 
 
