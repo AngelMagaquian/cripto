@@ -36,14 +36,15 @@ CREATE TABLE IF NOT EXISTS `account` (
   CONSTRAINT `FK_account_bank` FOREIGN KEY (`ID_bank`) REFERENCES `bank` (`id_bank`),
   CONSTRAINT `FK_account_type_account` FOREIGN KEY (`ID_type_account`) REFERENCES `type_account` (`ID_type_account`),
   CONSTRAINT `FK_account_user` FOREIGN KEY (`ID_user`) REFERENCES `user` (`ID_user`)
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=latin1;
 
--- Volcando datos para la tabla cripto_bd.account: ~3 rows (aproximadamente)
+-- Volcando datos para la tabla cripto_bd.account: ~4 rows (aproximadamente)
 /*!40000 ALTER TABLE `account` DISABLE KEYS */;
 REPLACE INTO `account` (`ID_user`, `ID_account`, `ID_bank`, `CBU`, `alias`, `ID_type_account`, `check_account`, `account_number`) VALUES
-	(31, 2, '00072', '0010010100101010101010', 'AAAA', 1, 1, '0398490398389'),
-	(31, 1, '00015', '0150804601000131815415', 'MARMOL.RUEDA.TONO', 1, 2, '08040113181541'),
-	(40, 13, '00011', '340938493093', 'MELI.BRU.VERA', 1, 2, '89049324');
+	(31, 2, '00072', '0010010100101010101010', 'AAAA', 1, 2, '0398490398389'),
+	(31, 1, '00015', '0150804601000131815415', 'MARMOL.RUEDA.TONO', 1, 1, '08040113181541'),
+	(40, 13, '00011', '340938493093', 'MELI.BRU.VERA', 1, 2, '89049324'),
+	(31, 14, '00011', '43723949238473', 'Angel.Maga.quian', 1, 1, '5467323');
 /*!40000 ALTER TABLE `account` ENABLE KEYS */;
 
 -- Volcando estructura para tabla cripto_bd.admin_values
@@ -68,7 +69,7 @@ CREATE TABLE IF NOT EXISTS `bank` (
   PRIMARY KEY (`id_bank`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- Volcando datos para la tabla cripto_bd.bank: ~41 rows (aproximadamente)
+-- Volcando datos para la tabla cripto_bd.bank: ~45 rows (aproximadamente)
 /*!40000 ALTER TABLE `bank` DISABLE KEYS */;
 REPLACE INTO `bank` (`id_bank`, `name`) VALUES
 	('00007', 'BANCO DE GALICIA Y BUENOS AIRES S.A.U.'),
@@ -118,6 +119,31 @@ REPLACE INTO `bank` (`id_bank`, `name`) VALUES
 	('00448', 'BANCO DINO S.A.');
 /*!40000 ALTER TABLE `bank` ENABLE KEYS */;
 
+-- Volcando estructura para tabla cripto_bd.cancel_deposit
+CREATE TABLE IF NOT EXISTS `cancel_deposit` (
+  `id_issue` int(255) NOT NULL AUTO_INCREMENT,
+  `id_deposit` bigint(20) NOT NULL DEFAULT 0,
+  `CBU` varchar(50) DEFAULT NULL,
+  `id_wallet_user` int(255) NOT NULL,
+  `pesos` float NOT NULL DEFAULT 0,
+  `description` varchar(1000) NOT NULL,
+  PRIMARY KEY (`id_issue`),
+  KEY `FK_cancel_deposit_deposit` (`id_deposit`),
+  KEY `FK_cancel_deposit_wallet_user` (`id_wallet_user`),
+  KEY `FK_cancel_deposit_account_2` (`CBU`),
+  CONSTRAINT `FK_cancel_deposit_account_2` FOREIGN KEY (`CBU`) REFERENCES `account` (`CBU`),
+  CONSTRAINT `FK_cancel_deposit_deposit` FOREIGN KEY (`id_deposit`) REFERENCES `deposit` (`id_deposit`),
+  CONSTRAINT `FK_cancel_deposit_wallet_user` FOREIGN KEY (`id_wallet_user`) REFERENCES `wallet_user` (`ID_wallet_user`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+
+-- Volcando datos para la tabla cripto_bd.cancel_deposit: ~3 rows (aproximadamente)
+/*!40000 ALTER TABLE `cancel_deposit` DISABLE KEYS */;
+REPLACE INTO `cancel_deposit` (`id_issue`, `id_deposit`, `CBU`, `id_wallet_user`, `pesos`, `description`) VALUES
+	(2, 7, '0010010100101010101010', 4, 1000, 'Usted queria depositar $1000 pero deposito $980'),
+	(3, 9, '0010010100101010101010', 4, 5, 'El deposito no pudo concretarse por falta de fondos'),
+	(4, 13, '0010010100101010101010', 4, 400, 'El problema es que no cumple con el monto de la solicitud');
+/*!40000 ALTER TABLE `cancel_deposit` ENABLE KEYS */;
+
 -- Volcando estructura para tabla cripto_bd.cripto
 CREATE TABLE IF NOT EXISTS `cripto` (
   `ID_cripto` int(11) NOT NULL AUTO_INCREMENT,
@@ -156,26 +182,27 @@ CREATE TABLE IF NOT EXISTS `deposit` (
   CONSTRAINT `FK_deposit_bank` FOREIGN KEY (`id_bank`) REFERENCES `bank` (`id_bank`),
   CONSTRAINT `FK_deposit_user` FOREIGN KEY (`id_user`) REFERENCES `user` (`ID_user`),
   CONSTRAINT `FK_deposit_wallet_user` FOREIGN KEY (`id_wallet_user`) REFERENCES `wallet_user` (`ID_wallet_user`)
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=latin1;
 
--- Volcando datos para la tabla cripto_bd.deposit: ~10 rows (aproximadamente)
+-- Volcando datos para la tabla cripto_bd.deposit: ~11 rows (aproximadamente)
 /*!40000 ALTER TABLE `deposit` DISABLE KEYS */;
 REPLACE INTO `deposit` (`id_deposit`, `id_bank`, `CBU`, `id_user`, `id_wallet_user`, `date_hour`, `pesos`, `state`) VALUES
-	(1, '00015', '0150804601000131815415', 31, 4, '2021-04-12 20:03:00', 1400, 0),
-	(5, '00015', '0150804601000131815415', 31, 4, '2021-04-19 20:18:32', 4500, 0),
-	(6, '00072', '0010010100101010101010', 31, 4, '2021-04-24 23:42:39', 1200, 0),
-	(7, '00072', '0010010100101010101010', 31, 4, '2021-04-24 23:50:12', 1000, 0),
-	(8, '00072', '0010010100101010101010', 31, 4, '2021-04-30 01:47:24', 5000, 0),
-	(9, '00072', '0010010100101010101010', 31, 4, '2021-04-30 01:47:36', 5, 0),
-	(10, '00072', '0010010100101010101010', 31, 4, '2021-04-30 01:48:08', 90, 0),
-	(11, '00072', '0010010100101010101010', 31, 4, '2021-04-30 01:50:28', 8000, 0),
-	(12, '00072', '0010010100101010101010', 31, 4, '2021-04-30 01:54:41', 200, 0),
-	(13, '00072', '0010010100101010101010', 31, 4, '2021-04-30 01:57:05', 400, 0);
+	(1, '00015', '0150804601000131815415', 31, 4, '2021-04-12 20:03:00', 1400, 2),
+	(5, '00015', '0150804601000131815415', 31, 4, '2021-04-19 20:18:32', 4500, 2),
+	(6, '00072', '0010010100101010101010', 31, 4, '2021-04-24 23:42:39', 1200, 2),
+	(7, '00072', '0010010100101010101010', 31, 4, '2021-04-24 23:50:12', 1000, 2),
+	(8, '00072', '0010010100101010101010', 31, 4, '2021-04-30 01:47:24', 5000, 2),
+	(9, '00072', '0010010100101010101010', 31, 4, '2021-04-30 01:47:36', 5, 2),
+	(10, '00072', '0010010100101010101010', 31, 4, '2021-04-30 01:48:08', 90, 1),
+	(11, '00072', '0010010100101010101010', 31, 4, '2021-04-30 01:50:28', 8000, 2),
+	(12, '00072', '0010010100101010101010', 31, 4, '2021-04-30 01:54:41', 200, 1),
+	(13, '00072', '0010010100101010101010', 31, 4, '2021-04-30 01:57:05', 400, 2),
+	(14, '00015', '0150804601000131815415', 31, 4, '2021-05-04 04:38:48', 5000, 2);
 /*!40000 ALTER TABLE `deposit` ENABLE KEYS */;
 
 -- Volcando estructura para tabla cripto_bd.operation
 CREATE TABLE IF NOT EXISTS `operation` (
-  `ID_op` int(11) NOT NULL AUTO_INCREMENT,
+  `ID_op` bigint(255) NOT NULL DEFAULT 0,
   `ID_user` int(11) NOT NULL,
   `ID_cripto` int(11) NOT NULL,
   `ID_wallet_cripto` varchar(255) NOT NULL DEFAULT '',
@@ -191,27 +218,46 @@ CREATE TABLE IF NOT EXISTS `operation` (
   CONSTRAINT `FK__cripto` FOREIGN KEY (`ID_cripto`) REFERENCES `cripto` (`ID_cripto`),
   CONSTRAINT `FK__user` FOREIGN KEY (`ID_user`) REFERENCES `user` (`ID_user`),
   CONSTRAINT `FK_operation_wallet_cripto` FOREIGN KEY (`ID_wallet_cripto`) REFERENCES `wallet_cripto` (`id_wallet_cripto`)
-) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- Volcando datos para la tabla cripto_bd.operation: ~8 rows (aproximadamente)
+-- Volcando datos para la tabla cripto_bd.operation: ~9 rows (aproximadamente)
 /*!40000 ALTER TABLE `operation` DISABLE KEYS */;
 REPLACE INTO `operation` (`ID_op`, `ID_user`, `ID_cripto`, `ID_wallet_cripto`, `type`, `cripto_amount`, `pesos_amount`, `date_hour`, `state`) VALUES
-	(7, 31, 6, '942021', 'COMPRA', 1, 60000, '2021-04-09 19:39:33', 1),
-	(10, 40, 2, '9420211', 'VENTA', 2, 800000, '2021-04-09 19:47:45', 2),
-	(11, 31, 6, '942021', 'VENTA', 1, 211, '2021-04-29 04:41:04', 1),
-	(12, 31, 6, '942021', 'COMPRA', 1, 211, '2021-04-30 01:42:04', 1),
+	(7, 31, 6, '942021', 'COMPRA', 1, 60000, '2021-04-09 19:39:33', 0),
+	(10, 40, 2, '9420211', 'VENTA', 2, 800000, '2021-04-09 19:47:45', 0),
+	(11, 31, 6, '942021', 'VENTA', 1, 211, '2021-04-29 04:41:04', 0),
+	(12, 31, 6, '942021', 'COMPRA', 1, 211, '2021-04-30 01:42:04', 0),
 	(13, 31, 6, '942021', 'COMPRA', 5, 1000, '2021-04-30 01:00:04', 1),
 	(14, 31, 6, '942021', 'VENTA', 1, 209, '2021-04-30 01:00:04', 2),
 	(15, 31, 6, '942021', 'COMPRA', 5, 1059, '2021-04-30 01:47:04', 1),
-	(16, 31, 6, '942021', 'COMPRA', 1, 211, '2021-04-30 01:37:04', 2);
+	(16, 31, 6, '942021', 'COMPRA', 1, 211, '2021-04-30 01:37:04', 2),
+	(17, 31, 4, '34334567876', 'COMPRA', 1, 152, '2021-05-04 01:08:05', 0);
 /*!40000 ALTER TABLE `operation` ENABLE KEYS */;
+
+-- Volcando estructura para tabla cripto_bd.pending_wallet_cripto
+CREATE TABLE IF NOT EXISTS `pending_wallet_cripto` (
+  `ID_pending` bigint(255) NOT NULL DEFAULT 0,
+  `ID_user` int(11) DEFAULT NULL,
+  `ID_cripto` int(11) DEFAULT NULL,
+  PRIMARY KEY (`ID_pending`),
+  KEY `FK_pending_wallet_cripto_user` (`ID_user`),
+  KEY `FK_pending_wallet_cripto_cripto` (`ID_cripto`),
+  CONSTRAINT `FK_pending_wallet_cripto_cripto` FOREIGN KEY (`ID_cripto`) REFERENCES `cripto` (`ID_cripto`),
+  CONSTRAINT `FK_pending_wallet_cripto_user` FOREIGN KEY (`ID_user`) REFERENCES `user` (`ID_user`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- Volcando datos para la tabla cripto_bd.pending_wallet_cripto: ~0 rows (aproximadamente)
+/*!40000 ALTER TABLE `pending_wallet_cripto` DISABLE KEYS */;
+REPLACE INTO `pending_wallet_cripto` (`ID_pending`, `ID_user`, `ID_cripto`) VALUES
+	(3, 31, 5);
+/*!40000 ALTER TABLE `pending_wallet_cripto` ENABLE KEYS */;
 
 -- Volcando estructura para tabla cripto_bd.photo_user
 CREATE TABLE IF NOT EXISTS `photo_user` (
   `id_user` int(255) NOT NULL DEFAULT 0,
-  `photo_face` longblob NOT NULL,
-  `photo_paper` longblob NOT NULL,
-  KEY `id_user` (`id_user`),
+  `photo_face` varchar(255) NOT NULL DEFAULT '',
+  `photo_paper` varchar(255) NOT NULL DEFAULT '',
+  PRIMARY KEY (`id_user`),
   CONSTRAINT `FK_photo_user_user` FOREIGN KEY (`id_user`) REFERENCES `user` (`ID_user`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -237,7 +283,7 @@ REPLACE INTO `type_account` (`ID_type_account`, `name`, `currency`) VALUES
 
 -- Volcando estructura para tabla cripto_bd.user
 CREATE TABLE IF NOT EXISTS `user` (
-  `ID_user` int(11) NOT NULL AUTO_INCREMENT,
+  `ID_user` int(11) NOT NULL DEFAULT 0,
   `DNI` int(8) NOT NULL,
   `CUIL` varchar(11) NOT NULL,
   `pass` longtext NOT NULL,
@@ -255,12 +301,13 @@ CREATE TABLE IF NOT EXISTS `user` (
   KEY `DNI` (`DNI`),
   KEY `ID_wallet_user` (`ID_wallet_user`),
   CONSTRAINT `FK_user_wallet_user` FOREIGN KEY (`ID_wallet_user`) REFERENCES `wallet_user` (`ID_wallet_user`)
-) ENGINE=InnoDB AUTO_INCREMENT=45 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- Volcando datos para la tabla cripto_bd.user: ~7 rows (aproximadamente)
+-- Volcando datos para la tabla cripto_bd.user: ~0 rows (aproximadamente)
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
 REPLACE INTO `user` (`ID_user`, `DNI`, `CUIL`, `pass`, `name_user`, `middle_name`, `last_name`, `second_last_name`, `birth_day`, `check_user`, `type`, `email`, `check_email`, `ID_wallet_user`) VALUES
-	(1, 0, '00000000000', '202cb962ac59075b964b07152d234b70', 'Admin', NULL, 'Admin', NULL, '1990-04-03', 1, 2, 'criptopremier@gmail.com', 1, NULL),
+	(0, 41000000, '2410000006', '202cb962ac59075b964b07152d234b70', 'Lizy', '', 'Taggliani', '', '1998-12-12', 0, 1, 'ltaggliani@gmail.com', 0, 8),
+	(1, 0, '00000000000', '202cb962ac59075b964b07152d234b70', 'Admin', NULL, 'Admin', NULL, '1990-04-03', 1, 2, 'info@criptopremier.com', 1, NULL),
 	(31, 41121345, '20411213456', '202cb962ac59075b964b07152d234b70', 'Angel', '', 'Magaquian', '', '1998-12-18', 1, 1, 'angelmagakhian@gmail.com', 1, 4),
 	(37, 41123345, '20411233456', '81dc9bdb52d04dc20036dbd8313ed055', 'Francisco', 'Arturo', 'Mansilla', 'Ruarte', '1998-12-17', 0, 1, 'Fa_mr@gmail.com', 0, 2),
 	(38, 40318624, '20403186246', '202cb962ac59075b964b07152d234b70', 'Pedro', 'Ignacio', 'De La Vega', '', '1999-03-23', 0, 1, 'pedrodlv@gmail.com', 0, 3),
@@ -282,10 +329,13 @@ CREATE TABLE IF NOT EXISTS `wallet_cripto` (
   CONSTRAINT `FK_wallet_cripto_user` FOREIGN KEY (`id_user`) REFERENCES `user` (`ID_user`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- Volcando datos para la tabla cripto_bd.wallet_cripto: ~3 rows (aproximadamente)
+-- Volcando datos para la tabla cripto_bd.wallet_cripto: ~0 rows (aproximadamente)
 /*!40000 ALTER TABLE `wallet_cripto` DISABLE KEYS */;
 REPLACE INTO `wallet_cripto` (`id_wallet_cripto`, `id_cripto`, `id_user`, `wallet_name`) VALUES
+	('3124', 1, 31, '432'),
+	('34334567876', 4, 31, 'Wallet DAI Angel'),
 	('45245245', 1, 31, 'Wallet BITCOIN (BTC) Angel'),
+	('543634543', 2, 31, 'Wallet ETHERUM Angel'),
 	('942021', 6, 31, 'Wallet RIPPLE (XRP) Angel'),
 	('9420211', 1, 40, 'Wallet BITCOIN (BTC) Melina');
 /*!40000 ALTER TABLE `wallet_cripto` ENABLE KEYS */;
@@ -299,17 +349,18 @@ CREATE TABLE IF NOT EXISTS `wallet_user` (
   PRIMARY KEY (`ID_wallet_user`),
   KEY `ID_user` (`ID_user`),
   CONSTRAINT `FK_wallet_user_user` FOREIGN KEY (`ID_user`) REFERENCES `user` (`ID_user`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
 
--- Volcando datos para la tabla cripto_bd.wallet_user: ~5 rows (aproximadamente)
+-- Volcando datos para la tabla cripto_bd.wallet_user: ~0 rows (aproximadamente)
 /*!40000 ALTER TABLE `wallet_user` DISABLE KEYS */;
 REPLACE INTO `wallet_user` (`ID_wallet_user`, `ID_user`, `balance`, `OS_balance`) VALUES
 	(1, 40, 0, 0),
 	(2, 37, 8000, 100),
 	(3, 38, 67, 100),
-	(4, 31, 7196, 600),
+	(4, 31, 90235, -61695),
 	(6, 43, 0, 0),
-	(7, 44, 0, 0);
+	(7, 44, 0, 0),
+	(8, 0, 0, 0);
 /*!40000 ALTER TABLE `wallet_user` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
