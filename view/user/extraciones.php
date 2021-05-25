@@ -43,7 +43,7 @@
             <div class="row justify-content-center mt-4">
                 <div class="col-11">   
                     <div class="row">
-                        <h5>Mis extraciones</h5>
+                        <h5>Extraciones</h5>
                     </div>
                     <div class="card">
                         <div class="card-body mt-3 mb-3 ">
@@ -139,11 +139,12 @@
         scrollY: 200,
         scrollX: true
       });
-    $( document ).ready(function() {
-      $("#navMisOp").addClass("activo")
-      $(".submenu-misOp").css("display", "block")
-      $("#extraciones").css("font-weight", "bold")
+    
 
+    $( document ).ready(function() {
+      $("#navOperaciones").addClass("activo")
+      $(".submenu-operaciones").css("display", "block")
+      $("#extraciones").css("font-weight", "bold")
     });
 
     function navPerfil(){
