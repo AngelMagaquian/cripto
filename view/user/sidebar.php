@@ -32,10 +32,13 @@
         <div class="submenu submenu-operaciones">
           <ul>
             <li>
-              <a href="venta.php" id="ventaOpera">Venta</a>
+              <a href="venta.php" id="ventaOpera">Compra / Venta</a>
             </li>
             <li>
               <a href="depositosOperaciones.php" id="compraOpera">Depositos</a>
+            </li>
+            <li>
+              <a href="extraciones.php" id="extraciones">Extraciones</a>
             </li>
           </ul>
         </div>
@@ -53,9 +56,6 @@
             </li>
             <li>
               <a href="transacciones.php" id="transacciones">Transacciones</a>
-            </li>
-            <li>
-              <a href="extraciones.php" id="extraciones">Extraciones</a>
             </li>
             <li>
               <a href="misExtraciones.php" id="misExtraciones">Mis extraciones</a>
