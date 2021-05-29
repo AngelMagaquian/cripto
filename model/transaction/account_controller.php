@@ -4,7 +4,7 @@
         include("../system/conexion.php");
 
         $id_user = $_SESSION['id_user'];
-        $CBU = $_SESSION['data'];
+        $CBU = $_POST['data'];
 
         $consulta="SELECT check_account FROM account WHERE CBU = '$CBU' AND ID_user = $id_user";
 

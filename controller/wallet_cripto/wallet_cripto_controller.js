@@ -57,7 +57,7 @@ $(function(){
         });
     }
 
- 
+    
 
     $('#add_wallet').submit(function(e){
         e.preventDefault();
@@ -99,6 +99,64 @@ $(function(){
             $('#description_cripto_wallet').val('');
         }
     });
+
+
+    $('#solicitud_wallet').click(function(e){
+        e.preventDefault();
+        console.log('modal solicitud wallet');
+        get_data('../../model/operation/divisas.php').then(response => {
+            // En este punto recibimos la respuesta.
+            
+            let data = JSON.parse(response); 
+            
+            let template=``;
+            data.forEach(dato =>{
+                   template += `
+                   <option value='${dato.ID_cripto}'>${dato.name} (${dato.description})</option>
+                   `;
+            })
+            
+            $('#select_cripto').html(template);
+
+            
+        })
+        .catch(error => {
+            console.log('error: '+error);
+        });
+
+    })
+
+    $('#finalizar').submit(function(e){
+        e.preventDefault();
+        var confirmation = confirm('¿Desea solicitar esta wallet?');
+        if(confirmation == true){
+            const postData ={
+                id_cripto: $('#select_cripto').val()
+            }
+            $.ajax({
+                url: '../../model/wallet_cripto/new_solicitud_wallet.php',
+                type: 'POST',
+                data: postData,
+                success: function(response) {
+                  //const json = JSON.parse(response);
+                  console.log(response);
+                  if(response == 1){
+                    alert('Solicitud enviada correctamente');
+                    
+                  }else{
+                    console.log('Ocurrio un error, intente mas tarde');
+                  }
+                   
+                },
+                error: function(error) {
+                    
+                  // "Marcamos" la Promise con error.
+                  console.log(error);
+                }
+              });
+        }
+        
+    })
 
     
 });

@@ -116,7 +116,7 @@
   ?>
 
   <!--Controllers-->
-  <script src="..\..\..\controller\admin\new_bank_admin_controller.js" type="module" ></script>
+  <script src="..\..\controller\admin\new_bank_admin_controller.js" type="module" ></script>
 
   <!-- Menu Toggle Script -->
   <script>

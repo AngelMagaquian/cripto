@@ -18,7 +18,7 @@
 <header>
   <nav class="navbar navbar-expand-lg ">
     <div class="container-fluid">
-      <a class="navbar-brand p-0" href="../../index.php"><img src="../asset/img/logo.png" alt="" class="logo"></a>
+      <a class="navbar-brand p-0" href="../../index.php"><img src="../asset/img/logo_home.png" alt="" class="logo"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon">
           <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#031D5A" class="bi bi-list" viewBox="0 0 16 16">
@@ -62,7 +62,7 @@
         
       </div>
     </div>
-    <div class="row justify-content-md-between justify-content-center mt-5">
+    <div class="row justify-content-md-between justify-content-center">
   <!--btc-->
       <div class="col-lg-4 col-md-5 col-sm-8 col-11">
         <div class="row">
@@ -221,7 +221,10 @@
 
 
 </div>
-    <svg class="hero-waves-nosotros" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28 " preserveAspectRatio="none">
+
+
+</section>
+<svg class="hero-waves-nosotros" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28 " preserveAspectRatio="none">
       <defs>
         <path id="wave-path" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z">
       </defs>
@@ -235,8 +238,6 @@
         <use xlink:href="#wave-path" x="50" y="9" fill="#fff">
       </g>
     </svg>
-
-</section>
 <!-- End Hero -->
 
 <!--tips-->

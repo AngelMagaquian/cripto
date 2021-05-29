@@ -55,14 +55,14 @@
                                     <thead>
                                         <tr>
                                             <th>Id extración</th>
-                                            <th>Userio</th> 
+                                            <th>Usuario</th> 
                                             <th>Fecha</th>
                                             <th>Cuenta</th>   
                                             <th>Importe</th> 
                                             <th>Confirmación</th>
                                         </tr>
                                     </thead>
-                                    <tbody>
+                                    <tbody id="tb_extracciones">
                                         <tr>
                                             <td></td>
                                             <td></td>
@@ -101,7 +101,7 @@
   <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
   <script src="https://cdn.datatables.net/1.10.24/js/dataTables.bootstrap5.min.js"></script>
   <!--Controllers-->
-  <script src="..\..\..\controller\admin\transactions_controller_admin.js" type="module" ></script>
+  <script src="..\..\controller\admin\confirm_extracciones.js" type="module" ></script>
 
   <!-- Menu Toggle Script -->
   <script>

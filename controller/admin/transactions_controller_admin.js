@@ -8,7 +8,7 @@ $(function(){
     });
 
     function all_trans(){
-        get_data('../../../model/transaction/pending_trans.php').then(response => {
+        get_data('../../model/transaction/pending_trans.php').then(response => {
             // En este punto recibimos la respuesta.
             console.log(response);
             let data = JSON.parse(response); 
@@ -28,7 +28,7 @@ $(function(){
                         <td>Trans #${dato.id_op}</td>
                         <td>${dato.date_hour}</td>
                         <td><b>${dato.type}</b></td>
-                        <td>(${dato.cripto_name})  <b>${dato.cripto_amount} </b></td>
+                        <td><b>${dato.cripto_amount} </b> - (${dato.cripto_name})  </td>
                         <td>$${dato.pesos_amount}</td>
                         <td>${dato.id_wallet_cripto}</td>
                         <td>
@@ -65,7 +65,7 @@ $(function(){
             id_trans: post_id_trnas,
             conf: post_conf
         }
-        $.post('../../../model/transaction/confirm_operation.php', postData).then(response => {
+        $.post('../../model/transaction/confirm_operation.php', postData).then(response => {
             // En este punto recibimos la respuesta.
             console.log(response);
             if(response == 1){

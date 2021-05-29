@@ -54,17 +54,13 @@
                                       <table id="walletUserTable" class="table table-striped table-bordered" style="width:100%">
                                           <thead>
                                               <tr>
-                                                  <th>Id user</th>
-                                                  <th>DNI</th>      
-                                                  <th>CUIL</th>
-                                                  <th>Nombre</th>   
-                                                  <th>Apellido</th> 
-                                                  <th>Email</th>     
-                                                  <th>Balance</th>
-                                                  <th>Saldo pendiente</th>
+                                                  <th>Solicitud</th>
+                                                  <th>Usuario</th>   
+                                                  <th>ID usurario</th>        
+                                                  <th>Criptomoneda</th>
                                               </tr>
                                           </thead>
-                                          <tbody id="">
+                                          <tbody id="twallet">
                                               
                                           </tbody>
                                       </table>
@@ -74,16 +70,21 @@
                             <div class="card mt-4 mb-2">
                                 <div class="card-body">
 
-                                    <form id="add_wallet" action="">
+                                    <form id="add_wallet" >
                                         <div class="row justify-content-around">
                                             <div class="col-5">
-                                                <label for="">Id wallet</label>
-                                                
+                                                        <label for="">Solicitud</label>
+                                                        <input type="text" id="id_pending" class="form-control form-login" placeholder="Escribir el ID de la solicitud sin '#'" autocomplete="off" required/>
+                                                        </br>
+                                                        <label for="">Id usuario</label>
+                                                        <input type="text" id="id_user" class="form-control form-login" placeholder="Escribir el ID del usuario" autocomplete="off" required/>
+                                                        </br>
+                                                        <label for="">Id wallet</label>
                                                         </br>
                                                         <input type="text" id="wallet_id" class="form-control form-login" placeholder="Escribir el código de la wallet" autocomplete="off" required/>
                                                         </br>
                                                         <label>Descripción de wallet</label>
-                                                        <input type="text" id="description_cripto_wallet" class="form-control form-login" placeholder="Escribir la descripción de la wallet" required/>
+                                                        <input type="text" id="description_cripto_wallet" class="form-control form-login" placeholder="Escribir la descripción de la wallet" autocomplete="off" required/>
                                                     
                                             </div>
                                             <div class="col-5">
@@ -124,7 +125,7 @@
   <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
   <script src="https://cdn.datatables.net/1.10.24/js/dataTables.bootstrap5.min.js"></script>
   <!--Controllers-->
-  <script src="..\..\controller\admin\user_info_controller_admin.js" type="module" ></script>
+  
   <script src="..\..\controller\admin\new_wallet_controller_admin.js" type="module" ></script>
 
   <!-- Menu Toggle Script -->

@@ -20,7 +20,7 @@
 <header>
   <nav class="navbar navbar-expand-lg ">
     <div class="container-fluid">
-      <a class="navbar-brand p-0" href="../../index.php"><img src="../asset/img/logo.png" alt="" class="logo"></a>
+      <a class="navbar-brand p-0" href="../../index.php"><img src="../asset/img/logo_home.png" alt="" class="logo"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon">
           <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#031D5A" class="bi bi-list" viewBox="0 0 16 16">
@@ -63,135 +63,135 @@
         
       </div>
     </div>
-    <div class="row justify-content-md-between justify-content-center mt-5">
-  <!--btc-->
-      <div class="col-lg-4 col-md-5 col-sm-8 col-11">
-        <div class="row">
-          <div class="img-cripto col-lg-3 col-md-4 col-sm-3 col-3">
-            <img src="../asset/img/btc.png" alt="Bitcoin">
-          </div>
-          <div class="col-lg-9 col-md-8 col-sm-9 col-9  cotizacion">
-              <h4><b>bitcoin <span>(btc)</span></b></h4>
-
-              <div class="row">
-
-                <div class="col-lg-5 col-6 compra">
-                  <h5>Compra</h5>
-                  <span>$ 7004262.5</span>
-                </div>
-
-                <div class="col-lg-5 col-6 compra">
-                  <h5>Venta</h5>
-                  <span>$ 7004262.5</span>
-                </div>
+    <div class="row justify-content-md-between justify-content-center">
+      <!--btc-->
+          <!-- <div class="col-lg-4 col-md-5 col-sm-8 col-11">
+            <div class="row">
+              <div class="img-cripto col-lg-3 col-md-4 col-sm-3 col-3">
+                <img src="../asset/img/btc.png" alt="Bitcoin">
               </div>
-          </div>
-        </div>
-      </div>
+              <div class="col-lg-9 col-md-8 col-sm-9 col-9  cotizacion">
+                  <h4><b>bitcoin <span>(btc)</span></b></h4>
 
-  <!--eth-->
-      <div class="col-lg-4 col-md-5 col-sm-8 col-11 mt-md-0 mt-5">
-        <div class="row">
-          <div class="img-cripto col-lg-3 col-md-4 col-sm-3 col-3">
-            <img src="../asset/img/eth.png" alt="Ethereum">
-          </div>
-          <div class="col-lg-9 col-md-8 col-sm-9 col-9 cotizacion">
-            
-              <h4><b>ethereum <span>(eth)</span></b></h4>
+                  <div class="row">
 
-              <div class="row">
+                    <div class="col-lg-5 col-6 compra">
+                      <h5>Compra</h5>
+                      <span>$ 7004262.5</span>
+                    </div>
 
-                <div class="col-lg-5 col-6 compra">
-                  <h5>Compra</h5>
-                  <span>$ 7004262.5</span>
-                </div>
-
-                <div class="col-lg-5 col-6 compra">
-                  <h5>Venta</h5>
-                  <span>$ 7004262.5</span>
-                </div>
+                    <div class="col-lg-5 col-6 compra">
+                      <h5>Venta</h5>
+                      <span>$ 7004262.5</span>
+                    </div>
+                  </div>
               </div>
-          </div>
-        </div>
-      </div>
+            </div>
+          </div> -->
 
-  <!--usdt-->
-      <div class="col-lg-4 col-md-5 col-sm-8 col-11 mt-lg-0 mt-5">
-        <div class="row justify-content-center">
-          <div class="img-cripto col-lg-3 col-md-4 col-sm-3 col-3">
-            <img src="../asset/img/usdt.png" alt="Tether">
-          </div>
-          <div class="col-lg-9 col-md-8 col-sm-9 col-9 cotizacion">
-              <h4><b>tether <span>(usdt)</span></b></h4>
-
-              <div class="row">
-
-                <div class="col-lg-5 col-6 compra">
-                  <h5>Compra</h5>
-                  <span>$ 7004262.5</span>
-                </div>
-
-                <div class="col-lg-5 col-6 compra">
-                  <h5>Venta</h5>
-                  <span>$ 7004262.5</span>
-                </div>
+      <!--eth-->
+          <!-- <div class="col-lg-4 col-md-5 col-sm-8 col-11 mt-md-0 mt-5">
+            <div class="row">
+              <div class="img-cripto col-lg-3 col-md-4 col-sm-3 col-3">
+                <img src="../asset/img/eth.png" alt="Ethereum">
               </div>
-          </div>
-        </div>
-      </div>
+              <div class="col-lg-9 col-md-8 col-sm-9 col-9 cotizacion">
+                
+                  <h4><b>ethereum <span>(eth)</span></b></h4>
 
-  <!--dai-->
-      <div class="col-lg-4 col-md-5 col-sm-8 col-11 mt-5">
-        <div class="row">
-          <div class="img-cripto col-lg-3 col-md-4 col-sm-3 col-3">
-            <img src="../asset/img/dai.png" alt="Dai">
-          </div>
-          <div class="col-lg-9 col-md-8 col-sm-9 col-9 cotizacion">
-              <h4><b>dai <span>(dai)</span></b></h4>
+                  <div class="row">
 
-              <div class="row">
+                    <div class="col-lg-5 col-6 compra">
+                      <h5>Compra</h5>
+                      <span>$ 7004262.5</span>
+                    </div>
 
-                <div class="col-lg-5 col-6 compra">
-                  <h5>Compra</h5>
-                  <span>$ 7004262.5</span>
-                </div>
-
-                <div class="col-lg-5 col-6 compra">
-                  <h5>Venta</h5>
-                  <span>$ 7004262.5</span>
-                </div>
+                    <div class="col-lg-5 col-6 compra">
+                      <h5>Venta</h5>
+                      <span>$ 7004262.5</span>
+                    </div>
+                  </div>
               </div>
-          </div>
-        </div>
-      </div>
+            </div>
+          </div> -->
 
-  <!--link-->
-      <div class="col-lg-4 col-md-5 col-sm-8 col-11 mt-5">
-        <div class="row">
-          <div class="img-cripto col-lg-3 col-md-4 col-sm-3 col-3">
-            <img src="../asset/img/link.png" alt="Chainlink">
-          </div>
-          <div class="col-lg-9 col-md-8 col-sm-9 col-9 cotizacion">
-              <h4><b>chainlink <span>(link)</span></b></h4>
-
-              <div class="row">
-
-                <div class="col-lg-5 col-6 compra">
-                  <h5>Compra</h5>
-                  <span>$ 7004262.5</span>
-                </div>
-
-                <div class="col-lg-5 col-6 compra">
-                  <h5>Venta</h5>
-                  <span>$ 7004262.5</span>
-                </div>
+      <!--usdt-->
+          <!-- <div class="col-lg-4 col-md-5 col-sm-8 col-11 mt-lg-0 mt-5">
+            <div class="row justify-content-center">
+              <div class="img-cripto col-lg-3 col-md-4 col-sm-3 col-3">
+                <img src="../asset/img/usdt.png" alt="Tether">
               </div>
-          </div>
-        </div>
-      </div>
+              <div class="col-lg-9 col-md-8 col-sm-9 col-9 cotizacion">
+                  <h4><b>tether <span>(usdt)</span></b></h4>
 
-  <!--xrp-->
-      <div class="col-lg-4 col-md-5 col-sm-8 col-11  mt-5">
+                  <div class="row">
+
+                    <div class="col-lg-5 col-6 compra">
+                      <h5>Compra</h5>
+                      <span>$ 7004262.5</span>
+                    </div>
+
+                    <div class="col-lg-5 col-6 compra">
+                      <h5>Venta</h5>
+                      <span>$ 7004262.5</span>
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div> -->
+
+      <!--dai-->
+          <!-- <div class="col-lg-4 col-md-5 col-sm-8 col-11 mt-5">
+            <div class="row">
+              <div class="img-cripto col-lg-3 col-md-4 col-sm-3 col-3">
+                <img src="../asset/img/dai.png" alt="Dai">
+              </div>
+              <div class="col-lg-9 col-md-8 col-sm-9 col-9 cotizacion">
+                  <h4><b>dai <span>(dai)</span></b></h4>
+
+                  <div class="row">
+
+                    <div class="col-lg-5 col-6 compra">
+                      <h5>Compra</h5>
+                      <span>$ 7004262.5</span>
+                    </div>
+
+                    <div class="col-lg-5 col-6 compra">
+                      <h5>Venta</h5>
+                      <span>$ 7004262.5</span>
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div> -->
+
+      <!--link-->
+          <!-- <div class="col-lg-4 col-md-5 col-sm-8 col-11 mt-5">
+            <div class="row">
+              <div class="img-cripto col-lg-3 col-md-4 col-sm-3 col-3">
+                <img src="../asset/img/link.png" alt="Chainlink">
+              </div>
+              <div class="col-lg-9 col-md-8 col-sm-9 col-9 cotizacion">
+                  <h4><b>chainlink <span>(link)</span></b></h4>
+
+                  <div class="row">
+
+                    <div class="col-lg-5 col-6 compra">
+                      <h5>Compra</h5>
+                      <span>$ 7004262.5</span>
+                    </div>
+
+                    <div class="col-lg-5 col-6 compra">
+                      <h5>Venta</h5>
+                      <span>$ 7004262.5</span>
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div> -->
+
+      <!--xrp-->
+      <!-- <div class="col-lg-4 col-md-5 col-sm-8 col-11  mt-5">
         <div class="row justify-content-center">
           <div class="img-cripto col-lg-3 col-md-4 col-sm-3 col-3">
             <img src="../asset/img/xrp.png" alt="Tether">
@@ -213,8 +213,10 @@
               </div>
           </div>
         </div>
-      </div>
+      </div> -->
 
+      <?php include('../user/cripto_table.php');?>
+    
 
     </div>
 
@@ -222,7 +224,9 @@
 
 
 </div>
-    <svg class="hero-waves-nosotros" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28 " preserveAspectRatio="none">
+
+</section><!-- End Hero -->
+<svg class="hero-waves-nosotros" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28 " preserveAspectRatio="none">
       <defs>
         <path id="wave-path" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z">
       </defs>
@@ -236,8 +240,6 @@
         <use xlink:href="#wave-path" x="50" y="9" fill="#fff">
       </g>
     </svg>
-
-</section><!-- End Hero -->
 
 <!--tips-->
 <!--tips-->

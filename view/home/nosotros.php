@@ -20,7 +20,7 @@
 <header>
   <nav class="navbar navbar-expand-lg ">
     <div class="container-fluid">
-      <a class="navbar-brand p-0" href="../../index.php"><img src="../asset/img/logo.png" alt="" class="logo"></a>
+      <a class="navbar-brand p-0" href="../../index.php"><img src="../asset/img/logo_home.png" alt="" class="logo"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon">
           <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#031D5A" class="bi bi-list" viewBox="0 0 16 16">
