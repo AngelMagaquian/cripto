@@ -23,11 +23,9 @@ function insertaImagen($id_user,$tipo_imagen){
 	if($_FILES[$tipo_imagen]["size"] > 33000003008000)
 		return;
 
-	$dia = date("d");
-	$mes = date("m");
-	$anio = date("Y");
 
-	$targetDir = "img/$anio/$mes/$dia/";
+
+	$targetDir = "img/";
 
 	@rmdir($targetDir);
 
@@ -40,7 +38,7 @@ function insertaImagen($id_user,$tipo_imagen){
 	$file_name = $token.'.'.$extension;
 
 	$add = $targetDir.$file_name;
-	$db_url_img = "$anio/$mes/$dia/$file_name";
+	$db_url_img = "$file_name";
 	echo "antes de if";
 	if(move_uploaded_file($_FILES[$tipo_imagen]["tmp_name"],$add)){
 		$sql = "UPDATE photo_user SET $tipo_imagen = '$db_url_img' WHERE id_user = $id_user";

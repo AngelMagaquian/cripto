@@ -8,7 +8,7 @@
         $cripto =$_POST['data'];
         
 
-        $query_wallet="SELECT w.id_wallet_cripto AS id_wallet_cripto, w.id_cripto, w.id_user AS id_user, w.wallet_name AS wallet_name, c.cripto_name,c.ID_cripto
+        $query_wallet="SELECT w.id_wallet_cripto AS id_wallet_cripto, w.id_cripto, w.id_user AS id_user, w.wallet_name AS wallet_name, c.cripto_name, c.ID_cripto
                     FROM wallet_cripto w
                     INNER JOIN cripto c ON w.id_cripto = c.ID_cripto
                     WHERE c.cripto_name = '$cripto'

@@ -27,8 +27,9 @@ $(function(){
         }else{
             get_data('../../model/transaction/trans_controller.php').then(response =>{
                 if(response==1){
-                    post_data('../../model/transaction/account_controller.php', $('#bank_account').val()).then(response =>{
-        
+                    let bank_account = $('#bank_account').val();
+                    post_data('../../model/transaction/account_controller.php', bank_account ).then(response =>{
+                        console.log(response);
                         if(response == 1){
                             var opcion = confirm('¿Desea confirmar la operación?');
                             if (opcion == true) {
@@ -91,15 +92,17 @@ $(function(){
             // En este punto recibimos la respuesta.
 
             let data = JSON.parse(response); 
-        
+         
             let template =`<option value="0">Mis Cuentas</option>`;
-            if(data.check_account == 1){
+            
                 data.forEach(dato => {
+                    if(dato.check_account == '1'){
                     template+=`
                         <option value="${dato.CBU}">${dato.bank} - ${dato.CBU}</option>
                     `;
+                    }
                 }); 
-            }
+            
             
 
             $('#bank_account').html(template);

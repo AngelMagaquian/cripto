@@ -1,7 +1,7 @@
 import { get_data } from "../app/get_data.js";
 import { post_data } from "../app/post_data.js";
 $(function() {
-    console.log('DNI Controller');
+    console.log('Confirm Account Controller');
 
     $(document).ready(function() {
         //dejar todo el form en blanco
@@ -20,10 +20,10 @@ $(function() {
 
 
     function account_table() {
-        get_data('../../../model/datos_bancarios/get_all_account.php').then(response => {
+        get_data('../../model/datos_bancarios/get_all_account.php').then(response => {
                 // En este punto recibimos la respuesta.
                 let template = ``;
-                console.log(response);
+          
                 if(response == 0){
                     template = `
                     <tr>
@@ -91,7 +91,7 @@ $(function() {
             CBU: post_CBU,
             conf: post_conf
         }
-        $.post('../../../model/datos_bancarios/confirm_account.php', postData).then(response => {
+        $.post('../../model/datos_bancarios/confirm_account.php', postData).then(response => {
             // En este punto recibimos la respuesta.
             console.log(response);
             if(response == 1){

@@ -16,7 +16,7 @@ $(function(){
         var dni = $('#dni_search_wc').val();
         
 
-        post_data('../../../model/user/DNI_search.php', dni).then(response => {
+        post_data('../../model/user/DNI_search.php', dni).then(response => {
             // En este punto recibimos la respuesta.
             data = JSON.parse(response); 
                 console.log(data);
@@ -44,7 +44,7 @@ $(function(){
 
 
     function divisas(){
-        get_data('../../../model/operation/divisas.php').then(response => {
+        get_data('../../model/operation/divisas.php').then(response => {
             // En este punto recibimos la respuesta.
             let divisa = JSON.parse(response); 
             
@@ -71,14 +71,14 @@ $(function(){
         auto_complete_desc();
     });
       
-    function auto_complete_desc(){
+   /*  function auto_complete_desc(){
         
         var user_name= $('#name_wc').val();
         var line = $('#divisa option:selected').text();
         var cad = 'Wallet '+ line + ' ' + user_name;
         
         $('#description_cripto_wallet').val(cad);
-    }
+    } */
 
 
     function default_form(){
@@ -90,6 +90,32 @@ $(function(){
         $('#CUIL_wc').val('');
         $('#email_wc').val('');
         divisas();
+        table();
+    }
+
+    function table(){
+        get_data('../../model/wallet_cripto/pending_wallet.php').then(response => {
+            // En este punto recibimos la respuesta.
+            let dato = JSON.parse(response); 
+            console.log(response);
+            let template=``;
+            dato.forEach(data =>{
+                   template += `
+                        <tr>
+                            <td>#${data.ID_pending}</td>
+                            <td>${data.user_name}</td>
+                            <td>${data.ID_user}</td>
+                            <td>${data.cripto_name}</td>
+                        </tr>
+                   `;
+            })
+            $('#twallet').html(template);
+
+            
+        })
+        .catch(error => {
+            console.log('error: '+error);
+        });
     }
 
 
@@ -97,19 +123,21 @@ $(function(){
 
     $('#add_wallet').submit(function(e){
         e.preventDefault();
-        
+
+
         var confirmation_wallet = confirm('¿Desea agregar esta wallet? Recuerde revisar los datos');
         if(confirmation_wallet == true){
                 let postData ={
-                    id_user : data.ID_user,
+                    id_user : $('#id_user').val(),
                     id_cripto_wallet: $('#wallet_id').val(),
                     description_cripto_alias: $('#description_cripto_wallet').val(),
-                    id_cripto: $('#divisa').val()
+                    id_cripto: $('#divisa').val(),
+                    id_pending: $('#id_pending').val()
                 }
                 console.log(postData);
                 
                 $.ajax({
-                    url: '../../../model/wallet_cripto/new_wallet_cripto.php',
+                    url: '../../model/wallet_cripto/new_wallet_cripto.php',
                     type: 'POST',
                     data: postData,
                     success: function(response) {

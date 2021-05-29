@@ -56,13 +56,13 @@
                                         <tr>
                                             <th>Id user</th>
                                             <th>User</th>
-                                            <th>DNI</th>    
-                                            <th>Id tranferencia</th>  
-                                            <th>Fecha</th>
-                                            <th>Operación</th>   
-                                            <th>Criptomoneda</th> 
-                                            <th>Pesos</th>   
-                                            <th>Wallet</th> 
+                                            <th>CUIL</th>    
+                                            <th>Alias</th>  
+                                            <th>Banco</th>
+                                            <th>Id deposito</th>   
+                                            <th>CBU</th> 
+                                            <th>Fecha</th>   
+                                            <th>Monto</th> 
                                             <th>Confirmación</th>
                                         </tr>
                                     </thead>
@@ -97,6 +97,42 @@
 
       </section>
 
+       <!-- Modal
+
+                           -->
+                           <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                              <div class="modal-content">
+                                <div class="modal-header" style="color: #385BA2; background-color: rgba(0, 0, 0, 0.03);">
+                                  <h5 class="modal-title" id="exampleModalLabel">Descripción de cancelación</h5>
+                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="border: none;background: transparent;">
+                                    <span aria-hidden="true">&times;</span>
+                                  </button>
+                                </div>
+                                <div class="modal-body">
+                                  <div class="row">
+                                  
+                                    <div class="col-12 form-group mb-4">
+                                      <label for="">Escriba el motivo de la cancelación del deposito</label>
+                                      <div class="card-footer text-muted">
+                                        <textarea id="text_issue"  rows="4" cols="50"></textarea>
+                                      </div>
+                                    </div>
+                                  
+                                    
+                                    <div class="col-12 form-group text-right">
+                                      <form id="finalizar">
+                                        <input type="submit" value="Finalizar" class="btn btn-sm btn-get-started-agg  btn-agg">
+                                      </form>
+                                    </div>
+                                  </div>
+                                  
+                                </div>
+                                
+                              </div>
+                            </div>
+                          </div>
+
 
       <!--FIN DE VISTA-->
 
@@ -113,7 +149,8 @@
   <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
   <script src="https://cdn.datatables.net/1.10.24/js/dataTables.bootstrap5.min.js"></script>
   <!--Controllers-->
-  <script src="..\..\..\controller\admin\transactions_controller_admin.js" type="module" ></script>
+  <script src="..\..\controller\admin\confirm_deposit_controller_admin.js" type="module" ></script>
+  <script src="..\..\controller\admin\modal_cancel_deposit.js" type="module" ></script>
 
   <!-- Menu Toggle Script -->
   <script>

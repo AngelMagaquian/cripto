@@ -49,22 +49,22 @@
                         <div class="card-body mt-3 mb-3 ">
 
                             <div class=" mt-4">
-                            <form action="" id="extraciones" class="row justify-content-center">
+                            <form id="new_extraccion" class="row justify-content-center">
                               <div class="col-md-5 col-12 mt-3">
-                                  <label><b>Seleciones la cuenta a tranferir</b></label>
-                                  <select name="" id="" class="form-control form-select"></select>
+                                  <label><b>SELECCIONE LA CUENTA DE BANCO PARA TRANSFERIR</b></label>
+                                  <select name="" id="bank_account" class="form-control form-select"></select>
                               </div>
                               <div class="col-md-5 col-12 mt-3">
-                                <label><b>Saldo actual</b></label>
-                                <input type="text" class="form-control form-login"   id="saldo" placeholder="" disable readonly>
+                                <label><b>SALDO ACTUAL</b></label>
+                               <input type="text" class="form-control form-login"   id="saldo_actual" placeholder="" disable readonly>
                               </div>
                               <div class="col-md-5 col-12 mt-3">
-                                <label><b>Ingrese monto a extraer</b></label>
-                                <input type="number" class="form-control form-login"   id="extracion">
+                                <label><b>INGRESE EL MONTO A EXTRAER</b></label>
+                                <input type="number" class="form-control form-login"   id="importe">
                               </div>
                               <div class="col-md-5 col-12 mt-3">
-                                <label><b>Saldo actual</b></label>
-                                <input type="text" class="form-control form-login form-number"   id="proyectado" placeholder="" disable readonly>
+                                <label><b>PROYECTADO</b></label>
+                                <input type="text" class="form-control form-login form-number"   id="saldo_proyectado" placeholder="" disable readonly>
                               </div>
                               <div class="col-12 mt-3" style="text-align: end;">
                                 <input type="submit" value="Confirmar" class="btn-get-started-extracciones btn-extraciones">
@@ -91,7 +91,7 @@
   include 'head.php';
   ?>
   <!--Controllers-->
-  <script src="..\..\controller\operation\operation_controller.js" type="module" ></script> <!--no eliminar-->
+  <script src="..\..\controller\operation\extracciones_controller.js" type="module" ></script> <!--no eliminar-->
 
   <script src="https://code.jquery.com/jquery-3.5.1.js"></script> <!--no eliminar-->
   <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
