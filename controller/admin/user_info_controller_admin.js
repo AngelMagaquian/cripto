@@ -40,13 +40,14 @@ $(function(){
                         template +=`
                         <tr>
                             <td>${dato.ID_user}</td>
-                            <td>${dato.DNI}</td>
-                            <td>${dato.CUIL}</td>
-                            <td>${name}</td>
-                            <td>${last_name}</td>
-                            <td>${dato.email}</td>
-                            <td>$${dato.balance}</td>
-                            <td>$${dato.OS_balance}</td>
+                            <td>${name} ${last_name}</td>
+                            <td>CONFIRMADO</td>
+                            <td><a href="" class="btn btn-dark btn-get-started  btn-siguiente mr-2 mt-sm-0 mt-3" type="button" data-toggle="modal" data-target="#modalFichaUsuario" id="modal_show_button">ver más</a></td>
+                            <td><a href="" class="btn btn-dark btn-get-started  btn-siguiente mr-2 mt-sm-0 mt-3" type="button" data-toggle="modal" data-target="#modaDatosBancarios" id="modal_show_button">ver más</a></td>
+                            <td><a href="" class="btn btn-dark btn-get-started  btn-siguiente mr-2 mt-sm-0 mt-3" type="button" data-toggle="modal" data-target="#modalCripto" id="modal_show_button">ver más</a></td>
+                            <td><a href="" class="btn btn-dark btn-get-started  btn-siguiente mr-2 mt-sm-0 mt-3" type="button" data-toggle="modal" data-target="#modalDeposito" id="modal_show_button">ver más</a></td>
+
+                            
                         <tr>
                     `;
 
