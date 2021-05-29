@@ -51,14 +51,13 @@
                             <table id="datosUserTable" class="table table-striped table-bordered" style="width:100%">
                                 <thead>
                                     <tr>
-                                        <th>Id user</th>
-                                        <th>DNI</th>      
-                                        <th>CUIL</th>
-                                        <th>Nombre</th>   
-                                        <th>Apellido</th> 
-                                        <th>Email</th>     
-                                        <th>Balance</th>
-                                        <th>Saldo pendiente</th>
+                                        <th>Id user</th>    
+                                        <th>Nombre y apellido</th>    
+                                        <th>Estado</th>
+                                        <th>Ficha de usuario</th>
+                                        <th>Datos bancarios</th>
+                                        <th>Operaciones con Cripto</th>
+                                        <th>Depositos y extracciones</th>
                                     </tr>
                                 </thead>
                                 <tbody id="user_data_tbody">

@@ -17,7 +17,7 @@ $(function(){
 
 
     function user_table(){
-        get_data('../../../model/user/all_user_data.php').then(response => {
+        get_data('../../model/user/all_user_data.php').then(response => {
             // En este punto recibimos la respuesta.
             let data = JSON.parse(response); 
             let template=``;
@@ -40,13 +40,13 @@ $(function(){
                         template +=`
                         <tr>
                             <td>${dato.ID_user}</td>
-                            <td>${dato.DNI}</td>
-                            <td>${dato.CUIL}</td>
-                            <td>${name}</td>
-                            <td>${last_name}</td>
-                            <td>${dato.email}</td>
-                            <td>$${dato.balance}</td>
-                            <td>$${dato.OS_balance}</td>
+                            <td>${name} ${last_name}</td>
+                            <td></td>
+                            <td><a href="" class="btn-get-started  btn-siguiente mr-2 mt-sm-0 mt-3" type="button" data-toggle="modal" data-target="#exampleModal" id="modal_show_button">Siguiente</a></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            
                         <tr>
                     `;
 
