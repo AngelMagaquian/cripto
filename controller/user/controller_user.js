@@ -30,30 +30,40 @@ $(function(){
           // En este punto recibimos el error. then() no se ha invocado
          //window.alert('Error al cargar los datos, intente mas tarde');
         });       
+
+
+        get_data('../../model/user/user_data.php').then(response => {
+            
+        })
+        .catch(error => {
+          // En este punto recibimos el error. then() no se ha invocado
+         //window.alert('Error al cargar los datos, intente mas tarde');
+        });       
    
     });
-
+/* 
     $('#from_photo').submit(function(e){
         e.preventDefault();
-        console.log("update pass");
+        console.log("from photo");
         var confirmation = confirm('¿Desea subir esta fotografia?');
         if(confirmation == true){
-            
-            
+            console.log(this.files)
+            var file = this.files;
+            var element;
         } else{
             
-        }
+        } 
         
         
-    });
+    }); */
 
-    $(document).on("change", "#from_photo", function(){
+    /* $(document).on("change", "#from_photo", function(){
         console.log(this.files)
         var file = this.files;
         var element;
 
        //var supportedImages = ['image/jpeg', 'image/png', 'image/gif'];
-    });
+    }); */
 
 });
 

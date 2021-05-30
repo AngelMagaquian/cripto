@@ -69,7 +69,7 @@ $(function(){
     
     $('#conf_yes').click(function(e){
         e.preventDefault();
-        console.log('HOLA PUTO');
+       
     });
     
 
