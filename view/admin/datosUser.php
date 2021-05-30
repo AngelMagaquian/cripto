@@ -40,38 +40,220 @@
       <section id="usuarios">
         <div class="container-fluid">
             <div class="row justify-content-center mt-4">
-
                 <div class="col-11">   
                     <div class="row justify-content-between">
-                    <h5>Datos de usuarios</h5>
-                        </div>
+                      <h5>Datos de usuarios</h5>
+                    </div>
                     <div class="card">
                         <div class="card-body mt-3">
-                        <div class="row mt-4">
-                            <table id="datosUserTable" class="table table-striped table-bordered" style="width:100%">
-                                <thead>
-                                    <tr>
-                                        <th>Id user</th>
-                                        <th>DNI</th>      
-                                        <th>CUIL</th>
-                                        <th>Nombre</th>   
-                                        <th>Apellido</th> 
-                                        <th>Email</th>     
-                                        <th>Balance</th>
-                                        <th>Saldo pendiente</th>
-                                    </tr>
-                                </thead>
-                                <tbody id="user_data_tbody">
-                                    
-                                </tbody>
-                            </table>
-                        </div>
-                            
-                                    
-                            
-                        </div>
-                    </div>
+                          <div class="row mt-4">
+                              <table id="datosUserTable" class="table table-striped table-bordered" style="width:100%">
+                                  <thead>
+                                      <tr>
+                                          <th>Id user</th>    
+                                          <th>Nombre y apellido</th>    
+                                          <th>Estado</th>
+                                          <th>Ficha de usuario</th>
+                                          <th>Datos bancarios</th>
+                                          <th>Operaciones con Cripto</th>
+                                          <th>Depositos y extracciones</th>
+                                      </tr>
+                                  </thead>
+                                  <tbody id="user_data_tbody">
+                                      
+                                  </tbody>
+                              </table>
+                          </div>
+                              
+                          <!-- Modal ficha de usuario -->
+                           <div class="modal fade" id="modalFichaUsuario" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                              <div class="modal-content">
+                                <div class="modal-header" style="color: #385BA2; background-color: rgba(0, 0, 0, 0.03);">
+                                  <h5 class="modal-title" id="exampleModalLabel">Ficha de usuario</h5>
+                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="border: none;background: transparent;">
+                                    <span aria-hidden="true">&times;</span>
+                                  </button>
+                                </div>
+                                <div class="modal-body">
+                                  <div class="row ">
+                                    <div class="col-12 mt-2">
+                                        <label><b>Usuario:</b></label><span class="ml-2">nombrexxx</span>
+                                      </div>
+                                        <div class="col-md-6 col-12 mt-2">
+                                            <label><b>Nombre y apellido</b></label>
+                                            <input type="text" class="form-control form-login" id="name_uc" disabled=»disabled» />
+                                        </div>
+                                        <div class="col-md-6 mt-2">
+                                            <label><b>Email</b></label>
+                                            <input type="text" class="form-control form-login" id="email_uc" disabled=»disabled» />
+                                        </div>
+                                        <div class="col-md-6 col-12 mt-2">
+                                            <label><b>DNI</b></label>
+                                            <input type="text" class="form-control form-login" id="DNI_uc" disabled=»disabled» />
+                                        </div>
+                                        <div class="col-md-6 col-12 mt-2">
+                                            <label><b>CUIL</b></label>
+                                            <input type="text" class="form-control form-login" id="CUIL_uc" disabled=»disabled» />
+                                        </div>
+                                        <div class="col-md-6 col-12 mt-2">
+                                            <label><b>Fecha de nacimiento</b></label>
+                                            <input type="date" class="form-control form-login" id="CUIL_uc" disabled=»disabled» />
+                                        </div>
+                                        <div class="col-md-6 col-12 mt-2">
+                                          <div class="form-check" style="margin-top:45px; padding-left: 1.5em;">
+                                            <input type="checkbox" class="form-check-input" id="exampleCheck1" disabled=»disabled»>
+                                            <label class="form-check-label" for="exampleCheck1">Declaración no ser PEP</label>
+                                          </div>
+                                        </div>
+                                        <div class=" col-4 mt-2 fotoPerfil">
+                                            <label><b>Foto de perfil</b></label>
+                                            <br>
+                                            <div style="width:100%; height: 200px;">
+                                              <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="" width="100%" height="100%" style="object-fit: cover;">
+                                            </div>
+                                        </div>
+                                        <div class=" col-4 mt-2 fotoPerfil">
+                                            <label><b>Foto de perfil</b></label>
+                                            <br>
+                                            <div style="width:100%; height: 200px;">
+                                              <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="" width="100%" height="100%" style="object-fit: cover;">
+                                            </div>
+                                        </div>
+                                        <div class=" col-4 mt-2 fotoPerfil">
+                                            <label><b>Foto de perfil</b></label>
+                                            <br>
+                                            <div style="width:100%; height: 200px;">
+                                              <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="" width="100%" height="100%" style="object-fit: cover;">
+                                            </div>
+                                        </div>
+                                    </div> 
+                                  
+                                </div>
+                                <div class="modal-footer">
+                                  <form id="confirm_user">
+                                        <input type="submit" value="Confirmar usuario" class="btn btn-success"/>
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    </form>
+                                  
+                                </div>                            
+                              </div>
+                            </div>
+                          </div>   
 
+                          <!-- Modal ficha de usuario -->
+                          <div class="modal fade" id="modaDatosBancarios" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                              <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                                <div class="modal-content">
+                                  <div class="modal-header" style="color: #385BA2; background-color: rgba(0, 0, 0, 0.03);">
+                                    <h5 class="modal-title" id="exampleModalLabel">Ficha de usuario</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="border: none;background: transparent;">
+                                      <span aria-hidden="true">&times;</span>
+                                    </button>
+                                  </div>
+                                  <div class="modal-body">
+                                    <div class="row ">
+                                      <div class="col-12 mt-2">
+                                        <label><b>Usuario:</b></label><span class="ml-2">nombrexxx</span>
+                                      </div>
+                                      <table id="modalFichaUs" class="table table-striped table-bordered" style="width:100%">
+                                        <thead>
+                                          <tr>
+                                            <th>Id banco</th>    
+                                            <th>Banco</th>    
+                                            <th>Alias</th>
+                                            <th>CBU</th>
+                                            <th>N° cuenta</th>
+                                            <th>Tipo de cuenta</th>
+                                            <th>Estado</th>
+                                            <th>Confirmación</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody id="user_data_tbody">
+                                              
+                                        </tbody>
+                                      </table>     
+                                    </div> 
+                                    
+                                  </div>
+                                  <div class="modal-footer">
+                                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> 
+                                  </div>                            
+                                </div>
+                              </div>
+                            </div>          
+                              
+                          </div>
+
+                          <!-- Modal ficha de usuario -->
+                          <div class="modal fade" id="modalDeposito" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                              <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                                <div class="modal-content">
+                                  <div class="modal-header" style="color: #385BA2; background-color: rgba(0, 0, 0, 0.03);">
+                                    <h5 class="modal-title" id="exampleModalLabel">Historial de compra y ventas</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="border: none;background: transparent;">
+                                      <span aria-hidden="true">&times;</span>
+                                    </button>
+                                  </div>
+                                  <div class="modal-body">
+                                    <div class="row ">
+                                      <div class="col-12 mt-2">
+                                        <label><b>Usuario:</b></label><span class="ml-2">nombrexxx</span>
+                                      </div>
+
+                                      <div class="col-12 mt-3">
+                                        <label><b>Compras</b></label>
+                                        <table id="modalDepositoCompra" class="table table-striped table-bordered" style="width:100%">
+                                          <thead>
+                                            <tr>
+                                              <th>Id operación</th>    
+                                              <th>Fecha</th>    
+                                              <th>Operación</th>
+                                              <th>Importe cripto</th>
+                                              <th>Cotización</th>
+                                              <th>Total s/comisión</th>
+                                              <th>Comisión</th>
+                                              <th>Total final</th>
+                                            </tr>
+                                          </thead>
+                                          <tbody id="user_data_tbody">
+                                                
+                                          </tbody>
+                                        </table>   
+                                      </div>  
+
+                                      <div class="col-12 mt-3">
+                                        <label><b>Venta</b></label>
+                                        <table id="modalDepositoVenta" class="table table-striped table-bordered" style="width:100%">
+                                          <thead>
+                                            <tr>
+                                              <th>Id operación</th>    
+                                              <th>Fecha</th>    
+                                              <th>Operación</th>
+                                              <th>Importe cripto</th>
+                                              <th>Cotización</th>
+                                              <th>Total s/comisión</th>
+                                              <th>Comisión</th>
+                                              <th>Total final</th>
+                                            </tr>
+                                          </thead>
+                                          <tbody id="user_data_tbody">
+                                                
+                                          </tbody>
+                                        </table>   
+                                      </div>  
+                                    </div> 
+                                    
+                                  </div>
+                                  <div class="modal-footer">
+                                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> 
+                                  </div>                            
+                                </div>
+                              </div>
+                            </div>          
+                              
+                          </div>
+                    </div>
                 </div>
 
             </div>
@@ -165,10 +347,115 @@
             select: true,
             colReorder: true
         },
-        scrollY: 300,
+        scrollY: 500,
         scrollX: true
       });
 
+      $('#modalFichaUs').DataTable({ 
+        responsive: true,
+        paging: false,
+        searching: false,
+        language: {
+            lengthMenu: "Agrupar de MENU ",
+            search: " ",
+            searchPlaceholder: " Buscar",
+            info: "",
+            infoEmpty: " ",
+            infoFiltered: " ",
+            infoPostFix: "",
+            loadingRecords: " ",
+            zeroRecords: "No se encontraron datos con tu busqueda",
+            emptyTable: "No hay datos disponibles en la tabla.",
+            paginate: {
+                first: "Primero",
+                previous: "Ant",
+                next: "Sig",
+                last: "Ultimo"
+            },
+            aria: {
+                sortAscending: ": active para ordenar la columna en orden ascendente",
+                sortDescending: ": active para ordenar la columna en orden descendente"
+            },
+            pageLength: 7,
+            bLengthChange: false,
+            ordering: false,
+            select: true,
+            colReorder: true
+        },
+        scrollY: 400,
+        scrollX: true
+      });
+
+      $('#modalDepositoCompra').DataTable({ 
+        responsive: true,
+        paging: false,
+        searching: false,
+        language: {
+            lengthMenu: "Agrupar de MENU ",
+            search: " ",
+            searchPlaceholder: " Buscar",
+            info: "",
+            infoEmpty: " ",
+            infoFiltered: " ",
+            infoPostFix: "",
+            loadingRecords: " ",
+            zeroRecords: "No se encontraron datos con tu busqueda",
+            emptyTable: "No hay datos disponibles en la tabla.",
+            paginate: {
+                first: "Primero",
+                previous: "Ant",
+                next: "Sig",
+                last: "Ultimo"
+            },
+            aria: {
+                sortAscending: ": active para ordenar la columna en orden ascendente",
+                sortDescending: ": active para ordenar la columna en orden descendente"
+            },
+            pageLength: 7,
+            bLengthChange: false,
+            ordering: false,
+            select: true,
+            colReorder: true
+        },
+        scrollY: 200,
+        scrollX: true
+      });
+
+      $('#modalDepositoVenta').DataTable({ 
+        responsive: true,
+        paging: false,
+        searching: false,
+        language: {
+            lengthMenu: "Agrupar de MENU ",
+            search: " ",
+            searchPlaceholder: " Buscar",
+            info: "",
+            infoEmpty: " ",
+            infoFiltered: " ",
+            infoPostFix: "",
+            loadingRecords: " ",
+            zeroRecords: "No se encontraron datos con tu busqueda",
+            emptyTable: "No hay datos disponibles en la tabla.",
+            paginate: {
+                first: "Primero",
+                previous: "Ant",
+                next: "Sig",
+                last: "Ultimo"
+            },
+            aria: {
+                sortAscending: ": active para ordenar la columna en orden ascendente",
+                sortDescending: ": active para ordenar la columna en orden descendente"
+            },
+            pageLength: 7,
+            bLengthChange: false,
+            ordering: false,
+            select: true,
+            colReorder: true
+        },
+        scrollY: 200,
+        scrollX: true
+      });
+      
   </script>
 
 </body>

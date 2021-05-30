@@ -72,7 +72,48 @@
                                             </form>
                                         </div>
 
-                                        <div class="col-11 mt-5">
+                                        <div class="col-md-6 col-12 mt-5" >
+                                          <div class="card">
+                                              <div class="card-header">
+                                                  <span>Cuenta a depositar</span>
+                                              </div>
+                                              <div class="card-body row justify-content-around">
+                                                <div class="col-md-5 col-12 mt-2">
+                                                    <label><b>Razón social</b></label>
+                                                    <input type="text" class="form-control form-login"  value="BTC Trade SRL" disabled=»disabled»>
+                                                </div>
+                                                <div class="col-md-5 col-12 mt-2">
+                                                    <label><b>CUIT</b></label>
+                                                    <input type="text" class="form-control form-login"  value="30715669478" disabled=»disabled»>
+                                                </div>
+                                                <div class="col-md-5 col-12 mt-2">
+                                                    <label><b>CBU</b></label>
+                                                    <input type="text" class="form-control form-login"  value="3220001805006401160034" disabled=»disabled»>
+                                                </div>
+                                                <div class="col-md-5 col-12 mt-2">
+                                                    <label><b>CBU (segunda opción)</b></label>
+                                                    <input type="text" class="form-control form-login"  value="3220001805006401160034" disabled=»disabled»>
+                                                </div>
+                                                <div class="col-md-5 col-12 mt-2">
+                                                  <label><b>Alias</b></label>
+                                                  <input type="text" class="form-control form-login"  value="BUENBIT.ARS" disabled=»disabled»>
+                                                </div>
+                                                <div class="col-md-5 col-12 mt-2">
+                                                  <label><b>Banco</b></label>
+                                                  <input type="text" class="form-control form-login"  value="Banco Industrial S.A. Sucuarsal 1" disabled=»disabled»>
+                                                </div>
+                                                <div class="col-md-5 col-12 mt-2">
+                                                  <label><b>Cuenta</b></label>
+                                                  <input type="text" class="form-control form-login"  value="Cuenta Corriente 1-640116/3" disabled=»disabled»>
+                                                </div>
+                                                <div class="col-md-5 col-12 mt-2">
+
+                                                </div>
+                                              </div>
+                                              
+                                          </div>
+                                        </div>
+                                        <div class="col-md-6  col-12 mt-5">
                                           <div class="card" style="">
                                             <div class="card-header">
                                               Depositos

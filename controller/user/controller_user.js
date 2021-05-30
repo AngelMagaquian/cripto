@@ -41,8 +41,8 @@ $(function(){
         });       
    
     });
-/* 
-    $('#from_photo').submit(function(e){
+
+    /*$('#from_photo').submit(function(e){
         e.preventDefault();
         console.log("from photo");
         var confirmation = confirm('¿Desea subir esta fotografia?');
@@ -62,8 +62,8 @@ $(function(){
         var file = this.files;
         var element;
 
-       //var supportedImages = ['image/jpeg', 'image/png', 'image/gif'];
-    }); */
+        var supportedImages = ['image/jpeg', 'image/png', 'image/gif'];
+    });*/
 
 });
 
