@@ -78,7 +78,7 @@
                                 <div class="modal-body">
                                   <div class="row ">
                                     <div class="col-12 mt-2">
-                                        <label><b>Usuario:</b></label><span class="ml-2">nombrexxx</span>
+                                        <label><b>Usuario:</b></label><span class="ml-2" id="span_id_user">nombrexxx</span>
                                       </div>
                                         <div class="col-md-6 col-12 mt-2">
                                             <label><b>Nombre y apellido</b></label>
@@ -98,12 +98,18 @@
                                         </div>
                                         <div class="col-md-6 col-12 mt-2">
                                             <label><b>Fecha de nacimiento</b></label>
-                                            <input type="date" class="form-control form-login" id="CUIL_uc" disabled=»disabled» />
+                                            <input type="date" class="form-control form-login" id="bd" disabled=»disabled» />
                                         </div>
                                         <div class="col-md-6 col-12 mt-2">
                                           <div class="form-check" style="margin-top:45px; padding-left: 1.5em;">
-                                            <input type="checkbox" class="form-check-input" id="exampleCheck1" disabled=»disabled»>
-                                            <label class="form-check-label" for="exampleCheck1">Declaración no ser PEP</label>
+                                            <input type="checkbox" class="form-check-input" id="chk_pep" disabled=»disabled»>
+                                            <label class="form-check-label" for="chk_pep">Declaración no ser PEP</label>
+                                            <br>
+                                            <input type="checkbox" class="form-check-input" id="chk_conf" disabled=»disabled»>
+                                            <label class="form-check-label" for="chk_conf">Confirmación de usuario</label>
+                                            <br>
+                                            <input type="checkbox" class="form-check-input" id="chk_email" disabled=»disabled»>
+                                            <label class="form-check-label" for="chk_email">Confirmación de email</label>
                                           </div>
                                         </div>
                                         <div class=" col-4 mt-2 fotoPerfil">
@@ -132,8 +138,8 @@
                                 </div>
                                 <div class="modal-footer">
                                   <form id="confirm_user">
-                                        <input type="submit" value="Confirmar usuario" class="btn btn-success"/>
-                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        <input type="submit" value="Confirmar usuario" class="btn btn-success" id="submit_user"/>
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal" id="close">Close</button>
                                     </form>
                                   
                                 </div>                            
@@ -275,6 +281,7 @@
   <script src="https://cdn.datatables.net/1.10.24/js/dataTables.bootstrap5.min.js"></script>
   <!--Controllers-->
   <script src="..\..\controller\admin\user_info_controller_admin.js" type="module" ></script>
+  <script src="..\..\controller\admin\modal_admin\modal_user_info.js" type="module" ></script>
 
   <!-- Menu Toggle Script -->
   <script>

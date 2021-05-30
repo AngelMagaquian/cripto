@@ -3,9 +3,9 @@
     
     if($_SESSION['type'] == 2){
         include("../system/conexion.php");
-        $dni = $_POST['data'];
+        $id = $_POST['data'];
 
-        $update_user = $conexion -> query("UPDATE user set check_user= 1 WHERE DNI = $dni") or die("Error ". mysqli_error($conexion));
+        $update_user = $conexion -> query("UPDATE user set check_user= 1 WHERE ID_user = $id") or die("Error ". mysqli_error($conexion));
 
         if($update_user){
             echo 1;
