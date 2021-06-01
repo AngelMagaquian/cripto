@@ -113,6 +113,11 @@ $(function(){
             $('#monto_pesos').val('');
             $('#monto_pesos').val($('#ars_value').val());
 
+            console.log($('#id_cripto').val());
+            console.log($('#valor_cripto_sc').val());
+            console.log($('#monto_cripto').val());
+            console.log($('#monto_pesos').val());
+
             
 
             cripto_pesos(data.value);
@@ -142,7 +147,12 @@ $(function(){
 
             $('#monto_pesos').val('');
             $('#monto_pesos').val($('#ars_value').val());
-            
+
+            console.log($('#id_cripto').val());
+            console.log($('#valor_cripto_sc').val());
+            console.log($('#monto_cripto').val());
+            console.log($('#monto_pesos').val());
+
             pesos_cripto(data.value);
             
         })
