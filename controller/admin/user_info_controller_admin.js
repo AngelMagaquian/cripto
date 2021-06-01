@@ -44,7 +44,7 @@ $(function(){
                             <td>${name} ${last_name}</td>
                             <td>${status}</td>
                             <td><a href="" class="btn btn-dark btn-get-started  btn-siguiente mr-2 mt-sm-0 mt-3" type="button" data-toggle="modal" data-target="#modalFichaUsuario" id="modal_ficha_user_show_button" data-id=${dato.ID_user}>ver más</a></td>
-                            <td><a href="" class="btn btn-dark btn-get-started  btn-siguiente mr-2 mt-sm-0 mt-3" type="button" data-toggle="modal" data-target="#modaDatosBancarios" id="modal_show_button">ver más</a></td>
+                            <td><a href="" class="btn btn-dark btn-get-started  btn-siguiente mr-2 mt-sm-0 mt-3" type="button" data-toggle="modal" data-target="#modaDatosBancarios" id="modal_account_show_button" data-id=${dato.ID_user}>ver más</a></td>
                             <td><a href="" class="btn btn-dark btn-get-started  btn-siguiente mr-2 mt-sm-0 mt-3" type="button" data-toggle="modal" data-target="#modalCripto" id="modal_show_button">ver más</a></td>
                             <td><a href="" class="btn btn-dark btn-get-started  btn-siguiente mr-2 mt-sm-0 mt-3" type="button" data-toggle="modal" data-target="#modalDeposito" id="modal_show_button">ver más</a></td>
 
