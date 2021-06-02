@@ -60,11 +60,11 @@
                                 <p>Moneda: <?php echo $_POST['id_cripto'];?>
                                 <p>Operacion: <?php echo $_POST['type_trans']." ".$_POST['id_cripto'];?>
                                 <p>Cantidad: <?php echo $_POST['monto_cripto']." ".$_POST['id_cripto'];?></p>
-                                <p>Pesos:$ <?php echo $_POST['monto_pesos'];?></p>
+                                <p>Pesos: $ <?php echo $_POST['monto_pesos'];?></p>
                                 <p>Cotización: AR$/<?php echo $_POST['id_cripto']." $ ".$_POST['valor_cripto_cc'];?></p>
                                 
                             <br>
-                            <p>Monto final:$ <?php echo $_POST['monto_pesos'];?> </p>
+                            <p>Monto final: $ <?php echo $_POST['monto_pesos'];?> </p>
                             <br>
                             <input type="checkbox" id="declaracion"/> <p for="declaracion">Al continuar declaro bajo juramento que mis fondos no provienen de planes y programas sociales Argentina"</p>
                         </div>

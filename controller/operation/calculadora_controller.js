@@ -118,7 +118,7 @@ $(function(){
         
         post_data('../../model/calculadora/calculadora2.php', cripto).then(response => {
             // En este punto recibimos la respuesta.
-            console.log(response);
+            
             let data = JSON.parse(response); 
             $('#id_cripto').val('');
             $('#id_cripto').val(cripto);

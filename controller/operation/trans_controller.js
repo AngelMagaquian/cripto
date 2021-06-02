@@ -23,6 +23,7 @@ $(function(){
         console.log($('#valor_cripto_sc').val());
         console.log($('#valor_cripto_cc').val());
         console.log($('#comision').val());
+        console.log($('#comision').val());
         console.log($('#monto_pesos').val());
     });
 
