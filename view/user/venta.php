@@ -106,8 +106,9 @@
                                 <input type="text" id="type_trans" name="type_trans" value="" hidden>
                                 <input type="text" id="id_cripto" name="id_cripto" value="" hidden>
                                 <input type="text" id="monto_cripto" name="monto_cripto" value="" hidden>
-                                <input type="text" id="valor_cripto_sc" value="" hidden>
-                                <input type="text" id="comision" value="" hidden>
+                                <input type="text" id="valor_cripto_sc" name="valor_cripto_sc" value="" hidden>
+                                <input type="text" id="valor_cripto_cc" name="valor_cripto_cc" value="" hidden>
+                                <input type="text" id="comision" value="" name="comision" hidden>
                                 <input type="text" id="monto_pesos" name="monto_pesos" value="" hidden>
                               </form>
                               
