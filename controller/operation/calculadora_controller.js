@@ -52,16 +52,20 @@ $(function(){
             controller_compra = true;
             let cripto = $('#cripto_select').val();
             get_cripto_pesos_value(cripto);
+            $('#type_trans').val('');
+            $('#type_trans').val('compra');
         }
         else if (this.value == '2') {
             controller_compra = false;
             console.log('venta');
             let cripto = $('#cripto_select').val();
             get_cripto_pesos_value(cripto);
+            $('#type_trans').val('');
+            $('#type_trans').val('venta');
         }
     });
 
-    $('input[name=operation]').select(function() {
+   /*  $('input[name=operation]').select(function() {
         
         if (this.value == '1') {
             console.log('compra');
@@ -72,7 +76,7 @@ $(function(){
             console.log('venta');
          
         }
-    });
+    }); */
 
 
     $('#cripto_select').change(function(){
@@ -94,11 +98,31 @@ $(function(){
         
         post_data('../../model/calculadora/calculadora2.php', cripto).then(response => {
             // En este punto recibimos la respuesta.
+
             let data = JSON.parse(response); 
-            cripto_pesos(data.value);
+
+            $('#id_cripto').val('');
+            $('#id_cripto').val(cripto);
+
+            $('#valor_cripto_sc').val('');
+            $('#valor_cripto_sc').val(data.value);
+
+            $('#monto_cripto').val('');
+            $('#monto_cripto').val($('#cripto_value').val());
+
+            $('#monto_pesos').val('');
+            $('#monto_pesos').val($('#ars_value').val());
+
+            console.log($('#id_cripto').val());
+            console.log($('#valor_cripto_sc').val());
+            console.log($('#monto_cripto').val());
+            console.log($('#monto_pesos').val());
 
             
 
+            cripto_pesos(data.value);
+
+            /*LLENO LOS input de cripto */
         })
         .catch(error => {
           console.log(error);
@@ -112,6 +136,23 @@ $(function(){
             // En este punto recibimos la respuesta.
             console.log('cripto: '+response);
             let data = JSON.parse(response); 
+            $('#id_cripto').val('');
+            $('#id_cripto').val(cripto);
+
+            $('#valor_cripto_sc').val('');
+            $('#valor_cripto_sc').val(data.value);
+
+            $('#monto_cripto').val('');
+            $('#monto_cripto').val($('#cripto_value').val());
+
+            $('#monto_pesos').val('');
+            $('#monto_pesos').val($('#ars_value').val());
+
+            console.log($('#id_cripto').val());
+            console.log($('#valor_cripto_sc').val());
+            console.log($('#monto_cripto').val());
+            console.log($('#monto_pesos').val());
+
             pesos_cripto(data.value);
             
         })

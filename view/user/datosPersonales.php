@@ -44,19 +44,19 @@
               <div class="col-md-10 col-12">
                 <ul class="nav nav-tabs" id="myTab" role="tablist">
                   <li class="nav-item" role="presentation">
-                    <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Datos personales</button>
+                    <button class="nav-link " id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Datos personales</button>
                   </li>
                   <li class="nav-item" role="presentation">
                     <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Contraseña</button>
                   </li>
                   <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#foto" type="button" role="tab" aria-controls="foto" aria-selected="false">Foto</button>
+                    <button class="nav-link active" id="profile-tab" data-bs-toggle="tab" data-bs-target="#foto" type="button" role="tab" aria-controls="foto" aria-selected="false">Foto</button>
                   </li>
                 </ul>
 
                 
                 <div class="tab-content" id="myTabContent">
-                  <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                  <div class="tab-pane fade " id="home" role="tabpanel" aria-labelledby="home-tab">
                     <div class="row m-0 justify-content-around mb-4">
                       <div class="form-group col-md-5 col-12 mt-4">
                         <label for="exampleInputEmail1" ><b>Nombre*</b></label>
@@ -120,7 +120,7 @@
                     </div>
                   </div>
 
-                  <div class="tab-pane fade" id="foto" role="tabpanel" aria-labelledby="foto-tab">
+                  <div class="tab-pane fade show active" id="foto" role="tabpanel" aria-labelledby="foto-tab">
                     <div class="row m-0 justify-content-around">
                             <div class="col-11 botonera" >
                               <form action="foto/registrar.php" method="post" id="from_photo" enctype="multipart/form-data">
@@ -129,6 +129,47 @@
                                   <div style="width:100px; height:100px; background-color: red;">
                                   </div>
                                   <input type="file" name="photo_face"/>
+                                  <input type="text" id="table" name="table" value="photo_face" hidden/>
+                                  <br>
+                                  <input type="submit" value="Cargar"  class="btn-get-started-pass btn-pass float-right">
+                                  <br>
+                                  <figure>
+
+                                  </figure>
+                              </form>
+                            </div>
+                        
+                    </div>      
+
+                    <div class="row m-0 justify-content-around">
+                            <div class="col-11 botonera" >
+                              <form action="foto/registrar.php" method="post" id="from_photo_dni" enctype="multipart/form-data">
+                                  <label style="font-size: 14px; color: #274070;"><b>Foto de dni</b></label>
+                                  <br>
+                                  <div style="width:100px; height:100px; background-color: red;">
+                                  </div>
+                                  <input type="file" name="photo_dni"/>
+                                  <input type="text" id="table" name="table" value="photo_dni" hidden/>
+                                  <br>
+                                  <input type="submit" value="Cargar"  class="btn-get-started-pass btn-pass float-right">
+                                  <br>
+                                  <figure>
+
+                                  </figure>
+                              </form>
+                            </div>
+                        
+                    </div>      
+
+                    <div class="row m-0 justify-content-around">
+                            <div class="col-11 botonera" >
+                              <form action="foto/registrar.php" method="post" id="from_photo_dorso" enctype="multipart/form-data">
+                                  <label style="font-size: 14px; color: #274070;"><b>Foto de dorso dni</b></label>
+                                  <br>
+                                  <div style="width:100px; height:100px; background-color: red;">
+                                  </div>
+                                  <input type="file" name="photo_dorso"/>
+                                  <input type="text" id="table" name="table" value="photo_dorso" hidden/>
                                   <br>
                                   <input type="submit" value="Cargar"  class="btn-get-started-pass btn-pass float-right">
                                   <br>

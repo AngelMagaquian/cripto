@@ -9,12 +9,6 @@ $(function(){
         user_table();
     });
 
- 
-    
-    
-
-    
-
 
     function user_table(){
         get_data('../../model/user/all_user_data.php').then(response => {
@@ -35,13 +29,20 @@ $(function(){
                     var last_name = dato.last_name + ' ' + dato.second_last_name;
                 }
 
+                let status = '';
+                if(dato.status == 0){
+                     status = 'NO CONFIRMADO';
+                }else{
+                     status = 'CONFIRMADO';
+                }
+
               
                 
                         template +=`
                         <tr>
                             <td>${dato.ID_user}</td>
                             <td>${name} ${last_name}</td>
-                            <td>CONFIRMADO</td>
+                            <td>${status}</td>
                             <td class="text-center">
                                 <a href="" class="btn btn-info  mr-2 mt-sm-0 mt-3" type="button" data-toggle="modal" data-target="#modalFichaUsuario" id="modal_show_button">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
@@ -72,15 +73,9 @@ $(function(){
                                 </svg>
                                 </a>
                             </td>
-
-                            
                         <tr>
                     `;
 
-                    
-                    
-                    
-                
             })
 
             $('#user_data_tbody').html(template);
@@ -94,11 +89,11 @@ $(function(){
     }
 
     
-    $('#conf_yes').click(function(e){
+    /* $('#conf_yes').click(function(e){
         e.preventDefault();
-        console.log('HOLA PUTO');
+       
     });
-    
+     */
 
     
 });

@@ -6,11 +6,14 @@ function insertaImagen($id_user,$tipo_imagen){
 	if(empty($_FILES[$tipo_imagen]["name"]))
 	echo"<br>";
 	echo "entro a la funcion 2";
-
+	echo"<br>";
+	echo $tipo_imagen;
 
 	
 
 	$file_name = $_FILES[$tipo_imagen]["name"];
+	echo"<br>";
+	echo "DUDA: ".$file_name;
 	$extension = pathinfo($_FILES[$tipo_imagen]["name"],PATHINFO_EXTENSION);
 	$ext_formatos = array('png','gif','jpg','jpeg','pdf');
 

@@ -98,13 +98,24 @@
                         </div>-->
                         <div class="col-12 mt-5">
                             <div class="container-btn text-center">
-                              <a href="" class="btn-get-started  btn-cancelar mr-2">Actualizar</a>
-                              <a href="" class="btn-get-started  btn-siguiente mr-2 mt-sm-0 mt-3" type="button" data-toggle="modal" data-target="#exampleModal" id="modal_show_button">Siguiente</a>
+                              
+                              <form action="continuar_trans.php" method="post">
+                                <a href="" class="btn-get-started  btn-cancelar mr-2">Actualizar</a>
+                                <!-- <a href="" class="btn-get-started  btn-siguiente mr-2 mt-sm-0 mt-3" type="button" data-toggle="modal" data-target="#exampleModal" id="modal_show_button">Siguiente</a> -->
+                                <input type="submit" value="Siguiente" class="btn-get-started  btn-siguiente mr-2 mt-sm-0 mt-3"> 
+                                <input type="text" id="type_trans" name="type_trans" value="" hidden>
+                                <input type="text" id="id_cripto" name="id_cripto" value="" hidden>
+                                <input type="text" id="monto_cripto" name="monto_cripto" value="" hidden>
+                                <input type="text" id="valor_cripto_sc" value="" hidden>
+                                <input type="text" id="comision" value="" hidden>
+                                <input type="text" id="monto_pesos" name="monto_pesos" value="" hidden>
+                              </form>
+                              
                             </div>
                           <!-- Modal
 
                            -->
-                          <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                          <!-- <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
                               <div class="modal-content">
                                 <div class="modal-header" style="color: #385BA2; background-color: rgba(0, 0, 0, 0.03);">
@@ -146,7 +157,7 @@
                                 
                               </div>
                             </div>
-                          </div>
+                          </div> -->
                             
                         </div>
                     </div>
@@ -165,7 +176,7 @@
   ?>
   <!--Controllers-->
   <script src="..\..\controller\operation\calculadora_controller.js" type="module" ></script>
-  <script src="..\..\controller\operation\modal_trans_controller.js" type="module" ></script>
+<!--   <script src="..\..\controller\operation\modal_trans_controller.js" type="module" ></script> -->
 
  
   <!-- Menu Toggle Script -->
