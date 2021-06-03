@@ -12,6 +12,12 @@
         $cant_cripto = $_POST['cant_cripto'];
         $cripto = $_POST['cripto'];
 
+        $dolar_value = $_POST['dolar_value'];
+        $cripto_price_cc = $_POST['cripto_price_cc'];
+        $cripto_price_sc =$_POST['cripto_price_sc'];
+        $commission = $_POST['commission'];
+        
+
 
         $consulta = "SELECT * FROM cripto WHERE cripto_name = '$cripto'";
         $ejecucion=mysqli_query($conexion,$consulta);
@@ -20,8 +26,8 @@
         $id_cripto=$response['ID_cripto'];
         $date = date('Y-m-d h:s:m');
        
-        $new_op = $conexion -> query("INSERT INTO operation (ID_user, ID_cripto, ID_wallet_cripto, TYPE, cripto_amount, pesos_amount, date_hour,state)
-        VALUE ($user, $id_cripto, $id_wallet, 'COMPRA', $cant_cripto, $cant_pesos,'$date' , 0)")
+        $new_op = $conexion -> query("INSERT INTO operation (ID_user, ID_cripto, ID_wallet_cripto, TYPE, cripto_amount, pesos_amount, date_hour,state, dolar_value, cripto_price_cc, cripto_price_sc, commission)
+        VALUE ($user, $id_cripto, $id_wallet, 'COMPRA', $cant_cripto, $cant_pesos,'$date' , 0, $dolar_value, $cripto_price_cc,$cripto_price_sc,$commission)")
          or die("Error ". mysqli_error($conexion));
 
          if($new_op){

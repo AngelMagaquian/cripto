@@ -109,6 +109,7 @@
                                 <input type="text" id="valor_cripto_sc" name="valor_cripto_sc" value="" hidden>
                                 <input type="text" id="valor_cripto_cc" name="valor_cripto_cc" value="" hidden>
                                 <input type="text" id="comision" value="" name="comision" hidden>
+                                <input type="text" id="dolar" value="" name="dolar" hidden>
                                 <input type="text" id="monto_pesos" name="monto_pesos" value="" hidden>
                               </form>
                               

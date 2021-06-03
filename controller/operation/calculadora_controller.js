@@ -14,6 +14,7 @@ $(function(){
         //si es venta se tiene que mostrar el valor de un 1c (btc,dai,eth,etc) convertido a pesos
         //si es compra se tiene que mostrar el valor de 1c/1peso
         //$('#ars_value').val('1');
+        
         $('#cripto_value').val('1');
         var cripto = $('#cripto_select').val();
         get_cripto_pesos_value(cripto);
@@ -58,7 +59,8 @@ $(function(){
             get_cripto_pesos_value(cripto);
             $('#type_trans').val('');
             $('#type_trans').val('compra');
-            console.log('type= '+$('#type_trans').val());
+            $('#comision').val(commission_compra);
+    
         }
         else if (this.value == '2') {
             controller_compra = false;
@@ -67,7 +69,8 @@ $(function(){
             get_cripto_pesos_value(cripto);
             $('#type_trans').val('');
             $('#type_trans').val('venta');
-            console.log('type= '+$('#type_trans').val());
+            $('#comision').val(commission_venta);
+  
         }
     });
 
@@ -89,7 +92,7 @@ $(function(){
         var cripto = $('#cripto_select').val();
         $('#id_cripto').val('');
         $('#id_cripto').val($('#cripto_select').val());
-        console.log('cripto: '+$('#id_cripto').val());
+   
         get_cripto_pesos_value(cripto);
         
     });
@@ -98,7 +101,7 @@ $(function(){
         var cripto = $('#cripto_select').val();
         $('#monto_cripto').val('');
         $('#monto_cripto').val($('#cripto_value').val());
-        console.log('Monto cripto: '+$('#monto_cripto').val());
+    
         get_cripto_pesos_value(cripto);
     });
 
@@ -106,7 +109,7 @@ $(function(){
         var cripto = $('#cripto_select').val();
         $('#monto_pesos').val('');
         $('#monto_pesos').val($('#ars_value').val());
-        console.log('monto_pesos: '+$('#monto_pesos').val());
+
         get_pesos_cripto_value(cripto);
     });
 
@@ -190,10 +193,10 @@ $(function(){
             $('#cripto_value').val(result.toFixed(3)); 
             $('#monto_cripto').val('');
             $('#monto_cripto').val($('#cripto_value').val());
-            console.log('Monto cripto4: '+$('#monto_cripto').val());
+          
             $('#monto_pesos').val('');
             $('#monto_pesos').val($('#ars_value').val());
-            console.log('monto_pesos4: '+$('#monto_pesos').val());
+
             $('#valor_cripto_cc').val('');
             $('#valor_cripto_cc').val(cotizacion);
         }else{
@@ -205,10 +208,10 @@ $(function(){
             $('#cripto_value').val(result); 
             $('#monto_cripto').val('');
             $('#monto_cripto').val($('#cripto_value').val());
-            console.log('Monto cripto5: '+$('#monto_cripto').val());
+        
             $('#monto_pesos').val('');
             $('#monto_pesos').val($('#ars_value').val());
-            console.log('monto_pesos5: '+$('#monto_pesos').val());
+           
             $('#valor_cripto_cc').val('');
             $('#valor_cripto_cc').val(cotizacion);
         }
@@ -228,10 +231,10 @@ $(function(){
 
             $('#monto_cripto').val('');
             $('#monto_cripto').val($('#cripto_value').val());
-            console.log('Monto cripto2: '+$('#monto_cripto').val());
+           
             $('#monto_pesos').val('');
             $('#monto_pesos').val($('#ars_value').val());
-            console.log('monto_pesos2: '+$('#monto_pesos').val());
+           
             $('#valor_cripto_cc').val('');
             $('#valor_cripto_cc').val(cotizacion);
         }else{
@@ -244,10 +247,10 @@ $(function(){
             $('#ars_value').val(result.toFixed(2)); 
             $('#monto_cripto').val('');
             $('#monto_cripto').val($('#cripto_value').val());
-            console.log('Monto cripto3: '+$('#monto_cripto').val());
+         
             $('#monto_pesos').val('');
             $('#monto_pesos').val($('#ars_value').val());
-            console.log('monto_pesos3: '+$('#monto_pesos').val());
+      
             $('#valor_cripto_cc').val('');
             $('#valor_cripto_cc').val(cotizacion);
         }
@@ -255,6 +258,7 @@ $(function(){
 
     
     function get_admin_values(){
+        
         get_data('../../model/calculadora/get_values.php').then(response => {
             // En este punto recibimos la respuesta.
             let data = JSON.parse(response); 
@@ -264,10 +268,14 @@ $(function(){
                     case '1':
                         dolar_cripto = dato.value;
                         
+                        $('#dolar').val(dolar_cripto);
+                        
                     break;
 
                     case '2':
                         commission_compra = dato.value;
+                        $('#comision').val(commission_compra);
+                 
                         
                     break;
 
