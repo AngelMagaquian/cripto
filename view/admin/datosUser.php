@@ -191,7 +191,7 @@
                           </div>
 
                           <!-- Modal ficha de usuario -->
-                          <div class="modal fade" id="modalDeposito" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                          <div class="modal fade" id="modalCripto" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                               <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
                                 <div class="modal-content">
                                   <div class="modal-header" style="color: #385BA2; background-color: rgba(0, 0, 0, 0.03);">
@@ -203,7 +203,7 @@
                                   <div class="modal-body">
                                     <div class="row ">
                                       <div class="col-12 mt-2">
-                                        <label><b>Usuario:</b></label><span class="ml-2">nombrexxx</span>
+                                        <label><b>Usuario:</b></label><span class="ml-2" id="span_id_user3"></span>
                                       </div>
 
                                       <div class="col-12 mt-3">
@@ -211,19 +211,24 @@
                                         <table id="modalDepositoCompra" class="table table-striped table-bordered" style="width:100%">
                                           <thead>
                                             <tr>
-                                              <th>Id operación</th>    
+                                              <th>Id</th>   
+                                              <th>Wallet</th> 
                                               <th>Fecha</th>    
                                               <th>Operación</th>
                                               <th>Importe cripto</th>
                                               <th>Cotización</th>
-                                              <th>Total s/comisión</th>
+                                              <th>Cotización s/c</th>
+                                              <th>Valor dolar</th>
                                               <th>Comisión</th>
                                               <th>Total final</th>
                                             </tr>
                                           </thead>
-                                          <tbody id="user_data_tbody">
+                                          <tbody>
                                                 
                                           </tbody>
+                                          <tfoot id="tftotal_compra">
+                                  
+                                          </tfoot>
                                         </table>   
                                       </div>  
 
@@ -232,19 +237,24 @@
                                         <table id="modalDepositoVenta" class="table table-striped table-bordered" style="width:100%">
                                           <thead>
                                             <tr>
-                                              <th>Id operación</th>    
+                                              <th>Id</th> 
+                                              <th>Wallet</th>    
                                               <th>Fecha</th>    
                                               <th>Operación</th>
                                               <th>Importe cripto</th>
                                               <th>Cotización</th>
-                                              <th>Total s/comisión</th>
+                                              <th>Cotización s/c</th>
+                                              <th>Valor dolar</th>
                                               <th>Comisión</th>
                                               <th>Total final</th>
                                             </tr>
                                           </thead>
-                                          <tbody id="user_data_tbody">
+                                          <tbody>
                                                 
                                           </tbody>
+                                          <tfoot id="tftotal_ventas">
+                                  
+                                          </tfoot>
                                         </table>   
                                       </div>  
                                     </div> 
@@ -282,6 +292,7 @@
   <script src="..\..\controller\admin\user_info_controller_admin.js" type="module" ></script>
   <script src="..\..\controller\admin\modal_admin\modal_user_info.js" type="module" ></script>
   <script src="..\..\controller\admin\modal_admin\modal_user_account.js" type="module" ></script>
+  <script src="..\..\controller\admin\modal_admin\modal_user_trans.js" type="module" ></script>
 
   <!-- Menu Toggle Script -->
   <script>
@@ -323,7 +334,7 @@
 
     }
     
-    $('#datosUserTable').DataTable({ 
+     $('#datosUserTable').DataTable({ 
         responsive: true,
         paging: false,
         searching: false,
@@ -356,7 +367,7 @@
         },
         scrollY: 500,
         scrollX: true
-      });
+      }); 
 
       $('#modalFichaUs').DataTable({ 
         responsive: true,
@@ -395,8 +406,8 @@
 
       $('#modalDepositoCompra').DataTable({ 
         responsive: true,
-        paging: false,
-        searching: false,
+        paging: true,
+        searching: true,
         language: {
             lengthMenu: "Agrupar de MENU ",
             search: " ",
@@ -430,8 +441,8 @@
 
       $('#modalDepositoVenta').DataTable({ 
         responsive: true,
-        paging: false,
-        searching: false,
+        paging: true,
+        searching: true,
         language: {
             lengthMenu: "Agrupar de MENU ",
             search: " ",
@@ -461,7 +472,7 @@
         },
         scrollY: 200,
         scrollX: true
-      });
+      }); 
       
   </script>
 
