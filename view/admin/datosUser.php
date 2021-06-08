@@ -268,7 +268,77 @@
                             </div>          
                               
                           </div>
-                    </div>
+
+                           <!-- Modal ficha de usuario -->
+                           <div class="modal fade" id="modalDeposito" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                              <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                                <div class="modal-content">
+                                  <div class="modal-header" style="color: #385BA2; background-color: rgba(0, 0, 0, 0.03);">
+                                    <h5 class="modal-title" id="exampleModalLabel">Historial de compra y ventas</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="border: none;background: transparent;">
+                                      <span aria-hidden="true">&times;</span>
+                                    </button>
+                                  </div>
+                                  <div class="modal-body">
+                                    <div class="row ">
+                                      <div class="col-12 mt-2">
+                                        <label><b>Usuario:</b></label><span class="ml-2" id="span_id_user3"></span>
+                                      </div>
+
+                                      <div class="col-12 mt-3">
+                                        <label><b>Depositos</b></label>
+                                        <table id="modalDeposito" class="table table-striped table-bordered" style="width:100%">
+                                          <thead>
+                                            <tr>
+                                              <th>Id</th> 
+                                              <th>Banco</th>    
+                                              <th>CBU</th>    
+                                              <th>Fecha</th>
+                                              <th>Monto</th>
+                                            </tr>
+                                          </thead>
+                                          <tbody>
+                                                
+                                          </tbody>
+                                          <tfoot id="tftotal_ventas">
+                                  
+                                          </tfoot>
+                                        </table>   
+                                      </div>  
+
+                                      <div class="col-12 mt-3">
+                                        <label><b>Venta</b></label>
+                                        <table id="modalExtraccion" class="table table-striped table-bordered" style="width:100%">
+                                          <thead>
+                                            <tr>
+                                              <th>Id</th> 
+                                              <th>Banco</th>    
+                                              <th>CBU</th>    
+                                              <th>Fecha</th>
+                                              <th>Monto</th>
+                                            </tr>
+                                          </thead>
+                                          <tbody>
+                                                
+                                          </tbody>
+                                          <tfoot id="tftotal_ventas">
+                                  
+                                          </tfoot>
+                                        </table>   
+                                      </div>  
+                                    </div> 
+                                    
+                                  </div>
+                                  <div class="modal-footer">
+                                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> 
+                                  </div>                            
+                                </div>
+                              </div>
+                            </div>          
+                              
+                          </div>
+
+                  </div>
                 </div>
 
             </div>
@@ -293,6 +363,7 @@
   <script src="..\..\controller\admin\modal_admin\modal_user_info.js" type="module" ></script>
   <script src="..\..\controller\admin\modal_admin\modal_user_account.js" type="module" ></script>
   <script src="..\..\controller\admin\modal_admin\modal_user_trans.js" type="module" ></script>
+  <script src="..\..\controller\admin\modal_admin\modal_user_op.js" type="module" ></script>
 
   <!-- Menu Toggle Script -->
   <script>
@@ -440,6 +511,76 @@
       });
 
       $('#modalDepositoVenta').DataTable({ 
+        responsive: true,
+        paging: true,
+        searching: true,
+        language: {
+            lengthMenu: "Agrupar de MENU ",
+            search: " ",
+            searchPlaceholder: " Buscar",
+            info: "",
+            infoEmpty: " ",
+            infoFiltered: " ",
+            infoPostFix: "",
+            loadingRecords: " ",
+            zeroRecords: "No se encontraron datos con tu busqueda",
+            emptyTable: "No hay datos disponibles en la tabla.",
+            paginate: {
+                first: "Primero",
+                previous: "Ant",
+                next: "Sig",
+                last: "Ultimo"
+            },
+            aria: {
+                sortAscending: ": active para ordenar la columna en orden ascendente",
+                sortDescending: ": active para ordenar la columna en orden descendente"
+            },
+            pageLength: 7,
+            bLengthChange: false,
+            ordering: false,
+            select: true,
+            colReorder: true
+        },
+        scrollY: 200,
+        scrollX: true
+      }); 
+
+      $('#modalDeposito').DataTable({ 
+        responsive: true,
+        paging: true,
+        searching: true,
+        language: {
+            lengthMenu: "Agrupar de MENU ",
+            search: " ",
+            searchPlaceholder: " Buscar",
+            info: "",
+            infoEmpty: " ",
+            infoFiltered: " ",
+            infoPostFix: "",
+            loadingRecords: " ",
+            zeroRecords: "No se encontraron datos con tu busqueda",
+            emptyTable: "No hay datos disponibles en la tabla.",
+            paginate: {
+                first: "Primero",
+                previous: "Ant",
+                next: "Sig",
+                last: "Ultimo"
+            },
+            aria: {
+                sortAscending: ": active para ordenar la columna en orden ascendente",
+                sortDescending: ": active para ordenar la columna en orden descendente"
+            },
+            pageLength: 7,
+            bLengthChange: false,
+            ordering: false,
+            select: true,
+            colReorder: true
+        },
+        scrollY: 200,
+        scrollX: true
+      }); 
+
+      $('#modalExtraccion').DataTable({ 
         responsive: true,
         paging: true,
         searching: true,
