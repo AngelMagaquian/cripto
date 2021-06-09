@@ -76,7 +76,7 @@ $(function (){
         $.post('../../model/admin_value/admin_value.php', postData).then(response => {
             alert('Actualización exitosa');
             get_values();
-            get_data();
+        
         })
         .catch(error => {
             // En este punto recibimos el error. then() no se ha invocado
