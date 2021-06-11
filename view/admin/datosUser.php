@@ -396,7 +396,7 @@
       $('#modalDepositoCompra').DataTable({ 
         responsive: true,
         paging: false,
-        searching: false,
+        searching: true,
         language: {
             lengthMenu: "Agrupar de MENU ",
             search: " ",
