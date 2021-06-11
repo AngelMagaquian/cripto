@@ -5,12 +5,13 @@ $(function(){
     var changes = false;
     var id = 0;
     $( document ).ready(function() {
-        
+       
     });
 
     $(document).on('click', '#modal_account_show_button', (e) => {
         e.preventDefault();
         id =$(e.currentTarget).data('id');
+        console.log(id);
         user_info(id);
     });
 
@@ -21,7 +22,7 @@ $(function(){
         /*     alert(id); */
             let data = JSON.parse(response); 
             let template =``;
-   
+            console.log('respuesta: '+response);
             $('#span_id_user2').html(id);
      
             data.forEach(dato => {

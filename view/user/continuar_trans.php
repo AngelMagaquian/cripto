@@ -50,30 +50,52 @@
             <div class="row justify-content-around">
                 <div class="col-lg-7 col-md-11 col-sm-11 col-11 card focus mt-lg-0 mt-md-4 mt-sm-4 mt-4">
                 <div class="card">
-                    <h5 class="card-title">Operacion: COMPRA<p></p></h5>
+                    <h5 class="card-title">Operacion: <?php echo $_POST['type_trans'];?><p></p></h5>
                     <div class="card-body">
-                        <p>Cotización criptomoneda: $4608,26</p>
+                      <h6>Seleccione la wallet del destino/origen de criptomoneda:<h6><br>
+                      <select id="select_wallet_cripto">
+                        <option value="default_select"> Seleccione una wallet</option>
+                      </select>
+                      <br>
+                      <p>Si no poseé una wallet para esta criptomoneda, puede solicitarla haciendo <a href="wallet.php">Click aquí</a>.</p>
+                      <br>
+                      <h6>Saldo actual: $ <input type="text" id="wallet_user_input" readonly/></h6>
                     </div>
                     <div class="card-footer">
                         <h6 class="card-title">Resumen: <p></p></h6>
                         <div class="card-body">
-                            
-                                <p>Pesos: <?php echo $_POST['monto_pesos'];?></p>
-                                <p>LINK: <?php echo $_POST['monto_cripto'];?></p>
+                                <p>Fecha y hora: <?php echo date("d/m/Y h:i:s a");?></p>
+                                <p>Moneda: <?php echo $_POST['id_cripto'];?>
+                                <p>Operacion: <?php echo $_POST['type_trans']." ".$_POST['id_cripto'];?>
+                                <p>Cantidad: <?php echo $_POST['monto_cripto']." ".$_POST['id_cripto'];?></p>
+                                <p>Pesos: $ <?php echo $_POST['monto_pesos'];?></p>
+                                <p>Wallet de orgien/destino: <label id="wallet_od"></label></p>
+                                <p>Cotización: AR$/<?php echo $_POST['id_cripto']." $ ".$_POST['valor_cripto_cc'];?></p>
+                                
                             <br>
-                            <p>Monto a pagar: $13824,78</p>
+                            <p>Monto final: $ <?php echo $_POST['monto_pesos'];?> </p>
                             <br>
                             <input type="checkbox" id="declaracion"/> <p for="declaracion">Al continuar declaro bajo juramento que mis fondos no provienen de planes y programas sociales Argentina"</p>
                         </div>
                     </div>
                     <div>
                         <form id="confirmar">
-                            <input type="submit" value="Siguiente" class="btn-get-started  btn-siguiente mr-2 mt-sm-0 mt-3"> 
+                            <input type="submit" value="Finalizar" id="siguiente" class="btn-get-started  btn-siguiente mr-2 mt-sm-0 mt-3"> 
                         </form>
                     </div>
                 </div>
             </div>
         </div>
+        <!-- Input auxileares-->
+        <input type="text" id="type_trans" name="type_trans" value="<?php echo $_POST['type_trans'] ;?>" hidden>
+        <input type="text" id="id_cripto" name="id_cripto" value="<?php echo $_POST['id_cripto'] ;?>" hidden>
+        <input type="text" id="monto_cripto" name="monto_cripto" value="<?php echo $_POST['monto_cripto'] ;?>" hidden>
+        <input type="text" id="valor_cripto_sc" name="valor_cripto_sc" value="<?php echo $_POST['valor_cripto_sc'] ;?>" hidden>
+        <input type="text" id="valor_cripto_cc" name="valor_cripto_cc" value="<?php echo $_POST['valor_cripto_cc'] ;?>" hidden>
+        <input type="text" id="comision" value="<?php echo $_POST['comision'] ;?>" hidden>
+        <input type="text" id="dolar" value="<?php echo $_POST['dolar'] ;?>" hidden>
+        <input type="text" id="monto_pesos" name="monto_pesos" value="<?php echo $_POST['monto_pesos'] ;?>"  hidden>
+      
       </section>
       <!--FIN VISTA-->
     </div>

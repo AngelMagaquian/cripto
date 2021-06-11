@@ -56,15 +56,15 @@
                                 </div>
                                 <div class="form-group col-md-4 col-12">
                                   <label for="exampleInputPassword1"><b>Dolar cripto actual</b></label>
-                                  <input type="text" class="form-control form-login" id="Dolar" disable readonly>
+                                  <input type="text" class="form-control form-login" id="Actual_Dolar" disable readonly>
                                 </div>
                                 <div class="form-group col-md-4 col-12">
                                   <label for="exampleInputPassword1"><b>Comisión venta actual</b></label>
-                                  <input type="text" class="form-control form-login" id="Dolar" disable readonly>
+                                  <input type="text" class="form-control form-login" id="Actual_Venta" disable readonly>
                                 </div>
                                 <div class="form-group col-md-4 col-12 ">
                                   <label for="exampleInputPassword1"><b>Comisión compra actual</b></label>
-                                  <input type="text" class="form-control form-login" id="Dolar" disable readonly>
+                                  <input type="text" class="form-control form-login" id="Actual_Compra" disable readonly>
                                 </div>
                                 
                             </div>           
@@ -76,25 +76,35 @@
                                 <div class="col-12 mb-3">
                                   <span style="font-weight: bold;text-transform: uppercase;color: darkblue;">Nuevos valores</span>
                                 </div>
-                                <form class="row" action="" id="new_values">
-                                  <div class="form-group col-md-4 col-12">
-                                    <label for="exampleInputPassword1"><b>Dolar cripto</b></label>
-                                    <input type="text" class="form-control form-login" id="Dolar" disable readonly>
-                                  </div>
-                                  <div class="form-group col-md-4 col-12">
-                                    <label for="exampleInputPassword1"><b>Comisión venta</b></label>
-                                    <input type="text" class="form-control form-login" id="Dolar" disable readonly>
-                                  </div>
-                                  <div class="form-group col-md-4 col-12 ">
-                                    <label for="exampleInputPassword1"><b>Comisión compra</b></label>
-                                    <input type="text" class="form-control form-login" id="Dolar" disable readonly>
-                                  </div>
-                                  <div class="col-12">
-                                    <input type="submit" value="Confirmar" class="btn-get-started-confirmar btn"/>
-                                  </div>
-                                </form>
-                                
-                            </div>
+                                    <div class="form-group col-md-4 col-12">
+                                      <label for="exampleInputPassword1"><b>Dolar cripto</b></label>
+                                      <input type="number" class="form-control form-login" id="new_Dolar" min = "0" placeholder="0" step="0.01">
+                                      <br><br>
+                                      <form id="change_dolar">
+                                        <input type="submit" id="new_dolar" value="Actualizar dolar" class="btn-get-started-confirmar btn"/>
+                                      </form>
+                                      
+                                    </div>
+                                    <div class="form-group col-md-4 col-12">
+                                      <label for="exampleInputPassword1"><b>Comisión venta (valor en porcentaje)</b></label>
+                                      <input type="number" class="form-control form-login" id="new_Venta" min = "0" placeholder="0">
+                                      <br><br>
+                                      <form id="change_venta">
+                                        <input type="submit" id="new_venta" value="Actualizar venta" class="btn-get-started-confirmar btn"/>
+                                      </form>
+                                      
+                                    </div>
+                                    <div class="form-group col-md-4 col-12 ">
+                                      <label for="exampleInputPassword1"><b>Comisión compra (valor en porcentaje)</b></label>
+                                      <input type="number" class="form-control form-login" id="new_Compra" min = "0" placeholder="0">
+                                      <br><br>
+                                      <form id="change_compra">
+                                        <input type="submit" id="new_compra" value="Actualizar compra" class="btn-get-started-confirmar btn"/>
+                                      </form>
+                                    </div>
+                                   
+                                    <p>Si no es necesario que exista alguna comisión, debe dejarla en 0.</p>
+                              </div>
                     
                         </div>
                     </div>
@@ -122,7 +132,7 @@
   <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
   <script src="https://cdn.datatables.net/1.10.24/js/dataTables.bootstrap5.min.js"></script>
   <!--Controllers-->
-  <script src="..\..\..\controller\admin\transactions_controller_admin.js" type="module" ></script>
+  <script src="..\..\controller\admin\value_controller.js" type="module" ></script>
 
   <!-- Menu Toggle Script -->
   <script>

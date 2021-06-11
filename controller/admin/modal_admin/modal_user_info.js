@@ -10,6 +10,7 @@ $(function(){
     $(document).on('click', '#modal_ficha_user_show_button', (e) => {
         e.preventDefault();
         let id =$(e.currentTarget).data('id');
+        console.log(id);
         user_info(id);
     });
 
