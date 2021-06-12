@@ -160,7 +160,7 @@
   color: #274070;
 }
 
-#perfil .tab-content .form-group input{
+#perfil .tab-content .form-group input[type=text], .form-group input[type=date], .form-group input[type=number], .form-group input[type=email]{
   font-size: 13px;
   background-color: transparent;
   border: none !important;

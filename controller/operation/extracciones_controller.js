@@ -61,9 +61,12 @@ $(function(){
              var monto = 0;
         }else{
             var monto =parseFloat($('#importe').val()) ;
+            importe_card();
         }
         var saldo =parseFloat($('#saldo_actual').val()) ;
         $('#saldo_proyectado').val('$'+(saldo-monto));
+        saldoP_card();
+
     });
 
    
@@ -105,5 +108,18 @@ $(function(){
             console.log('error: '+error);
         });
     }
+
+    $('#bank_account').change(function(){
+       $('#banco_resumen').val($('#bank_account').val())
+    })
+
+    function importe_card(){
+       $('#monto_resumen').val($('#importe').val())
+    }
+    function saldoP_card(){
+        $('#saldo_resumen').val($('#saldo_proyectado').val())
+     }
+
+
     
 });

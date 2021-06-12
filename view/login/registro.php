@@ -34,50 +34,58 @@
                         <p class="change-pass">*campos obligatorio</p>
                         <div class="row">
                         
-                            <div class="form-group col-6">
+                            <div class="form-group col-md-6 col-12 mt-md-0 mt-4">
                                 <label for="exampleInputEmail1" ><b>Nombre*</b></label>
                                 <input type="text" class="form-control form-login" id="name_user" placeholder="ingresá tu nombre" required>
                             </div>
-                            <div class="form-group col-6">
+                            <div class="form-group col-md-6 col-12 mt-md-0 mt-4">
                                 <label for="exampleInputEmail1"><b>Segundo nombre</b></label>
                                 <input type="text" class="form-control form-login" id="middle_name" placeholder="ingresá tu segundo nombre" >
                             </div>
 
-                            <div class="form-group col-6 mt-4">
+                            <div class="form-group col-md-6 col-12  mt-4">
                                 <label for="exampleInputEmail1"><b>Apellido*</b></label>
                                 <input type="text" class="form-control form-login" id="last_name" placeholder="ingresá tu apellido" required>
                             </div>
-                            <div class="form-group col-6 mt-4">
+                            <div class="form-group col-md-6 col-12  mt-4">
                                 <label for="exampleInputEmail1"><b>Segundo apellido</b></label>
                                 <input type="text" class="form-control form-login" id="second_last_name" placeholder="ingresá tu segundo apellido">
                             </div>
 
-                            <div class="form-group col-6 mt-4">
+                            <div class="form-group col-md-6 col-12  mt-4">
                                 <label for="exampleInputEmail1"><b>DNI*</b></label>
                                 <input type="text" class="form-control form-login" id="dni" placeholder="ingresá tu DNI" required>
                             </div>
-                            <div class="form-group col-6 mt-4">
+                            <div class="form-group col-md-6 col-12 mt-4">
                                 <label for="exampleInputEmail1"><b>CUIL*</b></label>
                                 <input type="text" class="form-control form-login" id="cuil" placeholder="ingresá tu CUIL" required>
                             </div>
                             
-                            <div class="form-group col-6 mt-4">
+                            <div class="form-group col-md-6 col-12  mt-4">
                                 <label for="exampleInputEmail1"><b>Fecha de nacimiento*</b></label>
                                 <input type="date" class="form-control form-login" id="birth_day" placeholder="ingresá tu fecha de nacimiento" required>
                             </div>
-                            <div class="form-group col-6 mt-4">
+                            <div class="form-group col-md-6 col-12  mt-4">
                                 <label for="exampleInputEmail1"><b>Email*</b></label>
                                 <input type="email" class="form-control form-login" id="email" placeholder="ingresá tu email" required>
                             </div>
 
-                            <div class="form-group col-6 mt-4 ">
+                            <div class="form-group col-md-6 col-12  mt-4 ">
                                 <label for="exampleInputPassword1"><b>Contraseña*</b></label>
                                 <input type="password" class="form-control form-login" id="first_pass" placeholder="Ingresá una contraseña" required>
                             </div>
-                            <div class="form-group col-6 mt-4 ">
+                            <div class="form-group col-md-6 col-12  mt-4 ">
                                 <label for="exampleInputPassword1"><b>Repetir contraseña*</b></label>
                                 <input type="password" class="form-control form-login" id="pass" placeholder="Ingresá tu contraseña nuevamente" required>
                                 <label for="exampleInputPassword1" id="comfirm_pass"><b></b></label>
+                            </div>
+                            <div class="form-group col-md-6 col-12  mt-4 ">
+                                <label for="exampleInputPassword1"><b>Teléfono*</b></label>
+                                <input type="number" class="form-control form-login" id="first_pass" placeholder="Ingresá tu numero de telefono" required>
+                            </div>
+                            <div class="form-group form-check col-md-6 col-12 mt-4 ">
+                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                <label class="form-check-label" for="exampleCheck1">Declaro aceptar ser persona expuesta publicamente</label>
                             </div>
                         </div>
 

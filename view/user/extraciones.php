@@ -38,41 +38,72 @@
 
       <!--VISTA-->
       
-      <section id="misOperaciones">
+      <section id="depositos">
         <div class="container-fluid">
             <div class="row justify-content-center mt-4">
                 <div class="col-11">   
                     <div class="row">
                         <h5>Extraciones</h5>
                     </div>
+                          
+                      
                     <div class="card">
                         <div class="card-body mt-3 mb-3 ">
 
                             <div class=" mt-4">
-                            <form id="new_extraccion" class="row justify-content-center">
-                              <div class="col-md-5 col-12 mt-3">
-                                  <label><b>SELECCIONE LA CUENTA DE BANCO PARA TRANSFERIR</b></label>
-                                  <select name="" id="bank_account" class="form-control form-select"></select>
+                              <form id="new_extraccion" class="row justify-content-around">
+                                <div class="col-md-5 col-12 mt-3">
+                                    <label><b>SELECCIONE LA CUENTA DE BANCO PARA TRANSFERIR</b></label>
+                                    <select name="" id="bank_account" class="form-control form-select form-login"></select>
+                                </div>
+                                <div class="col-md-5 col-12 mt-3">
+                                  <label><b>SALDO ACTUAL</b></label>
+                                <input type="text" class="form-control form-login"   id="saldo_actual" placeholder="" disable readonly>
+                                </div>
+                                <div class="col-md-5 col-12 mt-3">
+                                  <label><b>INGRESE EL MONTO A EXTRAER</b></label>
+                                  <input type="number" class="form-control form-login"   id="importe">
+                                </div>
+                                <div class="col-md-5 col-12 mt-3">
+                                  <label><b>PROYECTADO</b></label>
+                                  <input type="text" class="form-control form-login form-number"   id="saldo_proyectado" placeholder="" disable readonly>
+                                </div>
+                                <div class="col-11 botonera mt-3" style="text-align: end;">
+                                  <input type="submit" value="Confirmar" class="btn-get-started-agg btn-agg">
+                                </div>
+                              </form>
+                              <div class="col-md-5 col-12 mt-5" >
+                                <div class="card">
+                                  <div class="card-header">
+                                    <span>Cuenta a depositar</span>
+                                  </div>
+                                  <div class="card-body row justify-content-around">
+                                    <div class="col-md-5 col-12 mt-2">
+                                      <label><b>Banco seleccionado</b></label>
+                                      <input type="text" class="form-control form-login" id="banco_resumen" value="" disabled=»disabled»>
+                                    </div>
+                                    <div class="col-md-5 col-12 mt-2">
+                                      <label><b>Monto a extraer</b></label>
+                                      <input type="text" class="form-control form-login" id="monto_resumen" value="" disabled=»disabled»>
+                                    </div>
+                                    <div class="col-md-5 col-12 mt-2">
+                                      <label><b>Saldo proyectado</b></label>
+                                      <input type="text" class="form-control form-login" id="saldo_resumen" value="" disabled=»disabled»>
+                                    </div>
+                                    <div class="col-md-5 col-12 mt-2">
+                                    </div>
+                                  </div>        
+                                </div>
                               </div>
-                              <div class="col-md-5 col-12 mt-3">
-                                <label><b>SALDO ACTUAL</b></label>
-                               <input type="text" class="form-control form-login"   id="saldo_actual" placeholder="" disable readonly>
+                              <div class="col-5">
+
                               </div>
-                              <div class="col-md-5 col-12 mt-3">
-                                <label><b>INGRESE EL MONTO A EXTRAER</b></label>
-                                <input type="number" class="form-control form-login"   id="importe">
-                              </div>
-                              <div class="col-md-5 col-12 mt-3">
-                                <label><b>PROYECTADO</b></label>
-                                <input type="text" class="form-control form-login form-number"   id="saldo_proyectado" placeholder="" disable readonly>
-                              </div>
-                              <div class="col-12 mt-3" style="text-align: end;">
-                                <input type="submit" value="Confirmar" class="btn-get-started-extracciones btn-extraciones">
-                              </div>
-                            </form>
                             </div>
+                            
+                            
                         </div>
-                    </div>
+                    
+
             
                 </div>
             </div>
