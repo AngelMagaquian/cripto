@@ -24,6 +24,15 @@ $(function(){
             let template =``;
             console.log('respuesta: '+response);
             $('#span_id_user2').html(id);
+            //modalFichaUs
+
+            var table_account = $('#modalFichaUs').DataTable();
+           
+
+            table_account
+            .clear()
+            .draw();
+            
      
             data.forEach(dato => {
                 let status = '';
@@ -35,12 +44,21 @@ $(function(){
                             <button class="btn btn-danger" id="conf_no" data-id=${dato.CBU}>no</button>`;
                 }else if(dato.check_account == 1){
                     status = 'CONFIRMADA';
-                    conf = ``;
+                    conf = ` `;
                 }else{
                     status = 'CANCELADA';
-                    conf = ``;
+                    conf = ` `;
                 }
-                template +=`
+                table_account.row.add([
+                    dato.id_bank,
+                    dato.bank,
+                    dato.alias,
+                    dato.CBU,
+                    dato.account_number,
+                    status,
+                    conf
+                ]).draw();
+                /* template +=`
                     <tr>
                         <td>${dato.id_bank}</td>
                         <td>${dato.bank}</td>
@@ -50,9 +68,9 @@ $(function(){
                         <td>${status}</td>
                         <td>${conf}</td>
                     </tr>
-                `;
+                `; */
             })
-            $('#user_account_tbody').html(template);
+            //$('#user_account_tbody').html(template);
 
         })
     }

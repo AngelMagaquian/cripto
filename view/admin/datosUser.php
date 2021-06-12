@@ -282,12 +282,12 @@
                                   <div class="modal-body">
                                     <div class="row ">
                                       <div class="col-12 mt-2">
-                                        <label><b>Usuario:</b></label><span class="ml-2" id="span_id_user3"></span>
+                                        <label><b>Usuario:</b></label><span class="ml-2" id="span_id_user4"></span>
                                       </div>
 
                                       <div class="col-12 mt-3">
                                         <label><b>Depositos</b></label>
-                                        <table id="modalDeposito" class="table table-striped table-bordered" style="width:100%">
+                                        <table id="modalDep" class="table table-striped table-bordered" style="width:100%">
                                           <thead>
                                             <tr>
                                               <th>Id</th> 
@@ -307,7 +307,7 @@
                                       </div>  
 
                                       <div class="col-12 mt-3">
-                                        <label><b>Venta</b></label>
+                                        <label><b>Extracciones</b></label>
                                         <table id="modalExtraccion" class="table table-striped table-bordered" style="width:100%">
                                           <thead>
                                             <tr>
@@ -407,10 +407,10 @@
     
      $('#datosUserTable').DataTable({ 
         responsive: true,
-        paging: false,
-        searching: false,
+        paging: true,
+        searching: true,
         language: {
-            lengthMenu: "Agrupar de MENU ",
+            lengthMenu: "",
             search: " ",
             searchPlaceholder: " Buscar",
             info: "",
@@ -439,15 +439,16 @@
         scrollY: 500,
         scrollX: true
       }); 
+      
 
       $('#modalFichaUs').DataTable({ 
         responsive: true,
-        paging: false,
-        searching: false,
+        paging: true,
+        searching: true,
         language: {
-            lengthMenu: "Agrupar de MENU ",
+            lengthMenu: " ",
             search: " ",
-            searchPlaceholder: " Buscar",
+            searchPlaceholder: "Buscar",
             info: "",
             infoEmpty: " ",
             infoFiltered: " ",
@@ -480,7 +481,7 @@
         paging: true,
         searching: true,
         language: {
-            lengthMenu: "Agrupar de MENU ",
+            lengthMenu: "",
             search: " ",
             searchPlaceholder: " Buscar",
             info: "",
@@ -515,7 +516,7 @@
         paging: true,
         searching: true,
         language: {
-            lengthMenu: "Agrupar de MENU ",
+            lengthMenu: " ",
             search: " ",
             searchPlaceholder: " Buscar",
             info: "",
@@ -545,12 +546,12 @@
         scrollX: true
       }); 
 
-      $('#modalDeposito').DataTable({ 
+    $('#modalDep').DataTable({ 
         responsive: true,
         paging: true,
         searching: true,
         language: {
-            lengthMenu: "Agrupar de MENU ",
+            lengthMenu: "",
             search: " ",
             searchPlaceholder: " Buscar",
             info: "",
@@ -585,7 +586,7 @@
         paging: true,
         searching: true,
         language: {
-            lengthMenu: "Agrupar de MENU ",
+            lengthMenu: "",
             search: " ",
             searchPlaceholder: " Buscar",
             info: "",
@@ -613,7 +614,7 @@
         },
         scrollY: 200,
         scrollX: true
-      }); 
+      });  
       
   </script>
 

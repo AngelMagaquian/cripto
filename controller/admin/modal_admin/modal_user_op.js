@@ -16,20 +16,14 @@ $(function(){
         user_info(id);
     });
 
-    $('#modal_op_show_button').click(function (e){
-        e.preventDefault();
-        console.log('click');
-    })
-
     function user_info(id){
+
+        $('#span_id_user4').html(id);
         
-        /* post_data('../../model/datos_bancarios/get_deposit_admin.php', id).then(response => {
+        post_data('../../model/operation/get_deposit_admin.php', id).then(response => {
             let data = JSON.parse(response); 
-          
-            console.log('respuesta: '+response);
-            $('#span_id_user2').html(id);
-             
-            var table_deposito = $('#modalDeposito').DataTable();
+
+            var table_deposito = $('#modalDep').DataTable();
             var table_extraccion = $('#modalExtraccion').DataTable();
             table_deposito
             .clear()
@@ -54,16 +48,16 @@ $(function(){
                     total_deposito += parseFloat(dato.pesos);
                 }
             }) 
-        }) */
+        }).catch(error =>{
+            console.log(error)
+        })
 
 
-        post_data('../../model/datos_bancarios/get_extraccion_admin.php', id).then(response => {
-            // En este punto recibimos la respuesta.
-        /*     alert(id); */
+        post_data('../../model/operation/get_extraccion_admin.php', id).then(response => {
+
             let data = JSON.parse(response); 
           
-            console.log('respuesta: '+response);
-            $('#span_id_user2').html(id);
+            console.log('extracciones: '+response);
              
             var table_extraccion = $('#modalExtraccion').DataTable();
            
@@ -74,7 +68,7 @@ $(function(){
             
             let total_ex= 0;
             data.forEach(dato => {
-                if(dato.state == 1){
+                if(dato.state == 1){ 
                     
                     table_extraccion.row.add(  [      
                         dato.id,
@@ -85,7 +79,7 @@ $(function(){
                     ]
                     ).draw();
                     total_ex += parseFloat(dato.pesos);
-                }
+                } 
             }) 
         })
     }
