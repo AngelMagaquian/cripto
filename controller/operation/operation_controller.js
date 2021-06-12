@@ -45,6 +45,11 @@ $(function(){
     function table(data){
         let template =``;
         let state= '';
+        let tableTrans = $('#transTable').DataTable();
+
+        tableTrans
+        .clear()
+        .draw();
 
         data.forEach(dato =>{
        
@@ -62,24 +67,19 @@ $(function(){
                 break;
            }
 
-          
-               template += `
-               <tr>
-                   <td>${dato.type}</td>
-                   <td>${dato.cripto_name} </td>
-                   <td>$${dato.pesos_amount} </td>
-                   <td>${dato.cripto_amount} </td>
-                   <td>${dato.wallet_name} </td>
-                   <td>${dato.date_hour} </td>
-                   <td>${state} </td>
-                   
-               </tr>
-               `;
+           tableTrans.row.add(
+            [
+                dato.type,
+                dato.cripto_name,
+                dato.pesos_amount,
+                dato.cripto_amount,
+                dato.wallet_name,
+                dato.date_hour,
+                state
+            ]
+           ).draw();
         })
         
-       
-        
-        $('#operation_tbody').html(template);
     }
 
    
