@@ -100,12 +100,20 @@
                     <div class="row m-0 justify-content-around">
                       <form id="update_pass">
                           <div class="m-0 row justify-content-around">
-                            <div class="form-group col-md-5 col-12 mt-4 ">
+                            <div class="col-md-11 col-12">
+                              <span style="color: #707070; font-size: 13px">Por seguridad vamos a necesitar que ingrese tu contraseña actual antes de ingresar otra</span>
+                            </div>
+                            <div class="form-group col-md-11 col-12 mt-4 ">
+                              <label for="exampleInputPassword1"><b>Ingresá contraseña actual*</b></label>
+                              <input type="password" class="form-control form-login" id="" placeholder="Ingresá contraseña actual" required autocomplete="off">
+                              
+                            </div>
+                            <div class="form-group col-md-11 col-12 mt-4 ">
                               <label for="exampleInputPassword1"><b>Nueva contraseña*</b></label>
                               <input type="password" class="form-control form-login" id="first_pass" placeholder="Ingresá una contraseña" required autocomplete="off">
                               
                             </div>
-                            <div class="form-group col-md-5 col-12 mt-4 ">
+                            <div class="form-group col-md-11 col-12 mt-4 ">
                               <label for="exampleInputPassword1"><b>Repetir contraseña*</b></label>
                               <input type="text" class="form-control form-login" id="pass" placeholder="Ingresá tu contraseña nuevamente" required autocomplete="off">
                               <label for="exampleInputPassword1" id="comfirm_pass"><b></b></label>
@@ -113,6 +121,27 @@
 
                             <div class="col-11 botonera">
                               <input type="submit" value="Cambiar" id="input_update_pass" class="btn-get-started-pass btn-pass float-right">
+                            </div>
+                            <div class="col-md-11 col-12"  style="font-size:14px;">
+                              <p style="margin-bottom:5px"><b>Tu contraseña debe tener:</b></p>
+                              <div style="font-size:13px; margin-bottom: 5px">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-circle-fill" viewBox="0 0 16 16" style="color:red;">
+                                  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
+                                </svg>
+                                <span>8 o más caracteres</span>
+                              </div >
+                              <div style="font-size:13px; margin-bottom: 5px">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-circle-fill" viewBox="0 0 16 16" style="color:red;">
+                                  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
+                                </svg>
+                                <span>Mayúsculas o minúsculas</span>
+                              </div>
+                              <div style="font-size:13px; margin-bottom: 5px">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-circle-fill" viewBox="0 0 16 16" style="color:red;">
+                                  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
+                                </svg>
+                                <span>8 o más caracteres</span>
+                              </div>
                             </div>
                             
                           </div>
