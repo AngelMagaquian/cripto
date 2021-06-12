@@ -69,13 +69,15 @@ $(function(){
                     })
                     .catch(error =>{
                         console.log('Error de insert: '+error);
-                        window.alert('Ocurrio un error al registrarse, intentelo mas tarde');
+                        alertify.alert("<p class='text-center'>Ocurrio un error al registrarse, intentelo mas tarde</p>", function () {
+                        }).set({title:"Registro"});
                     });
                 }
                 
            }else{
            var b1= 1;
-            window.alert('Debe ser mayor de 18 años para poder registrarse y operar');
+            alertify.alert("<p class='text-center'>Debe ser mayor de 18 años para poder registrarse y operar.</p>", function () {
+            }).set({title:"Registro"});
            }
             
             
@@ -90,7 +92,8 @@ function insert_wallet(){
     $.post('../../model/user/insert_wallet_user.php', postData).then(response => {
         if(response == 1){
             //Aca seria el punto
-            window.alert('Registro exitoso');
+            alertify.alert("<p class='text-center'>¡Tu registro fue exitoso!</p>", function () {
+            }).set({title:"Registro"});
             $(location).attr('href','./login.php');
         }
     })

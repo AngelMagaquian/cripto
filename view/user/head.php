@@ -20,3 +20,7 @@
   <!--fonts-->
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+  <!--alertify-->
+  <link rel="stylesheet" type="text/css" href="../../libraries/alertifyjs/css/alertify.css">
+  <link rel="stylesheet" type="text/css" href="../../libraries/alertifyjs/css/themes/default.css">

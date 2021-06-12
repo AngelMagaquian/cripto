@@ -58,6 +58,9 @@
                 <div class="tab-content" id="myTabContent">
                   <div class="tab-pane fade " id="home" role="tabpanel" aria-labelledby="home-tab">
                     <div class="row m-0 justify-content-around mb-4">
+                      <div class="col-md-11 col-12">
+                        <span style="color: #707070; font-size: 13px">Aquì puedes ver tus datos ingresados en el momento del registro.</span>
+                      </div>
                       <div class="form-group col-md-5 col-12 mt-4">
                         <label for="exampleInputEmail1" ><b>Nombre*</b></label>
                         <input type="text" class="form-control form-login" id="name_user"  disabled=»disabled» >
@@ -92,6 +95,16 @@
                       <div class="form-group col-md-5 col-12 mt-4">
                         <label for="exampleInputEmail1"><b>Email*</b></label>
                         <input type="email" class="form-control form-login" id="user_email" placeholder="ingresá tu email" disabled=»disabled»>
+                      </div>
+                      <div class="form-group col-md-5 col-12  mt-4 ">
+                        <label for="exampleInputPassword1"><b>Teléfono*</b></label>
+                        <input type="number" class="form-control form-login" id="first_pass" placeholder="Ingresá tu numero de teléfono" required>
+                      </div>
+                      <div class="form-group form-check col-md-5 col-12 mt-4 ">
+                        <div class="mt-4 ml-4">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">Declaro aceptar ser persona expuesta publicamente</label>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -151,7 +164,7 @@
 
                   <div class="tab-pane fade show active" id="foto" role="tabpanel" aria-labelledby="foto-tab">
                     <div class="row m-0 justify-content-around">
-                            <div class="col-11 botonera" >
+                            <div class="col-md-4 col-12 botonera" >
                               <form action="foto/registrar.php" method="post" id="from_photo" enctype="multipart/form-data">
                                   <label style="font-size: 14px; color: #274070;"><b>Foto de usuario</b></label>
                                   <br>
@@ -168,10 +181,7 @@
                               </form>
                             </div>
                         
-                    </div>      
-
-                    <div class="row m-0 justify-content-around">
-                            <div class="col-11 botonera" >
+                            <div class="col-md-4 col-12 botonera" >
                               <form action="foto/registrar.php" method="post" id="from_photo_dni" enctype="multipart/form-data">
                                   <label style="font-size: 14px; color: #274070;"><b>Foto de dni</b></label>
                                   <br>
@@ -187,21 +197,22 @@
                                   </figure>
                               </form>
                             </div>
-                        
-                    </div>      
-
-                    <div class="row m-0 justify-content-around">
-                            <div class="col-11 botonera" >
+                            <div class="col-md-4 col-12 botonera" >
                               <form action="foto/registrar.php" method="post" id="from_photo_dorso" enctype="multipart/form-data">
                                   <label style="font-size: 14px; color: #274070;"><b>Foto de dorso dni</b></label>
                                   <br>
-                                  <div style="width:100px; height:100px; background-color: red;">
+                                  <div class="text-center">
+                                  <div style="width:250px; height:200px; background-color: red;">
                                   </div>
-                                  <input type="file" name="photo_dorso"/>
-                                  <input type="text" id="table" name="table" value="photo_dorso" hidden/>
-                                  <br>
-                                  <input type="submit" value="Cargar"  class="btn-get-started-pass btn-pass float-right">
-                                  <br>
+                                  
+                                    <div class="input-file-container btn btn-dark" style="position:relative">  
+                                      <input type="file" name="photo_dorso" style="position: absolute;top: 0; left: 0;opacity: 0;cursor: pointer;"/>
+                                      <label tabindex="0" for="my-file" class="input-file-trigger mb-0 btn-sm">Seleccionar imagen</label>
+                                    </div>
+                                    <input type="submit" value="Cargar"  class="btn-get-started-pass btn-pass float-right">
+      
+                                  </div>
+                                  
                                   <figure>
 
                                   </figure>
