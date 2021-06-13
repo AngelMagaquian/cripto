@@ -82,15 +82,20 @@
   include 'head.php';
   ?>
 
-  <!-- DataTable-->
-  <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
-  <script src="https://cdn.datatables.net/1.10.24/js/dataTables.bootstrap5.min.js"></script>
+
   <!--Controllers-->
   <script src="https://code.jquery.com/jquery-3.5.1.js"></script> <!--no eliminar-->
+    <!-- DataTable-->
+    <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/1.10.24/js/dataTables.bootstrap5.min.js"></script>
   <script src="..\..\controller\operation\deposit_controller.js" type="module" ></script> <!--no eliminar-->
 
   
-
+  <script>
+    $(document).ready( function () {
+      $('#operacionesTable').DataTable();
+    } );
+  </script>
   <!-- Menu Toggle Script -->
   <script>
     $("#menu-toggle").click(function(e) {
@@ -160,10 +165,10 @@
 
     $('#operacionesTable').DataTable({ 
         responsive: true,
-        paging: false,
+        paging: true,
         searching: true,
         language: {
-            lengthMenu: "Agrupar de MENU ",
+            lengthMenu: "",
             search: " ",
             searchPlaceholder: " Buscar",
             info: "",

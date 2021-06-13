@@ -20,9 +20,14 @@ $(function(){
 
 
     function table(data){
-        let template =``;
-        let state= '';
 
+        let state= '';
+       
+        var table_deposit = $('#operacionesTable').DataTable();
+        table_deposit
+        .clear()
+        .draw();
+        
 
         data.forEach(dato =>{
             
@@ -41,21 +46,17 @@ $(function(){
                break;
            }
 
-          
-               template += `
-               <tr>
-                   <td>#${dato.id_deposit}</td>
-                   <td>${dato.CBU} </td>
-                   <td>${dato.bank_name} </td>
-                   <td>${dato.date} </td>
-                   <td>$${dato.pesos} </td>
-                   <td>${state} </td>
-               </tr>
-               `;
+           /*Data table por aca */
+           table_deposit.row.add([
+                dato.id_deposit,
+                dato.CBU,
+                dato.bank_name,
+                dato.date,
+                '$'+dato.pesos,
+                state
+           ]).draw();
+         
         })
-       
-        
-        $('#deposit_tbody').html(template);
     }
 
    

@@ -11,20 +11,21 @@ $(function(){
     function wallet_cripto_table(){
         get_data('../../model/wallet_cripto/wallet_cripto_data.php').then(response => {
             // En este punto recibimos la respuesta.
-                
+                 
             let data = JSON.parse(response); 
-            
-                let template =``;
+            let walletTable = $('#walletTable').DataTable();
+
+            walletTable.clear().draw();
+
                 data.forEach(dato =>{
-                       template += `
-                       <tr>
-                           <td>${dato.id_wallet_cripto}</td>
-                           <td>${dato.cripto_name} </td>   
-                           <td>${dato.wallet_name} </td>   
-                       </tr>
-                       `;
+                    walletTable.row.add([
+                      dato.id_wallet_cripto,
+                      dato.cripto_name,
+                      dato.wallet_name,
+                    ]).draw();
+                   
                 })
-                $('#wallet_tbody').html(template);
+    
                 
             
         })

@@ -18,6 +18,12 @@ $(function(){
             let data = JSON.parse(response); 
             let template =``;
             let status = "";
+            let table_me = $('#transTable').DataTable();
+
+            table_me
+            .clear()
+            .draw();
+
                 data.forEach(dato => {
     
                     switch (dato.status){
@@ -31,7 +37,14 @@ $(function(){
                              status = 'Cancelado'
                         break;
                     }
-                    template+=`
+                    table_me.row.add([
+                        dato.id_extraccion,
+                        dato.date,
+                        dato.bank_name,
+                        dato.amount,
+                        status
+                    ]).draw();
+                    /* template+=`
                         <tr>
                             <td>#${dato.id_extraccion}</td>
                             <td>${dato.date}</td>
@@ -39,12 +52,12 @@ $(function(){
                             <td>$${dato.amount}</td>
                             <td>${status}</td>
                         </tr>
-                    `;
+                    `; */
                 }); 
                 
                 
     
-            $('#tb_extraccion').html(template);
+            /* $('#tb_extraccion').html(template); */
         })
         .catch(error => {
             console.log('error: '+error);

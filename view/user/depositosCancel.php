@@ -54,6 +54,7 @@
                                     <tr>
                                         <th>ID extración</th>
                                         <th>Fecha</th>
+                                        <th>Banco</th>
                                         <th>Cuenta</th>
                                         <th>Importe</th>
                                         <th>Motivo</th>
@@ -65,6 +66,7 @@
                                 </tbody>
                             </table>
                             </div>
+                            <p>Sus fondos no se verán afectados por la cancelación de una extracción, comuniquese con nosotros para poder resolver el problema haciendo <a href="https://api.whatsapp.com/send?phone=+5493571327014&text=Hola%20,%20tengo%20un%20problema%20con%20mis%20extracciones" target="_blank">Click aquí</a>.</p>
                         </div>
                     </div>
             
@@ -85,11 +87,13 @@
   include 'head.php';
   ?>
   <!--Controllers-->
-  <script src="..\..\controller\operation\operation_controller.js" type="module" ></script> <!--no eliminar-->
+
 
   <script src="https://code.jquery.com/jquery-3.5.1.js"></script> <!--no eliminar-->
   <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
   <script src="https://cdn.datatables.net/1.10.24/js/dataTables.bootstrap5.min.js"></script>
+
+  <script src="..\..\controller\operation\cancel_deposit_controller.js" type="module" ></script> <!--no eliminar-->
   
 
 
