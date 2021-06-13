@@ -43,11 +43,11 @@
             <div class="row justify-content-center mt-4">
                 <div class="col-11">   
                     <div class="row">
-                        <h5>Extraciones</h5>
+                        <h5>Extracciones</h5>
                     </div>
                           
                       
-                    <div class="card">
+                    <div class="card mb-5">
                         <div class="card-body mt-3 mb-3 ">
 
                             <div class=" mt-4">
@@ -72,7 +72,9 @@
                                   <input type="submit" value="Confirmar" class="btn-get-started-agg btn-agg">
                                 </div>
                               </form>
-                              <div class="col-md-5 col-12 mt-5" >
+                              
+                              <div class="row justify-content-around">
+                              <div class="col-md-8 col-12 mt-5" >
                                 <div class="card">
                                   <div class="card-header">
                                     <span>Cuenta a depositar</span>
@@ -95,9 +97,9 @@
                                   </div>        
                                 </div>
                               </div>
-                              <div class="col-5">
 
                               </div>
+                             
                             </div>
                             
                             

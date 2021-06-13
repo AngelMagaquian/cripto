@@ -38,7 +38,7 @@
               <a href="depositosOperaciones.php" id="compraOpera">Depositos</a>
             </li>
             <li>
-              <a href="extraciones.php" id="extraciones">Extraciones</a>
+              <a href="extraciones.php" id="extraciones">Extracciones</a>
             </li>
           </ul>
         </div>
