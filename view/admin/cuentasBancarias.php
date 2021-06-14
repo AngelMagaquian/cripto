@@ -192,8 +192,8 @@
 
     $('#cuentasTable').DataTable({ 
         responsive: true,
-        paging: false,
-        searching: false,
+        paging: true,
+        searching: true,
         language: {
             lengthMenu: "Agrupar de MENU ",
             search: " ",
@@ -212,7 +212,7 @@
                 last: "Ultimo"
             },
         },
-        scrollY: 100,
+        scrollY: 350,
         scrollX: true,
     });
 

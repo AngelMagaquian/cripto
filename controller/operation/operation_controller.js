@@ -77,9 +77,6 @@ $(function(){
                `;
         })
         
-       
-        
-        $('#operation_tbody').html(template);
     }
 
    
