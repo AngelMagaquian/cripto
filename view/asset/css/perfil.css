@@ -537,6 +537,7 @@
   -webkit-box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
   -moz-box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
   box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
+  border:none;
 }
 #venta .card .calculadora .container-btn .btn-siguiente:hover{
   background-color: #031D5A;
@@ -717,4 +718,28 @@
 }
 #wallet .btn-wallet:hover{
   background-color: #284378;
+}
+
+.btn-siguiente{
+  color:#fff;
+  background-color: #385BA2;
+  -webkit-box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
+  -moz-box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
+  box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
+  border:none;
+}
+ .btn-siguiente:hover{
+  background-color: #031D5A;
+}
+
+ .btn-get-started-agg {
+  font-weight: 500;
+  font-size: 13px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 10px 30px;
+  border-radius: 5px;
+  transition: 0.5s;
+  color: #f5f5f5;
+  border: none;
 }

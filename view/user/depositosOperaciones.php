@@ -72,7 +72,7 @@
                                             </form>
                                         </div>
 
-                                        <div class="col-md-6 col-12 mt-5" >
+                                        <div class="col-md-8 col-12 mt-5" >
                                           <div class="card">
                                               <div class="card-header">
                                                   <span>Cuenta a depositar</span>
@@ -113,7 +113,7 @@
                                               
                                           </div>
                                         </div>
-                                        <div class="col-md-6  col-12 mt-5">
+                                        <!-- <div class="col-md-6  col-12 mt-5">
                                           <div class="card" style="">
                                             <div class="card-header">
                                               Depositos
@@ -131,7 +131,7 @@
                                             </div>
                                           
                                           </div>
-                                        </div>
+                                        </div> -->
                                
                                 
                           </div>

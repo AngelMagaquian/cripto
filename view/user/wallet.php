@@ -193,7 +193,7 @@
             select: true,
             colReorder: true
         },
-        scrollY: 200,
+        scrollY: 250,
         scrollX: true
       });
 

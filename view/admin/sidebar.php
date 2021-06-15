@@ -19,9 +19,9 @@
             <li>
               <a href="datosUser.php" id="datosUser">Datos de usuario</a>
             </li>
-            <li>
+            <!-- <li>
               <a href="identidadUser.php" id="identidadUser">Identidad de usuario</a>
-            </li>
+            </li> -->
             <li>
               <a href="walletUser.php" id="walletUser" >Wallet de usuario</a>
             </li>

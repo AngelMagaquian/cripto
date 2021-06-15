@@ -48,41 +48,59 @@
         </div>
         <div class="container mt-3 mb-2">
             <div class="row justify-content-around">
-                <div class="col-lg-7 col-md-11 col-sm-11 col-11 card focus mt-lg-0 mt-md-4 mt-sm-4 mt-4">
-                <div class="card">
-                    <h5 class="card-title">Operacion: <?php echo $_POST['type_trans'];?><p></p></h5>
-                    <div class="card-body">
-                      <h6>Seleccione la wallet del destino/origen de criptomoneda:<h6><br>
-                      <select id="select_wallet_cripto">
+                <div class="col-lg-7 col-md-11 col-sm-11 col-11 card focus mt-lg-0 mt-md-4 mt-sm-4 mt-4"  >
+                  <div class="card-body pt-2" style="font-size: 15px;">
+                    <h5 class="card-title" style="color:#44596A" style="font-weight:bold;">Operacion: <?php echo $_POST['type_trans'];?></h5>
+                      <p>Seleccione la wallet del destino/origen de criptomoneda:</p>
+
+                      <select id="select_wallet_cripto" class="form-control form-select">
                         <option value="default_select"> Seleccione una wallet</option>
                       </select>
-                      <br>
-                      <p>Si no poseé una wallet para esta criptomoneda, puede solicitarla haciendo <a href="wallet.php">Click aquí</a>.</p>
-                      <br>
-                      <h6>Saldo actual: $ <input type="text" id="wallet_user_input" readonly/></h6>
-                    </div>
-                    <div class="card-footer">
-                        <h6 class="card-title">Resumen: <p></p></h6>
-                        <div class="card-body">
-                                <p>Fecha y hora: <?php echo date("d/m/Y h:i:s a");?></p>
-                                <p>Moneda: <?php echo $_POST['id_cripto'];?>
-                                <p>Operacion: <?php echo $_POST['type_trans']." ".$_POST['id_cripto'];?>
-                                <p>Cantidad: <?php echo $_POST['monto_cripto']." ".$_POST['id_cripto'];?></p>
-                                <p>Pesos: $ <?php echo $_POST['monto_pesos'];?></p>
-                                <p>Wallet de orgien/destino: <label id="wallet_od"></label></p>
-                                <p>Cotización: AR$/<?php echo $_POST['id_cripto']." $ ".$_POST['valor_cripto_cc'];?></p>
-                                
-                            <br>
+                      <p style="color:#707070; font-size: 12px">Si no poseé una wallet para esta criptomoneda, puede solicitarla haciendo <a href="wallet.php">Click aquí</a>.</p>
+                      <p class="mb-0">Saldo actual: $ <input type="text" id="wallet_user_input" readonly/></p>
+
+                  </div>
+                    <div class="card-footer" style="font-size: 13px;">
+                        <h5 style="font-size:15px"><b>Resumen:</b></h5>
+                        <div class="row">
+                          <div class="col-6">
+                            <p class="mb-1"><b>Fecha y hora:</b> <?php echo date("d/m/Y h:i:s a");?></p>
+                          </div>
+                          <div class="col-6">
+                            <p class="mb-1"><b>Moneda:</b> <?php echo $_POST['id_cripto'];?>
+                          </div>
+                          <div class="col-6">
+                            <p class="mb-1"><b>Operacion:</b> <?php echo $_POST['type_trans']." ".$_POST['id_cripto'];?></div>
+                          <div class="col-6">
+                            <p class="mb-1"><b>Cantidad:</b> <?php echo $_POST['monto_cripto']." ".$_POST['id_cripto'];?></p>
+                          </div>
+                          <div class="col-6">
+                            <p class="mb-1"><b>Pesos:</b> $ <?php echo $_POST['monto_pesos'];?></p>
+                          </div>
+                          <div class="col-6">
+                            <p class="mb-1"><b>Wallet de orgien/destino:</b> <label id="wallet_od"></label></p>
+                          </div>
+                          <div class="col-6">
+                            <p class="mb-2"><b>Cotización:</b> AR$/<?php echo $_POST['id_cripto']." $ ".$_POST['valor_cripto_cc'];?></p>
+                          </div>
+                          <div class="col-12">
                             <p>Monto final: $ <?php echo $_POST['monto_pesos'];?> </p>
-                            <br>
-                            <input type="checkbox" id="declaracion"/> <p for="declaracion">Al continuar declaro bajo juramento que mis fondos no provienen de planes y programas sociales Argentina"</p>
+                          </div>
+
+                          <div class="form-check col-12 ml-3">
+                            <input type="checkbox" class="form-check-input" id="declaracion">
+                            <label class="form-check-label" for="declaracion">Al continuar declaro bajo juramento que mis fondos no provienen de planes y programas sociales Argentina</label>
+                          </div>
+                              
                         </div>
                     </div>
-                    <div>
-                        <form id="confirmar">
-                            <input type="submit" value="Finalizar" id="siguiente" class="btn-get-started  btn-siguiente mr-2 mt-sm-0 mt-3"> 
-                        </form>
-                    </div>
+                  <div>
+                  <div class="col-12 text-center">
+                    <form id="confirmar">
+                      <input type="submit" value="Finalizar" id="siguiente" class="btn-get-started  btn-siguiente mr-2 mt-sm-0 mt-3" style=""> 
+                    </form>
+                  </div>
+
                 </div>
             </div>
         </div>
