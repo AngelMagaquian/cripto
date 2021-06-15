@@ -46,6 +46,7 @@ $(function(){
                     dato.ID_user,
                     name+' '+last_name,
                     status,
+                    '$'+dato.balance,
                     `
                         <a href="" class="btn btn-info  mr-2 mt-sm-0 mt-3" type="button" data-toggle="modal" data-target="#modalFichaUsuario" id="modal_ficha_user_show_button" data-id=${dato.ID_user}>
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">

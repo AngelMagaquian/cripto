@@ -21,49 +21,27 @@ $(function() {
 
     function account_table() {
         get_data('../../model/datos_bancarios/get_all_account.php').then(response => {
-                // En este punto recibimos la respuesta.
-                let template = ``;
-          
-                if(response == 0){
-                    template = `
-                    <tr>
-                        <td>No hay cuentas sin confirmar</td>
-                        <td>No hay cuentas sin confirmar</td>
-                        <td>No hay cuentas sin confirmar</td>
-                        <td>No hay cuentas sin confirmar</td>
-                        <td>
-                        
-                        </td>
-                    <tr>
-                `;
 
-                    $('#account_tbody').html(template);
-                }else{
-                    let data = JSON.parse(response);
-                    
-                    console.log('la repuesta es: ' + response);
+            let data = JSON.parse(response);
+            let table = $('#cuentasTable').DataTable();
+            table.clear().draw();
 
-                    data.forEach(dato => {
-                        if (dato.check_account == '0') {
-                            template += `
-                            <tr>
-                                <td>${dato.name}</td>
-                                <td>${dato.CUIL}</td>
-                                <td>${dato.bank}</td>
-                                <td>${dato.CBU}</td>
-                                <td>
-                                <button class="btn btn-success" id="conf_yes" data-id=${dato.CBU}>si</button>
-                                <button class="btn btn-danger" id="conf_no" data-id=${dato.CBU}>no</button>
-                                </td>
-                            <tr>
-                        `;
-
-                            $('#account_tbody').html(template);
-                        }
+            data.forEach(dato => {
+                if (dato.check_account == '0') {
+                    table.row.add([
+                        dato.name,
+                        dato.CUIL,
+                        dato.bank,
+                        dato.CBU,
+                         `<button class="btn btn-success" id="conf_yes" data-id=${dato.CBU}>si</button>
+                        <button class="btn btn-danger" id="conf_no" data-id=${dato.CBU}>no</button>`
+                    ]).draw();
+                       
+                }
                
                 
-                    })
-                }
+            })
+                
 
             })
             .catch(error => {

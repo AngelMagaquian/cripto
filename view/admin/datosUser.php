@@ -53,6 +53,7 @@
                                           <th>Id user</th>    
                                           <th>Nombre y apellido</th>    
                                           <th>Estado</th>
+                                          <th>Saldo</th>
                                           <th>Ficha de usuario</th>
                                           <th>Datos bancarios</th>
                                           <th>Operaciones con Cripto</th>
@@ -274,7 +275,7 @@
                               <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
                                 <div class="modal-content">
                                   <div class="modal-header" style="color: #385BA2; background-color: rgba(0, 0, 0, 0.03);">
-                                    <h5 class="modal-title" id="exampleModalLabel">Historial de compra y ventas</h5>
+                                    <h5 class="modal-title" id="exampleModalLabel">Historial de depositos y extracciones</h5>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="border: none;background: transparent;">
                                       <span aria-hidden="true">&times;</span>
                                     </button>
@@ -300,7 +301,7 @@
                                           <tbody>
                                                 
                                           </tbody>
-                                          <tfoot id="tftotal_ventas">
+                                          <tfoot id="tftotal_deposito">
                                   
                                           </tfoot>
                                         </table>   
@@ -321,7 +322,7 @@
                                           <tbody>
                                                 
                                           </tbody>
-                                          <tfoot id="tftotal_ventas">
+                                          <tfoot id="tftotal_extra">
                                   
                                           </tfoot>
                                         </table>   

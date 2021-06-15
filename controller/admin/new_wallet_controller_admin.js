@@ -98,18 +98,18 @@ $(function(){
             // En este punto recibimos la respuesta.
             let dato = JSON.parse(response); 
             console.log(response);
-            let template=``;
+
+            let table = $('#walletUserTable').DataTable();
             dato.forEach(data =>{
-                   template += `
-                        <tr>
-                            <td>#${data.ID_pending}</td>
-                            <td>${data.user_name}</td>
-                            <td>${data.ID_user}</td>
-                            <td>${data.cripto_name}</td>
-                        </tr>
-                   `;
+                table.row.add([
+                    data.ID_pending,
+                    data.ID_user,
+                    data.user_name,
+                    data.cripto_name
+                ]).draw()
+
             })
-            $('#twallet').html(template);
+           
 
             
         })

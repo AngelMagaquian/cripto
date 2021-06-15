@@ -55,8 +55,9 @@
                                           <thead>
                                               <tr>
                                                   <th>Solicitud</th>
+                                                  <th>ID usurario</th>   
                                                   <th>Usuario</th>   
-                                                  <th>ID usurario</th>        
+                                                       
                                                   <th>Criptomoneda</th>
                                               </tr>
                                           </thead>
@@ -171,8 +172,8 @@
     
     $('#walletUserTable').DataTable({ 
         responsive: true,
-        paging: false,
-        searching: false,
+        paging: true,
+        searching: true,
         language: {
             lengthMenu: "Agrupar de MENU ",
             search: " ",

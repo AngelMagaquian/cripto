@@ -34,12 +34,16 @@ $(function(){
 
             if(data.check_email == 0){
                 $("#chk_email").prop("checked", false);
+                ;
+                $("#submit_user").prop('disabled', false);
             }else{
                 $("#chk_email").prop("checked", true);
+                $("#submit_user").prop('disabled', true);
             }
 
             if(data.check_user == 0){
                 $("#chk_conf").prop("checked", false);
+                $("#submit_user").prop('disabled', false);
             }else{
                 $("#chk_conf").prop("checked", true);
                 $("#submit_user").prop('disabled', true);

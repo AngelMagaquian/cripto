@@ -11,31 +11,31 @@ $(function(){
     function all_deposit(){
         get_data('../../model/transaction/pending_deposit.php').then(response => {
             // En este punto recibimos la respuesta.
-            
+            let table = $('#transtasaccionTable').DataTable();
+            table.clear().draw();
             let data = JSON.parse(response); 
-            let template = ``;
+
             
             data.forEach(dato => {
-                template += `
-                    <tr>
-                        <td>${dato.id_user}</td>
-                        <td>${dato.user_name}</td>
-                        <td>${dato.CUIL}</td>
-                        <td>${dato.alias}</td>
-                        <td>${dato.bank_name}</td>
-                        <td>Deposito #${dato.id_deposit}</td>
-                        <td>(${dato.CBU})</td>
-                        <td>${dato.date}</td>
-                        <td><b>$${dato.monto}</b></td>
-                        <td>
-                            <button class="btn btn-success" id="conf_yes" data-id=${dato.id_deposit}>si</button>
-                            <a href="" class="btn btn-danger mr-2 mt-sm-0 mt-3" type="button" data-toggle="modal" data-target="#exampleModal" id="conf_no" data-id=${dato.id_deposit}>no</a>
-                        </td>
-                    </tr>
-                `;
+                table.row.add([
+                    dato.id_user,
+                    dato.user_name,
+                    dato.CUIL,
+                    dato.alias,
+                    dato.bank_name,
+                    dato.id_deposit,
+                    dato.CBU,
+                    dato.date,
+                    '$'+dato.monto,
+                    `
+                    <button class="btn btn-success" id="conf_yes" data-id=${dato.id_deposit}>si</button>
+                    <a href="" class="btn btn-danger mr-2 mt-sm-0 mt-3" type="button" data-toggle="modal" data-target="#exampleModal" id="conf_no" data-id=${dato.id_deposit}>no</a>
+                    `
+                ]).draw();
+               
             });
 
-            $('#transactions_tbody').html(template);
+       
                
             
         }).catch(error => {

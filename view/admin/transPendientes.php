@@ -61,6 +61,7 @@
                                             <th>Fecha</th>
                                             <th>Operación</th>   
                                             <th>Criptomoneda</th> 
+                                            <th>Cantidad criptomoneda</th> 
                                             <th>Pesos</th>   
                                             <th>Wallet</th> 
                                             <th>Confirmación</th>
@@ -162,7 +163,7 @@
 
     $('#transtasaccionTable').DataTable({ 
         responsive: true,
-        paging: false,
+        paging: true,
         searching: true,
         language: {
             lengthMenu: "Agrupar de MENU ",

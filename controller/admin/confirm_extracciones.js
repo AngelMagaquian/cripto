@@ -16,29 +16,26 @@ $(function(){
             // En este punto recibimos la respuesta.
     
             let data = JSON.parse(response); 
-            let template =``;
-            let status = "";
+            let table = $('#transtasaccionTable').DataTable();
+            table.clear().draw();
                 data.forEach(dato => {
     
                     if(dato.status == 0){
-                        template+=`
-                        <tr>
-                            <td>#${dato.id_extraccion}</td>
-                            <td>${dato.user_name}</td>
-                            <td>${dato.date}</td>
-                            <td>${dato.bank_name} - ${dato.CBU}</td>
-                            <td>$${dato.amount}</td>
-                            <td>
-                                <button class="btn btn-success" id="conf_yes" data-id=${dato.id_extraccion}>si</button>
-                                <a href="" class="btn btn-danger mr-2 mt-sm-0 mt-3" type="button" data-toggle="modal" data-target="#exampleModal" id="conf_no" data-id=${dato.id_extraccion}>no</a>
-                            </td>
-                        </tr>
-                    `;
+                        table.row.add([
+                            dato.id_extraccion,
+                            dato.user_name,
+                            dato.date,
+                            dato.bank_name +' - '+dato.CBU,
+                            '$'+dato.amount,
+                            `
+                            <button class="btn btn-success" id="conf_yes" data-id=${dato.id_extraccion}>si</button>
+                            <a href="" class="btn btn-danger mr-2 mt-sm-0 mt-3" type="button" data-toggle="modal" data-target="#exampleModal" id="conf_no" data-id=${dato.id_extraccion}>no</a>
+                            `
+                        ]).draw()
                     }
-                   
                 }); 
     
-            $('#tb_extracciones').html(template);
+        
         })
         .catch(error => {
             console.log('error: '+error);

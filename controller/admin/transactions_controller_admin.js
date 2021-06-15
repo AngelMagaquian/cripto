@@ -10,36 +10,37 @@ $(function(){
     function all_trans(){
         get_data('../../model/transaction/pending_trans.php').then(response => {
             // En este punto recibimos la respuesta.
-            console.log(response);
-            let data = JSON.parse(response); 
-            let template = ``;
-            let type = "";
-            
+           
+            let data = JSON.parse(response);
+   
+           
+            let table = $('#transtasaccionTable').DataTable();
+            table.clear().draw();
 
             
 
 
             data.forEach(dato => {
-                template += `
-                    <tr>
-                        <td>${dato.id_user}</td>
-                        <td>${dato.user}</td>
-                        <td>${dato.DNI}</td>
-                        <td>Trans #${dato.id_op}</td>
-                        <td>${dato.date_hour}</td>
-                        <td><b>${dato.type}</b></td>
-                        <td><b>${dato.cripto_amount} </b> - (${dato.cripto_name})  </td>
-                        <td>$${dato.pesos_amount}</td>
-                        <td>${dato.id_wallet_cripto}</td>
-                        <td>
-                            <button class="btn btn-success" id="conf_yes" data-id=${dato.id_op}>si</button>
-                            <button class="btn btn-danger"  id="conf_no" data-id=${dato.id_op}>no</button>
-                        </td>
-                    </tr>
-                `;
+                table.row.add([
+                    dato.id_user,
+                    dato.user,
+                    dato.DNI,
+                    dato.id_op,
+                    dato.date_hour,
+                    dato.type,
+                    dato.cripto_name,
+                    dato.cripto_amount,
+                    '$'+dato.pesos_amount,
+                    dato.id_wallet_cripto,
+                    `
+                    <button class="btn btn-success" id="conf_yes" data-id=${dato.id_op}>si</button>
+                    <button class="btn btn-danger"  id="conf_no" data-id=${dato.id_op}>no</button>
+                    `
+
+                ]).draw()
             });
 
-            $('#transactions_tbody').html(template);
+          
                
             
         }).catch(error => {

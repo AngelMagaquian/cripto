@@ -23,7 +23,8 @@ $(function(){
         console.log(postData);
        
         get_data('../../model/transaction/trans_controller.php').then(response =>{
-            if(response == 1){
+            let data  =JSON.parse(response);
+            if(data.email == 1 && data.user == 1){
                 var opcion = confirm('¿Desea confirmar la cuenta bancaria?');
                 if (opcion == true) {
                     $.ajax({

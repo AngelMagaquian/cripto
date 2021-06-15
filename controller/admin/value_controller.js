@@ -28,7 +28,7 @@ $(function (){
 
         if(option === true){
           
-            new_values($('#new_Venta').val(),2);
+            new_values($('#new_Venta').val(),3);
         }else{
             
         }       
@@ -39,7 +39,7 @@ $(function (){
         let option = confirm('¿Desea cambiar los valores la comisión de compra?');
 
         if(option === true){
-            new_values($('#new_Compra').val(),3);
+            new_values($('#new_Compra').val(),2);
         }else{
             
         }       
@@ -52,15 +52,14 @@ $(function (){
                 switch(dato.ID_value){
                     case '1':
                         $('#Actual_Dolar').val('$'+dato.value);
-                        
-                    break;
+                        break;
                     case '2':
                         $('#Actual_Compra').val(dato.value+'%');
-                    break;
+                        break;
 
                     case '3':
                         $('#Actual_Venta').val(dato.value+'%');
-                    break;
+                        break;
                 }
             });
         }).catch(error =>{

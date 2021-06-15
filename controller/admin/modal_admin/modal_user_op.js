@@ -48,6 +48,16 @@ $(function(){
                     total_deposito += parseFloat(dato.pesos);
                 }
             }) 
+            let template_td =`
+            <tr>
+                <td>TOTALES</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>$${total_deposito}</td>
+            <tr>
+            `;
+            $('#tftotal_deposito').html(template_td);
         }).catch(error =>{
             console.log(error)
         })
@@ -79,8 +89,21 @@ $(function(){
                     ]
                     ).draw();
                     total_ex += parseFloat(dato.pesos);
+
+                   
                 } 
             }) 
+
+            let template_te =`
+            <tr>
+                <td>TOTALES</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>$${total_ex}</td>
+            <tr>
+            `;
+            $('#tftotal_extra').html(template_te);
         })
     }
 

@@ -22,11 +22,16 @@ $(function(){
 
     $('#new_deposit').submit(function(e){
         e.preventDefault();
+        console.log('Nuevo deposito');
         if( $('#bank_account').val() == 0){
             alert('Por favor seleccione una cuenta de banco, si aún no agrego ninguna puede hacerlo en Perfil->Datos bancarios->Agregar cuenta');
+            console.log('seleccione una cuenta');
         }else{
             get_data('../../model/transaction/trans_controller.php').then(response =>{
-                if(response==1){
+                let data = JSON.parse(response);
+                console.log(data);
+                if(data.user == 1 && data.email == 1){
+                    console.log('user check');
                     let bank_account = $('#bank_account').val();
                     post_data('../../model/transaction/account_controller.php', bank_account ).then(response =>{
                         console.log(response);
@@ -59,6 +64,7 @@ $(function(){
                         console.log(error);
                     })
                 }else{
+                    console.log('Datos no confirmados');
                     new_deposit_default();
                 }
             }).catch(error =>{
