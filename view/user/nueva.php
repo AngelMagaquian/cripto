@@ -57,13 +57,13 @@
                         <div class=" mt-3 ">
                             <div class="row my-2">
                              <div class="col text-center">
-                                <button class="btn btn-nuevo btn-get-started-nuevo">Compra / venta</button>
+                                <a href="venta.php" class="btn btn-nuevo btn-get-started-nuevo" role="button">Compra / venta</a>
                              </div>
                              <div class="col text-center">
-                                <button class="btn btn-nuevo btn-get-started-nuevo">Depósitos</button>
+                                <a href="depositosOperaciones.php" class="btn btn-nuevo btn-get-started-nuevo" role="button">Depósitos</a>
                              </div>
                              <div class="col text-center">
-                                <button class="btn btn-nuevo btn-get-started-nuevo">Extracciones</button>
+                                <a href="extraciones.php" class="btn btn-nuevo btn-get-started-nuevo" role="button">Extracciones</a>
                              </div>
                             </div>
 
