@@ -63,6 +63,9 @@
             <li>
               <a href="depositosCancel.php" id="DepCancel">Deposito cancelado</a>
             </li>
+            <li>
+              <a href="nueva.php" id="nueva">Vista Nueva</a>
+            </li>
           </ul>
         </div>
 

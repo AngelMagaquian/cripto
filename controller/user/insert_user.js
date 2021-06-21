@@ -137,6 +137,8 @@ function pass_controller(pass){
         return false;
     }
 }
+//hola 
+
 
 function birth_day_control(date){
     console.log('Control de edad');
