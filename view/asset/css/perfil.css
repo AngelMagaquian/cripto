@@ -730,6 +730,7 @@
 }
  .btn-siguiente:hover{
   background-color: #031D5A;
+  color: #fff;
 }
 
  .btn-get-started-agg {
@@ -743,3 +744,29 @@
   color: #f5f5f5;
   border: none;
 }
+
+.btn-nuevo{
+  color:#fff;
+  background-color: #385BA2;
+  -webkit-box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
+  -moz-box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
+  box-shadow: 0px 0px 8px 0px rgba(166,166,166,1);
+  border:none;
+}
+ .btn-nuevo:hover{
+  background-color: #031D5A;
+  color: #fff;
+}
+
+ .btn-get-started-nuevo {
+  font-weight: 500;
+  font-size: 13px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 20px 30px;
+  border-radius: 50px;
+  transition: 0.5s;
+  color: #f5f5f5;
+  border: none;
+}
+
