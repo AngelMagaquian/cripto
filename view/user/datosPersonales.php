@@ -98,7 +98,7 @@
                       </div>
                       <div class="form-group col-md-5 col-12  mt-4 ">
                         <label for="exampleInputPassword1"><b>Teléfono*</b></label>
-                        <input type="number" class="form-control form-login" id="first_pass" placeholder="Ingresá tu numero de teléfono" required>
+                        <input type="number" class="form-control form-login" id="phone" placeholder="Ingresá tu numero de teléfono" required>
                       </div>
                       <div class="form-group form-check col-md-5 col-12 mt-4 ">
                         <div class="mt-4 ml-4">
@@ -118,7 +118,7 @@
                             </div>
                             <div class="form-group col-md-11 col-12 mt-4 ">
                               <label for="exampleInputPassword1"><b>Ingresá contraseña actual*</b></label>
-                              <input type="password" class="form-control form-login" id="" placeholder="Ingresá contraseña actual" required autocomplete="off">
+                              <input type="password" class="form-control form-login" id="current_pass" placeholder="Ingresá contraseña actual" required autocomplete="off">
                               
                             </div>
                             <div class="form-group col-md-11 col-12 mt-4 ">
@@ -128,7 +128,7 @@
                             </div>
                             <div class="form-group col-md-11 col-12 mt-4 ">
                               <label for="exampleInputPassword1"><b>Repetir contraseña*</b></label>
-                              <input type="text" class="form-control form-login" id="pass" placeholder="Ingresá tu contraseña nuevamente" required autocomplete="off">
+                              <input type="password" class="form-control form-login" id="pass" placeholder="Ingresá tu contraseña nuevamente" required autocomplete="off">
                               <label for="exampleInputPassword1" id="comfirm_pass"><b></b></label>
                             </div>
 
@@ -147,13 +147,13 @@
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-circle-fill" viewBox="0 0 16 16" style="color:red;">
                                   <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
                                 </svg>
-                                <span>Mayúsculas o minúsculas</span>
+                                <span>Al menos una letra mayúscula</span>
                               </div>
                               <div style="font-size:13px; margin-bottom: 5px">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-circle-fill" viewBox="0 0 16 16" style="color:red;">
                                   <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
                                 </svg>
-                                <span>8 o más caracteres</span>
+                                <span>Al menos un número</span>
                               </div>
                             </div>
                             

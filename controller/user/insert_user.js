@@ -30,6 +30,10 @@ $(function(){
     $('#input_user').submit(function(e){
         e.preventDefault();
         console.log('user_submit');
+        let pep = 0;
+        if( $('#pep').prop('checked') ) {
+            pep = 1;
+        }
             const postData = {
                 dni : $('#dni').val(),
                 pass : $('#pass').val(),
@@ -39,7 +43,9 @@ $(function(){
                 second_last_name : $('#second_last_name').val(),
                 birth_day : $('#birth_day').val(),
                 cuil : $('#cuil').val(),
-                email : $('#email').val()
+                email : $('#email').val(),
+                phone: $('#phone').val(),
+                pep_status: pep
             };
             console.log(postData);
             //primer filtro si, es menor no puede registrarse
@@ -55,23 +61,32 @@ $(function(){
             
                 const pass= $('#pass').val();
                 const first_pass= $('#first_pass').val();
+
+
                 if(pass === first_pass){
-                    $.post('../../model/user/insert_new.php', postData).then(response =>{
+                    let control_password = pass_controller(pass);
+                    if(control_password === true){
+                        $.post('../../model/user/insert_new.php', postData).then(response =>{
                         
                              
-                        //$(location).attr('href','./login.php');
-                        if(response == 1){
-                            insert_wallet()
-                        }else{
-                            console.log(response);
-                        }
+                            //$(location).attr('href','./login.php');
+                            if(response == 1){
+                                insert_wallet()
+                            }else{
+                                console.log(response);
+                            }
+                            
+                        })
+                        .catch(error =>{
+                            console.log('Error de insert: '+error);
+                            alertify.alert("<p class='text-center'>Ocurrio un error al registrarse, intentelo mas tarde</p>", function () {
+                            }).set({title:"Registro"});
+                        });
+                    }else{
                         
-                    })
-                    .catch(error =>{
-                        console.log('Error de insert: '+error);
-                        alertify.alert("<p class='text-center'>Ocurrio un error al registrarse, intentelo mas tarde</p>", function () {
-                        }).set({title:"Registro"});
-                    });
+                        alert('error en contraseña');
+                    }
+                    
                 }
                 
            }else{
@@ -99,15 +114,41 @@ function insert_wallet(){
     })
 }
 
+function pass_controller(pass){
+    let word = 0;
+    let number = 0;
+    if(pass.length >= 8){
+        let pass_arr = Array.from(pass);
+        pass_arr.forEach(e =>{
+            if(e.charCodeAt(0) > 47 && e.charCodeAt(0) < 58){
+                word += 1;
+            }
+            if(e.charCodeAt(0) > 64 && e.charCodeAt(0) < 91){
+                number += 1;
+            }
+        })
+
+        if(word >= 1 && number >= 1){
+            return true;
+        }else{
+            return false;
+        }
+    }else{
+        return false;
+    }
+}
+
 function birth_day_control(date){
     console.log('Control de edad');
-    
-
-    /*var fecha1 = moment(date);
-    var fecha2 = moment('2021-03-12');
-
-    console.log(fecha2.diff(fecha1, 'years'), ' dias de diferencia');*/
-    return true;
+    let hoy = new Date()
+    let fechaNacimiento = new Date(date)
+    let edad = hoy.getFullYear() - fechaNacimiento.getFullYear()
+    if(edad >= 18){
+        return true;
+    }else{
+        return false;
+    }
+  
 }
 
 /*

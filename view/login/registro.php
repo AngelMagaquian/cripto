@@ -81,11 +81,12 @@
                             </div>
                             <div class="form-group col-md-6 col-12  mt-4 ">
                                 <label for="exampleInputPassword1"><b>Teléfono*</b></label>
-                                <input type="number" class="form-control form-login" id="first_pass" placeholder="Ingresá tu numero de telefono" required>
+                                <input type="number" class="form-control form-login" id="phone" placeholder="Ingresá tu numero de telefono" required>
+                                <label class="form-check-label" for="phone">Por ejemplo, 3511111111 </label>
                             </div>
                             <div class="form-group form-check col-md-6 col-12 mt-4 ">
-                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                <label class="form-check-label" for="exampleCheck1">Declaro aceptar ser persona expuesta publicamente</label>
+                                <input type="checkbox" class="form-check-input" id="pep">
+                                <label class="form-check-label" for="exampleCheck1">Declaro no ser una <b>Persona Expuesta Políticamente</b></label>
                             </div>
                         </div>
 
