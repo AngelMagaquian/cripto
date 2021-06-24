@@ -94,9 +94,6 @@ $(function(){
             alertify.alert("<p class='text-center'>Debe ser mayor de 18 años para poder registrarse y operar.</p>", function () {
             }).set({title:"Registro"});
            }
-            
-            
-
     });
 });
 
@@ -152,16 +149,3 @@ function birth_day_control(date){
     }
   
 }
-
-/*
- $dni = $_POST['dni'];
-    $cuil = $_POST['cuil'];
-    $pass = $_POST['pass'];
-    $name_user = $_POST['name_user'];
-    $middle_name = $_POST['middle_name'];
-    $last_name = $_POST['last_name'];
-    $second_last_name = $_POST['second_last_name'];
-    $birth_day = $_POST['birth_day'];
-    $check_user = 0;
-    $type = 0;
-*/

@@ -48,7 +48,7 @@
                     <div class="card">
                         <div class="card-body mt-3 ">
                             <div class="row my-2">
-                                <h5>Saldo actual: <span>$1253.45</span></h5>
+                                <h5>Saldo actual: <span id="wallet_user_balance"></span></h5>
                             </div>
 
                         </div>
@@ -87,7 +87,7 @@
   include 'head.php';
   ?>
   <!--Controllers-->
-  <script src="..\..\controller\operation\mis_extracciones_controller.js" type="module" ></script> <!--no eliminar-->
+  <script src="..\..\controller\user\wallet_user_controller.js" type="module" ></script> <!--no eliminar-->
 
   <script src="https://code.jquery.com/jquery-3.5.1.js"></script> <!--no eliminar-->
   <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
