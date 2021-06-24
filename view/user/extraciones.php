@@ -186,6 +186,7 @@
       $(".submenu-misOp").css("display", "none")
       $(".submenu-operaciones").css("display", "none")
       $(".submenu-personal").css("display", "block")
+      $(".submenu-wallet").css("display", "none")
 
       if($("#navOperaciones").hasClass("activo")){
         $("#navOperaciones").removeClass("activo");
@@ -194,6 +195,10 @@
       if($("#navMisOp").hasClass("activo")){
         $("#navMisOp").removeClass("activo");
         $("#navMisOp").addClass("no-activo");
+      }
+      if($("#navWallet").hasClass("activo")){
+        $("#navWallet").removeClass("activo");
+        $("#navWallet").addClass("no-activo");
       }
     }
 
@@ -203,7 +208,58 @@
       $(".submenu-misOp").css("display", "none")
       $(".submenu-operaciones").css("display", "block")
       $(".submenu-personal").css("display", "none")
+      $(".submenu-wallet").css("display", "none")
       
+      if($("#navPerfil").hasClass("activo")){
+        $("#navPerfil").removeClass("activo");
+        $("#navPerfil").addClass("no-activo");
+      }
+      if($("#navMisOp").hasClass("activo")){
+        $("#navMisOp").removeClass("activo");
+        $("#navMisOp").addClass("no-activo");
+      }
+      if($("#navWallet").hasClass("activo")){
+        $("#navWallet").removeClass("activo");
+        $("#navWallet").addClass("no-activo");
+      }
+    }
+
+    function navMisOp(){
+      $("#navMisOp").removeClass("no-activo")
+      $("#navMisOp").addClass("activo")
+      $(".submenu-misOp").css("display", "block")
+      $(".submenu-operaciones").css("display", "none")
+      $(".submenu-personal").css("display", "none")
+      $(".submenu-wallet").css("display", "none")
+
+      if($("#navOperaciones").hasClass("activo")){
+        $("#navOperaciones").removeClass("activo");
+        $("#navOperaciones").addClass("no-activo");
+      }
+      if($("#navPerfil").hasClass("activo")){
+        $("#navPerfil").removeClass("activo");
+        $("#navPerfil").addClass("no-activo");
+      }
+      if($("#navWallet").hasClass("activo")){
+        $("#navWallet").removeClass("activo");
+        $("#navWallet").addClass("no-activo");
+      }
+    }
+
+    function navWallet(){
+      $("#navMisOp").removeClass("no-activo")
+      $("#navMisOp").addClass("no-activo")
+      $("#navWallet").addClass("activo")
+      $(".submenu-wallet").css("display", "block")
+      $(".submenu-misOp").css("display", "none")
+      $(".submenu-operaciones").css("display", "none")
+      $(".submenu-personal").css("display", "none")
+      
+
+      if($("#navOperaciones").hasClass("activo")){
+        $("#navOperaciones").removeClass("activo");
+        $("#navOperaciones").addClass("no-activo");
+      }
       if($("#navPerfil").hasClass("activo")){
         $("#navPerfil").removeClass("activo");
         $("#navPerfil").addClass("no-activo");
@@ -214,22 +270,6 @@
       }
     }
 
-    function navMisOp(){
-      $("#navMisOp").removeClass("no-activo")
-      $("#navMisOp").addClass("activo")
-      $(".submenu-misOp").css("display", "block")
-      $(".submenu-operaciones").css("display", "none")
-      $(".submenu-personal").css("display", "none")
-
-      if($("#navOperaciones").hasClass("activo")){
-        $("#navOperaciones").removeClass("activo");
-        $("#navOperaciones").addClass("no-activo");
-      }
-      if($("#navPerfil").hasClass("activo")){
-        $("#navPerfil").removeClass("activo");
-        $("#navPerfil").addClass("no-activo");
-      }
-    }
 
   </script>
 

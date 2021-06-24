@@ -147,6 +147,7 @@
       $("#navPerfil").addClass("activo")
       $(".submenu-misOp").css("display", "none")
       $(".submenu-operaciones").css("display", "none")
+      $(".submenu-wallet").css("display", "none")
       $(".submenu-personal").css("display", "block")
 
       if($("#navOperaciones").hasClass("activo")){
@@ -163,6 +164,7 @@
       $("#navOperaciones").removeClass("no-activo")
       $("#navOperaciones").addClass("activo")
       $(".submenu-misOp").css("display", "none")
+      $(".submenu-wallet").css("display", "none")
       $(".submenu-operaciones").css("display", "block")
       $(".submenu-personal").css("display", "none")
       
@@ -181,6 +183,7 @@
       $("#navMisOp").addClass("activo")
       $(".submenu-misOp").css("display", "block")
       $(".submenu-operaciones").css("display", "none")
+      $(".submenu-wallet").css("display", "none")
       $(".submenu-personal").css("display", "none")
 
       if($("#navOperaciones").hasClass("activo")){

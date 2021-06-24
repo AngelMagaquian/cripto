@@ -23,7 +23,7 @@
 <body>
   <section id="login">
       <div class="container">
-          <div class="row justify-content-center">
+          <div class="row justify-content-center  align-items-center" style="height: 100vh;">
           <div class="col-lg-4 col-md-6 col-sm-8 col-11  mt-4 mb-4">
             <div class="card ">
               <div class="card-body mt-4 mb-4">
