@@ -168,16 +168,19 @@
                               <form action="foto/registrar.php" method="post" id="from_photo" enctype="multipart/form-data">
                                   <label style="font-size: 14px; color: #274070;"><b>Foto de usuario</b></label>
                                   <br>
-                                  <div style="width:100px; height:100px; background-color: red;">
+                                  <div class="container-img">
+                                    <div class="img">
+                                    </div>
                                   </div>
-                                  <input type="file" name="photo_face"/>
-                                  <input type="text" id="table" name="table" value="photo_face" hidden/>
-                                  <br>
-                                  <input type="submit" value="Cargar"  class="btn-get-started-pass btn-pass float-right">
-                                  <br>
-                                  <figure>
-
-                                  </figure>
+                                  
+                                  <div style="min-width: 100%; text-align: end; margin-top:20px">
+                                  <div class="input-file-container btn btn-sm btn-outline-light">  
+                                    <input type="file" name="photo_dorso" class="input-file">
+                                    <label tabindex="0" for="my-file" class="input-file-trigger mb-0 btn-sm">Nueva imagen</label>
+                                  </div>
+                                  <input type="submit" value="Cargar"  class="btn-get-started-pass btn-pass">
+                                  </div>
+                                  
                               </form>
                             </div>
                         
@@ -185,37 +188,35 @@
                               <form action="foto/registrar.php" method="post" id="from_photo_dni" enctype="multipart/form-data">
                                   <label style="font-size: 14px; color: #274070;"><b>Foto de dni</b></label>
                                   <br>
-                                  <div style="width:100px; height:100px; background-color: red;">
+                                  <div class="container-img">
+                                    <div class="img">
+                                    </div>
                                   </div>
-                                  <input type="file" name="photo_dni"/>
-                                  <input type="text" id="table" name="table" value="photo_dni" hidden/>
-                                  <br>
-                                  <input type="submit" value="Cargar"  class="btn-get-started-pass btn-pass float-right">
-                                  <br>
-                                  <figure>
-
-                                  </figure>
+                                  
+                                  <div style="min-width: 100%; text-align: end; margin-top:20px">
+                                  <div class="input-file-container btn btn-sm btn-outline-light">  
+                                    <input type="file" name="photo_dorso" class="input-file">
+                                    <label tabindex="0" for="my-file" class="input-file-trigger mb-0 btn-sm">Nueva imagen</label>
+                                  </div>
+                                  <input type="submit" value="Cargar"  class="btn-get-started-pass btn-pass">
+                                  </div>
                               </form>
                             </div>
                             <div class="col-md-4 col-12 botonera" >
                               <form action="foto/registrar.php" method="post" id="from_photo_dorso" enctype="multipart/form-data">
                                   <label style="font-size: 14px; color: #274070;"><b>Foto de dorso dni</b></label>
-                                  <br>
-                                  <div class="text-center">
-                                  <div style="width:250px; height:200px; background-color: red;">
-                                  </div>
-                                  
-                                    <div class="input-file-container btn btn-dark" style="position:relative">  
-                                      <input type="file" name="photo_dorso" style="position: absolute;top: 0; left: 0;opacity: 0;cursor: pointer;"/>
-                                      <label tabindex="0" for="my-file" class="input-file-trigger mb-0 btn-sm">Seleccionar imagen</label>
+                                  <div class="container-img">
+                                    <div class="img">
                                     </div>
-                                    <input type="submit" value="Cargar"  class="btn-get-started-pass btn-pass float-right">
-      
                                   </div>
                                   
-                                  <figure>
-
-                                  </figure>
+                                  <div style="min-width: 100%; text-align: end; margin-top:20px">
+                                  <div class="input-file-container btn btn-sm btn-outline-light">  
+                                    <input type="file" name="photo_dorso" class="input-file">
+                                    <label tabindex="0" for="my-file" class="input-file-trigger mb-0 btn-sm">Nueva imagen</label>
+                                  </div>
+                                  <input type="submit" value="Cargar"  class="btn-get-started-pass btn-pass">
+                                  </div>
                               </form>
                             </div>
                         
@@ -264,6 +265,7 @@
       $(".submenu-misOp").css("display", "none")
       $(".submenu-operaciones").css("display", "none")
       $(".submenu-personal").css("display", "block")
+      $(".submenu-wallet").css("display", "none")
 
       if($("#navOperaciones").hasClass("activo")){
         $("#navOperaciones").removeClass("activo");
@@ -272,6 +274,10 @@
       if($("#navMisOp").hasClass("activo")){
         $("#navMisOp").removeClass("activo");
         $("#navMisOp").addClass("no-activo");
+      }
+      if($("#navWallet").hasClass("activo")){
+        $("#navWallet").removeClass("activo");
+        $("#navWallet").addClass("no-activo");
       }
     }
 
@@ -281,7 +287,58 @@
       $(".submenu-misOp").css("display", "none")
       $(".submenu-operaciones").css("display", "block")
       $(".submenu-personal").css("display", "none")
+      $(".submenu-wallet").css("display", "none")
       
+      if($("#navPerfil").hasClass("activo")){
+        $("#navPerfil").removeClass("activo");
+        $("#navPerfil").addClass("no-activo");
+      }
+      if($("#navMisOp").hasClass("activo")){
+        $("#navMisOp").removeClass("activo");
+        $("#navMisOp").addClass("no-activo");
+      }
+      if($("#navWallet").hasClass("activo")){
+        $("#navWallet").removeClass("activo");
+        $("#navWallet").addClass("no-activo");
+      }
+    }
+
+    function navMisOp(){
+      $("#navMisOp").removeClass("no-activo")
+      $("#navMisOp").addClass("activo")
+      $(".submenu-misOp").css("display", "block")
+      $(".submenu-operaciones").css("display", "none")
+      $(".submenu-personal").css("display", "none")
+      $(".submenu-wallet").css("display", "none")
+
+      if($("#navOperaciones").hasClass("activo")){
+        $("#navOperaciones").removeClass("activo");
+        $("#navOperaciones").addClass("no-activo");
+      }
+      if($("#navPerfil").hasClass("activo")){
+        $("#navPerfil").removeClass("activo");
+        $("#navPerfil").addClass("no-activo");
+      }
+      if($("#navWallet").hasClass("activo")){
+        $("#navWallet").removeClass("activo");
+        $("#navWallet").addClass("no-activo");
+      }
+    }
+
+    function navWallet(){
+      $("#navMisOp").removeClass("no-activo")
+      $("#navMisOp").addClass("no-activo")
+      $("#navWallet").addClass("activo")
+      $(".submenu-wallet").css("display", "block")
+      $(".submenu-misOp").css("display", "none")
+      $(".submenu-operaciones").css("display", "none")
+      $(".submenu-personal").css("display", "none")
+      
+
+      if($("#navOperaciones").hasClass("activo")){
+        $("#navOperaciones").removeClass("activo");
+        $("#navOperaciones").addClass("no-activo");
+      }
       if($("#navPerfil").hasClass("activo")){
         $("#navPerfil").removeClass("activo");
         $("#navPerfil").addClass("no-activo");
@@ -292,22 +349,6 @@
       }
     }
 
-    function navMisOp(){
-      $("#navMisOp").removeClass("no-activo")
-      $("#navMisOp").addClass("activo")
-      $(".submenu-misOp").css("display", "block")
-      $(".submenu-operaciones").css("display", "none")
-      $(".submenu-personal").css("display", "none")
-
-      if($("#navOperaciones").hasClass("activo")){
-        $("#navOperaciones").removeClass("activo");
-        $("#navOperaciones").addClass("no-activo");
-      }
-      if($("#navPerfil").hasClass("activo")){
-        $("#navPerfil").removeClass("activo");
-        $("#navPerfil").addClass("no-activo");
-      }
-    }
 
   </script>
 

@@ -63,19 +63,26 @@
             <li>
               <a href="depositosCancel.php" id="DepCancel">Deposito cancelado</a>
             </li>
-            <li>
-              <a href="nueva.php" id="nueva">Vista Nueva</a>
-            </li>
           </ul>
         </div>
 
-        <a href="wallet.php" id="wallet" class="list-group-item list-group-item-action">
+        <a href="#" class="list-group-item list-group-item-action"  id="navWallet" onclick="navWallet()">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-wallet2" viewBox="0 0 16 16">
               <path d="M12.136.326A1.5 1.5 0 0 1 14 1.78V3h.5A1.5 1.5 0 0 1 16 4.5v9a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 13.5v-9a1.5 1.5 0 0 1 1.432-1.499L12.136.326zM5.562 3H13V1.78a.5.5 0 0 0-.621-.484L5.562 3zM1.5 4a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-13z"/>
             </svg>
             Wallet
         </a>
-        <a href="../../home/ayuda.php" class="list-group-item list-group-item-action">
+        <div class="submenu submenu-wallet">
+          <ul>
+          <li>
+              <a href="wallet.php" id="walletCripto" >Wallet Cripto</a>
+            </li>
+            <li>
+              <a href="walletUser.php" id="walletUser">Wallet usuario</a>
+            </li>
+          </ul>
+        </div>
+        <a href="../home/ayuda.php" class="list-group-item list-group-item-action">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-question-circle" viewBox="0 0 16 16">
                 <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
                 <path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z"/>
@@ -90,3 +97,4 @@
       </div>
     </div>
     <!-- /#sidebar-wrapper -->
+    
