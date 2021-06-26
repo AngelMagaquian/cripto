@@ -16,7 +16,7 @@
         $insert_new_user = $conexion -> query("INSERT INTO user (DNI, CUIL, pass, name_user, middle_name, last_name, second_last_name, birth_day, check_user, type, email,check_email) 
         VALUE ($dni, $cuil,'$pass', '$name_user', '$middle_name','$last_name', '$second_last_name', '$birth_day', 0, 1, '$email',0, '$phone', $no_pep)") or die('Error: '. mysqli_error($conexion));
 
-        
+    
 
 
 

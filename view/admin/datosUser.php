@@ -140,7 +140,7 @@
                                 <div class="modal-footer">
                                   <form id="confirm_user">
                                         <input type="submit" value="Confirmar usuario" class="btn btn-success" id="submit_user"/>
-                                        <button type="button" class="btn btn-secondary" data-dismiss="modal" id="close">Close</button>
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal" id="close">Cerrar</button>
                                     </form>
                                   
                                 </div>                            
@@ -183,7 +183,7 @@
                                     
                                   </div>
                                   <div class="modal-footer">
-                                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> 
+                                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button> 
                                   </div>                            
                                 </div>
                               </div>
@@ -262,7 +262,7 @@
                                     
                                   </div>
                                   <div class="modal-footer">
-                                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> 
+                                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button> 
                                   </div>                            
                                 </div>
                               </div>
@@ -331,7 +331,7 @@
                                     
                                   </div>
                                   <div class="modal-footer">
-                                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> 
+                                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button> 
                                   </div>                            
                                 </div>
                               </div>
