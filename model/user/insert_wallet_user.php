@@ -22,6 +22,7 @@
     $ID_wallet_user = $repuesta['ID_wallet_user'];
 
     $update_id_wallet = $conexion -> query("UPDATE user SET ID_wallet_user = $ID_wallet_user WHERE ID_user = $user") or die('Error: '. mysqli_error($conexion));
+    $insert_photo = $conexion -> query("INSERT INTO photo_user (id_user, photo_face, photo_dni,  photo_dorso) VALUE ($user, NULL, NULL, null)") or die('Error: '. mysqli_error($conexion));
 
         if($insert_wallet_user){
             echo 1;

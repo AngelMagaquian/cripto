@@ -163,50 +163,106 @@
                   </div>
 
                   <div class="tab-pane fade show active" id="foto" role="tabpanel" aria-labelledby="foto-tab">
+                  <?php
+                 
+                    $user = $_SESSION['id_user'];
+                    include '../../model/system/conexion.php';
+
+
+                    $consulta ="SELECT * FROM photo_user WHERE ID_user = $user";
+                    $ejecucion = mysqli_query($conexion, $consulta);
+
+                    $response= mysqli_fetch_array($ejecucion);
+
+                    $photo_face = $response['photo_face'];
+                    $photo_dni = $response['photo_dni'];
+                    $photo_dorso = $response['photo_dorso'];
+
+                    $control_face = false;
+                    $control_dni = false;
+                    $control_dorso = false;
+
+                    $color_face = 'background-color: #385BA2';
+                    $color_dni = 'background-color: #385BA2';
+                    $color_dorso = 'background-color: #385BA2';
+                    /* && $photo_dni != '' && $photo_dorso != ''  */
+                    if($photo_face != null && $photo_face != '' ){
+                      $control_face = 'disabled';
+                      $color_face = "background-color: #707070";
+                    }else{
+                      $control_face = '';
+                    }
+
+                    if($photo_dni != null && $photo_dni != ''){
+                      $control_dni = 'disabled';
+                      $color_dni = "background-color: #707070";
+                    }else{
+                      $control_dni = '';
+                    }
+
+                    if($photo_dorso != null && $photo_dorso != ''){
+                      $control_dorso = 'disabled';
+                      $color_dorso = "background-color: #707070";
+                    }else{
+                      $control_dorso = '';
+                    }
+
+
+                  ?>
                     <div class="row m-0 justify-content-around">
                             <div class="col-md-4 col-12 botonera" >
                               <form action="foto/registrar.php" method="post" id="from_photo" enctype="multipart/form-data">
                                   <label style="font-size: 14px; color: #274070;"><b>Foto de usuario</b></label>
                                   <br>
                                   <div class="container-img">
-                                    <div class="img">
+                                    <div>
+                                    <?php
+                                        echo  "<img class='img' src='foto/".$photo_face."' alt=''>";
+                                    ?>
+                                     
                                     </div>
                                   </div>
                                   
                                   <div style="min-width: 100%; text-align: end; margin-top:20px">
                                   <div class="input-file-container btn btn-sm btn-outline-light">  
-                                    <input type="file" name="photo_dorso" class="input-file">
+                                    <input type="file" name="photo_face" class="input-file">
                                     <label tabindex="0" for="my-file" class="input-file-trigger mb-0 btn-sm">Nueva imagen</label>
                                   </div>
-                                  <input type="submit" value="Cargar"  class="btn-get-started-pass btn-pass">
+                                  <input type="submit" value="Cargar"  class="btn-get-started-pass btn-pass" <?php echo $control_face; ?>  style="<?php echo $color_face;?>">
                                   </div>
                                   
                               </form>
                             </div>
                         
                             <div class="col-md-4 col-12 botonera" >
-                              <form action="foto/registrar.php" method="post" id="from_photo_dni" enctype="multipart/form-data">
+                              <form action="foto/registrar_photo_dni.php" method="post" id="from_photo_dni" enctype="multipart/form-data">
                                   <label style="font-size: 14px; color: #274070;"><b>Foto de dni</b></label>
                                   <br>
                                   <div class="container-img">
-                                    <div class="img">
+                                    <div >
+                                    <?php
+                                        echo  "<img class='img' src='foto/".$photo_dni."' alt=''>";
+                                    ?>
                                     </div>
                                   </div>
                                   
                                   <div style="min-width: 100%; text-align: end; margin-top:20px">
                                   <div class="input-file-container btn btn-sm btn-outline-light">  
-                                    <input type="file" name="photo_dorso" class="input-file">
+                                    <input type="file" name="photo_dni" class="input-file">
                                     <label tabindex="0" for="my-file" class="input-file-trigger mb-0 btn-sm">Nueva imagen</label>
                                   </div>
-                                  <input type="submit" value="Cargar"  class="btn-get-started-pass btn-pass">
+                                  <input type="submit" value="Cargar"  class="btn-get-started-pass btn-pass" <?php echo $control_dni; ?> style="<?php echo $color_dni;?>"> 
                                   </div>
                               </form>
                             </div>
                             <div class="col-md-4 col-12 botonera" >
-                              <form action="foto/registrar.php" method="post" id="from_photo_dorso" enctype="multipart/form-data">
+                              <form action="foto/registrar_photo_dorso.php" method="post" id="from_photo_dorso" enctype="multipart/form-data">
                                   <label style="font-size: 14px; color: #274070;"><b>Foto de dorso dni</b></label>
                                   <div class="container-img">
-                                    <div class="img">
+                                    <div>
+                                    <?php
+                                        echo  "<img class='img' src='foto/".$photo_dorso."' alt=''>";
+                                    ?>
                                     </div>
                                   </div>
                                   
@@ -215,7 +271,7 @@
                                     <input type="file" name="photo_dorso" class="input-file">
                                     <label tabindex="0" for="my-file" class="input-file-trigger mb-0 btn-sm">Nueva imagen</label>
                                   </div>
-                                  <input type="submit" value="Cargar"  class="btn-get-started-pass btn-pass">
+                                  <input type="submit" value="Cargar"  class="btn-get-started-pass btn-pass" <?php echo $control_dorso; ?> style="<?php echo $color_dorso;?>">
                                   </div>
                               </form>
                             </div>
