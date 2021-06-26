@@ -175,7 +175,7 @@
         paging: true,
         searching: true,
         language: {
-            lengthMenu: "Agrupar de MENU ",
+            lengthMenu: " ",
             search: " ",
             searchPlaceholder: " Buscar",
             info: "",

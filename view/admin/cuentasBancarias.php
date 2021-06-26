@@ -40,7 +40,7 @@
       <section id="cuentas">
         <div class="container-fluid">
             <div class="row justify-content-center mt-4">
-            <div class="col-lg-10 col-12">
+            <div class="col-lg-11 col-12">
                 <div class="row">
                      <div class="col-12">
                         <div class="row justify-content-between">
@@ -195,7 +195,7 @@
         paging: true,
         searching: true,
         language: {
-            lengthMenu: "Agrupar de MENU ",
+            lengthMenu: " ",
             search: " ",
             searchPlaceholder: " Buscar",
             info: "",

@@ -548,7 +548,7 @@
       }); 
 
     $('#modalDep').DataTable({ 
-        responsive: true,
+      responsive: true,
         paging: true,
         searching: true,
         language: {
@@ -583,7 +583,7 @@
       }); 
 
       $('#modalExtraccion').DataTable({ 
-        responsive: true,
+        rresponsive: true,
         paging: true,
         searching: true,
         language: {

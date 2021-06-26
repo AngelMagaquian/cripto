@@ -202,7 +202,7 @@
         paging: true,
         searching: true,
         language: {
-            lengthMenu: "Agrupar de MENU ",
+            lengthMenu: "",
             search: " ",
             searchPlaceholder: " Buscar",
             info: "",
@@ -228,7 +228,7 @@
             select: true,
             colReorder: true
         },
-        scrollY: 200,
+        scrollY: 300,
         scrollX: true
       });
 

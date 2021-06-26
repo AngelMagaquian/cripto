@@ -48,7 +48,7 @@
                       </div>
                       <div class="card">
                           <div class="card-body mt-3 ">
-                              <div class="row mt-4 m-0">
+                              <div class="row m-0">
                                 <table id="operacionesTable" class="table table-striped table-bordered" style="width:100%">
                                     <thead>
                                         <tr>
@@ -234,7 +234,7 @@
             select: true,
             colReorder: true
         },
-        scrollY: 250,
+        scrollY: 300,
         scrollX: true
       });
 

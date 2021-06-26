@@ -87,7 +87,7 @@
 
                             <form id="solicitud_wallet" class=" col-12 mt-md-0 mt-sm-4 mt-4"> <!-- falta nombre-->
                                 <div class="row">
-                                    <div class="col-12" style="text-align: end;">
+                                    <div class="col-12 mt-2" style="text-align: end;">
                                     <a href="" class="btn-get-started  btn-siguiente mr-2 mt-sm-0 mt-3" type="button" data-toggle="modal" data-target="#exampleModal" id="modal_show_button">Solicitar Wallet</a>
                                     </div>
                                 </div>
@@ -129,7 +129,7 @@
                                     </div>
                                     <div class="col-12 form-group text-right">
                                       <form id="finalizar">
-                                        <input type="submit" value="Finalizar" class="btn btn-sm btn-get-started-agg  btn-agg">
+                                        <input type="submit" value="Finalizar" class="btn btn-sm btn-get-started-agg btn-nuevo">
                                       </form>
                                     </div>
                                   </div>
@@ -165,10 +165,10 @@
 
     $('#walletTable').DataTable({ 
         responsive: true,
-        paging: false,
+        paging: true,
         searching: true,
         language: {
-            lengthMenu: "Agrupar de MENU ",
+            lengthMenu: "",
             search: " ",
             searchPlaceholder: " Buscar",
             info: "",
@@ -194,7 +194,7 @@
             select: true,
             colReorder: true
         },
-        scrollY: 250,
+        scrollY: 300,
         scrollX: true
       });
 

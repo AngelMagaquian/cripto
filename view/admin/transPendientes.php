@@ -68,22 +68,7 @@
                                         </tr>
                                     </thead>
                                     <tbody id="transactions_tbody">
-                                        <tr>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td>
-                                                <button class="btn btn-success">si</button>
-                                                <button class="btn btn-danger">no</button>
-
-                                            </td>
-                                        </tr>
+                                        
                                     </tbody>
                                 </table>
                             </div>
@@ -166,7 +151,7 @@
         paging: true,
         searching: true,
         language: {
-            lengthMenu: "Agrupar de MENU ",
+            lengthMenu: " ",
             search: " ",
             searchPlaceholder: " Buscar",
             info: "",
@@ -192,7 +177,7 @@
             select: true,
             colReorder: true
         },
-        scrollY: 200,
+        scrollY: 300,
         scrollX: true
       });
 

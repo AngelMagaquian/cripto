@@ -48,7 +48,7 @@
                     <div class="card">
                         <div class="card-body mt-3 ">
 
-                            <div class="row mt-4">
+                            <div class="row">
                             <table id="transTable" class="table table-striped table-bordered" style="width:100%">
                                 <thead>
                                     <tr>
@@ -105,10 +105,10 @@
     });
     $('#transTable').DataTable({ 
         responsive: true,
-        paging: false,
+        paging: true,
         searching: true,
         language: {
-            lengthMenu: "Agrupar de MENU ",
+            lengthMenu: "",
             search: " ",
             searchPlaceholder: " Buscar",
             info: "",
@@ -134,7 +134,7 @@
             select: true,
             colReorder: true
         },
-        scrollY: 200,
+        scrollY: 300,
         scrollX: true
       });
     $( document ).ready(function() {
