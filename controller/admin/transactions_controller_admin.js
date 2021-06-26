@@ -18,7 +18,7 @@ $(function(){
             table.clear().draw();
 
             
-
+            
 
             data.forEach(dato => {
                 table.row.add([

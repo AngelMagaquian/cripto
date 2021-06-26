@@ -1,28 +1,21 @@
-import {get_data} from "../app/get_data.js";
 import {post_data} from "../app/post_data.js";
+import {get_data} from "../app/get_data.js";
 import {number_format} from "../app/number_format.js";
 $(function(){
-    console.log('table cripto Controller');
-
+    var commission_venta = 0.0;
     var commission_compra = 0.0;
-    var commission_venta= 0.0;
     var dolar_cripto = 0.0;
+    var controller_compra = true;
 
     $( document ).ready(function() {
-       
-        get_admin_values();
-        
-        
-        //get_cripto_pesos_value(cripto);
-
-
-
+        console.log('Home controller');
         var criptos = ['bitcoin', 'ethereum', 'tether','dai','chainlink','ripple']; 
-
+        get_admin_values()
         criptos.forEach(cripto => {
-            post_data('../../model/calculadora/calculadora2.php', cripto).then(response => {
+            post_data('model/calculadora/calculadora2.php', cripto).then(response => {
                 // En este punto recibimos la respuesta.
                 let data = JSON.parse(response); 
+          
  
 
                 var result = data.value;
@@ -72,36 +65,40 @@ $(function(){
 
     });
 
-    
+
+
     function get_admin_values(){
-        get_data('../../model/calculadora/get_values.php').then(response => {
+        
+        get_data('model/calculadora/get_values.php').then(response => {
             // En este punto recibimos la respuesta.
-            
             let data = JSON.parse(response); 
+
             data.forEach(dato => {
-                switch (dato.ID_value){
+                switch(dato.ID_value){
                     case '1':
                         dolar_cripto = dato.value;
+                        
+                        $('#dolar').val(dolar_cripto);
+                        
                     break;
 
                     case '2':
                         commission_compra = dato.value;
+                        $('#comision').val(commission_compra);
+                 
+                        
                     break;
 
                     case '3':
                         commission_venta = dato.value;
+                        
                     break;
                 }
             });
+            
         })
         .catch(error => {
             console.log('error: '+error);
         });
     }
-
-    /*function precise(x) {
-        return Number.parseFloat(x).toPrecision(4);
-    }*/
-
-
-});
+})
