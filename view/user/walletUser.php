@@ -43,7 +43,7 @@
             <div class="row justify-content-center mt-4">
                 <div class="col-11">   
                     <div class="row">
-                        <h5>titulo</h5>
+                        <h5>Wallet de usuario</h5>
                     </div>
                     <div class="card">
                         <div class="card-body mt-3 ">

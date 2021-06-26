@@ -26,11 +26,11 @@ $(function(){
             $('#email_uc').val(data.email);
             $('#bd').val(data.birth_day);
 
-            /* if(data.pep == 0){
-                $("#chk_email").prop("checked", true); //si no lo es se pone check
+            if(data.pep == 0){
+                $("#chk_pep").prop("checked", false); //si no lo es se pone check
             }else{
-                $("#chk_email").prop("checked", false);
-            } */
+                $("#chk_pep").prop("checked", true);
+            } 
 
             if(data.check_email == 0){
                 $("#chk_email").prop("checked", false);

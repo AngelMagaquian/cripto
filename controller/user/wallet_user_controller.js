@@ -13,7 +13,7 @@ $(function(){
             if(data.OS_balance == '0'){
                 template =`<span>${number_format(data.balance,2)}</span>`;
             }else{
-                template =`<span>${number_format(data.balance,2)} + Saldo Pendiente: ($${number_format(data.balance,2)})</span>`;
+                template =`<span>${number_format(data.balance,2)} + Saldo Pendiente: ($${number_format(data.OS_balance,2)})</span>`;
             }
             
             

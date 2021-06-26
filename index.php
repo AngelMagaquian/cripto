@@ -124,12 +124,12 @@
 
               <div class="col-lg-5 col-6 compra">
                 <h5>Compra</h5>
-                <span>$ 7004262.5</span>
+                <span id="btc_compra"></span>
               </div>
 
               <div class="col-lg-5 col-6 compra">
                 <h5>Venta</h5>
-                <span>$ 7004262.5</span>
+                <span id="btc_venta"></span>
               </div>
             </div>
         </div>
@@ -150,12 +150,12 @@
 
               <div class="col-lg-5 col-6 compra">
                 <h5>Compra</h5>
-                <span>$ 7004262.5</span>
+                <span id="eth_compra"></span>
               </div>
 
               <div class="col-lg-5 col-6 compra">
                 <h5>Venta</h5>
-                <span>$ 7004262.5</span>
+                <span id="eth_venta"></span>
               </div>
             </div>
         </div>
@@ -175,12 +175,12 @@
 
               <div class="col-lg-5 col-6 compra">
                 <h5>Compra</h5>
-                <span>$ 7004262.5</span>
+                <span id="usdt_compra"></span>
               </div>
 
               <div class="col-lg-5 col-6 compra">
                 <h5>Venta</h5>
-                <span>$ 7004262.5</span>
+                <span id="usdt_venta"></span>
               </div>
             </div>
         </div>
@@ -200,12 +200,12 @@
 
               <div class="col-lg-5 col-6 compra">
                 <h5>Compra</h5>
-                <span>$ 7004262.5</span>
+                <span id="dai_compra"></span>
               </div>
 
               <div class="col-lg-5 col-6 compra">
                 <h5>Venta</h5>
-                <span>$ 7004262.5</span>
+                <span id="dai_venta"></span>
               </div>
             </div>
         </div>
@@ -225,12 +225,12 @@
 
               <div class="col-lg-5 col-6 compra">
                 <h5>Compra</h5>
-                <span>$ 7004262.5</span>
+                <span id="link_compra"></span>
               </div>
 
               <div class="col-lg-5 col-6 compra">
                 <h5>Venta</h5>
-                <span>$ 7004262.5</span>
+                <span id="link_venta"></span>
               </div>
             </div>
         </div>
@@ -331,7 +331,8 @@ include 'view/footer/footer.php';
 
 </body>
 
-  <script src="./view/asset/jquery/jquery.min.js"></script>
+  <script src="./view/asset/jquery/jquery.min.js" ></script>
+  <script src="./controller/home/controller_home.js" type="module"></script>
   <script src="./view/asset/js/bootstrap/bootstrap.bundle.min.js"></script>
 
 </html>
