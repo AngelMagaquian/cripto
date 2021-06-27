@@ -12,6 +12,7 @@ $(function(){
         let id =$(e.currentTarget).data('id');
         console.log(id);
         user_info(id);
+        get_photo(id);
     });
 
     function user_info(id){
@@ -48,6 +49,20 @@ $(function(){
                 $("#chk_conf").prop("checked", true);
                 $("#submit_user").prop('disabled', true);
             }
+        })
+    }
+
+    function get_photo(id){
+
+        
+
+        post_data('../../model/user/get_user_photo.php', id).then(response => {
+            let data = JSON.parse(response); 
+            console.log(data);
+            $('#photo_face').attr('src', '../user/foto/'+data.photo_face);
+            $('#photo_dni').attr('src', '../user/foto/'+data.photo_dni);
+            $('#photo_dorso').attr('src', '../user/foto/'+data.photo_dorso);
+            
         })
     }
 

@@ -117,21 +117,21 @@
                                             <label><b>Foto de perfil</b></label>
                                             <br>
                                             <div style="width:100%; height: 200px;">
-                                              <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="" width="100%" height="100%" style="object-fit: cover;">
+                                              <img src="" id="photo_face" alt="" width="100%" height="100%" style="object-fit: cover;">
                                             </div>
                                         </div>
                                         <div class=" col-4 mt-2 fotoPerfil">
-                                            <label><b>Foto de perfil</b></label>
+                                            <label><b>Foto de DNI</b></label>
                                             <br>
                                             <div style="width:100%; height: 200px;">
-                                              <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="" width="100%" height="100%" style="object-fit: cover;">
+                                              <img src="" id="photo_dni" alt="" width="100%" height="100%" style="object-fit: cover;">
                                             </div>
                                         </div>
                                         <div class=" col-4 mt-2 fotoPerfil">
-                                            <label><b>Foto de perfil</b></label>
+                                            <label><b>Foto dorso DNI</b></label>
                                             <br>
                                             <div style="width:100%; height: 200px;">
-                                              <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="" width="100%" height="100%" style="object-fit: cover;">
+                                              <img src="" id="photo_dorso" alt="" width="100%" height="100%" style="object-fit: cover;">
                                             </div>
                                         </div>
                                     </div> 
