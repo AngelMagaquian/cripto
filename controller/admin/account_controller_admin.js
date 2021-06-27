@@ -95,10 +95,10 @@ $(function() {
             // En este punto recibimos la respuesta.
             console.log(response);
             if(response == 1){
-                alert('Confirmación exitosa');
+                alertify.alert("<p class='text-center'>¡La operación fue exitosa!</p>", function () {}).set({title:"Confirmación de cuenta"});               
                 default_form();
             }else{
-                alert('Ocurrio un error, intentelo mas tarde.');
+                alertify.alert("<p class='text-center'>Ocurrio un error, intentelo mas tarde.</p>", function () {}).set({title:"Confirmación de cuenta"});
                 default_form();
             }
 

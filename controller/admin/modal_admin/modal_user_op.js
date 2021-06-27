@@ -100,6 +100,7 @@ $(function(){
             // En este punto recibimos la respuesta.
             console.log(response);
             if(response == 1){
+                
                 alert('Confirmación exitosa');
                 changes = true;
                 user_info(id);

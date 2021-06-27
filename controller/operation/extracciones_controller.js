@@ -20,10 +20,10 @@ $(function(){
         var saldo =parseFloat($('#saldo_actual').val()) ;
         var control = (saldo-monto);
         if(control < 0){
-            alert('El monto sobrepasa al saldo actual, ingrese otro monto a extraer');
+            alertify.alert("<p class='text-center'>El monto sobrepasa al saldo actual, ingrese otro monto a extraer.</p>", function () {}).set({title:"Extracciones"});    
         }else{
             if($('#bank_account').val() == 0){
-                alert('Por favor ingrese una cuenta bancaria');
+                alertify.alert("<p class='text-center'>Por favor ingrese una cuenta bancaria.</p>", function () {}).set({title:"Extracciones"}); 
             }else{
                 const postData ={
                     monto: monto,
@@ -32,10 +32,10 @@ $(function(){
 
                 $.post('../../model/transaction/new_extraccion.php', postData).then(response => {
                     if(response == 1){
-                        alert('Solicitud de extracción enviada, puede consultar los datos en Mis operaciones->Mis extracciones');
+                        alertify.alert("<p class='text-center'>Solicitud de extracción enviada, puede consultar los datos en Mis operaciones->Mis extracciones.</p>", function () {}).set({title:"Extracciones"}); 
                         new_extraccion_default();
                     }else{
-                        alert('Error al cargar los datos: '+response);
+                        alertify.alert("<p class='text-center'>Error al cargar los datos:" +response+ "</p>", function () {}).set({title:"Extracciones"}); 
                         new_extraccion_default();
                     }
                 }) 

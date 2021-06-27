@@ -39,10 +39,10 @@ $(function(){
                                 }
                                 $.post('../../model/transaction/new_deposit.php', postData).then(response => {
                                     if(response == 1){
-                                        alert('Solicitud de deposito enviada, puede consultar los datos en Mis operaciones->Depositos');
+                                        alertify.alert("<p class='text-center'>Solicitud de deposito enviada, puede consultar los datos en Mis operaciones->Depositos </p>", function () {}).set({title:"Depositos"});  
                                         new_deposit_default();
                                     }else{
-                                        alert('Error al cargar los datos: '+response);
+                                        alertify.alert("<p class='text-center'>Error al cargar los datos:"+response+"</p>", function () {}).set({title:"Depositos"});  
                                         new_deposit_default();
                                     }
                                 })
@@ -51,7 +51,7 @@ $(function(){
                             }
                             
                         }else{
-                            alert('Falta la confirmación de su cuenta bancaria para poder operar, seleccione otra o espere a que sea confirmada.');
+                            alertify.alert("<p class='text-center'>Falta la confirmación de su cuenta bancaria para poder operar, seleccione otra o espere a que sea confirmada.</p>", function () {}).set({title:"Depositos"});
                             new_deposit_default();
                         }
     

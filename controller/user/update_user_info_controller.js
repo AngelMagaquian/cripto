@@ -17,8 +17,7 @@ $(function(){
                     // En este punto recibimos la respuesta.
                     
                    if(response ==1){
-                       
-                        window.alert('Contraseña cambiada con éxito');
+                    alertify.alert("<p class='text-center'>¡Contraseña cambiada con éxito!</p>", function () {}).set({title:"Cambio de Contraseña"});      
                    }
                     
                     
@@ -29,7 +28,7 @@ $(function(){
                   //window.alert('Error al cargar los datos, intente mas tarde');
                 });
             } else{
-                window.alert('Las contraseñas no coinciden');
+                alertify.alert("<p class='text-center'>Las contraseñas no coinciden</p>", function () {}).set({title:"Cambio de Contraseña"});     
             }
             
         } else{

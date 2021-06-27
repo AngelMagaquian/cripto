@@ -74,7 +74,7 @@ $(function (){
             id_value : id
         }
         $.post('../../model/admin_value/admin_value.php', postData).then(response => {
-            alert('Actualización exitosa');
+            alertify.alert("<p class='text-center'>¡Actualización exitosa!</p>", function () {}).set({title:"Valores"});    
             get_values();
         
         })

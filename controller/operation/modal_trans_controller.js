@@ -95,10 +95,10 @@ $(function(){
                         $.post('../../model/transaction/new_compra.php', postData).then(response => {
                            
                              if(response == 1){
-                                 alert('Compra realizada con éxito, aguarde confirmación del administrador');
+                                alertify.alert("<p class='text-center'>Compra realizada con éxito, aguarde confirmación del administrador</p>", function () {}).set({title:"Compra"}); 
                                  CierraPopup();
                              }else{
-                                 alert('Ocurrio un error, intentelo mas tarde');
+                                 alertify.alert("<p class='text-center'>Ocurrio un error, intentelo mas tarde.</p>", function () {}).set({title:"Compra"});
                                  CierraPopup();
                              }
                         }) 
@@ -108,10 +108,10 @@ $(function(){
                         $.post('../../model/transaction/new_venta.php', postData).then(response => {
                            
                              if(response == 1){
-                                 alert('Venta realizada con éxito, aguarde confirmación del administrador');
+                                alertify.alert("<p class='text-center'>Venta realizada con éxito, aguarde confirmación del administrador</p>", function () {}).set({title:"Venta"}); 
                                  CierraPopup();
                              }else{
-                                 alert('Ocurrio un error, intentelo mas tarde');
+                                alertify.alert("<p class='text-center'>Ocurrio un error, intentelo mas tarde.</p>", function () {}).set({title:"Venta"});
                                  CierraPopup();
                              }
                         }) 

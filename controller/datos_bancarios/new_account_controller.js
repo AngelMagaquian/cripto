@@ -33,10 +33,10 @@ $(function(){
                         success: function(response) {
                             console.log(response);
                           if(response == 1){
-                            alert('Éxito al cargar la cuenta de banco. Por favor espere que sea verificada por el administrador.');
+                            alertify.alert("<p class='text-center'>Éxito al cargar la cuenta de banco. Por favor espere que sea verificada por el administrador.</p>", function () {}).set({title:"Datos Bancarios"});    
                             CierraPopup();
                           }else{
-                              alert('Error al cargar la cuenta, verifique los datos ingresados');
+                            alertify.alert("<p class='text-center'>Error al cargar la cuenta, verifique los datos ingresados.</p>", function () {}).set({title:"Datos Bancarios"});    
                           }
                         },
                         error: function(error) {

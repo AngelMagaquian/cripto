@@ -41,7 +41,7 @@ $(function(){
             
                         
             if(response == 1){
-                alert('Usuario Confirmado con exito');
+                alertify.alert("<p class='text-center'>¡Usuario Confirmado con exito!</p>", function () {}).set({title:"Checkear Usuario"});     
             }else{
                 console.log(response);
             }
@@ -49,7 +49,7 @@ $(function(){
         })
         .catch(error =>{
             console.log('Error de insert: '+error);
-            window.alert('Ocurrio un error al registrarse, intentelo mas tarde');
+            alertify.alert("<p class='text-center'>Ocurrio un error al registrarse, intentelo mas tarde.</p>", function () {}).set({title:"Checkear Usuario"});
         });
 
         

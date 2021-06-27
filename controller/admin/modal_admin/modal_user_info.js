@@ -64,7 +64,7 @@ $(function(){
     function confirm_user(id){
         post_data('../../model/user/update_check_user_admin.php', id).then(response => {
             if(response == 1){
-                alert('Usuario Confirmado con exito');
+                alertify.alert("<p class='text-center'>¡La operación fue exitosa!</p>", function () {}).set({title:"Confirmar Usuario"});   
                 user_info(id);
                 changes = true;
             }else{
@@ -74,7 +74,7 @@ $(function(){
         })
         .catch(error =>{
             console.log('Error de insert: '+error);
-            window.alert('Ocurrio un error al registrarse, intentelo mas tarde');
+            alertify.alert("<p class='text-center'>Ocurrio un error, intentelo mas tarde.</p>", function () {}).set({title:"Confirmar Usuario"});
         }); 
     }
 

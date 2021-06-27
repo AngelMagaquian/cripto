@@ -144,15 +144,12 @@ $(function(){
                       //const json = JSON.parse(response);
                       console.log(response);
                       if(response == 1){
-                        
-                        alert('Wallet agregada con éxito');
-                        
+                        alertify.alert("<p class='text-center'>¡Wallet agregada con éxito!</p>", function () {}).set({title:"Agregar Wallet"});
                         //default_form();
                         window.location.reload();
                         
-                        
                       }else{
-                        alert('Ocurrio un error, el código de wallet ya existe');
+                        alertify.alert("<p class='text-center'>Ocurrio un error, el código de wallet ya existe</p>", function () {}).set({title:"Agregar Wallet"});
                       }
                        
                     },

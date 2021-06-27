@@ -66,10 +66,10 @@ $(function(){
             // En este punto recibimos la respuesta.
             
             if(response == 1){
-                alert('Confirmación exitosa');
+                alertify.alert("<p class='text-center'>¡La operación fue exitosa!</p>", function () {}).set({title:"Depositos"});  
                 all_deposit();
             }else{
-                alert('Ocurrio un error, intentelo mas tarde.');
+                alertify.alert("<p class='text-center'>Ocurrio un error, intentelo mas tarde.</p>", function () {}).set({title:"Depositos"});
                 all_deposit();
             }
 
@@ -95,12 +95,12 @@ $(function(){
             // En este punto recibimos la respuesta.
             console.log(response);
             if(response == 1){
-                alert('Problema enviado');
+                alertify.alert("<p class='text-center'>El problema fue enviado al usuario</p>", function () {}).set({title:"Depositos"});
                 $('#text_issue').val('');
                 all_deposit();
                 
             }else{
-                alert('Ocurrio un error, intentelo mas tarde.');
+                alertify.alert("<p class='text-center'>Ocurrio un error, intentelo mas tarde.</p>", function () {}).set({title:"Depositos"});
                 $('#text_issue').val('');
                 all_deposit();
             }

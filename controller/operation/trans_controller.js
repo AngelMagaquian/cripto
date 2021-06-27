@@ -64,21 +64,21 @@ $(function(){
                                 $.post('../../model/transaction/new_compra.php', postData).then(response => {
                                     console.log(response);
                                     if(response == 1){
-                                        alert('Solicitud de compra realizada con éxito, aguarde confirmación del administrador');
+                                        alertify.alert("<p class='text-center'>Solicitud de compra realizada con éxito, aguarde confirmación del administrador</p>", function () {}).set({title:"Operacion Cripto"});      
                                     }else{
-                                        alert('Ocurrio un error, intentelo mas tarde');
+                                        alertify.alert("<p class='text-center'>Ocurrio un error, intentelo mas tarde</p>", function () {}).set({title:"Operacion Cripto"});
                                     }
                                 }) 
                             }else{
-                                alert('Falta verificar sus datos de identidad antes de poder operar');
+                                alertify.alert("<p class='text-center'>Falta verificar sus datos de identidad antes de poder operar</p>", function () {}).set({title:"Operacion Cripto"});
                             }
                             
                         })
                     }else{
-                        alert('Por favor seleccione una wallet para poder operar, en caso de no tener una, solicitela al administrador');
+                        alertify.alert("<p class='text-center'>Por favor seleccione una wallet para poder operar, en caso de no tener una, solicitela al administrador</p>", function () {}).set({title:"Operacion Cripto"});
                     }
                 }else{
-                    alert('No poseé fondos suficientes para efectuar la operación, puede añadir mas fondos haciendo un deposito');
+                    alertify.alert("<p class='text-center'>No poseé fondos suficientes para efectuar la operación, puede añadir mas fondos haciendo un deposito</p>", function () {}).set({title:"Operacion Cripto"});
                 }
             }else{
                 /*todo en caso de que sea una venta */
@@ -100,23 +100,23 @@ $(function(){
                             $.post('../../model/transaction/new_venta.php', postData).then(response => {
                                 console.log(response);
                                 if(response == 1){
-                                    alert('Solicitud de venta realizada con éxito, aguarde confirmación del administrador');
+                                    alertify.alert("<p class='text-center'>Solicitud de venta realizada con éxito, aguarde confirmación del administrador</p>", function () {}).set({title:"Operacion Cripto"});
                                 }else{
-                                    alert('Ocurrio un error, intentelo mas tarde');
+                                    alertify.alert("<p class='text-center'>Ocurrio un error, intentelo mas tarde</p>", function () {}).set({title:"Operacion Cripto"});
                                 }
                             }) 
                         }else{
-                            alert('Falta verificar sus datos de identidad antes de poder operar');
+                            alertify.alert("<p class='text-center'>Falta verificar sus datos de identidad antes de poder operar</p>", function () {}).set({title:"Operacion Cripto"});
                         }
                         
                     })
                 }else{
-                    alert('Por favor seleccione una wallet para poder operar, en caso de no tener una, solicitela al administrador');
+                    alertify.alert("<p class='text-center'>Por favor seleccione una wallet para poder operar, en caso de no tener una, solicitela al administrador</p>", function () {}).set({title:"Operacion Cripto"});
                 }
 
             }
         }else{
-            alert('Operación cancelada');
+            alertify.alert("<p class='text-center'>Operación cancelada</p>", function () {}).set({title:"Operacion Cripto"});
         }
     })
 

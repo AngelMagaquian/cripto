@@ -141,10 +141,10 @@ $(function(){
                   //const json = JSON.parse(response);
                   console.log(response);
                   if(response == 1){
-                    alert('Solicitud enviada correctamente');
+                    alertify.alert("<p class='text-center'>¡Solicitud enviada correctamente!</p>", function () {}).set({title:"Wallet Cripto"});  
                     
                   }else{
-                    console.log('Ocurrio un error, intente mas tarde');
+                    alertify.alert("<p class='text-center'>Ocurrio un error, intente mas tarde</p>", function () {}).set({title:"Wallet Cripto"});  
                   }
                    
                 },

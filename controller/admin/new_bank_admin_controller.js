@@ -40,9 +40,9 @@ $(function(){
                       console.log(typeof response);
                       
                         if(response){
-                            alert('Error al agregar el banco, intente mas tarde');
+                            alertify.alert("<p class='text-center'>Error al agregar el banco, intente mas tarde.</p>", function () {}).set({title:"Agregar Banco"});
                         }else{
-                            alert('Banco agregado con exito');
+                            alertify.alert("<p class='text-center'>¡Banco agregado con exito!</p>", function () {}).set({title:"Agregar Banco"});    
                             $('#id_bank').val('');
                             $('#bank_name').val('');
                         }
