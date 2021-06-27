@@ -1,5 +1,6 @@
 import {get_data} from "../../app/get_data.js";
 import {post_data} from "../../app/post_data.js";
+
 $(function(){
     console.log('Modal user info ON');
     var changes = false;
@@ -54,14 +55,33 @@ $(function(){
 
     function get_photo(id){
 
-        
+       /*  $('#photo_face').attr('src', '../user/foto/img/defaul.jpg');
+        $('#photo_face').attr('src', '../user/foto/img/defaul.jpg');
+        $('#photo_face').attr('src', '../user/foto/img/defaul.jpg'); */
 
         post_data('../../model/user/get_user_photo.php', id).then(response => {
             let data = JSON.parse(response); 
             console.log(data);
-            $('#photo_face').attr('src', '../user/foto/'+data.photo_face);
-            $('#photo_dni').attr('src', '../user/foto/'+data.photo_dni);
-            $('#photo_dorso').attr('src', '../user/foto/'+data.photo_dorso);
+            if(data.photo_face == null){
+                $('#photo_face').attr('src', '../user/foto/img/defaul.jpg');
+            }else{
+                $('#photo_face').attr('src', '../user/foto/'+data.photo_face);
+            }
+
+            if(data.photo_dni == null){
+                $('#photo_dni').attr('src', '../user/foto/img/defaul.jpg');
+            }else{
+                $('#photo_dni').attr('src', '../user/foto/'+data.photo_dni);
+            }
+
+            if(data.photo_dorso == null){
+                $('#photo_dorso').attr('src', '../user/foto/img/defaul.jpg');
+            }else{
+                $('#photo_dorso').attr('src', '../user/foto/'+data.photo_dorso);
+            }
+            
+            
+            
             
         })
     }
