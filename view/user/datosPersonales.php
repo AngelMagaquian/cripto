@@ -62,7 +62,7 @@
                         <span style="color: #707070; font-size: 13px">Aquì puedes ver tus datos ingresados en el momento del registro.</span>
                       </div>
                       <div class="form-group col-md-5 col-12 mt-4">
-                        <label for="exampleInputEmail1" ><b>Nombre*</b></label>
+                        <label for="exampleInputEmail1" ><b>Nombre</b></label>
                         <input type="text" class="form-control form-login" id="name_user"  disabled=»disabled» >
                       </div>
                       <div class="form-group col-md-5 col-12 mt-4">
@@ -71,7 +71,7 @@
                       </div>
 
                       <div class="form-group col-md-5 col-12 mt-4">
-                        <label for="exampleInputEmail1"><b>Apellido*</b></label>
+                        <label for="exampleInputEmail1"><b>Apellido</b></label>
                         <input type="text" class="form-control form-login" id="user_last_name"  disabled=»disabled»>
                       </div>
                       <div class="form-group col-md-5 col-12 mt-4">
@@ -80,32 +80,41 @@
                       </div>
 
                       <div class="form-group col-md-5 col-12 mt-4">
-                        <label for="exampleInputEmail1"><b>DNI*</b></label>
+                        <label for="exampleInputEmail1"><b>DNI</b></label>
                         <input type="text" class="form-control form-login" id="user_dni" placeholder="ingresá tu DNI" disabled=»disabled»>
                       </div>
                       <div class="form-group col-md-5 col-12 mt-4">
-                        <label for="exampleInputEmail1"><b>CUIL*</b></label>
+                        <label for="exampleInputEmail1"><b>CUIL</b></label>
                         <input type="text" class="form-control form-login" id="user_cuil" placeholder="ingresá tu CUIL" disabled=»disabled»>
                       </div>
                                 
                       <div class="form-group col-md-5 col-12 mt-4">
-                        <label for="exampleInputEmail1"><b>Fecha de nacimiento*</b></label>
+                        <label for="exampleInputEmail1"><b>Fecha de nacimiento</b></label>
                         <input type="date" class="form-control form-login" id="user_birth_day" placeholder="ingresá tu fecha de nacimiento" disabled=»disabled»>
                       </div>
                       <div class="form-group col-md-5 col-12 mt-4">
-                        <label for="exampleInputEmail1"><b>Email*</b></label>
+                        <label for="exampleInputEmail1"><b>Email</b></label>
                         <input type="email" class="form-control form-login" id="user_email" placeholder="ingresá tu email" disabled=»disabled»>
                       </div>
                       <div class="form-group col-md-5 col-12  mt-4 ">
-                        <label for="exampleInputPassword1"><b>Teléfono*</b></label>
-                        <input type="number" class="form-control form-login" id="phone" placeholder="Ingresá tu numero de teléfono" required>
+                        <label for="exampleInputPassword1"><b>Teléfono</b></label>
+                        <input type="number" class="form-control form-login" id="phone" placeholder="Ingresá tu numero de teléfono" disabled>
                       </div>
                       <div class="form-group form-check col-md-5 col-12 mt-4 ">
+                        <h5>Estado de usuario</h5>
                         <div class="mt-4 ml-4">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                        <label class="form-check-label" for="exampleCheck1">Declaro aceptar ser persona expuesta publicamente</label>
+                        <input type="checkbox" class="form-check-input" id="pep" disabled>
+                        <label class="form-check-label"  for="pep">Declaro no ser PEP</label>
+                        <br>
+                        <input type="checkbox" class="form-check-input" id="check_email" disabled>
+                        <label class="form-check-label" for="check_email">Email confirmado</label>
+                        <br>
+                        <input type="checkbox" class="form-check-input" id="check_user" disabled>
+                        <label class="form-check-label"  for="check_user">Identidad confirmada</label>
                         </div>
                       </div>
+
+                      <p>En caso de necesitar asistencia o problemas en la confirmación de sus datos, comuníquese haciendo <a href="https://api.whatsapp.com/send?phone=+5493571327014&text=Hola%20,%20tengo%20un%20problema%20con%20mis%20extracciones" target="_blank">Click aquí</a>.</p>
                     </div>
                   </div>
 
@@ -217,7 +226,7 @@
                                   <div class="container-img">
                                     <div>
                                     <?php
-                                        echo  "<img class='img' src='foto/".$photo_face."' alt=''>";
+                                        echo  "<img style='object-fit: cover;' class='img' src='foto/".$photo_face."' alt=''>";
                                     ?>
                                      
                                     </div>
@@ -241,7 +250,7 @@
                                   <div class="container-img">
                                     <div >
                                     <?php
-                                        echo  "<img class='img' src='foto/".$photo_dni."' alt=''>";
+                                        echo  "<img style='object-fit: cover;' class='img' src='foto/".$photo_dni."' alt=''>";
                                     ?>
                                     </div>
                                   </div>
@@ -261,7 +270,7 @@
                                   <div class="container-img">
                                     <div>
                                     <?php
-                                        echo  "<img class='img' src='foto/".$photo_dorso."' alt=''>";
+                                        echo  "<img style='object-fit: cover;' class='img' src='foto/".$photo_dorso."' alt=''>";
                                     ?>
                                     </div>
                                   </div>

@@ -56,8 +56,8 @@
                       <select id="select_wallet_cripto" class="form-control form-select">
                         <option value="default_select"> Seleccione una wallet</option>
                       </select>
-                      <p style="color:#707070; font-size: 12px">Si no poseé una wallet para esta criptomoneda, puede solicitarla haciendo <a href="wallet.php">Click aquí</a>.</p>
-                      <p class="mb-0">Saldo actual: $ <input type="text" id="wallet_user_input" readonly/></p>
+                      <p style="color:#707070; font-size: 12px">Si no poseé una wallet para esta criptomoneda, puede solicitarla haciendo <a href="wallet.php" target="_blanck">Click aquí</a>.</p>
+                      <p class="mb-0">Saldo actual: $ <input type="text" id="wallet_user_input"  disabled /></p>
 
                   </div>
                     <div class="card-footer" style="font-size: 13px;">
@@ -84,7 +84,7 @@
                             <p class="mb-2"><b>Cotización:</b> AR$/<?php echo $_POST['id_cripto']." $ ".$_POST['valor_cripto_cc'];?></p>
                           </div>
                           <div class="col-12">
-                            <p>Monto final: $ <?php echo $_POST['monto_pesos'];?> </p>
+                            <p>Monto final: $ <?php echo ($_POST['monto_pesos']);?> </p>
                           </div>
 
                           <div class="form-check col-12 ml-3">

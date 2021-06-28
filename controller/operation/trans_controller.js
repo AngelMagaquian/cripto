@@ -1,5 +1,6 @@
 import {post_data} from "../app/post_data.js";
 import {get_data} from "../app/get_data.js";
+import {number_format} from "../app/number_format.js";
 $(function(){
     console.log('Trans Controller');
 
@@ -156,7 +157,7 @@ $(function(){
             console.log(response);
             let data = JSON.parse(response);
             console.log(data);
-            $('#wallet_user_input').val(data.balance);
+            $('#wallet_user_input').val(number_format(data.balance,2));
         })
         .catch(error =>{    
             console.log(error);
