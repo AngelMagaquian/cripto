@@ -9,6 +9,7 @@
   <?php
   include 'head.php';
   ?>
+  <meta http-equiv="refresh" content="60" />
 </head>
 
 <body>
@@ -99,26 +100,26 @@
                         <div class="col-12 mt-5">
                             <div class="container-btn text-center">
                               
-                              <form action="continuar_trans.php" method="post">
+                              <form >
                                 <a href="" class="btn-get-started  btn-cancelar mr-2">Actualizar</a>
                                 <!-- <a href="" class="btn-get-started  btn-siguiente mr-2 mt-sm-0 mt-3" type="button" data-toggle="modal" data-target="#exampleModal" id="modal_show_button">Siguiente</a> -->
-                                <input type="submit" value="Siguiente" class="btn-get-started  btn-siguiente mr-2 mt-sm-0 mt-3"> 
-                                <input type="text" id="type_trans" name="type_trans" value="" hidden>
+                                <button type="button" class="btn-get-started  btn-siguiente mr-2 mt-sm-0 mt-3" id="modal_show_button" data-toggle="modal" data-target="#exampleModal"> Siguente</button> 
+                               <!--  <input type="text" id="type_trans" name="type_trans" value="" hidden>
                                 <input type="text" id="id_cripto" name="id_cripto" value="" hidden>
                                 <input type="text" id="monto_cripto" name="monto_cripto" value="" hidden>
                                 <input type="text" id="valor_cripto_sc" name="valor_cripto_sc" value="" hidden>
                                 <input type="text" id="valor_cripto_cc" name="valor_cripto_cc" value="" hidden>
                                 <input type="text" id="comision" value="" name="comision" hidden>
                                 <input type="text" id="dolar" value="" name="dolar" hidden>
-                                <input type="text" id="monto_pesos" name="monto_pesos" value="" hidden>
+                                <input type="text" id="monto_pesos" name="monto_pesos" value="" hidden> -->
                               </form>
                               
                             </div>
                           <!-- Modal
 
                            -->
-                          <!-- <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog" role="document">
+                           <div class="modal fade bd-example-modal-lg" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-lg" role="document">
                               <div class="modal-content">
                                 <div class="modal-header" style="color: #385BA2; background-color: rgba(0, 0, 0, 0.03);">
                                   <h5 class="modal-title" id="exampleModalLabel">Completar operación</h5>
@@ -126,40 +127,66 @@
                                     <span aria-hidden="true">&times;</span>
                                   </button>
                                 </div>
-                                <div class="modal-body">
+                                <div class="modal-body ">
+                                  <label for="select_wallet_cripto"> Seleccione la waller para operar</label>
+                                  <select  id="select_wallet_cripto"></select>
+
+                                  <br>
+                                  <label>Su saldo es: <b>$ <label id="saldo"></label> <b></label>
                                   <div class="row">
-                                    
+                                  <div class="card-footer" style="font-size: 13px;">
+                                      <h5 style="font-size:15px"><b>Resumen:</b></h5>
+                                      <div class="row">
+                                        <div class="col-6">
+                                          <p class="mb-1"><b>Fecha y hora:</b> <?php echo date("d/m/Y h:i:s a");?></p>
+                                        </div>
+                                        <div class="col-6">
+                                          <p class="mb-1"><b>Moneda: <label id="cripto_resumen"></label>
+                                        </div>
+                                        <div class="col-6">
+                                          <p class="mb-1"><b>Operacion: <label id="operacion_resumen"> </label></b> 
+                                        </div>
+                                        <div class="col-6">
+                                          <p class="mb-1"><b>Cantidad:</b> <label id="cant_cripto"></label></p>
+                                        </div>
+                                        <div class="col-6">
+                                          <p class="mb-1"><b>Pesos:</b> $ <label id="cant_pesos"></label></p>
+                                        </div>
+                                        <div class="col-6">
+                                          <p class="mb-1"><b>Wallet de orgien/destino:</b> <label id="wallet_od"></label></p>
+                                        </div>
+                                        <div class="col-6">
+                                          <p class="mb-2"><b>Cotización:</b> AR$/<label id="cotizacion_resumen"></label></p>
+                                        </div>
+                                        <div class="col-12">
+                                          <p>Monto final: $ <label id="total_resumen"></label> </p>
+                                        </div>
 
-                                    <div class="col-6 form-group mb-4">
-                                      <label for="">Saldo actual</label>
-                                      <input id="wallet_user_input"  type="text" class="form-control" disabled >
-                                    </div>
-
-                                    <div class="col-12 form-group mb-4">
-                                      <label for="">Seleccionar wallet</label>
-                                      <select name="" id="select_wallet_cripto" class="form-control">
-                                      </select>
-                                    </div>
-                                    <div class="col-12 form-group mb-4">
-                                      <label for="">Información</label>
-                                      <div class="card-footer text-muted">
-                                        <span id="span_info">Seleccione la wallet de donde desea operar</span>
+                                        <div class="form-check col-12 ml-3">
+                                          <input type="checkbox" class="form-check-input" id="declaracion">
+                                          <label class="form-check-label" for="declaracion">Al continuar declaro bajo juramento que mis fondos no provienen de planes y programas sociales en Argentina. Tambien acepto los terminos y condiciones del proceso de operaciones (compra/venta) con criptomonedas de CriptoPremier.com</label>
+                                        </div>
+                                        <br>
+                                        <div class="form-check col-12 ml-3">
+                                          <form id="finalizar">
+                                            <input type="submit" id="btn_finalizar" value="Finalizar" class="btn-get-started  btn-siguiente mr-2 mt-sm-0 mt-3"/>
+                                          </form>
+                                            
+                                        </div>
+                                            
                                       </div>
-                                    </div>
-                                  
+                                  </div>
+                                <div>
                                     
-                                    <div class="col-12 form-group text-right">
-                                      <form id="finalizar">
-                                        <input type="submit" value="Finalizar" class="btn btn-sm btn-get-started-agg  btn-agg">
-                                      </form>
-                                    </div>
+
+                                    
                                   </div>
                                   
                                 </div>
                                 
                               </div>
                             </div>
-                          </div> -->
+                          </div> 
                             
                         </div>
                     </div>
@@ -178,7 +205,7 @@
   ?>
   <!--Controllers-->
   <script src="..\..\controller\operation\calculadora_controller.js" type="module" ></script>
-<!--   <script src="..\..\controller\operation\modal_trans_controller.js" type="module" ></script> -->
+  <script src="..\..\controller\operation\modal_trans_controller.js" type="module" ></script> 
 
  
   <!-- Menu Toggle Script -->

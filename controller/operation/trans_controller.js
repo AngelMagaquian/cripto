@@ -123,6 +123,7 @@ $(function(){
 
 
     function saldo_controller(saldo, compra){
+
         if(saldo< compra){
             return false;
         }else{
@@ -157,7 +158,7 @@ $(function(){
             console.log(response);
             let data = JSON.parse(response);
             console.log(data);
-            $('#wallet_user_input').val(number_format(data.balance,2));
+            $('#wallet_user_input').val(data.balance);
         })
         .catch(error =>{    
             console.log(error);
@@ -182,10 +183,13 @@ $(function(){
                     `;
                 });
                 $('#select_wallet_cripto').html(template);
+                
                
             }else{
-                
+                alert('No tiene wallet para operar')
             }
+
+            
         })
         .catch(error =>{    
             console.log(error);

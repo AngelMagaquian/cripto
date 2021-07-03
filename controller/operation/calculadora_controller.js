@@ -3,6 +3,15 @@ import {post_data} from "../app/post_data.js";
 $(function(){
     console.log('venta Controller');
 
+  /*   "type_trans"                             
+    "id_cripto"                             
+    "monto_cripto"                           
+    "valor_cripto_sc"                        
+    "valor_cripto_cc"                           
+    "comision"                         
+    "dolar"           
+    "monto_pesos" */
+
     var commission_venta = 0.0;
     var commission_compra = 0.0;
     var dolar_cripto = 0.0;
@@ -21,14 +30,14 @@ $(function(){
 
         if($('#option1').is(':checked')){
             controller_compra = true;
-            $('#type_trans').val('');
-            $('#type_trans').val('compra');
+            /* $('#type_trans').val('');
+            $('#type_trans').val('compra'); */
         }
 
         if($('#option2').is(':checked')){
             controller_compra = false;
-            $('#type_trans').val('');
-            $('#type_trans').val('venta');
+            /* $('#type_trans').val('');
+            $('#type_trans').val('venta'); */
         } 
 
 			
@@ -57,9 +66,9 @@ $(function(){
             controller_compra = true;
             let cripto = $('#cripto_select').val();
             get_cripto_pesos_value(cripto);
-            $('#type_trans').val('');
-            $('#type_trans').val('compra');
-            $('#comision').val(commission_compra);
+            /* $('#type_trans').val('');
+            $('#type_trans').val('compra'); */
+           /*  $('#comision').val(commission_compra); */
     
         }
         else if (this.value == '2') {
@@ -67,9 +76,9 @@ $(function(){
             console.log('venta');
             let cripto = $('#cripto_select').val();
             get_cripto_pesos_value(cripto);
-            $('#type_trans').val('');
-            $('#type_trans').val('venta');
-            $('#comision').val(commission_venta);
+           /*  $('#type_trans').val('');
+            $('#type_trans').val('venta'); */
+           /*  $('#comision').val(commission_venta); */
   
         }
     });
@@ -90,8 +99,8 @@ $(function(){
 
     $('#cripto_select').change(function(){
         var cripto = $('#cripto_select').val();
-        $('#id_cripto').val('');
-        $('#id_cripto').val($('#cripto_select').val());
+        /* $('#id_cripto').val(''); */
+       /*  $('#id_cripto').val($('#cripto_select').val()); */
    
         get_cripto_pesos_value(cripto);
         
@@ -99,16 +108,16 @@ $(function(){
 
     $('#cripto_value').keyup(function(){
         var cripto = $('#cripto_select').val();
-        $('#monto_cripto').val('');
-        $('#monto_cripto').val($('#cripto_value').val());
+        /* $('#monto_cripto').val('');
+        $('#monto_cripto').val($('#cripto_value').val()); */
     
         get_cripto_pesos_value(cripto);
     });
 
     $('#ars_value').keyup(function(){
         var cripto = $('#cripto_select').val();
-        $('#monto_pesos').val('');
-        $('#monto_pesos').val($('#ars_value').val());
+        /* $('#monto_pesos').val('');
+        $('#monto_pesos').val($('#ars_value').val()); */
 
         get_pesos_cripto_value(cripto);
     });
@@ -121,12 +130,12 @@ $(function(){
         
         post_data('../../model/calculadora/calculadora2.php', cripto).then(response => {
             // En este punto recibimos la respuesta.
-            
+            console.log(response)
             let data = JSON.parse(response); 
-            $('#id_cripto').val('');
-            $('#id_cripto').val(cripto);
-            $('#valor_cripto_sc').val('');
-            $('#valor_cripto_sc').val(data.value * dolar_cripto);
+            /* $('#id_cripto').val('');
+            $('#id_cripto').val(cripto); */
+           /*  $('#valor_cripto_sc').val('');
+            $('#valor_cripto_sc').val(data.value * dolar_cripto); */
             
             /* $('#id_cripto').val('');
             $('#id_cripto').val(cripto);
@@ -162,11 +171,11 @@ $(function(){
             // En este punto recibimos la respuesta.
             
             let data = JSON.parse(response); 
-            $('#id_cripto').val('');
-            $('#id_cripto').val(cripto);
+           /*  $('#id_cripto').val('');
+            $('#id_cripto').val(cripto); */
 
-            $('#valor_cripto_sc').val('');
-            $('#valor_cripto_sc').val(data.value * dolar_cripto);
+           /*  $('#valor_cripto_sc').val('');
+            $('#valor_cripto_sc').val(data.value * dolar_cripto); */
 
             pesos_cripto(data.value);
             
@@ -191,14 +200,14 @@ $(function(){
             let cotizacion = cripto_value*dolar_cripto;
             cotizacion = (((cotizacion*commission_compra)/100)+cotizacion);
             $('#cripto_value').val(result.toFixed(3)); 
-            $('#monto_cripto').val('');
-            $('#monto_cripto').val($('#cripto_value').val());
+           /*  $('#monto_cripto').val('');
+            $('#monto_cripto').val($('#cripto_value').val()); */
           
-            $('#monto_pesos').val('');
-            $('#monto_pesos').val($('#ars_value').val());
+            /* $('#monto_pesos').val('');
+            $('#monto_pesos').val($('#ars_value').val()); */
 
-            $('#valor_cripto_cc').val('');
-            $('#valor_cripto_cc').val(cotizacion);
+           /*  $('#valor_cripto_cc').val('');
+            $('#valor_cripto_cc').val(cotizacion); */
         }else{
             var pesos_amount = $('#ars_value').val();
             var result = pesos_amount/(cripto_amount * dolar_cripto); //cantidad de pesos que quiere invertir el usuario divido en el valor de la cripto, el resultado es la cantidad que puedo comprar 
@@ -206,14 +215,14 @@ $(function(){
             let cotizacion = cripto_value*dolar_cripto;
             cotizacion = (((cotizacion*commission_venta)/100)+cotizacion);
             $('#cripto_value').val(result); 
-            $('#monto_cripto').val('');
-            $('#monto_cripto').val($('#cripto_value').val());
+           /*  $('#monto_cripto').val('');
+            $('#monto_cripto').val($('#cripto_value').val()); */
         
-            $('#monto_pesos').val('');
-            $('#monto_pesos').val($('#ars_value').val());
+            /* $('#monto_pesos').val('');
+            $('#monto_pesos').val($('#ars_value').val()); */
            
-            $('#valor_cripto_cc').val('');
-            $('#valor_cripto_cc').val(cotizacion);
+           /*  $('#valor_cripto_cc').val('');
+            $('#valor_cripto_cc').val(cotizacion); */
         }
        
     }
@@ -229,14 +238,14 @@ $(function(){
             cotizacion = (((cotizacion*commission_compra)/100)+cotizacion);
             $('#ars_value').val(result.toFixed(2)); 
 
-            $('#monto_cripto').val('');
-            $('#monto_cripto').val($('#cripto_value').val());
+           /*  $('#monto_cripto').val('');
+            $('#monto_cripto').val($('#cripto_value').val()); */
            
-            $('#monto_pesos').val('');
-            $('#monto_pesos').val($('#ars_value').val());
-           
+           /*  $('#monto_pesos').val('');
+            $('#monto_pesos').val($('#ars_value').val()); */
+           /* 
             $('#valor_cripto_cc').val('');
-            $('#valor_cripto_cc').val(cotizacion);
+            $('#valor_cripto_cc').val(cotizacion); */
         }else{
             var cant_cripto = $('#cripto_value').val();
             var result = cant_cripto * cripto_value; //cantidad que pone el usuario de cripto que quiere multiplicado por el valor de la api
@@ -245,14 +254,14 @@ $(function(){
             let cotizacion = cripto_value*dolar_cripto;
             cotizacion = (((cotizacion*commission_venta)/100)+cotizacion);
             $('#ars_value').val(result.toFixed(2)); 
-            $('#monto_cripto').val('');
-            $('#monto_cripto').val($('#cripto_value').val());
+            /* $('#monto_cripto').val('');
+            $('#monto_cripto').val($('#cripto_value').val()); */
          
-            $('#monto_pesos').val('');
-            $('#monto_pesos').val($('#ars_value').val());
+            /* $('#monto_pesos').val('');
+            $('#monto_pesos').val($('#ars_value').val()); */
       
-            $('#valor_cripto_cc').val('');
-            $('#valor_cripto_cc').val(cotizacion);
+           /*  $('#valor_cripto_cc').val('');
+            $('#valor_cripto_cc').val(cotizacion); */
         }
     }
 
@@ -268,13 +277,13 @@ $(function(){
                     case '1':
                         dolar_cripto = dato.value;
                         
-                        $('#dolar').val(dolar_cripto);
+                       /*  $('#dolar').val(dolar_cripto); */
                         
                     break;
 
                     case '2':
                         commission_compra = dato.value;
-                        $('#comision').val(commission_compra);
+                       /*  $('#comision').val(commission_compra); */
                  
                         
                     break;
@@ -291,6 +300,9 @@ $(function(){
             console.log('error: '+error);
         });
     }
+
+
+
 
     /*function precise(x) {
         return Number.parseFloat(x).toPrecision(4);
